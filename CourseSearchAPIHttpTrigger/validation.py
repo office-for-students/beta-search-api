@@ -1,6 +1,6 @@
 import logging
 
-from models import error
+from .models import error
 
 def check_query_parameters(countries, filters, length_of_course, limit, max_default_limit, offset):
     
