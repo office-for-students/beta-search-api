@@ -2,8 +2,19 @@ import logging
 import requests
 import os
 import json
+import sys
+import inspect
 
-from . import exceptions
+
+# TODO investigate setting PATH in Azure so can remove this
+CURRENTDIR = os.path.dirname(
+    os.path.abspath(inspect.getfile(inspect.currentframe()))
+)
+PARENTDIR = os.path.dirname(CURRENTDIR)
+sys.path.insert(0, CURRENTDIR)
+sys.path.insert(0, PARENTDIR)
+
+import exceptions
 
 
 def find_postcode(url, api_key, api_version, index_name, postcode):
@@ -36,7 +47,7 @@ class PostcodeIndex():
 
             response = requests.get(url, headers=self.headers)
             response_body = response.json()
-        
+
             postcode_object = {
                 "latitude": response_body['value'][0]['latitude'],
                 "longitude": response_body['value'][0]['longitude']
@@ -52,7 +63,7 @@ class PostcodeIndex():
                             status: {response.status_code}\n\
                             postcode: {self.p}')
             return {}
-        
+
         return postcode_object
 
 def get_courses(url, api_key, api_version, index_name, search_query):
@@ -94,5 +105,5 @@ class CourseIndex():
                             status: {response.status_code}\n\
                             query: {self.query_string}')
             return {}
-        
+
         return response

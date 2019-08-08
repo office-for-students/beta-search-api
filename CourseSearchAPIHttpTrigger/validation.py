@@ -1,4 +1,17 @@
+import os
+import sys
+import inspect
 import logging
+
+
+
+# TODO investigate setting PATH in Azure so can remove this
+CURRENTDIR = os.path.dirname(
+    os.path.abspath(inspect.getfile(inspect.currentframe()))
+)
+PARENTDIR = os.path.dirname(CURRENTDIR)
+sys.path.insert(0, CURRENTDIR)
+sys.path.insert(0, PARENTDIR)
 
 from models import error
 

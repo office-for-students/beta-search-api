@@ -1,12 +1,23 @@
 import logging
 import os
+import sys
+import inspect
 import traceback
 import json
 
 import azure.functions as func
 
-from . import helper, query, search, validation
-from .models import error
+
+# TODO investigate setting PATH in Azure so can remove this
+CURRENTDIR = os.path.dirname(
+    os.path.abspath(inspect.getfile(inspect.currentframe()))
+)
+PARENTDIR = os.path.dirname(CURRENTDIR)
+sys.path.insert(0, CURRENTDIR)
+sys.path.insert(0, PARENTDIR)
+
+import helper, query, search, validation
+from models import error
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
@@ -67,7 +78,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             )
 
         # Step 3 - TODO Instead of hardcoding the version, it should retrieve the
-        # latest stable dataset version, dependent on dataset endpoint existing 
+        # latest stable dataset version, dependent on dataset endpoint existing
         version = "1"
         course_index_name = "courses-" + version
 
@@ -77,7 +88,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # Step 5 - Query course search index to get list of institution course groupings
         response_with_facets = search.get_courses(search_url, api_key, api_version, course_index_name, search_query)
         facets = response_with_facets.json()
-       
+
         counts = {}
         # Step 6 - handle facets to build correct limit and offset for next query
         query_params["limit"], query_params["offset"], counts["institutions"], counts["courses"] = helper.get_offset_and_limit(facets["@search.facets"]['course/institution/sort_pub_ukprn_name'], int(limit), int(offset))
