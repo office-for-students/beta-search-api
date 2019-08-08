@@ -1,9 +1,9 @@
 import logging
 
-from .models import error
+from models import error
 
 def check_query_parameters(countries, filters, length_of_course, limit, max_default_limit, offset):
-    
+
     try:
         validator = Validator(countries, filters, length_of_course, limit, max_default_limit, offset)
 
@@ -53,7 +53,7 @@ class Validator():
             error_objects.append(error_object)
 
             return 0, error_objects
-            
+
         if limit > self.max_default_limit:
             error_values = [{"key": "limit", "value": self.limit}]
             error_object = error.get_error_object(error.err_limit_above_max + f"{self.max_default_limit}", error_values)
@@ -95,7 +95,7 @@ class Validator():
         error_objects, new_filters = [], {}
         if self.filters == "":
             return new_filters, error_objects
-        
+
         filters = self.filters.split(",")
 
         count_filters, duplicate_filters, invalid_filters = {}, [], []
@@ -151,7 +151,7 @@ class Validator():
         error_objects = []
         if self.countries == "":
             return [], error_objects
-        
+
         countries = self.countries.split(",")
 
 
@@ -205,7 +205,7 @@ class Validator():
         must_have_countries = convert(must_not_have_countries)
 
         return must_have_countries, []
-        
+
     def validate_length_of_courses(self):
         error_objects = []
         if self.length_of_course == "":
@@ -249,7 +249,7 @@ class Validator():
         query_params = {}
         if self.new_offset > 0:
             query_params['offset'] = self.new_offset
-        
+
         if self.new_limit > 0:
             query_params['limit'] = self.new_limit
 
