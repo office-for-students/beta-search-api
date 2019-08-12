@@ -1,19 +1,19 @@
 import json
 
-err_limit_wrong_type = "limit value needs to be a number"
-err_limit_negative = "limit needs to be a positive number, limit cannot be lower than 0"
-err_limit_above_max = "limit cannot exceed maximum value of "
-err_offset_wrong_type = "offset value needs to be a number"
-err_offset_negative = (
+ERR_LIMIT_WRONG_TYPE = "limit value needs to be a number"
+ERR_LIMIT_NEGATIVE = "limit needs to be a positive number, limit cannot be lower than 0"
+ERR_LIMIT_ABOVE_MAX = "limit cannot exceed maximum value of "
+ERR_OFFSET_WRONG_TYPE = "offset value needs to be a number"
+ERR_OFFSET_NEGATIVE = (
     "offset needs to be a positive number, offset cannot be lower than 0"
 )
-err_multiple_modes = "cannot have both part_time and full_time filters set"
-err_invalid_filters = "invalid filters"
-err_duplicate_filters = "use of the same filter option more than once"
-err_duplicate_countries = "use of the same countries more than once"
-err_invalid_countries = "invalid countries"
-err_length_of_course_wrong_type = "length_of_course values needs to be a number"
-err_length_of_course_out_of_range = (
+ERR_MULTIPLE_MODES = "cannot have both part_time and full_time filters set"
+ERR_INVALID_FILTERS = "invalid filters"
+ERR_DUPLICATE_FILTERS = "use of the same filter option more than once"
+ERR_DUPLICATE_COUNTRIES = "use of the same countries more than once"
+ERR_INVALID_COUNTRIES = "invalid countries"
+ERR_LENGTH_OF_COURSE_WRONG_TYPE = "length_of_course values needs to be a number"
+ERR_LENGTH_OF_COURSE_OUT_OF_RANGE = (
     "length_of_course values needs to be numbers between the range of 1 and 7"
 )
 

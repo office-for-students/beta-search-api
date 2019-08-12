@@ -60,20 +60,20 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         course = req.params.get("qc", "")
         institution = req.params.get("qi", "")
         filters = req.params.get("filters", "")
-        postcode = req.params.get("postcode", "")
+        postcode_and_distance = req.params.get("postcode", "")
         institutions = req.params.get("institutions", "")
         countries = req.params.get("countries", "")
         length_of_course = req.params.get("length_of_course", "")
 
         postcode_object = {}
         # Step 1 Lookup postcode if parameter is set
-        if postcode != "":
-            p = postcode.split(",")
+        if postcode_and_distance:
+            postcode_params = postcode_and_distance.split(",")
             postcode_object = search.find_postcode(
-                search_url, api_key, api_version, postcode_index_name, p[0]
+                search_url, api_key, api_version, postcode_index_name, postcode_params[0]
             )
 
-            postcode_object["distance"] = convert_to_km(p[1])
+            postcode_object["distance"] = convert_miles_to_km(postcode_params[1])
 
         # Step 2 - Validate query parameters
         query_params, error_objects = validation.check_query_parameters(
@@ -81,7 +81,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         )
 
         logging.info(f"query_params: {query_params}")
-        if len(error_objects) > 0:
+        if error_objects:
             logging.error(
                 f"invalid filter options\n filter_options:\
                            {params}\n"
@@ -151,10 +151,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         raise e
 
 
-def convert_to_km(distance):
+def convert_miles_to_km(distance_in_miles):
     try:
-        distance = str(float(distance) * 1.60934)
-        logging.info(f"type distance 1: {type(distance)}")
+        distance = str(float(distance_in_miles) * 1.60934)
 
         return distance
     except ValueError:

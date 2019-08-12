@@ -6,28 +6,21 @@ def build_course_search_query(
     course, institution, institutions, postcode_object, query_params
 ):
 
-    try:
-        query = Query(course, institution, institutions, postcode_object, query_params)
+    query = Query(course, institution, institutions, postcode_object, query_params)
 
-        query.build()
+    query.build()
 
-        return query.add_paging()
-    except Exception:
-        raise
+    return query.add_paging()
 
 
 def build_institution_search_query(
     course, institution, institutions, postcode_object, query_params
 ):
+    query = Query(course, institution, institutions, postcode_object, query_params)
 
-    try:
-        query = Query(course, institution, institutions, postcode_object, query_params)
+    query.build()
 
-        query.build()
-
-        return query.add_facet()
-    except Exception:
-        raise
+    return query.add_facet()
 
 
 class Query:
@@ -45,20 +38,20 @@ class Query:
         query = ""
         # Create search part of query
         search = list()
-        if self.institution != "":
+        if self.institution:
             search.append(self.institution)
 
-        if self.course != "":
+        if self.course:
             search.append(self.course)
 
-        if len(search) < 1:
-            query += "&search=*"
-        else:
+        if search:
             query += "&search=" + " + ".join(search)
+        else:
+            query += "&search=*"
 
         # Create filter part of query
         filters = list()
-        if "countries" in self.query_params and len(self.query_params["countries"]) > 0:
+        if "countries" in self.query_params and self.query_params["countries"]:
 
             countries = list()
             for country in self.query_params["countries"]:
@@ -92,7 +85,7 @@ class Query:
 
         if (
             "length_of_courses" in self.query_params
-            and len(self.query_params["length_of_courses"]) > 0
+            and self.query_params["length_of_courses"]
         ):
 
             loc = ",".join(self.query_params["length_of_courses"])

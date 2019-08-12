@@ -69,7 +69,7 @@ class Validator:
         if not is_integer:
             error_values = [{"key": "limit", "value": self.limit}]
             error_object = error.get_error_object(
-                error.err_limit_wrong_type, error_values
+                error.ERR_LIMIT_WRONG_TYPE, error_values
             )
             error_objects.append(error_object)
 
@@ -78,7 +78,7 @@ class Validator:
         if limit > self.max_default_limit:
             error_values = [{"key": "limit", "value": self.limit}]
             error_object = error.get_error_object(
-                error.err_limit_above_max + f"{self.max_default_limit}", error_values
+                error.ERR_LIMIT_ABOVE_MAX + f"{self.max_default_limit}", error_values
             )
             error_objects.append(error_object)
 
@@ -87,7 +87,7 @@ class Validator:
         if limit < 0:
             error_values = [{"key": "limit", "value": self.limit}]
             error_object = error.get_error_object(
-                error.err_limit_negative, error_values
+                error.ERR_LIMIT_NEGATIVE, error_values
             )
             error_objects.append(error_object)
 
@@ -101,7 +101,7 @@ class Validator:
         if not is_integer:
             error_values = [{"key": "offset", "value": self.offset}]
             error_object = error.get_error_object(
-                error.err_offset_wrong_type, error_values
+                error.ERR_OFFSET_WRONG_TYPE, error_values
             )
             error_objects.append(error_object)
 
@@ -110,7 +110,7 @@ class Validator:
         if offset < 0:
             error_values = [{"key": "offset", "value": self.offset}]
             error_object = error.get_error_object(
-                error.err_offset_negative, error_values
+                error.ERR_OFFSET_NEGATIVE, error_values
             )
             error_objects.append(error_object)
 
@@ -153,7 +153,7 @@ class Validator:
             error_values = [{"key": "filters", "value": value}]
 
             error_object = error.get_error_object(
-                error.err_duplicate_filters, error_values
+                error.ERR_DUPLICATE_FILTERS, error_values
             )
             error_objects.append(error_object)
 
@@ -162,7 +162,7 @@ class Validator:
             error_values = [{"key": "filters", "value": value}]
 
             error_object = error.get_error_object(
-                error.err_invalid_filters, error_values
+                error.ERR_INVALID_FILTERS, error_values
             )
             error_objects.append(error_object)
 
@@ -170,7 +170,7 @@ class Validator:
         if "part_time" in count_filters and "full_time" in count_filters:
             error_values = [{"key": "filters", "value": "part_time,full_time"}]
             error_object = error.get_error_object(
-                error.err_multiple_modes, error_values
+                error.ERR_MULTIPLE_MODES, error_values
             )
             error_objects.append(error_object)
 
@@ -220,7 +220,7 @@ class Validator:
             error_values = [{"key": "countries", "value": value}]
 
             error_object = error.get_error_object(
-                error.err_duplicate_countries, error_values
+                error.ERR_DUPLICATE_COUNTRIES, error_values
             )
             error_objects.append(error_object)
 
@@ -229,7 +229,7 @@ class Validator:
             error_values = [{"key": "countries", "value": value}]
 
             error_object = error.get_error_object(
-                error.err_invalid_countries, error_values
+                error.ERR_INVALID_COUNTRIES, error_values
             )
             error_objects.append(error_object)
 
@@ -271,7 +271,7 @@ class Validator:
             error_values = [{"key": "length_of_courses", "value": value}]
 
             error_object = error.get_error_object(
-                error.err_length_of_course_wrong_type, error_values
+                error.ERR_LENGTH_OF_COURSE_WRONG_TYPE, error_values
             )
             error_objects.append(error_object)
 
@@ -280,7 +280,7 @@ class Validator:
             error_values = [{"key": "length_of_courses", "value": value}]
 
             error_object = error.get_error_object(
-                error.err_length_of_course_out_of_range, error_values
+                error.ERR_LENGTH_OF_COURSE_OUT_OF_RANGE, error_values
             )
             error_objects.append(error_object)
 

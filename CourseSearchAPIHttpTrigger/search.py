@@ -1,7 +1,6 @@
 import logging
 import requests
 import os
-import json
 import sys
 import inspect
 
@@ -17,12 +16,9 @@ import exceptions
 
 def find_postcode(url, api_key, api_version, index_name, postcode):
 
-    try:
-        index = PostcodeIndex(url, api_key, api_version, index_name, postcode)
+    index = PostcodeIndex(url, api_key, api_version, index_name, postcode)
 
-        return index.get()
-    except Exception:
-        raise
+    return index.get_lat_long_for_postcode()
 
 
 class PostcodeIndex:
@@ -35,18 +31,18 @@ class PostcodeIndex:
         }
 
         # lowercase postcode and remove whitespace
-        self.p = postcode.lower().replace(" ", "")
-        self.query_string = "?api-version=" + api_version + "&search=" + self.p
+        self.postcode = postcode.lower().replace(" ", "")
+        self.query_string = "?api-version=" + api_version + "&search=" + self.postcode
         self.index_name = index_name
 
-    def get(self):
+    def get_lat_long_for_postcode(self):
         try:
             url = self.url + "/indexes/" + self.index_name + "/docs" + self.query_string
 
             response = requests.get(url, headers=self.headers)
             response_body = response.json()
 
-            postcode_object = {
+            postcode_lat_long = {
                 "latitude": response_body["value"][0]["latitude"],
                 "longitude": response_body["value"][0]["longitude"],
             }
@@ -62,20 +58,17 @@ class PostcodeIndex:
                 f"failed to find postcode in search documents\n\
                             index-name: {self.index_name}\n\
                             status: {response.status_code}\n\
-                            postcode: {self.p}"
+                            postcode: {self.postcode}"
             )
             return {}
 
-        return postcode_object
+        return postcode_lat_long
 
 
 def get_courses(url, api_key, api_version, index_name, search_query):
-    try:
         index = CourseIndex(url, api_key, api_version, index_name, search_query)
 
         return index.get()
-    except Exception:
-        raise
 
 
 class CourseIndex:

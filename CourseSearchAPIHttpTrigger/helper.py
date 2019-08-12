@@ -10,7 +10,7 @@ def get_offset_and_limit(facets, requested_limit, requested_offset):
     for facet in facets:
         if total_institutions < lower_range:
             offset += facet["count"]
-        elif total_institutions >= lower_range and total_institutions < upper_range:
+        elif lower_range <= total_institutions < upper_range:
             limit += facet["count"]
 
         total_institutions += 1
