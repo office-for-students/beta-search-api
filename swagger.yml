@@ -91,15 +91,14 @@ components:
       required: [
         country
         distance_learning
-        english_title
         foundation_year
         honours_award
         kis_course_id
         length_of_course
-        link
         mode
         qualificatuon
         sandwich_year
+        title
         year_abroad
       ]
       type: object
@@ -116,9 +115,6 @@ components:
         distance_learning:
           description: "The code representing whether the course is offered wholly through distance learning."
           type: string
-        english_title:
-          description: "An english version of the title given by institution."
-          type: string
         foundation_year:
           description: "The availability of a foundation year."
           type: string
@@ -131,11 +127,11 @@ components:
         length_of_course:
           description: "The total number of stages for the course."
           type: string
-        link:
-          description: "A link to the course page"
-          type: string
-        location:
-          $ref: '#/components/schemas/location'
+        locations:
+          description: ""
+          type: array
+          items:
+            $ref: '#/components/schemas/location'
         mode:
           description: "Indicator to represent if a course is advertised as full-time, part-time or both."
           type: string
@@ -144,9 +140,20 @@ components:
         sandwich_year:
           description: "The availability of a sandwich year/work placement."
           type: string
-        welsh_title:
-          description: "A welsh version of the title given by institution."
-          type: string
+        
+        title:
+          description: "The title given to course by institution."
+          required: [
+            english
+          ]
+          type: object
+          properties:
+            english:
+              description: "An english version of the title given by institution. Also known as 'TITLE' across other available data sources."
+              type: string
+            welsh:
+              description: "A welsh version of the title given by institution. Also known as 'TITLEW' across other available data sources."
+              type: string
         year_abroad:
           description: "The availability of a year abroad."
           type: string
@@ -154,9 +161,7 @@ components:
       description: "An object containing information on the teaching UK provider."
       required: [
         public_ukprn_name,
-        public_ukprn,
-        ukprn_name,
-        ukprn
+        public_ukprn
       ]
       type: object
       properties:
@@ -166,55 +171,23 @@ components:
         public_ukprn:
           description: "Publication UK provider reference number for where the course is primarily taught. Known as 'PUBUKPRN' across csvs."
           type: string
-        ukprn_name:
-          description: "The name of the UK provider registered on the UK Register of Learning Providers (UKRLP)."
-          type: string
-        ukprn:
-          description: "UK provider reference number, which is the unique identifier allocated to providers by the UK Register of Learning Providers (UKRLP). Known as 'UKPRN' across csvs."
-          type: string
     location:
       description: "Sub document containing information on course location."
       required: [
-        latitude,
-        longitude
+        english
       ]
       type: object
       properties:
-        latitude:
-          description: "Latitude reference point for the teaching location."
+        english:
+          description: "The english name for teaching location."
           type: string
-        longitude:
-          description: "Longitude reference point for the teaching location."
+        welsh:
+          description: "The welsh name for teaching location."
           type: string
     qualification:
-      description: "Further details of the qualification of course."
-      required: [
-        code,
-        label,
-        level,
-        name
-      ]
-      type: object
-      properties:
-        code:
-          description: "The code referencing course qualification. Known as 'KISAIM' in KIS course csv."
-          type: string
-          example: "021"
-        label:
-          description: "The short name (alias) of the course qualification."
-          type: string
-          example: "BSc"
-        level:
-          description: "The qualificatin level for course."
-          type: string
-          enum: [
-            "F",
-            "U"
-          ]
-        name:
-          description: "The long name of the course qualification."
-          type: string
-          example: "Bachelor of Science"
+      description: "The short name (alias) of the course qualification."
+      type: string
+      example: "BSc"
     errorResponse:
       description: "The error response body, contains specific details of why the request failed"
       type: object
