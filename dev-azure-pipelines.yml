@@ -5,14 +5,7 @@ trigger:
 - develop
 
 # The pr from branches to be included or excluded to trigger build
-pr:
-  branches:
-    exclude:
-    - feature/*
-    - refactor/*
-    - bug/*
-    - bugfix/*
-    
+pr: none
 
 # Build Agent Resources
 pool:
