@@ -1,6 +1,3 @@
-import logging
-
-
 def get_offset_and_limit(facets, requested_limit, requested_offset):
     limit = 0
     offset = 0
@@ -15,7 +12,7 @@ def get_offset_and_limit(facets, requested_limit, requested_offset):
             offset += facet["count"]
         elif total_institutions >= lower_range and total_institutions < upper_range:
             limit += facet["count"]
-        
+
         total_institutions += 1
         total_courses += facet["count"]
 
@@ -23,22 +20,19 @@ def get_offset_and_limit(facets, requested_limit, requested_offset):
 
 
 def group_courses_by_institution(search_results, counts, limit, offset):
-    logging.info(f"search_results: {search_results}")
-
     courses = search_results["value"]
 
     institutions = {}
     for c in courses:
         course = c["course"]
-        logging.warning(f"course:{course}")
-        
+
         pub_ukprn = course["institution"]["pub_ukprn"]
         if pub_ukprn not in institutions:
             institution_body = {
                 "pub_ukprn_name": course["institution"]["pub_ukprn_name"],
                 "pub_ukprn": pub_ukprn,
                 "courses": [],
-                "number_of_courses": 0
+                "number_of_courses": 0,
             }
             institutions[pub_ukprn] = institution_body
 
@@ -58,7 +52,7 @@ def group_courses_by_institution(search_results, counts, limit, offset):
             "qualification": course["qualification"]["label"],
             "sandwich_year": course["sandwich_year"]["label"],
             "title": course["title"],
-            "year_abroad": course["year_abroad"]["label"]
+            "year_abroad": course["year_abroad"]["label"],
         }
 
         institution = institutions.get(pub_ukprn)
@@ -75,7 +69,7 @@ def group_courses_by_institution(search_results, counts, limit, offset):
         "number_of_items": len(institutions),
         "offset": offset,
         "total_number_of_courses": counts["courses"],
-        "total_results": counts["institutions"]
+        "total_results": counts["institutions"],
     }
 
     return results

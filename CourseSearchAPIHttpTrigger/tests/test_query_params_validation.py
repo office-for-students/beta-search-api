@@ -3,8 +3,7 @@ import os
 import sys
 import inspect
 
-CURRENTDIR = os.path.dirname(
-    os.path.abspath(inspect.getfile(inspect.currentframe())))
+CURRENTDIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
@@ -13,8 +12,9 @@ from validation import (
     check_country_is_valid,
     Validator,
     validate_filter_options,
-    is_int
+    is_int,
 )
+
 
 class TestValidateLimit(unittest.TestCase):
     def test_when_limit_is_within_max_limit(self):
@@ -33,14 +33,12 @@ class TestValidateLimit(unittest.TestCase):
         validator = Validator("", "", "", limit, max_limit, "0")
 
         expected_result = 200
-        expected_error_object = [{
-            'error': "limit cannot exceed maximum value of 100",
-            'error_values': [
-                {
-                    "limit": "200"
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "limit cannot exceed maximum value of 100",
+                "error_values": [{"limit": "200"}],
+            }
+        ]
         output_result, output_error_object = validator.validate_limit()
 
         self.assertEqual(expected_result, output_result)
@@ -52,14 +50,12 @@ class TestValidateLimit(unittest.TestCase):
         validator = Validator("", "", "", limit, max_limit, "0")
 
         expected_result = -20
-        expected_error_object = [{
-            'error': "limit needs to be a positive number, limit cannot be lower than 0",
-            'error_values': [
-                {
-                    "limit": "-20"
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "limit needs to be a positive number, limit cannot be lower than 0",
+                "error_values": [{"limit": "-20"}],
+            }
+        ]
         output_result, output_error_object = validator.validate_limit()
 
         self.assertEqual(expected_result, output_result)
@@ -71,14 +67,12 @@ class TestValidateLimit(unittest.TestCase):
         validator = Validator("", "", "", limit, max_limit, "0")
 
         expected_result = 0
-        expected_error_object = [{
-            'error': "limit value needs to be a number",
-            'error_values': [
-                {
-                    "limit": limit
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "limit value needs to be a number",
+                "error_values": [{"limit": limit}],
+            }
+        ]
         output_result, output_error_object = validator.validate_limit()
 
         self.assertEqual(expected_result, output_result)
@@ -101,14 +95,12 @@ class TestValidateOffset(unittest.TestCase):
         validator = Validator("", "", "", "0", 100, offset)
 
         expected_result = -20
-        expected_error_object = [{
-            'error': "offset needs to be a positive number, offset cannot be lower than 0",
-            'error_values': [
-                {
-                    "offset": offset
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "offset needs to be a positive number, offset cannot be lower than 0",
+                "error_values": [{"offset": offset}],
+            }
+        ]
         output_result, output_error_object = validator.validate_offset()
 
         self.assertEqual(expected_result, output_result)
@@ -119,14 +111,12 @@ class TestValidateOffset(unittest.TestCase):
         validator = Validator("", "", "", "0", 100, offset)
 
         expected_result = 0
-        expected_error_object = [{
-            'error': "offset value needs to be a number",
-            'error_values': [
-                {
-                    "offset": offset
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "offset value needs to be a number",
+                "error_values": [{"offset": offset}],
+            }
+        ]
         output_result, output_error_object = validator.validate_offset()
 
         self.assertEqual(expected_result, output_result)
@@ -174,7 +164,7 @@ class TestValidateFilters(unittest.TestCase):
             "full_time": False,
             "honours_award": True,
             "sandwich_year": True,
-            "year_abroad": True
+            "year_abroad": True,
         }
 
         self.assertEqual(expected_filters, output_filters)
@@ -185,14 +175,12 @@ class TestValidateFilters(unittest.TestCase):
         validator = Validator("", filters, "", "0", 100, "0")
 
         output_filters, output_error_object = validator.validate_filters()
-        expected_error_object = [{
-            'error': "use of the same filter option more than once",
-            'error_values': [
-                {
-                    "filters": "distance_learning"
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "use of the same filter option more than once",
+                "error_values": [{"filters": "distance_learning"}],
+            }
+        ]
 
         self.assertEqual({}, output_filters)
         self.assertEqual(expected_error_object, output_error_object)
@@ -202,14 +190,12 @@ class TestValidateFilters(unittest.TestCase):
         validator = Validator("", filters, "", "0", 100, "0")
 
         output_filters, output_error_object = validator.validate_filters()
-        expected_error_object = [{
-            'error': "invalid filters",
-            'error_values': [
-                {
-                    "filters": "salary,PaRt-Time"
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "invalid filters",
+                "error_values": [{"filters": "salary,PaRt-Time"}],
+            }
+        ]
 
         self.assertEqual({}, output_filters)
         self.assertEqual(expected_error_object, output_error_object)
@@ -219,14 +205,12 @@ class TestValidateFilters(unittest.TestCase):
         validator = Validator("", filters, "", "0", 100, "0")
 
         output_filters, output_error_object = validator.validate_filters()
-        expected_error_object = [{
-            'error': "cannot have both part_time and full_time filters set",
-            'error_values': [
-                {
-                    "filters": "part_time,full_time"
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "cannot have both part_time and full_time filters set",
+                "error_values": [{"filters": "part_time,full_time"}],
+            }
+        ]
 
         self.assertEqual({}, output_filters)
         self.assertEqual(expected_error_object, output_error_object)
@@ -366,14 +350,12 @@ class TestValidateCountries(unittest.TestCase):
         validator = Validator(countries, "", "", "0", 100, "0")
 
         output_countries, output_error_object = validator.validate_countries()
-        expected_error_object = [{
-            'error': "use of the same countries more than once",
-            'error_values': [
-                {
-                    "countries": "england"
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "use of the same countries more than once",
+                "error_values": [{"countries": "england"}],
+            }
+        ]
 
         self.assertEqual([], output_countries)
         self.assertEqual(expected_error_object, output_error_object)
@@ -383,14 +365,12 @@ class TestValidateCountries(unittest.TestCase):
         validator = Validator(countries, "", "", "0", 100, "0")
 
         output_countries, output_error_object = validator.validate_countries()
-        expected_error_object = [{
-            'error': "invalid countries",
-            'error_values': [
-                {
-                    "countries": "bosnia,photosynthesis"
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "invalid countries",
+                "error_values": [{"countries": "bosnia,photosynthesis"}],
+            }
+        ]
 
         self.assertEqual([], output_countries)
         self.assertEqual(expected_error_object, output_error_object)
@@ -502,48 +482,46 @@ class TestValidateLengthOfCourse(unittest.TestCase):
         validator = Validator("", "", length_of_courses, "0", 100, "0")
 
         output_lengths, output_error_object = validator.validate_length_of_courses()
-        expected_error_object = [{
-            'error': "length_of_course values needs to be a number",
-            'error_values': [
-                {
-                    "length_of_courses": "four"
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "length_of_course values needs to be a number",
+                "error_values": [{"length_of_courses": "four"}],
+            }
+        ]
 
         self.assertEqual([], output_lengths)
         self.assertEqual(expected_error_object, output_error_object)
 
-    def test_when_length_of_courses_is_above_maximum_number_of_years_returns_error(self):
+    def test_when_length_of_courses_is_above_maximum_number_of_years_returns_error(
+        self
+    ):
         length_of_courses = "8"
         validator = Validator("", "", length_of_courses, "0", 100, "0")
 
         output_lengths, output_error_object = validator.validate_length_of_courses()
-        expected_error_object = [{
-            'error': "length_of_course values needs to be numbers between the range of 1 and 7",
-            'error_values': [
-                {
-                    "length_of_courses": "8"
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "length_of_course values needs to be numbers between the range of 1 and 7",
+                "error_values": [{"length_of_courses": "8"}],
+            }
+        ]
 
         self.assertEqual([], output_lengths)
         self.assertEqual(expected_error_object, output_error_object)
 
-    def test_when_length_of_courses_is_above_minimum_number_of_years_returns_error(self):
+    def test_when_length_of_courses_is_above_minimum_number_of_years_returns_error(
+        self
+    ):
         length_of_courses = "0"
         validator = Validator("", "", length_of_courses, "0", 100, "0")
 
         output_lengths, output_error_object = validator.validate_length_of_courses()
-        expected_error_object = [{
-            'error': "length_of_course values needs to be numbers between the range of 1 and 7",
-            'error_values': [
-                {
-                    "length_of_courses": "0"
-                }
-            ]
-        }]
+        expected_error_object = [
+            {
+                "error": "length_of_course values needs to be numbers between the range of 1 and 7",
+                "error_values": [{"length_of_courses": "0"}],
+            }
+        ]
 
         self.assertEqual([], output_lengths)
         self.assertEqual(expected_error_object, output_error_object)
@@ -553,7 +531,7 @@ class TestValidate(unittest.TestCase):
     def test_when_all_query_params_are_set(self):
         limit = 5
         offset = "30"
-        filters = "distance_learning,honours_award,-foundation_year,sandwich_year,-year_abroad,full_time" 
+        filters = "distance_learning,honours_award,-foundation_year,sandwich_year,-year_abroad,full_time"
         length_of_courses = "3,4"
         countries = "england,wales"
         validator = Validator(countries, filters, length_of_courses, limit, 100, offset)
@@ -568,7 +546,7 @@ class TestValidate(unittest.TestCase):
             "limit": 5,
             "offset": 30,
             "sandwich_year": True,
-            "year_abroad": False
+            "year_abroad": False,
         }
         output_result, output_error_object = validator.validate()
 
@@ -578,7 +556,7 @@ class TestValidate(unittest.TestCase):
     def test_when_all_query_params_are_bad(self):
         limit = 200
         offset = "-30"
-        filters = "illusion,Part_Time,full_time,-full_time" 
+        filters = "illusion,Part_Time,full_time,-full_time"
         length_of_courses = "-2,8,twenty"
         countries = "bolivia,-england,england"
         validator = Validator(countries, filters, length_of_courses, limit, 100, offset)
@@ -587,30 +565,34 @@ class TestValidate(unittest.TestCase):
         output_result, output_error_object = validator.validate()
         expected_error_object = [
             {
-                'error': 'limit cannot exceed maximum value of 100', 
-                'error_values': [{'limit': 200}]
-            }, {
-                'error': 'offset needs to be a positive number, offset cannot be lower than 0',
-                'error_values': [{'offset': '-30'}]
-            }, {
-                'error': 'use of the same filter option more than once',
-                'error_values': [{'filters': 'full_time'}]
-            }, {
-                'error': 'invalid filters',
-                'error_values': [{'filters': 'illusion,Part_Time'}]
-            }, {
-                'error': 'use of the same countries more than once',
-                'error_values': [{'countries': 'england'}]
-            }, {
-                'error': 'invalid countries',
-                'error_values': [{'countries': 'bolivia'}]
-            }, {
-                'error': 'length_of_course values needs to be a number',
-                'error_values': [{'length_of_courses': 'twenty'}]
-            }, {
-                'error': 'length_of_course values needs to be numbers between the range of 1 and 7',
-                'error_values': [{'length_of_courses': '-2,8'}]
-            }
+                "error": "limit cannot exceed maximum value of 100",
+                "error_values": [{"limit": 200}],
+            },
+            {
+                "error": "offset needs to be a positive number, offset cannot be lower than 0",
+                "error_values": [{"offset": "-30"}],
+            },
+            {
+                "error": "use of the same filter option more than once",
+                "error_values": [{"filters": "full_time"}],
+            },
+            {
+                "error": "invalid filters",
+                "error_values": [{"filters": "illusion,Part_Time"}],
+            },
+            {
+                "error": "use of the same countries more than once",
+                "error_values": [{"countries": "england"}],
+            },
+            {"error": "invalid countries", "error_values": [{"countries": "bolivia"}]},
+            {
+                "error": "length_of_course values needs to be a number",
+                "error_values": [{"length_of_courses": "twenty"}],
+            },
+            {
+                "error": "length_of_course values needs to be numbers between the range of 1 and 7",
+                "error_values": [{"length_of_courses": "-2,8"}],
+            },
         ]
 
         print(f"output: {output_error_object}")
