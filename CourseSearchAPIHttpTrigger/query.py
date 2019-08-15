@@ -64,24 +64,24 @@ class Query:
 
         if "distance_learning" in self.query_params:
             if self.query_params["distance_learning"]:
-                filters.append("course/distance_learning/code ne '0'")
+                filters.append("course/distance_learning/code ne 0")
             else:
-                filters.append("course/distance_learning/code ne '1'")
+                filters.append("course/distance_learning/code ne 1")
 
         if "foundation_year" in self.query_params:
             if self.query_params["foundation_year"]:
-                filters.append("course/foundation_year_avaialbility/code ne '0'")
+                filters.append("course/foundation_year_avaialbility/code ne 0")
             else:
-                filters.append("course/foundation_year_availability/code ne '2'")
+                filters.append("course/foundation_year_availability/code ne 2")
 
         if "full_time" in self.query_params:
-            filters.append("course/mode/code eq '1'")
+            filters.append("course/mode/code eq 1")
 
         if "honours_award" in self.query_params:
             if self.query_params["honours_award"]:
-                filters.append("course/honours_award_provision/code eq '1'")
+                filters.append("course/honours_award_provision/code eq 1")
             else:
-                filters.append("course/honours_award_provision/code eq '0'")
+                filters.append("course/honours_award_provision/code eq 0")
 
         if (
             "length_of_courses" in self.query_params
@@ -92,19 +92,19 @@ class Query:
             filters.append("search.in(course/length_of_course/code. '" + loc + "')")
 
         if "part_time" in self.query_params:
-            filters.append("course/mode/code eq '2'")
+            filters.append("course/mode/code eq 2")
 
         if "sandwich_year" in self.query_params:
             if self.query_params["sandwich_year"]:
-                filters.append("course/sandwich_year/code ne '0'")
+                filters.append("course/sandwich_year/code ne 0")
             else:
-                filters.append("course/sandwich_year/code ne '2'")
+                filters.append("course/sandwich_year/code ne 2")
 
         if "year_abroad" in self.query_params:
             if self.query_params["year_abroad"]:
-                filters.append("course/year_abroad/code ne '0'")
+                filters.append("course/year_abroad/code ne 0")
             else:
-                filters.append("course/year_abroad/code ne '2'")
+                filters.append("course/year_abroad/code ne 2")
 
         if self.institutions != "":
             institutions = self.institutions.split(",")
