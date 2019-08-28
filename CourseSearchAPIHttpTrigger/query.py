@@ -58,7 +58,7 @@ class Query:
                 countries.append("course/country/code eq '" + country + "'")
 
             if len(countries) > 1:
-                filters.append(" or ".join(countries))
+                filters.append("("+ " or ".join(countries) + ")")
             else:
                 filters.append(countries[0])
 
@@ -122,7 +122,7 @@ class Query:
                     )
 
             if len(institution_list) > 1:
-                filters.append(" or ".join(institution_list))
+                filters.append("(" + " or ".join(institution_list) + ")")
             else:
                 filters.append(institution_list[0])
 
