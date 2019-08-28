@@ -2,6 +2,13 @@ beta-search-api
 =================
 Service to allow api customers to search for course resources.
 
+Builds
+
+master - [![Build Status](https://dev.azure.com/ofsbeta/discoverUni/_apis/build/status/prod/prod-search-api?branchName=master)](https://dev.azure.com/ofsbeta/discoverUni/_build/latest?definitionId=17&branchName=master)
+
+develop - [![Build Status](https://dev.azure.com/ofsbeta/discoverUni/_apis/build/status/dev/dev-search-api?branchName=develop)](https://dev.azure.com/ofsbeta/discoverUni/_build/latest?definitionId=31&branchName=develop)
+
+
 ### Configuration Settings
 
 Add the following to your local.settings.json:
