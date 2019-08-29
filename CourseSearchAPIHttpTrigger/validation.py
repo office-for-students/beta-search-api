@@ -58,7 +58,7 @@ class Validator:
         self.new_offset, o_error_objects = self.validate_offset()
         self.new_filters, f_error_objects = self.validate_filters()
         self.new_countries, c_error_objects = self.validate_countries()
-        self.new_length_of_course, loc_error_objects = self.validate_length_of_courses()
+        self.new_length_of_course, loc_error_objects = self.validate_length_of_course()
 
         # Combine error objects
         error_objects.extend(
@@ -259,7 +259,7 @@ class Validator:
 
         return must_have_countries, []
 
-    def validate_length_of_courses(self):
+    def validate_length_of_course(self):
         error_objects = []
         if self.length_of_course == "":
             return [], []
