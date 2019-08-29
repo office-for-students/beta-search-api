@@ -64,23 +64,33 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         institutions = req.params.get("institutions", "")
         countries = req.params.get("countries", "")
         length_of_course = req.params.get("length_of_course", "")
+        subjects = req.params.get("subjects", "")
 
         postcode_object = {}
         # Step 1 Lookup postcode if parameter is set
         if postcode_and_distance:
             postcode_params = postcode_and_distance.split(",")
             postcode_object = search.find_postcode(
-                search_url, api_key, api_version, postcode_index_name, postcode_params[0]
+                search_url,
+                api_key,
+                api_version,
+                postcode_index_name,
+                postcode_params[0],
             )
 
             postcode_object["distance"] = convert_miles_to_km(postcode_params[1])
 
         # Step 2 - Validate query parameters
         query_params, error_objects = validation.check_query_parameters(
-            countries, filters, length_of_course, limit, max_default_limit, offset
+            countries,
+            filters,
+            length_of_course,
+            subjects,
+            limit,
+            max_default_limit,
+            offset,
         )
 
-        logging.info(f"query_params: {query_params}")
         if error_objects:
             logging.error(
                 f"invalid filter options\n filter_options:\
@@ -109,6 +119,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             search_url, api_key, api_version, course_index_name, search_query
         )
 
+        logging.info(f"response:{response_with_facets}")
         facets = response_with_facets.json()
 
         counts = {}

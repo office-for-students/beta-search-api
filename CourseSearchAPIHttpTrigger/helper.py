@@ -51,6 +51,7 @@ def group_courses_by_institution(search_results, counts, limit, offset):
             "mode": course["mode"]["label"],
             "qualification": course["qualification"]["label"],
             "sandwich_year": course["sandwich_year"]["label"],
+            "subjects": course["subjects"],
             "title": course["title"],
             "year_abroad": course["year_abroad"]["label"],
         }
