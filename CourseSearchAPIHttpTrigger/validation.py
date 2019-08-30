@@ -14,12 +14,18 @@ from models import error
 
 
 def check_query_parameters(
-    countries, filters, length_of_course, limit, max_default_limit, offset
+    countries, filters, length_of_course, subjects, limit, max_default_limit, offset
 ):
 
     try:
         validator = Validator(
-            countries, filters, length_of_course, limit, max_default_limit, offset
+            countries,
+            filters,
+            length_of_course,
+            subjects,
+            limit,
+            max_default_limit,
+            offset,
         )
 
         return validator.validate()
@@ -29,7 +35,14 @@ def check_query_parameters(
 
 class Validator:
     def __init__(
-        self, countries, filters, length_of_course, limit, max_default_limit, offset
+        self,
+        countries,
+        filters,
+        length_of_course,
+        subjects,
+        limit,
+        max_default_limit,
+        offset,
     ):
         self.max_default_limit = max_default_limit
         self.limit = limit
@@ -37,6 +50,7 @@ class Validator:
         self.filters = filters
         self.length_of_course = length_of_course
         self.countries = countries
+        self.subjects = subjects
 
     def validate(self):
         error_objects = []
@@ -44,9 +58,7 @@ class Validator:
         self.new_offset, o_error_objects = self.validate_offset()
         self.new_filters, f_error_objects = self.validate_filters()
         self.new_countries, c_error_objects = self.validate_countries()
-        self.new_length_of_courses, loc_error_objects = (
-            self.validate_length_of_courses()
-        )
+        self.new_length_of_course, loc_error_objects = self.validate_length_of_course()
 
         # Combine error objects
         error_objects.extend(
@@ -247,14 +259,14 @@ class Validator:
 
         return must_have_countries, []
 
-    def validate_length_of_courses(self):
+    def validate_length_of_course(self):
         error_objects = []
         if self.length_of_course == "":
             return [], []
 
         loc = self.length_of_course.split(",")
 
-        length_of_courses, invalid_type, out_of_range = [], [], []
+        length_of_course, invalid_type, out_of_range = [], [], []
         for length in loc:
             length_is_int, l = is_int(length)
             if not length_is_int:
@@ -264,11 +276,11 @@ class Validator:
             if l < 1 or l > 7:
                 out_of_range.append(length)
 
-            length_of_courses.append(l)
+            length_of_course.append(str(l))
 
         if len(invalid_type) > 0:
             value = ",".join(invalid_type)
-            error_values = [{"key": "length_of_courses", "value": value}]
+            error_values = [{"key": "length_of_course", "value": value}]
 
             error_object = error.get_error_object(
                 error.ERR_LENGTH_OF_COURSE_WRONG_TYPE, error_values
@@ -277,7 +289,7 @@ class Validator:
 
         if len(out_of_range) > 0:
             value = ",".join(out_of_range)
-            error_values = [{"key": "length_of_courses", "value": value}]
+            error_values = [{"key": "length_of_course", "value": value}]
 
             error_object = error.get_error_object(
                 error.ERR_LENGTH_OF_COURSE_OUT_OF_RANGE, error_values
@@ -288,7 +300,7 @@ class Validator:
         if len(error_objects) > 0:
             return [], error_objects
 
-        return length_of_courses, []
+        return length_of_course, []
 
     def build_query_params(self):
         query_params = {}
@@ -303,8 +315,12 @@ class Validator:
         if len(self.new_countries) > 0:
             query_params["countries"] = self.new_countries
 
-        if len(self.new_length_of_courses) > 0:
-            query_params["length_of_courses"] = self.new_length_of_courses
+        if len(self.new_length_of_course) > 0:
+            query_params["length_of_course"] = self.new_length_of_course
+
+        if self.subjects != "":
+            subjects = self.subjects.upper().split(",")
+            query_params["subjects"] = subjects
 
         self.query_params = query_params
 

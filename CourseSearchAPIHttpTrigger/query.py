@@ -58,7 +58,7 @@ class Query:
                 countries.append("course/country/code eq '" + country + "'")
 
             if len(countries) > 1:
-                filters.append("("+ " or ".join(countries) + ")")
+                filters.append("(" + " or ".join(countries) + ")")
             else:
                 filters.append(countries[0])
 
@@ -84,12 +84,13 @@ class Query:
                 filters.append("course/honours_award_provision/code eq 0")
 
         if (
-            "length_of_courses" in self.query_params
-            and self.query_params["length_of_courses"]
+            "length_of_course" in self.query_params
+            and self.query_params["length_of_course"]
         ):
-
-            loc = ",".join(self.query_params["length_of_courses"])
-            filters.append("search.in(course/length_of_course/code. '" + loc + "')")
+            loc = ",".join(self.query_params["length_of_course"])
+            filters.append(
+                "search.in(course/length_of_course/code, '" + str(loc) + "')"
+            )
 
         if "part_time" in self.query_params:
             filters.append("course/mode/code eq 2")
@@ -99,6 +100,17 @@ class Query:
                 filters.append("course/sandwich_year/code ne 0")
             else:
                 filters.append("course/sandwich_year/code ne 2")
+
+        if "subjects" in self.query_params and self.query_params["subjects"]:
+            subjects = list()
+
+            for subject in self.query_params["subjects"]:
+                subjects.append("s/code eq '" + subject + "'")
+
+            if len(subjects) > 1:
+                filters.append("course/subjects/any(s: " + " or ".join(subjects) + ")")
+            else:
+                filters.append("course/subjects/any(s: " + subjects[0] + ")")
 
         if "year_abroad" in self.query_params:
             if self.query_params["year_abroad"]:
