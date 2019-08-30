@@ -18,6 +18,7 @@ paths:
         - $ref: '#/components/parameters/filters'
         - $ref: '#/components/parameters/countries'
         - $ref: '#/components/parameters/institutions'
+        - $ref: '#/components/parameters/subjects'
         - $ref: '#/components/parameters/postcode'
       responses:
         200:
@@ -128,7 +129,7 @@ components:
           description: "The total number of stages for the course."
           type: string
         locations:
-          description: ""
+          description: "A list of teaching location that the course is taught at."
           type: array
           items:
             $ref: '#/components/schemas/location'
@@ -140,7 +141,11 @@ components:
         sandwich_year:
           description: "The availability of a sandwich year/work placement."
           type: string
-        
+        subjects:
+          description: "A list of subjects that the course relates too."
+          type: array
+          items:
+            $ref: '#/components/schemas/subject'
         title:
           description: "The title given to course by institution."
           required: [
@@ -188,6 +193,33 @@ components:
       description: "The short name (alias) of the course qualification."
       type: string
       example: "BSc"
+    subject:
+      description: "Sub document containing information on subject."
+      required: [
+        code
+        english
+        level
+      ]
+      type: object
+      properties:
+        code:
+          description: "The code that uniquely identifies subject."
+          type: string
+          example: "CAH09"
+        english:
+          description: "The english name for subject."
+          type: string
+        level:
+          description: "The hierarchy (also known as aggregation) level of subject."
+          type: integer
+          enum: [
+            1,
+            2,
+            3
+          ]
+        welsh:
+          description: "The welsh name for subject."
+          type: string
     errorResponse:
       description: "The error response body, contains specific details of why the request failed"
       type: object
@@ -279,6 +311,15 @@ components:
       example: "Didsbury Manchester,Roehampton University"
       in: query
       name: institutions
+      required: false
+      schema:
+        type: string
+    subjects:
+      description: |
+        A commar separated list of subjects' to filter by. Only subject codes which directly match the stored values will be returned ignoring casing
+      example: "CAH09-01-01,cah11-01-01"
+      in: query
+      name: subjects
       required: false
       schema:
         type: string
