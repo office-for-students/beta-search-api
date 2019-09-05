@@ -1,3 +1,14 @@
+import os
+import sys
+import inspect
+
+# TODO investigate setting PATH in Azure so can remove this
+CURRENTDIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+PARENTDIR = os.path.dirname(CURRENTDIR)
+sys.path.insert(0, CURRENTDIR)
+sys.path.insert(0, PARENTDIR)
+
+
 def get_offset_and_limit(facets, requested_limit, requested_offset):
     limit = 0
     offset = 0
@@ -74,3 +85,34 @@ def group_courses_by_institution(search_results, counts, limit, offset):
     }
 
     return results
+
+
+def remove_conjunctions_from_searchable_fields(course, institution):
+    if course != "":
+        course = remove_conjunctions(course)
+
+    if institution != "":
+        institution = remove_conjunctions(institution)
+
+    return course, institution
+
+
+conjunctions = {
+    "&",
+    "and",
+    "for",
+    "in",
+    "the",
+    "with"
+}
+
+
+def remove_conjunctions(searchable_field):
+    dict_of_string_parts = searchable_field.split(" ")
+
+    list_of_string_parts = []
+    for string_part in dict_of_string_parts:
+        if string_part.lower() not in conjunctions:
+            list_of_string_parts.append(string_part)
+
+    return " ".join(list_of_string_parts)
