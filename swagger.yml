@@ -292,7 +292,7 @@ components:
         type: string
     countries:
       description: |
-        A commar separated list of countries' to filter by. Only the following enumerations are filterable (case insensitive):
+        A comma separated list of countries' to filter by. Only the following enumerations are filterable (case insensitive):
           * england
           * northern_ireland
           * wales
@@ -307,7 +307,7 @@ components:
         type: string
     institutions:
       description: |
-        A commar separated list of institutions' to filter by. Only institutions which directly match the stored values will be returned ignoring casing
+        A comma separated list of institutions' to filter by. Only institutions which directly match the stored values will be returned ignoring casing
       example: "Didsbury Manchester,Roehampton University"
       in: query
       name: institutions
@@ -316,7 +316,7 @@ components:
         type: string
     subjects:
       description: |
-        A commar separated list of subjects' to filter by. Only subject codes which directly match the stored values will be returned ignoring casing
+        A comma separated list of subjects' to filter by. Only subject codes which directly match the stored values will be returned ignoring casing
       example: "CAH09-01-01,cah11-01-01"
       in: query
       name: subjects
@@ -325,7 +325,7 @@ components:
         type: string
     filters:
       description: |
-        A commar separated list of filters' to filter all courses by. Only the following enumerations are filterable (case insensitive):
+        A comma separated list of filters' to filter all courses by. Only the following enumerations are filterable (case insensitive):
           * part_time
           * full_time
           * distance_learning
