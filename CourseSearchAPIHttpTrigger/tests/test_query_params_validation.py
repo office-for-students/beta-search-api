@@ -492,9 +492,7 @@ class TestValidateLengthOfCourse(unittest.TestCase):
         self.assertEqual([], output_lengths)
         self.assertEqual(expected_error_object, output_error_object)
 
-    def test_when_length_of_course_is_above_maximum_number_of_years_returns_error(
-        self
-    ):
+    def test_when_length_of_course_is_above_maximum_number_of_years_returns_error(self):
         length_of_course = "8"
         validator = Validator("", "", length_of_course, "", "0", 100, "0")
 
@@ -509,9 +507,7 @@ class TestValidateLengthOfCourse(unittest.TestCase):
         self.assertEqual([], output_lengths)
         self.assertEqual(expected_error_object, output_error_object)
 
-    def test_when_length_of_course_is_above_minimum_number_of_years_returns_error(
-        self
-    ):
+    def test_when_length_of_course_is_above_minimum_number_of_years_returns_error(self):
         length_of_course = "0"
         validator = Validator("", "", length_of_course, "", "0", 100, "0")
 
@@ -535,7 +531,9 @@ class TestValidate(unittest.TestCase):
         length_of_course = "3,4"
         countries = "england,wales"
         subjects = "CAH09-01-01,CAH09-01-02"
-        validator = Validator(countries, filters, length_of_course, subjects, limit, 100, offset)
+        validator = Validator(
+            countries, filters, length_of_course, subjects, limit, 100, offset
+        )
 
         expected_result = {
             "countries": ["XF", "XI"],
@@ -548,7 +546,7 @@ class TestValidate(unittest.TestCase):
             "offset": 30,
             "sandwich_year": True,
             "subjects": ["CAH09-01-01", "CAH09-01-02"],
-            "year_abroad": False
+            "year_abroad": False,
         }
         output_result, output_error_object = validator.validate()
 
@@ -562,7 +560,9 @@ class TestValidate(unittest.TestCase):
         length_of_course = "-2,8,twenty"
         countries = "bolivia,-england,england"
         subjects = 32
-        validator = Validator(countries, filters, length_of_course, subjects, limit, 100, offset)
+        validator = Validator(
+            countries, filters, length_of_course, subjects, limit, 100, offset
+        )
 
         expected_result = {}
         output_result, output_error_object = validator.validate()
@@ -595,7 +595,7 @@ class TestValidate(unittest.TestCase):
             {
                 "error": "length_of_course values needs to be numbers between the range of 1 and 7",
                 "error_values": [{"length_of_course": "-2,8"}],
-            }
+            },
         ]
 
         print(f"output: {output_error_object}")

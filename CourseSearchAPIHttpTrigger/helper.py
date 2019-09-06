@@ -98,15 +98,8 @@ def remove_conjunctions_from_searchable_fields(course, institution):
 
 
 def remove_conjunctions(searchable_field):
-    conjunctions = {
-        "&",
-        "and",
-        "for",
-        "in",
-        "the",
-        "with"
-    }
-    
+    conjunctions = {"&", "and", "for", "in", "the", "with"}
+
     string_parts = searchable_field.split(" ")
 
     list_of_string_parts = []

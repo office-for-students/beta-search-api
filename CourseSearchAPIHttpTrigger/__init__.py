@@ -91,7 +91,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             offset,
         )
 
-        course, institution = helper.remove_conjunctions_from_searchable_fields(course, institution)
+        course, institution = helper.remove_conjunctions_from_searchable_fields(
+            course, institution
+        )
 
         if error_objects:
             logging.error(
