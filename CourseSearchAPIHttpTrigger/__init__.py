@@ -91,10 +91,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             offset,
         )
 
-        course, institution = helper.remove_conjunctions_from_searchable_fields(
-            course, institution
-        )
-
         if error_objects:
             logging.error(
                 f"invalid filter options\n filter_options:\
@@ -106,18 +102,23 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 status_code=400,
             )
 
-        # Step 3 - TODO Instead of hardcoding the version, it should
+        # Step 3 - Remove conjunction whitelist from course and institution search
+        course, institution = helper.remove_conjunctions_from_searchable_fields(
+            course, institution
+        )
+
+        # Step 4 - TODO Instead of hardcoding the version, it should
         # retrieve the latest stable dataset version, dependent on
         # dataset endpoint existing
         version = "1"
         course_index_name = "courses-" + version
 
-        # Step 4 - Build institution course grouping query
+        # Step 5 - Build institution course grouping query
         search_query = query.build_institution_search_query(
             course, institution, institutions, postcode_object, query_params
         )
 
-        # Step 5 - Query course search index to get list of
+        # Step 6 - Query course search index to get list of
         # institution course groupings
         response_with_facets = search.get_courses(
             search_url, api_key, api_version, course_index_name, search_query
@@ -127,7 +128,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         facets = response_with_facets.json()
 
         counts = {}
-        # Step 6 - handle facets to build correct
+        # Step 7 - handle facets to build correct
         # limit and offset for next query
         query_params["limit"], query_params["offset"], counts["institutions"], counts[
             "courses"
@@ -137,17 +138,17 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             int(offset),
         )
 
-        # Step 7 - Build course query
+        # Step 8 - Build course query
         search_query = query.build_course_search_query(
             course, institution, institutions, postcode_object, query_params
         )
 
-        # Step 8 - Query course search index
+        # Step 9 - Query course search index
         response = search.get_courses(
             search_url, api_key, api_version, course_index_name, search_query
         )
 
-        # Step 9 - Manipulate response to match swagger spec - add counts (inst. & courses)
+        # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
         search_results = helper.group_courses_by_institution(
             response.json(), counts, int(limit), int(offset)
         )
