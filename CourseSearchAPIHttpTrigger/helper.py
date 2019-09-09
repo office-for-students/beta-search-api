@@ -108,3 +108,7 @@ def remove_conjunctions(searchable_field):
             list_of_string_parts.append(string_part)
 
     return " ".join(list_of_string_parts)
+
+
+def handle_apostrophes_in_search(field):
+    return field.replace("'", "''",)
