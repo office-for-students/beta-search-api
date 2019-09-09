@@ -107,6 +107,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             course, institution
         )
 
+        # Gracefully handle apostrophes for search
+        institution = helper.handle_apostrophes_in_search(institution)
+        institutions = helper.handle_apostrophes_in_search(institutions)
+
         # Step 4 - TODO Instead of hardcoding the version, it should
         # retrieve the latest stable dataset version, dependent on
         # dataset endpoint existing
