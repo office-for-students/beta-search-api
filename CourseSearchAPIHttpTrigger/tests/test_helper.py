@@ -7,7 +7,7 @@ CURRENTDIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
-from helper import remove_conjunctions
+from helper import remove_conjunctions, handle_apostrophes_in_search
 
 
 class TestRemoveConjunctions(unittest.TestCase):
@@ -106,3 +106,15 @@ class TestRemoveConjunctions(unittest.TestCase):
 
         output_result = remove_conjunctions(input_field)
         self.assertEqual(expected_result, output_result)
+
+
+class TestHandleApostrophesInSearch(unittest.TestCase):
+    def test_when_searchable_field_has_a_single_apostrophe_string(self):
+
+        output_result = handle_apostrophes_in_search("Queen's University")
+        self.assertEqual("Queen''s University", output_result)
+
+    def test_when_searchable_field_has_multiple_apostrophe_string(self):
+
+        output_result = handle_apostrophes_in_search("Queen's and King's University")
+        self.assertEqual("Queen''s and King''s University", output_result)
