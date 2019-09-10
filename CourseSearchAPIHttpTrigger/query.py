@@ -1,5 +1,6 @@
 import logging
 import os
+import re
 
 
 def build_course_search_query(
@@ -45,8 +46,10 @@ class Query:
             search.append(institution_search_query)
 
         if self.course:
-            course_search_query = "course/title/english:" + self.course
-            search.append(course_search_query)
+            english_course_search_query = "course/title/english:" + self.course
+            welsh_course_search_query = "course/title/welsh:" + self.course
+            search.append(english_course_search_query)
+            search.append(welsh_course_search_query)
 
         if search:
             query += "&search=" + " ".join(search) + "&queryType=full"
@@ -123,11 +126,14 @@ class Query:
                 filters.append("course/year_abroad/code ne 2")
 
         if self.institutions != "":
-            institutions = self.institutions.split(",")
+            institutions = re.split(r',(?=")', self.institutions)
 
             institution_list = list()
             search_public_ukprn = os.environ["SearchPubUKPRN"]
             for institution in institutions:
+                institution = institution.strip('\"')
+                institution = institution.replace("&", "%26")
+
                 if search_public_ukprn == "False":
                     institution_list.append(
                         "course/institution/pub_ukprn_name eq '" + institution + "'"
