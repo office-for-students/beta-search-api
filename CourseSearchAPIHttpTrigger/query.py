@@ -39,13 +39,17 @@ class Query:
         # Create search part of query
         search = list()
         if self.institution:
-            search.append(self.institution)
+            institution_search_query = (
+                "course/institution/pub_ukprn_name:" + self.institution
+            )
+            search.append(institution_search_query)
 
         if self.course:
-            search.append(self.course)
+            course_search_query = "course/title/english:" + self.course
+            search.append(course_search_query)
 
         if search:
-            query += "&search=" + " + ".join(search)
+            query += "&search=" + " ".join(search) + "&queryType=full"
         else:
             query += "&search=*"
 
