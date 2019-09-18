@@ -4,6 +4,7 @@ import sys
 import inspect
 import traceback
 import json
+import re
 
 import azure.functions as func
 
@@ -102,7 +103,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 status_code=400,
             )
 
-        # Step 3 - Remove conjunction whitelist from course and institution search
+        # Step 3 handle unsafe and reserved characters in search terms
+        course, institution = helper.handle_search_terms(course, institution)
+
+        # Step 4 - Remove conjunctions from course and institution search
         course, institution = helper.remove_conjunctions_from_searchable_fields(
             course, institution
         )
@@ -111,18 +115,18 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         institution = helper.handle_apostrophes_in_search(institution)
         institutions = helper.handle_apostrophes_in_search(institutions)
 
-        # Step 4 - TODO Instead of hardcoding the version, it should
+        # Step 5 - TODO Instead of hardcoding the version, it should
         # retrieve the latest stable dataset version, dependent on
         # dataset endpoint existing
         version = "1"
         course_index_name = "courses-" + version
 
-        # Step 5 - Build institution course grouping query
+        # Step 6 - Build institution course grouping query
         search_query = query.build_institution_search_query(
             course, institution, institutions, postcode_object, query_params
         )
 
-        # Step 6 - Query course search index to get list of
+        # Step 7 - Query course search index to get list of
         # institution course groupings
         response_with_facets = search.get_courses(
             search_url, api_key, api_version, course_index_name, search_query
@@ -132,37 +136,53 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         facets = response_with_facets.json()
 
         counts = {}
-        # Step 7 - handle facets to build correct
+        # Step 8 - handle facets to build correct
         # limit and offset for next query
         query_params["limit"], query_params["offset"], counts["institutions"], counts[
             "courses"
-        ] = helper.get_offset_and_limit(
+        ], institution_course_counts = helper.get_offset_and_limit(
             facets["@search.facets"]["course/institution/sort_pub_ukprn_name"],
             int(limit),
             int(offset),
         )
 
-        # Step 8 - Build course query
-        search_query = query.build_course_search_query(
-            course, institution, institutions, postcode_object, query_params
-        )
+        # Step 9 Get courses by institution based on query paramaeters
+        # Azure search can only return a maximum of 1000 docs in one call, so page through results
+        if query_params["limit"] > 1000:
+            courses = search.get_results(
+                search_url,
+                api_key,
+                api_version,
+                course_index_name,
+                course,
+                institution,
+                institutions,
+                postcode_object,
+                query_params,
+            )
+        else:
+            # Step a - Build course query
+            search_query = query.build_course_search_query(
+                course, institution, institutions, postcode_object, query_params
+            )
 
-        # Step 9 - Query course search index
-        response = search.get_courses(
-            search_url, api_key, api_version, course_index_name, search_query
-        )
+            # Step b - Query course search index
+            response = search.get_courses(
+                search_url, api_key, api_version, course_index_name, search_query
+            )
+            json_response = response.json()
+            courses = json_response["value"]
 
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
         search_results = helper.group_courses_by_institution(
-            response.json(), counts, int(limit), int(offset)
+            courses, counts, int(limit), int(offset)
         )
 
-        if response:
-            return func.HttpResponse(
-                json.dumps(search_results),
-                headers={"Content-Type": "application/json"},
-                status_code=200,
-            )
+        return func.HttpResponse(
+            json.dumps(search_results),
+            headers={"Content-Type": "application/json"},
+            status_code=200,
+        )
 
     except Exception as e:
         logging.error(traceback.format_exc())
