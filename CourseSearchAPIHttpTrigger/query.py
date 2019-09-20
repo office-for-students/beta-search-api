@@ -6,7 +6,6 @@ import re
 def build_course_search_query(
     course, institution, institutions, postcode_object, query_params
 ):
-
     query = Query(course, institution, institutions, postcode_object, query_params)
 
     query.build()
@@ -131,7 +130,7 @@ class Query:
             institution_list = list()
             search_public_ukprn = os.environ["SearchPubUKPRN"]
             for institution in institutions:
-                institution = institution.strip('\"')
+                institution = institution.strip('"')
                 institution = institution.replace("&", "%26")
 
                 if search_public_ukprn == "False":

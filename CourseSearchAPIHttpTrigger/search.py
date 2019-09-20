@@ -3,6 +3,7 @@ import requests
 import os
 import sys
 import inspect
+import math
 
 
 # TODO investigate setting PATH in Azure so can remove this
@@ -11,7 +12,7 @@ PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
-import exceptions
+import exceptions, query
 
 
 def find_postcode(url, api_key, api_version, index_name, postcode):
@@ -107,3 +108,45 @@ class CourseIndex:
             return {}
 
         return response
+
+
+def get_results(
+    search_url,
+    api_key,
+    api_version,
+    course_index_name,
+    course,
+    institution,
+    institutions,
+    postcode_object,
+    query_params,
+):
+    queries = {}
+
+    offset = query_params["offset"]
+    total_number_of_items_to_return = query_params["limit"]
+
+    azure_search_limit = 1000
+
+    # Make a single request every 1000 course docs
+    iterations = total_number_of_items_to_return / azure_search_limit
+    number_of_requests = math.ceil(iterations)
+
+    courses = []
+    for i in range(0, number_of_requests):
+        search_query = query.build_course_search_query(
+            course, institution, institutions, postcode_object, query_params
+        )
+
+        response = get_courses(
+            search_url, api_key, api_version, course_index_name, search_query
+        )
+        search_results = response.json()
+        results = search_results["value"]
+
+        courses.extend(results)
+
+        query_params["offset"] = offset + azure_search_limit
+        query_params["limit"] = query_params["limit"] - azure_search_limit
+
+    return courses
