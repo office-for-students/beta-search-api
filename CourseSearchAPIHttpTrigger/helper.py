@@ -111,4 +111,4 @@ def remove_conjunctions(searchable_field):
 
 
 def handle_apostrophes_in_search(field):
-    return field.replace("'", "''",)
+    return field.replace("'", "''")
