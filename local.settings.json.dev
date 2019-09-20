@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=devdatapipeline;AccountKey=AItZ/w/HN0rW03DxAsprbeh9JgRUHXF1u9hnZtgYQMetdpFtyjTCd5e3DKFLqa5H0AqlCh5h66n28urGUJ3Gwg==",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "MaxDefaultLimit": "100",
+    "DefaultLimit": "20",
+    "SearchURL": "https://dev-course-search.search.windows.net",
+    "SearchAPIKey": "0B4DB31AF2051442D7393DC8A487431B",
+    "AzureSearchAPIVersion": "2019-05-06",
+    "PostcodeIndexName": "postcodes",
+    "SearchPubUKPRN": "False"
+  }
+}
