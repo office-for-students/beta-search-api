@@ -19,6 +19,8 @@ import query
 import search
 import validation
 
+from dataset_helper import DataSetHelper
+
 from models import error
 
 
@@ -48,6 +50,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     )
 
     try:
+        dsh = DataSetHelper()
+
         logging.info(
             f"Processing course search request\n\
                        url: {req.url}\n\
@@ -114,8 +118,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # Step 4 - TODO Instead of hardcoding the version, it should
         # retrieve the latest stable dataset version, dependent on
         # dataset endpoint existing
-        version = "1"
-        course_index_name = "courses-" + version
+        version = dsh.get_highest_successful_version_number()
+        course_index_name = f"courses-{version}"
+        logging.info(f"course_index_name:{course_index_name}")
 
         # Step 5 - Build institution course grouping query
         search_query = query.build_institution_search_query(
