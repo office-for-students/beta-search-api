@@ -146,7 +146,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             int(offset),
         )
 
-        # Step 9 Get courses by institution based on query paramaeters
+        # Step 9 - TODO Refactor so caller does not have to about the number of courses and handling more than 1000
+        # Get courses by institution based on query paramaeters
         # Azure search can only return a maximum of 1000 docs in one call, so page through results
         if query_params["limit"] > 1000:
             courses = search.get_results(
