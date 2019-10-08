@@ -16,6 +16,10 @@ Add the following to your local.settings.json:
 | Variable                            | Default                | Description                                              |
 | ----------------------------------- | ---------------------- | -------------------------------------------------------- |
 | FUNCTIONS_WORKER_RUNTIME            | python                 | The programming language the function worker runs on     |
+| AzureCosmosDbUri                    | {retrieve from portal} | The uri to the cosmosdb instance                         |
+| AzureCosmosDbKey                    | {retrieve from portal} | The database key to access cosmosdb instance             |
+| AzureCosmosDbDatabaseId             | discoveruni            | The database where documents are stored                  |
+| AzureCosmosDbDataSetCollectionId    | datasets               | The name of the collection in which datasets are loaded  |
 | AzureWebJobsStorage                 | {retrieve from portal} | The default endpoint to access storage account           |
 | StopEtlPipelineOnWarning            | false                  | Boolean flag to stop function worker on a warning        |
 | PostcodeIndexName                   | postcodes              | The storage container that will trigger the function     |

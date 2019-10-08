@@ -128,4 +128,4 @@ def handle_search_terms(course, institution):
 
 def remove_unwanted_chars_in_search_term(field):
 
-    return re.sub("[^0-9A-Za-z'\s]+", "", field)
+    return re.sub("[^0-9A-Za-z'\\s]+", "", field)
