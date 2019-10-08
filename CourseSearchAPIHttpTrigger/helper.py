@@ -1,6 +1,8 @@
 import os
 import sys
 import inspect
+import re
+import logging
 
 # TODO investigate setting PATH in Azure so can remove this
 CURRENTDIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -18,22 +20,24 @@ def get_offset_and_limit(facets, requested_limit, requested_offset):
     lower_range = requested_offset
     upper_range = requested_limit + requested_offset
 
+    institution_course_counts = {}
     for facet in facets:
         if total_institutions < lower_range:
             offset += facet["count"]
         elif lower_range <= total_institutions < upper_range:
             limit += facet["count"]
 
+        institution_course_counts[facet["value"]] = facet["count"]
         total_institutions += 1
         total_courses += facet["count"]
 
-    return limit, offset, total_institutions, total_courses
+    return limit, offset, total_institutions, total_courses, institution_course_counts
 
 
-def group_courses_by_institution(search_results, counts, limit, offset):
-    courses = search_results["value"]
+def group_courses_by_institution(courses, counts, limit, offset):
 
     institutions = {}
+    institution_count = 0
     for c in courses:
         course = c["course"]
 
@@ -46,6 +50,7 @@ def group_courses_by_institution(search_results, counts, limit, offset):
                 "number_of_courses": 0,
             }
             institutions[pub_ukprn] = institution_body
+            institution_count += 1
 
         locations = []
         for location in course["locations"]:
@@ -98,7 +103,7 @@ def remove_conjunctions_from_searchable_fields(course, institution):
 
 
 def remove_conjunctions(searchable_field):
-    conjunctions = {"&", "and", "for", "in", "the", "with"}
+    conjunctions = {"&", "and", "for", "in", "the", "with", "studies"}
 
     string_parts = searchable_field.split(" ")
 
@@ -112,3 +117,15 @@ def remove_conjunctions(searchable_field):
 
 def handle_apostrophes_in_search(field):
     return field.replace("'", "''")
+
+
+def handle_search_terms(course, institution):
+    return (
+        remove_unwanted_chars_in_search_term(course),
+        remove_unwanted_chars_in_search_term(institution),
+    )
+
+
+def remove_unwanted_chars_in_search_term(field):
+
+    return re.sub("[^0-9A-Za-z'\\s]+", "", field)
