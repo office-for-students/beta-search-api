@@ -20,9 +20,27 @@ import query
 import search
 import validation
 
-from dataset_helper import DataSetHelper
+from dataset_helper import (
+    DataSetHelper,
+    get_cosmos_client,
+    get_collection_link,
+)
 
 from models import error
+
+api_key = os.environ["SearchAPIKey"]
+api_version = os.environ["AzureSearchAPIVersion"]
+default_limit = os.environ["DefaultLimit"]
+max_default_limit = int(os.environ["MaxDefaultLimit"])
+postcode_index_name = os.environ["PostcodeIndexName"]
+search_url = os.environ["SearchURL"]
+cosmosdb_uri = os.environ["AzureCosmosDbUri"]
+cosmosdb_key = os.environ["AzureCosmosDbKey"]
+cosmosdb_database_id = os.environ["AzureCosmosDbDatabaseId"]
+cosmosdb_dataset_collection_id = os.environ["AzureCosmosDbDataSetCollectionId"]
+
+# Intialise cosmos db client
+client = get_cosmos_client(cosmosdb_uri, cosmosdb_key)
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
@@ -35,13 +53,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     as this module.
     """
 
-    api_key = os.environ["SearchAPIKey"]
-    api_version = os.environ["AzureSearchAPIVersion"]
-    default_limit = os.environ["DefaultLimit"]
-    max_default_limit = int(os.environ["MaxDefaultLimit"])
-    postcode_index_name = os.environ["PostcodeIndexName"]
-    search_url = os.environ["SearchURL"]
-
     # Only log environment variables which are not security sensitive
     logging.info(
         f"Starting up azure function with the following configuration\n\
@@ -51,7 +62,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     )
 
     try:
-        dsh = DataSetHelper()
 
         logging.info(
             f"Processing course search request\n\
@@ -120,7 +130,11 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         institutions = helper.handle_apostrophes_in_search(institutions)
 
         # Step 5 - Retrieve the latest stable dataset version, dependent on
+        dataset_collection_link = get_collection_link(cosmosdb_database_id, cosmosdb_dataset_collection_id)
+
+        dsh = DataSetHelper(client, dataset_collection_link)
         version = dsh.get_highest_successful_version_number()
+        
         course_index_name = f"courses-{version}"
         logging.info(f"course_index_name:{course_index_name}")
 
