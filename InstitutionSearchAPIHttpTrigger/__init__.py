@@ -235,12 +235,18 @@ def build_search_response(facets, requested_limit, requested_offset):
 
     institution_course_counts = {}
     for facet in facets:
+        total_courses += facet["count"]
+
         if lower_range <= total_institutions < upper_range:
+            facet["pub_ukprn_name"] = facet["value"]
+            facet["number_of_courses"] = facet["count"]
             del facet["sort_name"]
+            del facet["value"]
+            del facet["count"]
             institutions.append(facet)
 
         total_institutions += 1
-        total_courses += facet["count"]
+        
 
     return {
         "limit": requested_limit,
