@@ -15,7 +15,7 @@ PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
-from .helper import (
+from institution.helper import (
     handle_search_terms,
     remove_conjunctions_from_searchable_fields,
     handle_apostrophes_in_search,
@@ -23,23 +23,23 @@ from .helper import (
     group_courses_by_institution,
 )
 
-from .query import build_institution_search_query
+from institution.query import build_institution_search_query
 
-from .search import (
+from institution.search import (
     find_postcode,
     get_courses,
     get_results,
 )
 
-from .validation import check_query_parameters
+from institution.validation import check_query_parameters
 
-from .dataset_helper import (
+from institution.dataset_helper import (
     DataSetHelper,
     get_cosmos_client,
     get_collection_link,
 )
 
-from .models import error
+from institution.models import error
 
 api_key = os.environ["SearchAPIKey"]
 api_version = os.environ["AzureSearchAPIVersion"]
@@ -94,21 +94,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         length_of_course = req.params.get("length_of_course", "")
         subjects = req.params.get("subjects", "")
 
-        postcode_object = {}
-        # Step 1 Lookup postcode if parameter is set
-        if postcode_and_distance:
-            postcode_params = postcode_and_distance.split(",")
-            postcode_object = search.find_postcode(
-                search_url,
-                api_key,
-                api_version,
-                postcode_index_name,
-                postcode_params[0],
-            )
-
-            postcode_object["distance"] = convert_miles_to_km(postcode_params[1])
-
-        # Step 2 - Validate query parameters
+        # Step 1 - Validate query parameters
         query_params, error_objects = check_query_parameters(
             countries,
             filters,
@@ -129,6 +115,20 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 headers={"Content-Type": "application/json"},
                 status_code=400,
             )
+
+        postcode_object = {}
+        # Step 2 Lookup postcode if parameter is set
+        if postcode_and_distance:
+            postcode_params = postcode_and_distance.split(",")
+            postcode_object = search.find_postcode(
+                search_url,
+                api_key,
+                api_version,
+                postcode_index_name,
+                postcode_params[0],
+            )
+
+            postcode_object["distance"] = convert_miles_to_km(postcode_params[1])
 
         # Step 3 handle unsafe and reserved characters in search terms
         course, institution = handle_search_terms(course, institution)
@@ -163,7 +163,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         )
 
         facets = response_with_facets.json()
-        logging.info(f"facets: {facets}")
         
         new_facets = add_sortable_name(facets["@search.facets"]["course/institution/pub_ukprn_name"])
         sorted_facets = sort_facets(new_facets)

@@ -10,7 +10,7 @@ PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
-from models import error
+from institution.models import error
 
 
 def check_query_parameters(

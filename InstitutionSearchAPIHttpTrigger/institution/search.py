@@ -12,7 +12,7 @@ PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
-import exceptions, query
+import institution.exceptions, institution.query
 
 
 def find_postcode(url, api_key, api_version, index_name, postcode):

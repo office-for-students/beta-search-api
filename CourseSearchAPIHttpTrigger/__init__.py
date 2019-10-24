@@ -97,21 +97,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         length_of_course = req.params.get("length_of_course", "")
         subjects = req.params.get("subjects", "")
 
-        postcode_object = {}
-        # Step 1 Lookup postcode if parameter is set
-        if postcode_and_distance:
-            postcode_params = postcode_and_distance.split(",")
-            postcode_object = find_postcode(
-                search_url,
-                api_key,
-                api_version,
-                postcode_index_name,
-                postcode_params[0],
-            )
-
-            postcode_object["distance"] = convert_miles_to_km(postcode_params[1])
-
-        # Step 2 - Validate query parameters
+        # Step 1 - Validate query parameters
         query_params, error_objects = check_query_parameters(
             countries,
             filters,
@@ -132,6 +118,20 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 headers={"Content-Type": "application/json"},
                 status_code=400,
             )
+
+        postcode_object = {}
+        # Step 2 Lookup postcode if parameter is set
+        if postcode_and_distance:
+            postcode_params = postcode_and_distance.split(",")
+            postcode_object = find_postcode(
+                search_url,
+                api_key,
+                api_version,
+                postcode_index_name,
+                postcode_params[0],
+            )
+
+            postcode_object["distance"] = convert_miles_to_km(postcode_params[1])
 
         # Step 3 handle unsafe and reserved characters in search terms
         course, institution = handle_search_terms(course, institution)

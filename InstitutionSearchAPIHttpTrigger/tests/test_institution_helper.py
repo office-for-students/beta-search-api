@@ -7,7 +7,7 @@ CURRENTDIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
-from helper import remove_conjunctions, handle_apostrophes_in_search
+from institution.helper import remove_conjunctions, handle_apostrophes_in_search
 
 
 class TestRemoveConjunctions(unittest.TestCase):

@@ -7,7 +7,7 @@ CURRENTDIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
-from validation import (
+from institution.validation import (
     check_query_parameters,
     check_country_is_valid,
     Validator,
