@@ -7,7 +7,7 @@ info:
     name: ""
     url: ""
 paths:
-  /search/courses:
+  /search/CourseSearchAPIHttpTrigger:
     get:
       summary: "Returns a list of people"
       parameters:
@@ -27,6 +27,55 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/institutionCourses'
+        400:
+          $ref: '#/components/responses/InvalidRequestError'
+        500:
+          $ref: '#/components/responses/InternalError'
+  /search/institutions:
+    get:
+      summary: "Returns a list of people"
+      parameters:
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/course_query'
+        - $ref: '#/components/parameters/institution_query'
+        - $ref: '#/components/parameters/filters'
+        - $ref: '#/components/parameters/countries'
+        - $ref: '#/components/parameters/institutions'
+        - $ref: '#/components/parameters/subjects'
+        - $ref: '#/components/parameters/postcode'
+      responses:
+        200:
+          description: "Returns a list of all institutions whereby the query term and filters matched at least one course from each institution/course provider"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/institution_list'
+        400:
+          $ref: '#/components/responses/InvalidRequestError'
+        500:
+          $ref: '#/components/responses/InternalError'
+  /search/courses-by-institution:
+    get:
+      summary: "Returns a list of people"
+      parameters:
+        - $ref: '#/components/parameters/institution'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/course_query'
+        - $ref: '#/components/parameters/filters'
+        - $ref: '#/components/parameters/countries'
+        - $ref: '#/components/parameters/subjects'
+        - $ref: '#/components/parameters/postcode'
+      responses:
+        200:
+          description: "Returns a list of all relevant courses based on the query term and filters for a single institution/course provider."
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/pubUkprnName'
+                  - $ref: '#/components/schemas/coursesWithoutInstitutionObject'
         400:
           $ref: '#/components/responses/InvalidRequestError'
         500:
@@ -165,15 +214,15 @@ components:
     institution:
       description: "An object containing information on the teaching UK provider."
       required: [
-        public_ukprn_name,
-        public_ukprn
+        pub_ukprn_name,
+        pub_ukprn
       ]
       type: object
       properties:
-        public_ukprn_name:
+        pub_ukprn_name:
           description: "The name of the publication UK provider for where the course is primarily taught."
           type: string
-        public_ukprn:
+        pub_ukprn:
           description: "Publication UK provider reference number for where the course is primarily taught. Known as 'PUBUKPRN' across csvs."
           type: string
     location:
@@ -219,6 +268,43 @@ components:
           ]
         welsh:
           description: "The welsh name for subject."
+          type: string
+    institution_list:
+      description: "A list of institutions which have at least 1 course that comply with the search query."
+      type: object
+      properties:
+        limit:
+          description: "The number of search items returned per page."
+          type: integer
+        number_of_items:
+          description: "The number of items returned in items array. Increase the limit to return more items up to a maximum of 1000, (default is 20)."
+          type: integer
+        offset:
+          description: "The number of items skipped before starting to collect the result set."
+          type: integer
+        total_number_of_courses:
+          description: "The total number of courses found based on search query."
+          type: integer
+        total_results:
+          description: "The total number of institutions found with relevant courses matching search query."
+          type: integer
+        items:
+          description: "A list of institutions that were returned containing courses that comply with search query."
+          type: array
+          items:
+            type: object
+            properties:
+              pub_ukprn_name:
+                description: "The name of the publication UK provider for where the course is primarily taught."
+                type: string
+              number_of_courses:
+                description: "The number of courses found relevant to search query and associated with institution/course provider."
+                type: integer
+    pubUkprnName:
+      type: object
+      properties:
+        pub_ukprn_name:
+          description: "The name of the publication UK provider for where the course/courses is/are primarily taught."
           type: string
     errorResponse:
       description: "The error response body, contains specific details of why the request failed"
@@ -288,6 +374,13 @@ components:
       in: query
       name: qi
       required: false
+      schema:
+        type: string
+    institution:
+      description: "An institution (pub_ukprn_name) to filter on. Only institutions which directly match the stored values will be returned."
+      in: query
+      name: institution
+      required: true
       schema:
         type: string
     countries:

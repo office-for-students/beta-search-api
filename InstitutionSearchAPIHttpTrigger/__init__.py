@@ -15,7 +15,7 @@ PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
-from .helper import (
+from institution.helper import (
     handle_search_terms,
     remove_conjunctions_from_searchable_fields,
     handle_apostrophes_in_search,
@@ -23,26 +23,23 @@ from .helper import (
     group_courses_by_institution,
 )
 
-from .query import (
-    build_institution_search_query,
-    build_course_search_query,
-)
+from institution.query import build_institution_search_query
 
-from .search import (
+from institution.search import (
     find_postcode,
     get_courses,
     get_results,
 )
 
-from .validation import check_query_parameters
+from institution.validation import check_query_parameters
 
-from .dataset_helper import (
+from institution.dataset_helper import (
     DataSetHelper,
     get_cosmos_client,
     get_collection_link,
 )
 
-from .models import error
+from institution.models import error
 
 api_key = os.environ["SearchAPIKey"]
 api_version = os.environ["AzureSearchAPIVersion"]
@@ -123,7 +120,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # Step 2 Lookup postcode if parameter is set
         if postcode_and_distance:
             postcode_params = postcode_and_distance.split(",")
-            postcode_object = find_postcode(
+            postcode_object = search.find_postcode(
                 search_url,
                 api_key,
                 api_version,
@@ -166,49 +163,15 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         )
 
         facets = response_with_facets.json()
+        
+        new_facets = add_sortable_name(facets["@search.facets"]["course/institution/pub_ukprn_name"])
+        sorted_facets = sort_facets(new_facets)
 
-        counts = {}
-        # Step 8 - handle facets to build correct
-        # limit and offset for next query
-        query_params["limit"], query_params["offset"], counts["institutions"], counts[
-            "courses"
-        ], institution_course_counts = get_offset_and_limit(
-            facets["@search.facets"]["course/institution/sort_pub_ukprn_name"],
+        # handle facets to build list of institutions for page
+        search_results = build_search_response(
+            sorted_facets,
             int(limit),
             int(offset),
-        )
-
-        # Step 9 - TODO Refactor so caller does not have to know about the number of courses and handling more than 1000
-        # Get courses by institution based on query paramaeters
-        # Azure search can only return a maximum of 1000 docs in one call, so page through results
-        if query_params["limit"] > 1000:
-            courses = get_results(
-                search_url,
-                api_key,
-                api_version,
-                course_index_name,
-                course,
-                institution,
-                institutions,
-                postcode_object,
-                query_params,
-            )
-        else:
-            # Step a - Build course query
-            search_query = build_course_search_query(
-                course, institution, institutions, postcode_object, query_params
-            )
-
-            # Step b - Query course search index
-            response = get_courses(
-                search_url, api_key, api_version, course_index_name, search_query
-            )
-            json_response = response.json()
-            courses = json_response["value"]
-
-        # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
-        search_results = group_courses_by_institution(
-            courses, counts, int(limit), int(offset)
         )
 
         return func.HttpResponse(
@@ -231,3 +194,65 @@ def convert_miles_to_km(distance_in_miles):
         return distance
     except ValueError:
         return None
+
+
+def add_sortable_name(facets):
+    facet_with_sortable_name = []
+    for facet in facets:
+        facet["sort_name"] = create_sortable_name(facet["value"])
+        
+        facet_with_sortable_name.append(facet)
+
+    return facet_with_sortable_name
+
+
+def create_sortable_name(name):
+
+    # lowercase institution name
+    sortable_name = name.lower()
+
+    # remove unwanted prefixes
+    sortable_name = sortable_name.replace("the university of ", "")
+    sortable_name = sortable_name.replace("university of ", "")
+
+    # remove unwanted commas
+    sortable_name = sortable_name.replace(",", "")
+
+    return sortable_name
+
+
+def sort_facets(facets):
+    return sorted(facets, key=lambda k: k['sort_name'])
+    
+
+def build_search_response(facets, requested_limit, requested_offset):
+    total_courses = 0
+    total_institutions = 0
+    institutions = []
+
+    lower_range = requested_offset
+    upper_range = requested_limit + requested_offset
+
+    institution_course_counts = {}
+    for facet in facets:
+        total_courses += facet["count"]
+
+        if lower_range <= total_institutions < upper_range:
+            facet["pub_ukprn_name"] = facet["value"]
+            facet["number_of_courses"] = facet["count"]
+            del facet["sort_name"]
+            del facet["value"]
+            del facet["count"]
+            institutions.append(facet)
+
+        total_institutions += 1
+        
+
+    return {
+        "limit": requested_limit,
+        "number_of_items": len(institutions),
+        "offset": requested_offset,
+        "total_number_of_courses": total_courses,
+        "total_results": total_institutions,
+        "items": institutions
+    }
