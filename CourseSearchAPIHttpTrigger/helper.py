@@ -78,7 +78,9 @@ def group_courses_by_institution(courses, counts, limit, offset):
 
     items = []
     for item in institutions:
-        items.append(institutions.get(item))
+        institution = institutions.get(item)
+        institution["courses"].sort(key=lambda x: x["qualification"] + " " + x["title"]["english"] + (" Hons" if x["honours_award"] == 1 else ""))
+        items.append(institution)
 
     results = {
         "items": items,

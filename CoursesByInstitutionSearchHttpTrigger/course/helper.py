@@ -65,6 +65,8 @@ def build_response(courses):
 
         items.append(new_course)
  
+    items.sort(key=lambda x: x["qualification"] + " " + x["title"]["english"] + (" Hons" if x["honours_award"] == 1 else ""))
+
     return {
         "pub_ukprn_name": course["institution"]["pub_ukprn_name"],
         "pub_ukprn": course["institution"]["pub_ukprn"],
