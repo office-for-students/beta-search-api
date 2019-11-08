@@ -34,7 +34,7 @@ def get_offset_and_limit(facets, requested_limit, requested_offset):
     return limit, offset, total_institutions, total_courses, institution_course_counts
 
 
-def build_response(courses):
+def build_response(courses, language):
 
     if len(courses) < 1:
         return {}
@@ -64,8 +64,8 @@ def build_response(courses):
         }
 
         items.append(new_course)
- 
-    items.sort(key=lambda x: x["qualification"] + " " + x["title"]["english"] + (" Hons" if x["honours_award"] == 1 else ""))
+
+    items.sort(key=lambda x: course_sort_key(x, language))
 
     return {
         "pub_ukprn_name": course["institution"]["pub_ukprn_name"],
@@ -112,3 +112,10 @@ def handle_search_terms(course, institution):
 def remove_unwanted_chars_in_search_term(field):
 
     return re.sub("[^0-9A-Za-z'\\s]+", "", field)
+
+
+def course_sort_key(course, language):
+    if language == "cy":
+        return (course["title"]["welsh"] if course["title"]["welsh"] else course["title"]["english"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
+
+    return (course["title"]["english"] if course["title"]["english"] else course["title"]["welsh"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 

@@ -94,6 +94,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         countries = req.params.get("countries", "")
         length_of_course = req.params.get("length_of_course", "")
         subjects = req.params.get("subjects", "")
+        language = req.params.get("language", "en")
 
         # Step 1 - Validate query parameters
         query_params, error_objects = check_query_parameters(
@@ -105,6 +106,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             limit,
             max_default_limit,
             offset,
+            language,
         )
 
         if error_objects:
@@ -164,7 +166,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         courses = json_response["value"]
 
         # Step 8 - build response to match swagger spec - add course count
-        search_results = build_response(courses)
+        search_results = build_response(courses, language)
 
         return func.HttpResponse(
             json.dumps(search_results),
