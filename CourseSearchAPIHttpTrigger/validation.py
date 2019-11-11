@@ -14,7 +14,7 @@ from models import error
 
 
 def check_query_parameters(
-    countries, filters, length_of_course, subjects, limit, max_default_limit, offset
+    countries, filters, length_of_course, subjects, limit, max_default_limit, offset, language
 ):
 
     try:
@@ -26,6 +26,7 @@ def check_query_parameters(
             limit,
             max_default_limit,
             offset,
+            language,
         )
 
         return validator.validate()
@@ -43,6 +44,7 @@ class Validator:
         limit,
         max_default_limit,
         offset,
+        language,
     ):
         self.max_default_limit = max_default_limit
         self.limit = limit
@@ -51,6 +53,7 @@ class Validator:
         self.length_of_course = length_of_course
         self.countries = countries
         self.subjects = subjects
+        self.language = language
 
     def validate(self):
         error_objects = []
@@ -59,6 +62,7 @@ class Validator:
         self.new_filters, f_error_objects = self.validate_filters()
         self.new_countries, c_error_objects = self.validate_countries()
         self.new_length_of_course, loc_error_objects = self.validate_length_of_course()
+        self.new_language, lang_error_objects = self.validate_language()
 
         # Combine error objects
         error_objects.extend(
@@ -67,6 +71,7 @@ class Validator:
             + f_error_objects
             + c_error_objects
             + loc_error_objects
+            + lang_error_objects
         )
 
         self.query_params = {}
@@ -301,6 +306,23 @@ class Validator:
             return [], error_objects
 
         return length_of_course, []
+
+
+    def validate_language(self):
+        error_objects = []
+
+        if self.language != "en" and self.language != "cy":
+            error_values = [{"key": "language", "value": self.language}]
+
+            error_object = error.get_error_object(
+                error.ERR_UNKNOWN_LANGUAGE, error_values
+            )
+            error_objects.append(error_object)
+
+            return [], error_objects
+
+        return self.language, []
+
 
     def build_query_params(self):
         query_params = {}

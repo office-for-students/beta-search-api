@@ -20,7 +20,7 @@ class TestValidateLimit(unittest.TestCase):
     def test_when_limit_is_within_max_limit(self):
         limit = "10"
         max_limit = 100
-        validator = Validator("", "", "", "", limit, max_limit, "0")
+        validator = Validator("", "", "", "", limit, max_limit, "0", "en")
 
         expected_result = 10
         output_result, output_error_object = validator.validate_limit()
@@ -30,7 +30,7 @@ class TestValidateLimit(unittest.TestCase):
     def test_when_limit_is_outside_max_limit(self):
         limit = "200"
         max_limit = 100
-        validator = Validator("", "", "", "", limit, max_limit, "0")
+        validator = Validator("", "", "", "", limit, max_limit, "0", "en")
 
         expected_result = 200
         expected_error_object = [
@@ -47,7 +47,7 @@ class TestValidateLimit(unittest.TestCase):
     def test_when_limit_is_a_negative_number(self):
         limit = "-20"
         max_limit = 100
-        validator = Validator("", "", "", "", limit, max_limit, "0")
+        validator = Validator("", "", "", "", limit, max_limit, "0", "en")
 
         expected_result = -20
         expected_error_object = [
@@ -64,7 +64,7 @@ class TestValidateLimit(unittest.TestCase):
     def test_when_limit_is_not_a_number(self):
         limit = "twenty"
         max_limit = 100
-        validator = Validator("", "", "", "", limit, max_limit, "0")
+        validator = Validator("", "", "", "", limit, max_limit, "0", "en")
 
         expected_result = 0
         expected_error_object = [
@@ -82,7 +82,7 @@ class TestValidateLimit(unittest.TestCase):
 class TestValidateOffset(unittest.TestCase):
     def test_when_offset_is_a_positive_number(self):
         offset = "20"
-        validator = Validator("", "", "", "", "0", 100, offset)
+        validator = Validator("", "", "", "", "0", 100, offset, "en")
 
         expected_result = 20
         output_result, output_error_object = validator.validate_offset()
@@ -92,7 +92,7 @@ class TestValidateOffset(unittest.TestCase):
 
     def test_when_offset_is_a_negative_number(self):
         offset = "-20"
-        validator = Validator("", "", "", "", "0", 100, offset)
+        validator = Validator("", "", "", "", "0", 100, offset, "en")
 
         expected_result = -20
         expected_error_object = [
@@ -108,7 +108,7 @@ class TestValidateOffset(unittest.TestCase):
 
     def test_when_offset_is_not_a_number(self):
         offset = "twenty"
-        validator = Validator("", "", "", "", "0", 100, offset)
+        validator = Validator("", "", "", "", "0", 100, offset, "en")
 
         expected_result = 0
         expected_error_object = [
@@ -126,7 +126,7 @@ class TestValidateOffset(unittest.TestCase):
 class TestValidateFilters(unittest.TestCase):
     def test_when_empty_filters_returns_no_error(self):
         filters = ""
-        validator = Validator("", filters, "", "", "0", 100, "0")
+        validator = Validator("", filters, "", "", "0", 100, "0", "en")
 
         output_filters, output_error_object = validator.validate_filters()
 
@@ -135,7 +135,7 @@ class TestValidateFilters(unittest.TestCase):
 
     def test_when_a_filter_is_selected_returns_no_error(self):
         filters = "distance_learning"
-        validator = Validator("", filters, "", "", "0", 100, "0")
+        validator = Validator("", filters, "", "", "0", 100, "0", "en")
 
         output_filters, output_error_object = validator.validate_filters()
         expected_filters = {"distance_learning": True}
@@ -145,7 +145,7 @@ class TestValidateFilters(unittest.TestCase):
 
     def test_when_a_filter_is_selected_prefixed_with_hyphen_returns_no_error(self):
         filters = "-sandwich_year"
-        validator = Validator("", filters, "", "", "0", 100, "0")
+        validator = Validator("", filters, "", "", "0", 100, "0", "en")
 
         output_filters, output_error_object = validator.validate_filters()
         expected_filters = {"sandwich_year": False}
@@ -155,7 +155,7 @@ class TestValidateFilters(unittest.TestCase):
 
     def test_when_all_filters_are_selected_returns_no_error(self):
         filters = "-distance_learning,honours_award,foundation_year,sandwich_year,year_abroad,-full_time"
-        validator = Validator("", filters, "", "", "0", 100, "0")
+        validator = Validator("", filters, "", "", "0", 100, "0", "en")
 
         output_filters, output_error_object = validator.validate_filters()
         expected_filters = {
@@ -172,7 +172,7 @@ class TestValidateFilters(unittest.TestCase):
 
     def test_when_there_are_duplicate_filters_returns_error(self):
         filters = "-distance_learning,distance_learning"
-        validator = Validator("", filters, "", "", "0", 100, "0")
+        validator = Validator("", filters, "", "", "0", 100, "0", "en")
 
         output_filters, output_error_object = validator.validate_filters()
         expected_error_object = [
@@ -187,7 +187,7 @@ class TestValidateFilters(unittest.TestCase):
 
     def test_when_there_are_invalid_filters_returns_error(self):
         filters = "salary,distance_learning,PaRt-Time"
-        validator = Validator("", filters, "", "", "0", 100, "0")
+        validator = Validator("", filters, "", "", "0", 100, "0", "en")
 
         output_filters, output_error_object = validator.validate_filters()
         expected_error_object = [
@@ -202,7 +202,7 @@ class TestValidateFilters(unittest.TestCase):
 
     def test_when_there_both_part_time_and_full_time_filters_set_returns_error(self):
         filters = "full_time,-part_time"
-        validator = Validator("", filters, "", "", "0", 100, "0")
+        validator = Validator("", filters, "", "", "0", 100, "0", "en")
 
         output_filters, output_error_object = validator.validate_filters()
         expected_error_object = [
@@ -284,7 +284,7 @@ class TestValidateFilterOptions(unittest.TestCase):
 class TestValidateCountries(unittest.TestCase):
     def test_when_empty_countries_returns_no_error(self):
         countries = ""
-        validator = Validator(countries, "", "", "", "0", 100, "0")
+        validator = Validator(countries, "", "", "", "0", 100, "0", "en")
 
         output_countries, output_error_object = validator.validate_countries()
 
@@ -293,7 +293,7 @@ class TestValidateCountries(unittest.TestCase):
 
     def test_when_england_is_selected_returns_no_error(self):
         countries = "england"
-        validator = Validator(countries, "", "", "", "0", 100, "0")
+        validator = Validator(countries, "", "", "", "0", 100, "0", "en")
 
         output_countries, output_error_object = validator.validate_countries()
 
@@ -302,7 +302,7 @@ class TestValidateCountries(unittest.TestCase):
 
     def test_when_northern_ireland_is_selected_returns_no_error(self):
         countries = "northern_ireland"
-        validator = Validator(countries, "", "", "", "0", 100, "0")
+        validator = Validator(countries, "", "", "", "0", 100, "0", "en")
 
         output_countries, output_error_object = validator.validate_countries()
 
@@ -311,7 +311,7 @@ class TestValidateCountries(unittest.TestCase):
 
     def test_when_scotland_is_selected_returns_no_error(self):
         countries = "scotland"
-        validator = Validator(countries, "", "", "", "0", 100, "0")
+        validator = Validator(countries, "", "", "", "0", 100, "0", "en")
 
         output_countries, output_error_object = validator.validate_countries()
 
@@ -320,7 +320,7 @@ class TestValidateCountries(unittest.TestCase):
 
     def test_when_wales_is_selected_returns_no_error(self):
         countries = "wales"
-        validator = Validator(countries, "", "", "", "0", 100, "0")
+        validator = Validator(countries, "", "", "", "0", 100, "0", "en")
 
         output_countries, output_error_object = validator.validate_countries()
 
@@ -329,7 +329,7 @@ class TestValidateCountries(unittest.TestCase):
 
     def test_when_multiple_countries_are_selected_returns_no_error(self):
         countries = "england,wales"
-        validator = Validator(countries, "", "", "", "0", 100, "0")
+        validator = Validator(countries, "", "", "", "0", 100, "0", "en")
 
         output_countries, output_error_object = validator.validate_countries()
 
@@ -338,7 +338,7 @@ class TestValidateCountries(unittest.TestCase):
 
     def test_when_a_country_is_selected_prefixed_with_hyphen_returns_no_error(self):
         countries = "-england"
-        validator = Validator(countries, "", "", "", "0", 100, "0")
+        validator = Validator(countries, "", "", "", "0", 100, "0", "en")
 
         output_countries, output_error_object = validator.validate_countries()
 
@@ -347,7 +347,7 @@ class TestValidateCountries(unittest.TestCase):
 
     def test_when_there_are_duplicate_countries_returns_error(self):
         countries = "england,-england"
-        validator = Validator(countries, "", "", "", "0", 100, "0")
+        validator = Validator(countries, "", "", "", "0", 100, "0", "en")
 
         output_countries, output_error_object = validator.validate_countries()
         expected_error_object = [
@@ -362,7 +362,7 @@ class TestValidateCountries(unittest.TestCase):
 
     def test_when_there_are_invalid_uk_countries_returns_error(self):
         countries = "bosnia,photosynthesis,england"
-        validator = Validator(countries, "", "", "", "0", 100, "0")
+        validator = Validator(countries, "", "", "", "0", 100, "0", "en")
 
         output_countries, output_error_object = validator.validate_countries()
         expected_error_object = [
@@ -452,7 +452,7 @@ class TestIsInt(unittest.TestCase):
 class TestValidateLengthOfCourse(unittest.TestCase):
     def test_when_empty_length_of_course_returns_no_error(self):
         length_of_course = ""
-        validator = Validator("", "", length_of_course, "", "0", 100, "0")
+        validator = Validator("", "", length_of_course, "", "0", 100, "0", "en")
 
         output_lengths, output_error_object = validator.validate_length_of_course()
 
@@ -461,7 +461,7 @@ class TestValidateLengthOfCourse(unittest.TestCase):
 
     def test_when_a_valid_length_of_course_returns_no_error(self):
         length_of_course = "4"
-        validator = Validator("", "", length_of_course, "", "0", 100, "0")
+        validator = Validator("", "", length_of_course, "", "0", 100, "0", "en")
 
         output_lengths, output_error_object = validator.validate_length_of_course()
 
@@ -470,7 +470,7 @@ class TestValidateLengthOfCourse(unittest.TestCase):
 
     def test_when_multiple_valid_length_of_course_returns_no_error(self):
         length_of_course = "1,7"
-        validator = Validator("", "", length_of_course, "", "0", 100, "0")
+        validator = Validator("", "", length_of_course, "", "0", 100, "0", "en")
 
         output_lengths, output_error_object = validator.validate_length_of_course()
 
@@ -479,7 +479,7 @@ class TestValidateLengthOfCourse(unittest.TestCase):
 
     def test_when_length_of_course_is_not_a_number_returns_error(self):
         length_of_course = "four,3"
-        validator = Validator("", "", length_of_course, "", "0", 100, "0")
+        validator = Validator("", "", length_of_course, "", "0", 100, "0", "en")
 
         output_lengths, output_error_object = validator.validate_length_of_course()
         expected_error_object = [
@@ -494,7 +494,7 @@ class TestValidateLengthOfCourse(unittest.TestCase):
 
     def test_when_length_of_course_is_above_maximum_number_of_years_returns_error(self):
         length_of_course = "8"
-        validator = Validator("", "", length_of_course, "", "0", 100, "0")
+        validator = Validator("", "", length_of_course, "", "0", 100, "0", "en")
 
         output_lengths, output_error_object = validator.validate_length_of_course()
         expected_error_object = [
@@ -509,7 +509,7 @@ class TestValidateLengthOfCourse(unittest.TestCase):
 
     def test_when_length_of_course_is_above_minimum_number_of_years_returns_error(self):
         length_of_course = "0"
-        validator = Validator("", "", length_of_course, "", "0", 100, "0")
+        validator = Validator("", "", length_of_course, "", "0", 100, "0", "en")
 
         output_lengths, output_error_object = validator.validate_length_of_course()
         expected_error_object = [
@@ -531,8 +531,10 @@ class TestValidate(unittest.TestCase):
         length_of_course = "3,4"
         countries = "england,wales"
         subjects = "CAH09-01-01,CAH09-01-02"
+        language = "en"
+
         validator = Validator(
-            countries, filters, length_of_course, subjects, limit, 100, offset
+            countries, filters, length_of_course, subjects, limit, 100, offset, language
         )
 
         expected_result = {
@@ -560,8 +562,10 @@ class TestValidate(unittest.TestCase):
         length_of_course = "-2,8,twenty"
         countries = "bolivia,-england,england"
         subjects = 32
+        language = "bad"
+
         validator = Validator(
-            countries, filters, length_of_course, subjects, limit, 100, offset
+            countries, filters, length_of_course, subjects, limit, 100, offset, language
         )
 
         expected_result = {}
@@ -596,6 +600,10 @@ class TestValidate(unittest.TestCase):
                 "error": "length_of_course values needs to be numbers between the range of 1 and 7",
                 "error_values": [{"length_of_course": "-2,8"}],
             },
+            {
+                'error': 'value of language is not supported',
+                'error_values': [{'language': 'bad'}],
+            }
         ]
 
         print(f"output: {output_error_object}")
