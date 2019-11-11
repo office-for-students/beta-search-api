@@ -20,6 +20,7 @@ paths:
         - $ref: '#/components/parameters/institutions'
         - $ref: '#/components/parameters/subjects'
         - $ref: '#/components/parameters/postcode'
+        - $ref: '#/components/parameters/language'
       responses:
         200:
           description: "Returns a list of all relevant courses based on the query term and filters and grouped by institution/course provider"
@@ -67,6 +68,7 @@ paths:
         - $ref: '#/components/parameters/countries'
         - $ref: '#/components/parameters/subjects'
         - $ref: '#/components/parameters/postcode'
+        - $ref: '#/components/parameters/language'
       responses:
         200:
           description: "Returns a list of all relevant courses based on the query term and filters for a single institution/course provider."
@@ -413,6 +415,17 @@ components:
       example: "CAH09-01-01,cah11-01-01"
       in: query
       name: subjects
+      required: false
+      schema:
+        type: string
+    language:
+      description: |
+        A value representing the language the request was made in. Used for course sorting based on available title. Only the following enumerations are supported langauges:
+          * en - English
+          * cy - Welsh
+      example: "en"
+      in: query
+      name: language
       required: false
       schema:
         type: string
