@@ -26,6 +26,7 @@ ERR_LENGTH_OF_COURSE_WRONG_TYPE = "length_of_course values needs to be a number"
 ERR_LENGTH_OF_COURSE_OUT_OF_RANGE = (
     "length_of_course values needs to be numbers between the range of 1 and 7"
 )
+ERR_UNKNOWN_LANGUAGE = "value of language is not supported"
 
 
 def get_error_object(error_title, error_key_value_pairs):
