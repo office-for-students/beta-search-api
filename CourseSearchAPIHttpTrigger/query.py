@@ -38,7 +38,7 @@ class Query:
         # Create search part of query
         search = list()
         if self.institution:
-            if self.query_params.get("language", "") == "cy":
+            if self.query_params["language"] == "cy":
                 institution_search_query = (
                     "course/institution/pub_ukprn_welsh_name:" + self.institution
                 )

@@ -561,6 +561,7 @@ class TestValidate(unittest.TestCase):
             "foundation_year": False,
             "full_time": True,
             "honours_award": True,
+            "language": "en",
             "length_of_course": ["3", "4"],
             "limit": 5,
             "offset": 30,
