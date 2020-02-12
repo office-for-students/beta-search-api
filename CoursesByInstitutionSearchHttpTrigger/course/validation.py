@@ -361,6 +361,9 @@ class Validator:
             subjects = self.subjects.upper().split(",")
             query_params["subjects"] = subjects
 
+        if len(self.new_language) > 0:
+            query_params["language"] = self.new_language
+
         self.query_params = query_params
 
 
