@@ -549,10 +549,10 @@ class TestValidate(unittest.TestCase):
         length_of_course = "3,4"
         countries = "england,wales"
         subjects = "CAH09-01-01,CAH09-01-02"
-        langauge = "en"
+        language = "en"
 
         validator = Validator(
-            countries, filters, institution, length_of_course, subjects, limit, 100, offset, langauge
+            countries, filters, institution, length_of_course, subjects, limit, 100, offset, language
         )
 
         expected_result = {
