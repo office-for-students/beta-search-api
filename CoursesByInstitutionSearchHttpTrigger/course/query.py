@@ -40,7 +40,10 @@ class Query:
 
         # Create filter part of query
         filters = list()
-        filters.append("course/institution/pub_ukprn_name eq '" + self.institution + "'")
+        if self.query_params.get("language", "") == "cy":
+            filters.append("course/institution/pub_ukprn_welsh_name eq '" + self.institution + "'")
+        else:
+            filters.append("course/institution/pub_ukprn_name eq '" + self.institution + "'")
 
         if "countries" in self.query_params and self.query_params["countries"]:
 
