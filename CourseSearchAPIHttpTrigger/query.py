@@ -138,7 +138,7 @@ class Query:
                 institution = institution.replace("&", "%26")
 
                 if search_public_ukprn == "False":
-                    if self.query_params["langauge"] == "cy":
+                    if self.query_params["language"] == "cy":
                         institution_list.append(
                             "course/institution/pub_ukprn_welsh_name eq '" + institution + "'"
                         )

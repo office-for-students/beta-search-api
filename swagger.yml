@@ -420,7 +420,7 @@ components:
         type: string
     language:
       description: |
-        A value representing the language the request was made in. Used for course sorting based on available title. Only the following enumerations are supported langauges:
+        A value representing the language the request was made in. Used for course sorting based on available title. Only the following enumerations are supported languages:
           * en - English
           * cy - Welsh
       example: "en"
