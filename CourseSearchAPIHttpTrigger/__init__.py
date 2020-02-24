@@ -172,14 +172,23 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         counts = {}
         # Step 8 - handle facets to build correct
         # limit and offset for next query
-        query_params["limit"], query_params["offset"], counts["institutions"], counts[
-            "courses"
-        ], institution_course_counts = get_offset_and_limit(
-            facets["@search.facets"]["course/institution/sort_pub_ukprn_name"],
-            int(limit),
-            int(offset),
-        )
 
+        if language == "cy":
+            query_params["limit"], query_params["offset"], counts["institutions"], counts[
+                "courses"
+            ], institution_course_counts = get_offset_and_limit(
+                facets["@search.facets"]["course/institution/sort_pub_ukprn_welsh_name"],
+                int(limit),
+                int(offset),
+            )
+        else:
+            query_params["limit"], query_params["offset"], counts["institutions"], counts[
+                "courses"
+            ], institution_course_counts = get_offset_and_limit(
+                facets["@search.facets"]["course/institution/sort_pub_ukprn_name"],
+                int(limit),
+                int(offset),
+            )
         # Step 9 - TODO Refactor so caller does not have to know about the number of courses and handling more than 1000
         # Get courses by institution based on query paramaeters
         # Azure search can only return a maximum of 1000 docs in one call, so page through results

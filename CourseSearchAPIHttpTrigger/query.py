@@ -38,9 +38,14 @@ class Query:
         # Create search part of query
         search = list()
         if self.institution:
-            institution_search_query = (
-                "course/institution/pub_ukprn_name:" + self.institution
-            )
+            if self.query_params["language"] == "cy":
+                institution_search_query = (
+                    "course/institution/pub_ukprn_welsh_name:" + self.institution
+                )
+            else:
+                institution_search_query = (
+                    "course/institution/pub_ukprn_name:" + self.institution
+                )
             search.append(institution_search_query)
 
         if self.course:
@@ -133,9 +138,14 @@ class Query:
                 institution = institution.replace("&", "%26")
 
                 if search_public_ukprn == "False":
-                    institution_list.append(
-                        "course/institution/pub_ukprn_name eq '" + institution + "'"
-                    )
+                    if self.query_params["language"] == "cy":
+                        institution_list.append(
+                            "course/institution/pub_ukprn_welsh_name eq '" + institution + "'"
+                        )
+                    else:
+                        institution_list.append(
+                            "course/institution/pub_ukprn_name eq '" + institution + "'"
+                        )
                 else:
                     institution_list.append(
                         "course/institution/pub_ukprn eq '" + institution + "'"
@@ -169,7 +179,7 @@ class Query:
 
         # Add alphabetic ordering based on the institution name after
         # ordering by search score
-        query += "&$orderby=course/institution/sort_pub_ukprn_name"
+        query += "&$orderby=course/institution/sort_pub_ukprn_welsh_name" if self.query_params["language"] == "cy" else "&$orderby=course/institution/sort_pub_ukprn_name"
 
         self.query = query
 
@@ -192,7 +202,11 @@ class Query:
         query += "&$top=0"
 
         # Build facet query for categorising courses by institution
-        query += "&facet=course/institution/sort_pub_ukprn_name,\
-                 count:500,sort:value"
+        if self.query_params["language"] == "cy":
+            query += "&facet=course/institution/sort_pub_ukprn_welsh_name,\
+                count:500, sort:value"
+        else:
+            query += "&facet=course/institution/sort_pub_ukprn_name,\
+                count:500,sort:value"
 
         return query

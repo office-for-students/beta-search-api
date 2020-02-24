@@ -44,7 +44,7 @@ def group_courses_by_institution(courses, counts, limit, offset, language):
         pub_ukprn = course["institution"]["pub_ukprn"]
         if pub_ukprn not in institutions:
             institution_body = {
-                "pub_ukprn_name": course["institution"]["pub_ukprn_name"],
+                "pub_ukprn_name": course["institution"]["pub_ukprn_welsh_name"] if language == "cy" else course["institution"]["pub_ukprn_name"],
                 "pub_ukprn": pub_ukprn,
                 "courses": [],
                 "number_of_courses": 0,
