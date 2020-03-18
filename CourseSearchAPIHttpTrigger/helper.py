@@ -41,6 +41,9 @@ def group_courses_by_institution(courses, counts, limit, offset, language):
     for c in courses:
         course = c["course"]
 
+        if not isinstance(course["institution"]["pub_ukprn"], str):
+            continue
+
         pub_ukprn = course["institution"]["pub_ukprn"]
         if pub_ukprn not in institutions:
             institution_body = {
