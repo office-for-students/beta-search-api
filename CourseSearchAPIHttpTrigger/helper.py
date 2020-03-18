@@ -41,7 +41,7 @@ def group_courses_by_institution(courses, counts, limit, offset, language):
     for c in courses:
         course = c["course"]
 
-        if not isinstance(course["institution"]["pub_ukprn"], str):
+        if course["institution"]["pub_ukprn_name"] == "not available":
             continue
 
         pub_ukprn = course["institution"]["pub_ukprn"]
