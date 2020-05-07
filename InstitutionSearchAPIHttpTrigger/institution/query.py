@@ -116,7 +116,7 @@ class Query:
         if "first_degree" in self.query_params:
             filters.append("course/qualification/level eq 'first-degree'")
 
-        if "other_undegraduate" in self.query_params:
+        if "other_undergraduate" in self.query_params:
             filters.append("course/qualification/level eq 'other-undergraduate'")
 
         if self.institutions != "":
