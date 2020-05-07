@@ -359,6 +359,8 @@ def validate_filter_options(filter):
         "year_abroad": True,
         "full_time": True,
         "part_time": True,
+        "first_degree": True,
+        "other_undergraduate": True,
     }
 
     return switcher.get(filter, False)
