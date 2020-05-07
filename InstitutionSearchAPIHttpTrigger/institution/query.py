@@ -114,10 +114,10 @@ class Query:
                 filters.append("course/year_abroad/code ne 2")
 
         if "first_degree" in self.query_params:
-            filters.append("course/qualification/level eq 'first-degree")
+            filters.append("course/qualification/level eq 'first-degree'")
 
         if "other_undegraduate" in self.query_params:
-            filters.append("course/qualification/level eq 'other-undergraduate")
+            filters.append("course/qualification/level eq 'other-undergraduate'")
 
         if self.institutions != "":
             institutions = re.split(r',(?=")', self.institutions)
