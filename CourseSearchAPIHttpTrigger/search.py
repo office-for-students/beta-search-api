@@ -88,7 +88,6 @@ class CourseIndex:
     def get(self):
         try:
             url = self.url + "/indexes/" + self.index_name + "/docs" + self.query_string
-
             logging.info(f"Querying search service with the following url: {url}")
             response = requests.get(url, headers=self.headers)
 
@@ -123,7 +122,6 @@ def get_results(
 ):
     queries = {}
 
-    offset = query_params["offset"]
     total_number_of_items_to_return = query_params["limit"]
 
     azure_search_limit = 1000
@@ -145,8 +143,7 @@ def get_results(
         results = search_results["value"]
 
         courses.extend(results)
-
-        query_params["offset"] = offset + azure_search_limit
+        query_params["offset"] = query_params["offset"] + azure_search_limit
         query_params["limit"] = query_params["limit"] - azure_search_limit
-
+        
     return courses
