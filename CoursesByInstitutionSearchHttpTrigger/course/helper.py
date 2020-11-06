@@ -67,7 +67,7 @@ def build_response(courses, language):
 
     items.sort(key=lambda x: course_sort_key(x, language))
     return {
-        "pub_ukprn_name": course["institution"]["pub_ukprn_welsh_name"] if language == "cy" else course["institution"]["pub_ukprn_welsh_name"],
+        "pub_ukprn_name": course["institution"]["pub_ukprn_welsh_name"] if language == "cy" else course["institution"]["pub_ukprn_name"],
         "pub_ukprn": course["institution"]["pub_ukprn"],
         "courses": items,
         "number_of_courses": len(items),

@@ -137,7 +137,11 @@ def remove_unwanted_chars_in_search_term(field):
 
 
 def course_sort_key(course, language):
-    if language == "cy":
+    if not course["title"]:
+        return "course title is missing"
+    elif not course["title"]["english"]:
+        return "course title is missing"
+    elif language == "cy":
         return (course["title"]["welsh"] if course["title"]["welsh"] else course["title"]["english"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
-
-    return (course["title"]["english"] if course["title"]["english"] else course["title"]["welsh"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
+    else:
+        return (course["title"]["english"] if course["title"]["english"] else course["title"]["welsh"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
