@@ -126,7 +126,7 @@ def get_results(
 
     azure_search_limit = 1000
 
-    # Make a single request every 1000 course docs
+    # Make a single request every 1000 course docs.
     iterations = total_number_of_items_to_return / azure_search_limit
     number_of_requests = math.ceil(iterations)
 
