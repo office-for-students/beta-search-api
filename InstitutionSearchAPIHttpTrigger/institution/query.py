@@ -128,7 +128,7 @@ class Query:
                 institution = institution.strip('"')
                 institution = institution.replace("&", "%26")
 
-                if search_public_ukprn == "False":
+                if search_public_ukprn == "false":
                     institution_list.append(
                         "course/institution/pub_ukprn_name eq '" + institution + "'"
                     )
