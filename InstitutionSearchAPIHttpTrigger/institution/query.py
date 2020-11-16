@@ -65,7 +65,7 @@ class Query:
 
         if "foundation_year" in self.query_params:
             if self.query_params["foundation_year"]:
-                filters.append("course/foundation_year_avaialbility/code ne 0")
+                filters.append("course/foundation_year_availability/code ne 0")
             else:
                 filters.append("course/foundation_year_availability/code ne 2")
 
@@ -128,7 +128,7 @@ class Query:
                 institution = institution.strip('"')
                 institution = institution.replace("&", "%26")
 
-                if search_public_ukprn == "False":
+                if search_public_ukprn == "false":
                     institution_list.append(
                         "course/institution/pub_ukprn_name eq '" + institution + "'"
                     )
