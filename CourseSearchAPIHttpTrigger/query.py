@@ -80,7 +80,7 @@ class Query:
 
         if "foundation_year" in self.query_params:
             if self.query_params["foundation_year"]:
-                filters.append("course/foundation_year_avaialbility/code ne 0")
+                filters.append("course/foundation_year_availability/code ne 0")
             else:
                 filters.append("course/foundation_year_availability/code ne 2")
 
