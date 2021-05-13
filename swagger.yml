@@ -143,6 +143,7 @@ components:
       required: [
         country
         distance_learning
+        on_campus
         foundation_year
         honours_award
         kis_course_id
@@ -164,6 +165,9 @@ components:
             Scotland
             Wales
           ]
+        on_campus:
+          description: "The code representing whether the course is offered on campus."
+          type: string
         distance_learning:
           description: "The code representing whether the course is offered wholly through distance learning."
           type: string
@@ -435,6 +439,7 @@ components:
           * part_time
           * full_time
           * distance_learning
+          * on_campus
           * honours_award
           * foundation_year
           * length_of_course
