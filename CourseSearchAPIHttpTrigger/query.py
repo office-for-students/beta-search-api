@@ -72,11 +72,7 @@ class Query:
             else:
                 filters.append(countries[0])
 
-        if "distance_learning" in self.query_params:
-            if self.query_params["distance_learning"]:
-                filters.append("course/distance_learning/code ne 0")
-            else:
-                filters.append("course/distance_learning/code ne 1")
+        filters.append(Query.build_distance_learning_filter(self.query_params))
 
         if "foundation_year" in self.query_params:
             if self.query_params["foundation_year"]:
@@ -216,3 +212,9 @@ class Query:
                 count:500,sort:value"
 
         return query
+
+    def build_distance_learning_filter(query_params):
+        if query_params.get('distance_learning'):
+            return 'course/distance_learning/code ne 0'
+        else:
+            return 'course/distance_learning/code ne 1'
