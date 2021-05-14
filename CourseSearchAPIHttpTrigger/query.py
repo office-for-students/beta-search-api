@@ -214,7 +214,14 @@ class Query:
         return query
 
     def build_distance_learning_filter(query_params):
-        if query_params.get('distance_learning'):
-            return 'course/distance_learning/code ne 0'
-        else:
-            return 'course/distance_learning/code ne 1'
+        on_campus = query_params.get('on_campus')
+        distance_learning = query_params.get('distance_learning')
+        doc = 'course/distance_learning/code'
+        filter = f'({doc} eq 0 or {doc} eq 1 or {doc} eq 2)'       
+        
+        if on_campus and not distance_learning:
+            filter = f'{doc} ne 1'
+        elif not on_campus and distance_learning:
+            filter = f'{doc} ne 0'
+        return filter
+
