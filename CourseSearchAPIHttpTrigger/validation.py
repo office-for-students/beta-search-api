@@ -353,6 +353,7 @@ class Validator:
 def validate_filter_options(filter):
     switcher = {
         "distance_learning": True,
+        "on_campus": True,
         "honours_award": True,
         "foundation_year": True,
         "sandwich_year": True,
