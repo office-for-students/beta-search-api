@@ -65,9 +65,7 @@ class TestCampusDistanceWithCountry(unittest.TestCase):
         actual = Query.build_or_distance_filter(self.query_params, self.filters)
         self.assertEqual(actual, expected)
 
-
-    # Test to see if on_campus is removed from the array
-    def test_when_distance_and_campus_selected(self):
+    def test_campus_removed_when_both_selected(self):
         self.query_params['on_campus'] = True
         self.query_params['distance_learning'] = True
         build_array = Query.build_distance_learning_filter(self.query_params)
@@ -75,9 +73,7 @@ class TestCampusDistanceWithCountry(unittest.TestCase):
         expected = [f'{self.doc} ne 0']
         self.execute(expected)
 
-
-    # test a single country is removed when added
-    def test_when_only_distance_and_country_selected(self):
+    def test_country_removed_when_only_distance_selected(self):
         self.query_params['on_campus'] = False
         self.query_params['distance_learning'] = True
         self.query_params['countries'] = ['Wales']
@@ -88,8 +84,7 @@ class TestCampusDistanceWithCountry(unittest.TestCase):
         expected = [f'{self.doc} ne 0']
         self.execute(expected)
 
-    #test to see if campus and a country are removed from the filter
-    def test_when_campus_distance_and_countries_selected(self):
+    def test_country_and_campus_removed_when_both_selected(self):
         self.query_params['on_campus'] = True
         self.query_params['distance_learning'] = True
         self.query_params['countries'] = ['Wales']
@@ -100,8 +95,7 @@ class TestCampusDistanceWithCountry(unittest.TestCase):
         expected = [f'{self.doc} ne 0']
         self.execute(expected)
 
-    #test to see if multiple countries and on campus are removed from the filter.
-    def test_when_campus_distance_and_countries_selected(self):
+    def test_countries_and_campus_removed_when_both_selected(self):
         self.query_params['on_campus'] = True
         self.query_params['distance_learning'] = True
         self.query_params['countries'] = ['Wales', 'Scotland', 'England']
