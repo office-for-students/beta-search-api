@@ -43,3 +43,72 @@ class TestBuildDistanceLearningFilter(unittest.TestCase):
         self.query_params['distance_learning'] = True
         expected = f'({self.doc} eq 0 or {self.doc} eq 1 or {self.doc} eq 2)'
         self.execute(expected)
+
+
+class TestCampusDistanceWithCountry(unittest.TestCase):
+
+#  -----------------------------------------------------------------------------------------------------------------------------------------------------------
+# | On campus | Distance learning |   Wales   |   Scotland   |    N.I.   | KISCOURSE/DISTANCE value | Alternative | Expected no of courses returned (approx.) |
+# |   :---:   |      :---:        |   :---:   |    :---:     |   :---:   |           :---:          |     :---:   |                 ---                       |
+# |     O     |        X          |     O     |      -       |     -     |         1 or 2           |     ne 0    | 149 courses from 9 providers              |
+# |     -     |        -          |     -     |      O       |     O     |         1 or 2           |     ne 0    | 546 courses from 12 providers             |
+# |     O     |        X          |     -     |      O       |     O     |         1 or 2           |     ne 0    | 546 courses from 12 providers             |
+#  -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    doc = 'course/distance_learning/code'
+
+    def setUp(self):
+        self.query_params = {}
+        self.filters = []
+    
+    def execute(self, expected):
+        actual = Query.build_or_distance_filter(self.query_params, self.filters)
+        self.assertEqual(actual, expected)
+
+
+    # Test to see if on_campus is removed from the array
+    def test_when_distance_and_campus_selected(self):
+        self.query_params['on_campus'] = True
+        self.query_params['distance_learning'] = True
+        build_array = Query.build_distance_learning_filter(self.query_params)
+        self.filters.append(build_array)
+        expected = [f'{self.doc} ne 0']
+        self.execute(expected)
+
+
+    # test a single country is removed when added
+    def test_when_only_distance_and_country_selected(self):
+        self.query_params['on_campus'] = False
+        self.query_params['distance_learning'] = True
+        self.query_params['countries'] = ['Wales']
+        build_array = Query.build_distance_learning_filter(self.query_params)
+        build_country_array = Query.build_country_filter(self.query_params)
+        self.filters.append(build_array)
+        self.filters.append(build_country_array)
+        expected = [f'{self.doc} ne 0']
+        self.execute(expected)
+
+    #test to see if campus and a country are removed from the filter
+    def test_when_campus_distance_and_countries_selected(self):
+        self.query_params['on_campus'] = True
+        self.query_params['distance_learning'] = True
+        self.query_params['countries'] = ['Wales']
+        build_array = Query.build_distance_learning_filter(self.query_params)
+        build_country_array = Query.build_country_filter(self.query_params)
+        self.filters.append(build_array)
+        self.filters.append(build_country_array)
+        expected = [f'{self.doc} ne 0']
+        self.execute(expected)
+
+    #test to see if multiple countries and on campus are removed from the filter.
+    def test_when_campus_distance_and_countries_selected(self):
+        self.query_params['on_campus'] = True
+        self.query_params['distance_learning'] = True
+        self.query_params['countries'] = ['Wales', 'Scotland', 'England']
+        build_array = Query.build_distance_learning_filter(self.query_params)
+        build_country_array = Query.build_country_filter(self.query_params)
+        self.filters.append(build_array)
+        self.filters.append(build_country_array)
+        expected = [f'{self.doc} ne 0']
+        self.execute(expected)
+

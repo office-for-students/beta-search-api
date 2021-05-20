@@ -174,7 +174,16 @@ class Query:
                 + ")"
             )
 
-        filter_query = " and ".join(filters)
+        #Condition that will remove distance learning from the filters, and run a function for a separate distance learning filter
+        if '(course/distance_learning/code eq 0 or course/distance_learning/code eq 1 or course/distance_learning/code eq 2)' in filters:    
+            distance_filter = Query.build_or_distance_filter(self.query_params, filters)
+            filters.remove(f'(course/distance_learning/code eq 0 or course/distance_learning/code eq 1 or course/distance_learning/code eq 2)')
+            filters.append(f'course/distance_learning/code ne 1')
+            filter_query = " and ".join(filters)
+            filter_query += " or "
+            filter_query += " and ".join(distance_filter)
+        else:
+            filter_query = " and ".join(filters)
 
         if filter_query != "":
             query += "&$filter=" + filter_query
@@ -224,4 +233,42 @@ class Query:
         elif not on_campus and distance_learning:
             filter = f'{doc} ne 0'
         return filter
+
+    def build_country_filter(query_params):
+        filters = list()
+        if "countries" in query_params and query_params["countries"]:
+
+            countries = list()
+            for country in query_params["countries"]:
+                countries.append("course/country/code eq '" + country + "'")
+
+            if len(countries) > 1:
+                filters.append("(" + " or ".join(countries) + ")")
+            else:
+                filters.append(countries[0])
+
+            return filters[0]
+
+    def build_or_distance_filter(query_params, filters):
+        distance_filter = filters.copy()
+        on_campus = query_params.get('on_campus')
+        distance_learning = query_params.get('distance_learning')
+        doc = 'course/distance_learning/code'
+
+        if f'({doc} eq 0 or {doc} eq 1 or {doc} eq 2)' in filters:
+            distance_filter.remove(f'({doc} eq 0 or {doc} eq 1 or {doc} eq 2)')
+            distance_filter.append(f'{doc} ne 0')
+
+        if "countries" in query_params and query_params["countries"]:
+            #remove all countries from the duplicate filter
+            countries = list()
+            for country in query_params["countries"]:
+                countries.append("course/country/code eq '" + country + "'")
+
+            if len(countries) > 1:
+                distance_filter.remove("(" + " or ".join(countries) + ")")
+            else:
+                distance_filter.remove(countries[0])
+
+        return distance_filter
 
