@@ -135,32 +135,6 @@ class Query:
 
             for x in institution_filter_list:
                 filters.append(x)
-            # institutions = re.split(r',(?=")', self.institutions)
-
-            # institution_list = list()
-            # search_public_ukprn = os.environ["SearchPubUKPRN"]
-            # for institution in institutions:
-            #     institution = institution.strip('"')
-            #     institution = institution.replace("&", "%26")
-
-            #     if search_public_ukprn == "False":
-            #         if self.query_params["language"] == "cy":
-            #             institution_list.append(
-            #                 "course/institution/pub_ukprn_welsh_name eq '" + institution + "'"
-            #             )
-            #         else:
-            #             institution_list.append(
-            #                 "course/institution/pub_ukprn_name eq '" + institution + "'"
-            #             )
-            #     else:
-            #         institution_list.append(
-            #             "course/institution/pub_ukprn eq '" + institution + "'"
-            #         )
-
-            # if len(institution_list) > 1:
-            #     filters.append("(" + " or ".join(institution_list) + ")")
-            # else:
-            #     filters.append(institution_list[0])
 
         if self.postcode_object != {}:
             latitude = self.postcode_object["latitude"]
