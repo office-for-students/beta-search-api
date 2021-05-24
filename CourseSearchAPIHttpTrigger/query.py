@@ -131,32 +131,10 @@ class Query:
             filters.append("course/qualification/level eq 'other-undergraduate'")
 
         if self.institutions != "":
-            institutions = re.split(r',(?=")', self.institutions)
+            institution_filter_list = Query.build_institution_filter(self.institutions, self.query_params)
 
-            institution_list = list()
-            search_public_ukprn = os.environ["SearchPubUKPRN"]
-            for institution in institutions:
-                institution = institution.strip('"')
-                institution = institution.replace("&", "%26")
-
-                if search_public_ukprn == "False":
-                    if self.query_params["language"] == "cy":
-                        institution_list.append(
-                            "course/institution/pub_ukprn_welsh_name eq '" + institution + "'"
-                        )
-                    else:
-                        institution_list.append(
-                            "course/institution/pub_ukprn_name eq '" + institution + "'"
-                        )
-                else:
-                    institution_list.append(
-                        "course/institution/pub_ukprn eq '" + institution + "'"
-                    )
-
-            if len(institution_list) > 1:
-                filters.append("(" + " or ".join(institution_list) + ")")
-            else:
-                filters.append(institution_list[0])
+            for x in institution_filter_list:
+                filters.append(x)
 
         if self.postcode_object != {}:
             latitude = self.postcode_object["latitude"]
@@ -271,4 +249,35 @@ class Query:
                 distance_filter.remove(countries[0])
 
         return distance_filter
+
+    def build_institution_filter(institutions, query_params):
+        institution_filters = list()
+        split_institutions = institutions.split("#")
+        institution_list = list()
+        search_public_ukprn = os.environ["SearchPubUKPRN"]
+
+        for institution in split_institutions:
+            institution = institution.strip('"')
+            institution = institution.replace("&", "%26")
+
+            if search_public_ukprn == "False":
+                if query_params["language"] == "cy":
+                    institution_list.append(
+                        "course/institution/pub_ukprn_welsh_name eq '" + institution + "'"
+                    )
+                else:
+                    institution_list.append(
+                        "course/institution/pub_ukprn_name eq '" + institution + "'"
+                    )
+            else:
+                institution_list.append(
+                    "course/institution/pub_ukprn eq '" + institution + "'"
+                )
+
+        if len(institution_list) > 1:
+            institution_filters.append("(" + " or ".join(institution_list) + ")")
+        else:
+            institution_filters.append(institution_list[0])
+
+        return institution_filters
 
