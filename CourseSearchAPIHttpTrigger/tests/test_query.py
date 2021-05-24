@@ -1,4 +1,6 @@
 import unittest
+from unittest import mock
+import os
 
 from query import Query
 
@@ -65,8 +67,6 @@ class TestCampusDistanceWithCountry(unittest.TestCase):
         actual = Query.build_or_distance_filter(self.query_params, self.filters)
         self.assertEqual(actual, expected)
 
-
-    # Test to see if on_campus is removed from the array
     def test_when_distance_and_campus_selected(self):
         self.query_params['on_campus'] = True
         self.query_params['distance_learning'] = True
@@ -75,8 +75,6 @@ class TestCampusDistanceWithCountry(unittest.TestCase):
         expected = [f'{self.doc} ne 0']
         self.execute(expected)
 
-
-    # test a single country is removed when added
     def test_when_only_distance_and_country_selected(self):
         self.query_params['on_campus'] = False
         self.query_params['distance_learning'] = True
@@ -88,7 +86,6 @@ class TestCampusDistanceWithCountry(unittest.TestCase):
         expected = [f'{self.doc} ne 0']
         self.execute(expected)
 
-    #test to see if campus and a country are removed from the filter
     def test_when_campus_distance_and_countries_selected(self):
         self.query_params['on_campus'] = True
         self.query_params['distance_learning'] = True
@@ -100,7 +97,6 @@ class TestCampusDistanceWithCountry(unittest.TestCase):
         expected = [f'{self.doc} ne 0']
         self.execute(expected)
 
-    #test to see if multiple countries and on campus are removed from the filter.
     def test_when_campus_distance_and_countries_selected(self):
         self.query_params['on_campus'] = True
         self.query_params['distance_learning'] = True
@@ -112,3 +108,49 @@ class TestCampusDistanceWithCountry(unittest.TestCase):
         expected = [f'{self.doc} ne 0']
         self.execute(expected)
 
+
+
+class TestInsitituionFilter(unittest.TestCase):
+    doc_cy = "course/institution/pub_ukprn_welsh_name eq"
+    doc = "course/institution/pub_ukprn_name eq"
+    doc_ukprn = "course/institution/pub_ukprn eq"
+
+    def setUp(self):
+        self.institutions = ""
+        self.query_params = {}
+    
+    def execute(self, expected):
+        actual = Query.build_institution_filter(self.institutions, self.query_params)
+        self.assertEqual(actual, expected)
+
+    @mock.patch.dict(os.environ, {"SearchPubUKPRN": "False"})
+    def test_with_one_institution_selected(self):
+        self.institutions = 'University of Southampton'
+        self.query_params["language"] = {}
+        build_array = Query.build_institution_filter(self.institutions, self.query_params)
+        expected = [f"{self.doc} 'University of Southampton'"]
+        self.execute(expected)
+
+    @mock.patch.dict(os.environ, {"SearchPubUKPRN": "False"})
+    def test_with_multiple_institutions_selected(self):
+        self.institutions = 'University of Southampton#University Two#University Three'
+        self.query_params["language"] = {}
+        build_array = Query.build_institution_filter(self.institutions, self.query_params)
+        expected = [f"({self.doc} 'University of Southampton' or {self.doc} 'University Two' or {self.doc} 'University Three')"]
+        self.execute(expected)
+
+    @mock.patch.dict(os.environ, {"SearchPubUKPRN": "False"})
+    def test_with_multiple_institutions_welsh(self):
+        self.institutions = 'University of Southampton#University Two#University Three'
+        self.query_params["language"] = 'cy'
+        build_array = Query.build_institution_filter(self.institutions, self.query_params)
+        expected = [f"({self.doc_cy} 'University of Southampton' or {self.doc_cy} 'University Two' or {self.doc_cy} 'University Three')"]
+        self.execute(expected)
+
+    @mock.patch.dict(os.environ, {"SearchPubUKPRN": "True"})
+    def test_multiple_with_SearchPubUKPRN_set_true(self):
+        self.institutions = 'University of Southampton#University Two#University Three'
+        self.query_params["language"] = 'cy'
+        build_array = Query.build_institution_filter(self.institutions, self.query_params)
+        expected = [f"({self.doc_ukprn} 'University of Southampton' or {self.doc_ukprn} 'University Two' or {self.doc_ukprn} 'University Three')"]
+        self.execute(expected)
