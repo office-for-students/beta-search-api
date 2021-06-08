@@ -218,8 +218,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 search_url, api_key, api_version, course_index_name, search_query
             )
             json_response = response.json()
-            courses = json_response["value"]
-
+            
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
         if sortBySubject == 'true':
             search_results = group_courses_by_subject(courses, counts, int(limit), int(offset), language)     
