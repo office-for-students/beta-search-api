@@ -21,6 +21,7 @@ from .helper import (
     handle_apostrophes_in_search,
     get_offset_and_limit,
     group_courses_by_institution,
+    group_courses_by_subject,
 )
 
 from .query import (
@@ -97,6 +98,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         length_of_course = req.params.get("length_of_course", "")
         subjects = req.params.get("subjects", "")
         language = req.params.get("language", "en")
+        sortBySubject = req.params.get("sortBySubject", "false")
+        sortBySubjectLimit = req.params.get("sortBySubjectLimit", default_limit)
 
         # Step 1 - Validate query parameters
         query_params, error_objects = check_query_parameters(
@@ -218,9 +221,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             courses = json_response["value"]
 
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
-        search_results = group_courses_by_institution(
-            courses, counts, int(limit), int(offset), language
-        )
+        if sortBySubject == 'true':
+            search_results = group_courses_by_subject(courses, counts, int(limit), int(offset), language)     
+        else: 
+            search_results = group_courses_by_institution(courses, counts, int(limit), int(offset), language)
 
         return func.HttpResponse(
             json.dumps(search_results),
