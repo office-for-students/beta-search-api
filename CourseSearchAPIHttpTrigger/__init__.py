@@ -1,11 +1,9 @@
-from CourseSearchAPIHttpTrigger.sort_by_subject import SortBySubject
 import logging
 import os
 import sys
 import inspect
 import traceback
 import json
-import re
 
 import azure.functions as func
 
@@ -15,6 +13,9 @@ CURRENTDIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
+
+from course_to_label_mapper import CourseToLabelMapper
+from course_by_subject import CourseBySubject
 
 from .helper import (
     handle_search_terms,
@@ -218,16 +219,12 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 search_url, api_key, api_version, course_index_name, search_query
             )
             json_response = response.json()
+            courses = json_response["value"]
             
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
         if sortBySubject == 'true':
-                with open(f'{CURRENTDIR}/fixtures/subjects-sort-by.json', 'r') as myfile:
-                    input=myfile.read()
-                course_to_label_mapping = json.loads(input)
-
-                sortBySubject = SortBySubject(course_to_label_mapping)
-                sortBySubject.sort(courses, counts, int(limit), int(offset), language) 
-                # search_results = group_courses_by_subject(courses, counts, int(limit), int(offset), language)     
+            mapper = getCourseToLabelMapper();
+            search_results = CourseBySubject(mapper).group(courses, counts, int(limit), int(offset), language) 
         else: 
             search_results = group_courses_by_institution(courses, counts, int(limit), int(offset), language)
 
@@ -251,3 +248,9 @@ def convert_miles_to_km(distance_in_miles):
         return distance
     except ValueError:
         return None
+
+
+def getCourseToLabelMapper():
+    with open(f'{CURRENTDIR}/fixtures/subjects-sort-by.json', 'r') as file:
+        input = file.read()
+    return CourseToLabelMapper(json.loads(input))
