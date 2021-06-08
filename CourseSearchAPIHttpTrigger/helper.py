@@ -99,18 +99,7 @@ def group_courses_by_institution(courses, counts, limit, offset, language):
     return results
 
 
-def group_courses_by_subject(courses, counts, limit, offset, language):
-    with open(f'{CURRENTDIR}/fixtures/subjects-sort-by.json', 'r') as myfile:
-        input=myfile.read()
-    course_to_label_mapping = json.loads(input)
 
-    sortBySubject = SortBySubject(course_to_label_mapping)
-    subject = 'CAH11-01-01'
-
-    assert sortBySubject.get_label(subject) == 'Computer science'
-    assert sortBySubject.get_label_welsh(subject) == 'Gwyddoniaeth gyfrifiadurol'
-
-    return 'TO BE IMPLEMENTED'
 
 
 def remove_conjunctions_from_searchable_fields(course, institution):

@@ -1,3 +1,4 @@
+from CourseSearchAPIHttpTrigger.sort_by_subject import SortBySubject
 import logging
 import os
 import sys
@@ -21,7 +22,6 @@ from .helper import (
     handle_apostrophes_in_search,
     get_offset_and_limit,
     group_courses_by_institution,
-    group_courses_by_subject,
 )
 
 from .query import (
@@ -221,7 +221,13 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
         if sortBySubject == 'true':
-            search_results = group_courses_by_subject(courses, counts, int(limit), int(offset), language)     
+                with open(f'{CURRENTDIR}/fixtures/subjects-sort-by.json', 'r') as myfile:
+                    input=myfile.read()
+                course_to_label_mapping = json.loads(input)
+
+                sortBySubject = SortBySubject(course_to_label_mapping)
+                sortBySubject.sort(courses, counts, int(limit), int(offset), language) 
+                # search_results = group_courses_by_subject(courses, counts, int(limit), int(offset), language)     
         else: 
             search_results = group_courses_by_institution(courses, counts, int(limit), int(offset), language)
 
