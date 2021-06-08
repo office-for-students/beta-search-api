@@ -97,6 +97,10 @@ def group_courses_by_institution(courses, counts, limit, offset, language):
     return results
 
 
+def group_courses_by_subject(courses, counts, limit, offset, language):
+    return 'TO BE IMPLEMENTED'
+
+
 def remove_conjunctions_from_searchable_fields(course, institution):
     if course != "":
         course = remove_conjunctions(course)
