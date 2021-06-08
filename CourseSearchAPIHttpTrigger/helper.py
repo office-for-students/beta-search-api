@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 import inspect
@@ -10,6 +11,7 @@ PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
+from sort_by_subject import SortBySubject
 
 def get_offset_and_limit(facets, requested_limit, requested_offset):
     limit = 0
@@ -98,6 +100,16 @@ def group_courses_by_institution(courses, counts, limit, offset, language):
 
 
 def group_courses_by_subject(courses, counts, limit, offset, language):
+    with open(f'{CURRENTDIR}/fixtures/subjects-sort-by.json', 'r') as myfile:
+        input=myfile.read()
+    course_to_label_mapping = json.loads(input)
+
+    sortBySubject = SortBySubject(course_to_label_mapping)
+    subject = 'CAH11-01-01'
+
+    assert sortBySubject.get_label(subject) == 'Computer science'
+    assert sortBySubject.get_label_welsh(subject) == 'Gwyddoniaeth gyfrifiadurol'
+
     return 'TO BE IMPLEMENTED'
 
 
