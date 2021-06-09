@@ -8,11 +8,11 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfra
 PARENT_DIR = os.path.dirname(CURRENT_DIR)
 sys.path.insert(0, PARENT_DIR)
 
-from helper import group_courses_by_institution
+from course_by_institution import CoursesByInstitution
 
-TEST_DATA_DIR=f'{CURRENT_DIR}/fixtures/group_courses_by_institution'
+TEST_DATA_DIR=f'{CURRENT_DIR}/fixtures/courses_by_institution'
 
-class TestGroupCoursesByInstitution(unittest.TestCase):
+class TestCoursesByInstitution(unittest.TestCase):
     
     def test_existing_logic(self):
         # ARRANGE
@@ -29,14 +29,14 @@ class TestGroupCoursesByInstitution(unittest.TestCase):
         offset = "0"
         language = "en"
 
+        coursesByInstitution = CoursesByInstitution()
+
         # ACT
-        actual = group_courses_by_institution(
-            courses, 
-            counts, 
-            int(limit), 
-            int(offset), 
-            language
-        )
+        actual = coursesByInstitution.group(courses,
+                                            counts, 
+                                            int(limit),
+                                            int(offset), 
+                                            language)        
 
         # ASSERT
         self.assertEqual(actual, expected)
