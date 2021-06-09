@@ -12,7 +12,7 @@ from course_to_label_mapper import CourseToLabelMapper
 from course_by_subject import CourseBySubject
 
 MAPPING_FILE = f'{PARENT_DIR}/fixtures/subjects-sort-by.json'
-FIXTURES_DIR = f'{CURRENT_DIR}/fixtures/group_courses_by_subject'
+FIXTURES_DIR = f'{CURRENT_DIR}/fixtures/courses_by_subject'
 
 
 class TestCourseBySubject(unittest.TestCase):

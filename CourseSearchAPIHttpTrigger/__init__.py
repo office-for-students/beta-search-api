@@ -14,6 +14,7 @@ PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
+from course_by_institution import CoursesByInstitution
 from course_to_label_mapper import CourseToLabelMapper
 from course_by_subject import CourseBySubject
 
@@ -21,9 +22,7 @@ from .helper import (
     handle_search_terms,
     remove_conjunctions_from_searchable_fields,
     handle_apostrophes_in_search,
-    get_offset_and_limit,
-    group_courses_by_institution,
-)
+    get_offset_and_limit,)
 
 from .query import (
     build_institution_search_query,
@@ -226,7 +225,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             mapper = getCourseToLabelMapper();
             search_results = CourseBySubject(mapper).group(courses, counts, int(limit), int(offset), language) 
         else: 
-            search_results = group_courses_by_institution(courses, counts, int(limit), int(offset), language)
+            search_results = CoursesByInstitution().group(courses, counts, int(limit), int(offset), language)
 
         return func.HttpResponse(
             json.dumps(search_results),
