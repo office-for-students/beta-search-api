@@ -1,7 +1,7 @@
 import logging
 
 from course_to_label_mapper import CourseToLabelMapper
-from helper import group_courses_by_institution
+from course_by_institution import CoursesByInstitution
 
 
 class CourseBySubject:
@@ -20,6 +20,6 @@ class CourseBySubject:
 
         logging.warning(self.mapper.get_labels(subject))
 
-        return group_courses_by_institution(courses, counts, int(limit), int(offset), language)
+        return CoursesByInstitution().group(courses, counts, int(limit), int(offset), language)
 
         return 'TO BE IMPLEMENTED'
