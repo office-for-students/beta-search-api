@@ -9,13 +9,13 @@ PARENT_DIR = os.path.dirname(CURRENT_DIR)
 sys.path.insert(0, PARENT_DIR)
 
 from course_to_label_mapper import CourseToLabelMapper
-from course_by_subject import CourseBySubject
+from courses_by_subject import CoursesBySubject
 
 MAPPING_FILE = f'{PARENT_DIR}/fixtures/subjects-sort-by.json'
 FIXTURES_DIR = f'{CURRENT_DIR}/fixtures/courses_by_subject'
 
 
-class TestCourseBySubject(unittest.TestCase):
+class TestCoursesBySubject(unittest.TestCase):
     def test_blah(self):
         # ARRANGE
         with open(f'{MAPPING_FILE}', 'r') as file:
@@ -36,7 +36,7 @@ class TestCourseBySubject(unittest.TestCase):
         language = "en"
 
         mapper = CourseToLabelMapper(course_to_label_mapping)
-        courseBySubject = CourseBySubject(mapper)
+        courseBySubject = CoursesBySubject(mapper)
 
         # ACT
         actual = courseBySubject.group(courses,
@@ -46,4 +46,4 @@ class TestCourseBySubject(unittest.TestCase):
                                        language)
 
         # ASSERT
-        # self.assertEqual(actual, expected)
+        self.assertEqual(actual, expected)
