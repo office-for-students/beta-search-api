@@ -16,7 +16,7 @@ sys.path.insert(0, PARENTDIR)
 
 from course_by_institution import CoursesByInstitution
 from course_to_label_mapper import CourseToLabelMapper
-from course_by_subject import CourseBySubject
+from course_by_subject import CoursesBySubject
 
 from .helper import (
     handle_search_terms,
@@ -223,7 +223,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
         if sortBySubject == 'true':
             mapper = getCourseToLabelMapper();
-            search_results = CourseBySubject(mapper).group(courses, counts, int(limit), int(offset), language) 
+            search_results = CoursesBySubject(mapper).group(courses, counts, int(limit), int(offset), language) 
         else: 
             search_results = CoursesByInstitution().group(courses, counts, int(limit), int(offset), language)
 
