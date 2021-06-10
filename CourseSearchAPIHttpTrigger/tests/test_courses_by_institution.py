@@ -24,7 +24,7 @@ class TestCoursesByInstitution(unittest.TestCase):
             output=myfile.read()
         expected = json.loads(output)
 
-        counts = {'institutions': 432, 'courses': 29167}
+        counts = {'institutions': 442, 'courses': 35169}
         limit = "20" 
         offset = "0"
         language = "en"
