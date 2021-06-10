@@ -63,7 +63,7 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(actual.get('Others in business and management'), None) 
         self.assertEqual(actual.get('Others in creative arts and design'), None) 
 
-        # self.assertEqual(len(actual['Business and management & Marketing']), 13)
+        self.assertEqual(len(actual['Business and management (non-specific) & Marketing']), 13)
         self.assertEqual(len(actual['Business studies & Marketing']), 59)
         self.assertEqual(len(actual['Economics & Marketing']), 8)
         self.assertEqual(len(actual['Marketing & Design studies']), 22)
@@ -72,7 +72,7 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(len(actual['Marketing & Media studies']), 20)
         self.assertEqual(len(actual['Marketing & Publicity studies']), 15)
         self.assertEqual(len(actual['Marketing & Tourism, transport and travel']), 22)
-        # self.assertEqual(len(actual['Psychology & Marketing']), 10)
+        self.assertEqual(len(actual['Psychology (non-specific) & Marketing']), 10)
         # self.assertEqual(len(actual['Other combinations with Marketing']), 111)
         # self.assertEqual(len(actual['Other combinations']), 14)
 

@@ -94,7 +94,7 @@ class CoursesBySubject:
                     accordionsGroupB[label].append(course)
 
         # logging.warning(accordionsGroupA.keys())
-        logging.warning(accordionsGroupB.keys())
+        # logging.warning(accordionsGroupB.keys())
 
         ###################################################################
         # STEP 4.2 Move groups that are <= 1% of total courses to 'other' group
@@ -130,8 +130,8 @@ class CoursesBySubject:
             percentage = len(accordionsGroup[key]) / len(courses) * 100
             # logging.warning(f'{key}: {len(accordionsGroup[key])} ({round(percentage,1)}%)')
             # if key == 'Business and management & Marketing':
-            if key == 'Marketing & Design studies' or key == 'Marketing & Journalism':
-                logging.warning(f'{key}: {len(accordionsGroup[key])} ({round(percentage,1)}%)')
+            # if key == 'Marketing & Design studies' or key == 'Marketing & Journalism':
+            logging.warning(f'{key}: {len(accordionsGroup[key])} ({round(percentage,1)}%)')
 
 
         #     # CREATE INSTITUTION IF NOT ALREADY IN LIST OF INSTITUTIONS
