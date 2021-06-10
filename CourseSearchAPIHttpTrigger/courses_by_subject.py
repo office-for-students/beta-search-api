@@ -87,9 +87,7 @@ class CoursesBySubject:
                     accordionsGroupA[label].append(course)
                     
         logging.warning(accordionsGroupA.keys())
-        # logging.warning(accordionsGroupA)
 
-        # assert False
         # group courses that are <= 1% of total number of courses
         for key in list(accordionsGroupA.keys()):
             label = 'Courses in other subjects'
@@ -97,34 +95,24 @@ class CoursesBySubject:
             percentage = len(accordionsGroupA[key]) / len(courses) * 100
             logging.warning(f'{key}: {len(accordionsGroupA[key])} ({round(percentage,1)}%)')
 
+            if key == label:
+                continue
             
-            # logging.warning(accordionsGroupA[key])
-
             # move to other group
             if percentage <= 1:
-                print('0010')
                 if label not in accordionsGroupA:
-                    print('0020')
                     accordionsGroupA[label]=[]
-                    print('0030')
 
-                for c in accordionsGroupA[key]:
-                    print(f'0040 - {key}')
+                for c in list(accordionsGroupA[key]):
                     if c not in accordionsGroupA[label]:
-                        print('0050')
                         accordionsGroupA[label].append(c)
-                        print('0060')
-                        # accordionsGroupA[key].remove(c)
-                # print('0070')
-            # print('0080')
+                accordionsGroupA.pop(key)
 
 
         logging.warning('---------------------------------------')
-        for key in list(accordionsGroupA.keys()):
+        for key in accordionsGroupA.keys():
             percentage = len(accordionsGroupA[key]) / len(courses) * 100
             logging.warning(f'{key}: {len(accordionsGroupA[key])} ({round(percentage,1)}%)')
-
-        # logging.warning(len(accordionsGroupA['Tourism, transport and travel']))
 
         assert 250 == len(accordionsGroupA['Marketing'])
         assert 37 == len(accordionsGroupA['Business studies'])
@@ -133,30 +121,19 @@ class CoursesBySubject:
         assert 9 == len(accordionsGroupA['Tourism, transport and travel'])
         assert 20 == len(accordionsGroupA['Courses in other subjects'])
 
+        assert None == accordionsGroupA.get('Agriculture')
+        assert None == accordionsGroupA.get('Business and management (non-specific)')
+        assert None == accordionsGroupA.get('Economics')
+        assert None == accordionsGroupA.get('Food and beverage production')
+        assert None == accordionsGroupA.get('Human resource management')
+        assert None == accordionsGroupA.get('Nutrition and dietetics')
+        assert None == accordionsGroupA.get('Others in business and management')
+        assert None == accordionsGroupA.get('Others in creative arts and design')
+
         # assert False
-
-        # assert len(accordionsGroupA['Marketing']) == 250
-        # logging.warning(len(groupA.get("K00054")["subjects"]))
-        # logging.warning(len(groupB.get("43395")["subjects"]))
-        
-        # logging.warning(len(accordionsGroupA))
-        # logging.warning(len(accordionsGroupA['Marketing']))
-        # logging.warning(accordionsGroupA.keys())
-        # logging.warning(len(accordionsGroupA.keys()))
-        # logging.warning(accordionsGroupA['Marketing'])
-        # logging.warning(len(accordionsGroupA['Marketing']))
-
-
-
 
         logging.warning(len(courses))
         return "HELLO"
-
-
-# def logging.warning(string):
-#     logging.warning(string)
-
-
 
 
         #     # CREATE INSTITUTION IF NOT ALREADY IN LIST OF INSTITUTIONS
