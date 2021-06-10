@@ -8,21 +8,21 @@ class CoursesBySubject:
     def __init__(self, mapper):
         self.mapper = mapper
 
-    def group(self, courses, counts, limit, offset, language):
-        logging.info('sort')
+    # def group(self, courses, counts, limit, offset, language):
+    #     logging.info('sort')
 
-        # TODO THIS IS WHERE ALL THE WORK IS DONE
-        subject = 'CAH11-01-01'
+    #     # TODO THIS IS WHERE ALL THE WORK IS DONE
+    #     subject = 'CAH11-01-01'
 
-        assert self.mapper.get_label(subject) == 'Computer science'
-        assert self.mapper.get_label_welsh(
-            subject) == 'Gwyddoniaeth gyfrifiadurol'
+    #     assert self.mapper.get_label(subject) == 'Computer science'
+    #     assert self.mapper.get_label_welsh(
+    #         subject) == 'Gwyddoniaeth gyfrifiadurol'
 
-        log(self.mapper.get_labels(subject))
+    #     logging.warning(self.mapper.get_labels(subject))
 
-        return self.group(courses, counts, int(limit), int(offset), language)
+    #     return self.group(courses, counts, int(limit), int(offset), language)
 
-        return 'TO BE IMPLEMENTED'
+    #     return 'TO BE IMPLEMENTED'
 
 
     def group(self, courses, counts, limit, offset, language):
@@ -48,7 +48,7 @@ class CoursesBySubject:
             ################################################################
             # STEP 3 - sort results into two categories (groups)
             ################################################################
-            # log(f'{course["institution"]["pub_ukprn"]}\t{course["kis_course_id"]}\t{course["mode"]["code"]}\t{len(course["subjects"])}\t{course["title"]["english"]}\t\t\t{course["subjects"][0]["english"]}')
+            # logging.warning(f'{course["institution"]["pub_ukprn"]}\t{course["kis_course_id"]}\t{course["mode"]["code"]}\t{len(course["subjects"])}\t{course["title"]["english"]}\t\t\t{course["subjects"][0]["english"]}')
             if len(course["subjects"]) == 1:
                 groupA[course["kis_course_id"]] = course
  
@@ -61,66 +61,73 @@ class CoursesBySubject:
             ################################################################
             cont=0
             # for cont in range(10):
-            #     log(f'cont={cont}')
+            #     logging.warning(f'cont={cont}')
 
-            # log('STARTING CONT LOOP')
+            # logging.warning('STARTING CONT LOOP')
             for course in groupA.values():
                 subject_title = course["subjects"][0]["english"]
                 if subject_title not in accordionsGroupA:
                     accordionsGroupA[subject_title]=[]
 
                 # if subject_title == 'Tourism, transport and travel':
-                #     log(f'adding {course}')
-                #     log(f'going to add {course["kis_course_id"]} to {subject_title}')
+                #     logging.warning(f'adding {course}')
+                #     logging.warning(f'going to add {course["kis_course_id"]} to {subject_title}')
 
                 
                 if course not in accordionsGroupA[subject_title]:
                     accordionsGroupA[subject_title].append(course)
             continue
         
-        # log(f'{title} - {item}')
+        # logging.warning(f'{title} - {item}')
         
-        log(f'len(groupA)={len(groupA)}')
-        log(f'len(groupB)={len(groupB)}')
-        log(f'      total={len(groupA) + len(groupB)}')
+        logging.warning(f'len(groupA)={len(groupA)}')
+        logging.warning(f'len(groupB)={len(groupB)}')
+        logging.warning(f'      total={len(groupA) + len(groupB)}')
 
-        log(len(accordionsGroupA.keys()))
-        log(accordionsGroupA.keys())
+        logging.warning(len(accordionsGroupA.keys()))
+        logging.warning(accordionsGroupA.keys())
 
-        # log(accordionsGroupA['Economics'])
+        # logging.warning(accordionsGroupA['Economics'])
 
         for key in accordionsGroupA.keys():
-            # log(key)
-            log(f'{key}: {len(accordionsGroupA[key])}')
+            # logging.warning(key)
+            logging.warning(f'{key}: {len(accordionsGroupA[key])}')
 
-        log(len(accordionsGroupA['Tourism, transport and travel']))
+        logging.warning(len(accordionsGroupA['Tourism, transport and travel']))
 
-        # log(len(groupA.get("K00054")["subjects"]))
-        # log(len(groupB.get("43395")["subjects"]))
+        assert 250 == len(accordionsGroupA['Marketing'])
+        assert 37 == len(accordionsGroupA['Business studies'])
+        assert 24 == len(accordionsGroupA['Design studies'])
+        assert 19 == len(accordionsGroupA['Management studies'])
+        assert 9 == len(accordionsGroupA['Tourism, transport and travel'])
+
+        # assert len(accordionsGroupA['Marketing']) == 250
+        # logging.warning(len(groupA.get("K00054")["subjects"]))
+        # logging.warning(len(groupB.get("43395")["subjects"]))
         
-        # log(len(accordionsGroupA))
-        # log(len(accordionsGroupA['Marketing']))
-        # log(accordionsGroupA.keys())
-        # log(len(accordionsGroupA.keys()))
-        # log(accordionsGroupA['Marketing'])
-        # log(len(accordionsGroupA['Marketing']))
+        # logging.warning(len(accordionsGroupA))
+        # logging.warning(len(accordionsGroupA['Marketing']))
+        # logging.warning(accordionsGroupA.keys())
+        # logging.warning(len(accordionsGroupA.keys()))
+        # logging.warning(accordionsGroupA['Marketing'])
+        # logging.warning(len(accordionsGroupA['Marketing']))
 
 
 
 
-        log(len(courses))
+        logging.warning(len(courses))
         return "HELLO"
 
 
-def log(string):
-    logging.warning(string)
+# def logging.warning(string):
+#     logging.warning(string)
 
 
 
 
         #     # CREATE INSTITUTION IF NOT ALREADY IN LIST OF INSTITUTIONS
         #     pub_ukprn = course["institution"]["pub_ukprn"]
-        #     log(f'pub_ukprn={pub_ukprn}')
+        #     logging.warning(f'pub_ukprn={pub_ukprn}')
         #     if pub_ukprn not in institutions:
         #         institution = course["institution"]
         #         institution_body = {
@@ -131,16 +138,16 @@ def log(string):
         #         }
         #         institutions[pub_ukprn] = institution_body
         #         institution_count += 1
-        #         # log('******************************************************')
-        #         # log(f'pub_ukprn={institutions[pub_ukprn]["pub_ukprn_name"]}')
+        #         # logging.warning('******************************************************')
+        #         # logging.warning(f'pub_ukprn={institutions[pub_ukprn]["pub_ukprn_name"]}')
 
         #     # ADD EACH COURSE LOCATION TO LIST OF LOCATIONS
         #     locations = []
         #     for location in course["locations"]:
         #         locations.append(location["name"])
-        #         # log(f'location["name"]={location["name"]}')
-        #         # log(f'location["name"]["english"]={location["name"]["english"]}')
-        #     # log(f'locations={locations}')
+        #         # logging.warning(f'location["name"]={location["name"]}')
+        #         # logging.warning(f'location["name"]["english"]={location["name"]["english"]}')
+        #     # logging.warning(f'locations={locations}')
 
         #     # CREATE COURSE AND ADD TO LIST OF INSTITUTION COURSES
         #     new_course = {
@@ -162,17 +169,17 @@ def log(string):
         #     institution["courses"].append(new_course)
         #     institution["number_of_courses"] += 1
 
-        #     # log(f'new_course["subjects"]={new_course["subjects"]}')
-        #     # log('------------------------------------------------')
+        #     # logging.warning(f'new_course["subjects"]={new_course["subjects"]}')
+        #     # logging.warning('------------------------------------------------')
         #     # for subject in new_course["subjects"]:
-        #     #     log(f'subject={subject["code"]} - {subject["english"]}')
-        #     # log('------------------------------------------------')
+        #     #     logging.warning(f'subject={subject["code"]} - {subject["english"]}')
+        #     # logging.warning('------------------------------------------------')
                 
         #     # if len(new_course["subjects"]) == 1:
         #     #     groupA[new_course["code"]] = new_course
-        #     # log(f'len(groupA)={len(groupA)}')
+        #     # logging.warning(f'len(groupA)={len(groupA)}')
 
-        # # log(f'HELLO - 0015')
+        # # logging.warning(f'HELLO - 0015')
 
         # # SORT COURSES BASED ON LANGUAGE
         # items = []
@@ -181,7 +188,7 @@ def log(string):
         #     institution["courses"].sort(key=lambda x: course_sort_key(x, language))
         #     items.append(institution)
 
-        # # log(f'HELLO - 0020')
+        # # logging.warning(f'HELLO - 0020')
 
         # # CREATE DICTIONARY AND RETURN
         # results = {
@@ -192,5 +199,5 @@ def log(string):
         #     "total_number_of_courses": counts["courses"],
         #     "total_results": counts["institutions"],
         # }
-        # # log(f'HELLO - 0030')
+        # # logging.warning(f'HELLO - 0030')
         # return results
