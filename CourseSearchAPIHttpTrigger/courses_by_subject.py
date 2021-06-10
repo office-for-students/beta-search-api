@@ -114,26 +114,7 @@ class CoursesBySubject:
             percentage = len(accordionsGroupA[key]) / len(courses) * 100
             logging.warning(f'{key}: {len(accordionsGroupA[key])} ({round(percentage,1)}%)')
 
-        assert 250 == len(accordionsGroupA['Marketing'])
-        assert 37 == len(accordionsGroupA['Business studies'])
-        assert 24 == len(accordionsGroupA['Design studies'])
-        assert 19 == len(accordionsGroupA['Management studies'])
-        assert 9 == len(accordionsGroupA['Tourism, transport and travel'])
-        assert 20 == len(accordionsGroupA['Courses in other subjects'])
-
-        assert None == accordionsGroupA.get('Agriculture')
-        assert None == accordionsGroupA.get('Business and management (non-specific)')
-        assert None == accordionsGroupA.get('Economics')
-        assert None == accordionsGroupA.get('Food and beverage production')
-        assert None == accordionsGroupA.get('Human resource management')
-        assert None == accordionsGroupA.get('Nutrition and dietetics')
-        assert None == accordionsGroupA.get('Others in business and management')
-        assert None == accordionsGroupA.get('Others in creative arts and design')
-
-        # assert False
-
-        logging.warning(len(courses))
-        return "HELLO"
+        return accordionsGroupA
 
 
         #     # CREATE INSTITUTION IF NOT ALREADY IN LIST OF INSTITUTIONS
