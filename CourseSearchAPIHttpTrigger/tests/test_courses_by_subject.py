@@ -47,3 +47,18 @@ class TestCoursesBySubject(unittest.TestCase):
 
         # ASSERT
         # self.assertEqual(actual, expected)
+
+        self.assertEqual(len(actual['Marketing']), 250)
+        self.assertEqual(len(actual['Business studies']), 37)
+        self.assertEqual(len(actual['Design studies']), 24)
+        self.assertEqual(len(actual['Management studies']), 19)
+        self.assertEqual(len(actual['Tourism, transport and travel']), 9)
+        self.assertEqual(len(actual['Courses in other subjects']), 20)
+        self.assertEqual(actual.get('Agriculture'), None) 
+        self.assertEqual(actual.get('Business and management (non-specific)'), None) 
+        self.assertEqual(actual.get('Economics'), None) 
+        self.assertEqual(actual.get('Food and beverage production'), None) 
+        self.assertEqual(actual.get('Human resource management'), None) 
+        self.assertEqual(actual.get('Nutrition and dietetics'), None) 
+        self.assertEqual(actual.get('Others in business and management'), None) 
+        self.assertEqual(actual.get('Others in creative arts and design'), None) 
