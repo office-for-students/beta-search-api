@@ -14,9 +14,9 @@ PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
-from course_by_institution import CoursesByInstitution
+from courses_by_institution import CoursesByInstitution
 from course_to_label_mapper import CourseToLabelMapper
-from course_by_subject import CoursesBySubject
+from courses_by_subject import CoursesBySubject
 
 from .helper import (
     handle_search_terms,
