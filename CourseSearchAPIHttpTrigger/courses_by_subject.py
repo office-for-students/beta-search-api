@@ -41,13 +41,21 @@ class CoursesBySubject:
             if course["institution"]["pub_ukprn_name"] == "not available":
                 continue
 
-            ################################################################
-            # STEP 1 - map subject to label
-            ################################################################
+            ###################################################################
+            # STEP 2
+            # SBJ nodes of results are mapped to subject labels. 
+            # 
+            # If a course has two SBJ values that map to the same label, it is 
+            # given only one label.
+            ###################################################################
 
-            ################################################################
-            # STEP 3 - sort results into two categories (groups)
-            ################################################################
+
+            ###################################################################
+            # STEP 3
+            # Sort results into two categories:
+            #   A – single subject courses (courses with 1 subject label)
+            #   B – subject combinations (courses with >1 subject label)
+            ###################################################################
             # logging.warning(f'{course["institution"]["pub_ukprn"]}\t{course["kis_course_id"]}\t{course["mode"]["code"]}\t{len(course["subjects"])}\t{course["title"]["english"]}\t\t\t{course["subjects"][0]["english"]}')
             if len(course["subjects"]) == 1:
                 groupA[course["kis_course_id"]] = course
@@ -56,50 +64,76 @@ class CoursesBySubject:
                 groupB[course["kis_course_id"]] = course
 
 
-            ################################################################
+            ###################################################################
             # STEP 4
-            ################################################################
-            cont=0
-            # for cont in range(10):
-            #     logging.warning(f'cont={cont}')
+            # Identify most common single subjects in Group A (where the number
+            # of courses with this subject >1% of the total number of results). 
+            # 
+            # Each of these subject groups is given an accordion with the subject 
+            # label and the number of courses and sorted in descending order by 
+            # number of courses. 
+            # 
+            # Remaining courses in Group A are grouped together 
+            # under a “Courses in other subjects” accordion
+            ###################################################################
 
-            # logging.warning('STARTING CONT LOOP')
+            # group all courses by their subject label
             for course in groupA.values():
-                subject_title = course["subjects"][0]["english"]
-                if subject_title not in accordionsGroupA:
-                    accordionsGroupA[subject_title]=[]
+                label = course["subjects"][0]["english"]
+                if label not in accordionsGroupA:
+                    accordionsGroupA[label]=[]
 
-                # if subject_title == 'Tourism, transport and travel':
-                #     logging.warning(f'adding {course}')
-                #     logging.warning(f'going to add {course["kis_course_id"]} to {subject_title}')
-
-                
-                if course not in accordionsGroupA[subject_title]:
-                    accordionsGroupA[subject_title].append(course)
-            continue
-        
-        # logging.warning(f'{title} - {item}')
-        
-        logging.warning(f'len(groupA)={len(groupA)}')
-        logging.warning(f'len(groupB)={len(groupB)}')
-        logging.warning(f'      total={len(groupA) + len(groupB)}')
-
-        logging.warning(len(accordionsGroupA.keys()))
+                if course not in accordionsGroupA[label]:
+                    accordionsGroupA[label].append(course)
+                    
         logging.warning(accordionsGroupA.keys())
+        # logging.warning(accordionsGroupA)
 
-        # logging.warning(accordionsGroupA['Economics'])
+        # assert False
+        # group courses that are <= 1% of total number of courses
+        for key in list(accordionsGroupA.keys()):
+            label = 'Courses in other subjects'
 
-        for key in accordionsGroupA.keys():
-            # logging.warning(key)
-            logging.warning(f'{key}: {len(accordionsGroupA[key])}')
+            percentage = len(accordionsGroupA[key]) / len(courses) * 100
+            logging.warning(f'{key}: {len(accordionsGroupA[key])} ({round(percentage,1)}%)')
 
-        logging.warning(len(accordionsGroupA['Tourism, transport and travel']))
+            
+            # logging.warning(accordionsGroupA[key])
+
+            # move to other group
+            if percentage <= 1:
+                print('0010')
+                if label not in accordionsGroupA:
+                    print('0020')
+                    accordionsGroupA[label]=[]
+                    print('0030')
+
+                for c in accordionsGroupA[key]:
+                    print(f'0040 - {key}')
+                    if c not in accordionsGroupA[label]:
+                        print('0050')
+                        accordionsGroupA[label].append(c)
+                        print('0060')
+                        # accordionsGroupA[key].remove(c)
+                # print('0070')
+            # print('0080')
+
+
+        logging.warning('---------------------------------------')
+        for key in list(accordionsGroupA.keys()):
+            percentage = len(accordionsGroupA[key]) / len(courses) * 100
+            logging.warning(f'{key}: {len(accordionsGroupA[key])} ({round(percentage,1)}%)')
+
+        # logging.warning(len(accordionsGroupA['Tourism, transport and travel']))
 
         assert 250 == len(accordionsGroupA['Marketing'])
         assert 37 == len(accordionsGroupA['Business studies'])
         assert 24 == len(accordionsGroupA['Design studies'])
         assert 19 == len(accordionsGroupA['Management studies'])
         assert 9 == len(accordionsGroupA['Tourism, transport and travel'])
+        assert 20 == len(accordionsGroupA['Courses in other subjects'])
+
+        # assert False
 
         # assert len(accordionsGroupA['Marketing']) == 250
         # logging.warning(len(groupA.get("K00054")["subjects"]))
