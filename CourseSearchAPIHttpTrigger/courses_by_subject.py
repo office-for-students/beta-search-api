@@ -30,6 +30,7 @@ class CoursesBySubject:
         groupA = {} # single subject courses (courses with  1 subject label)
         groupB = {} # subject combinations   (courses with >1 subject label)
         accordionsGroupA = {}
+        accordionsGroupB = {}
 
         # ADD EACH COURSE TO LIST OF INSTITUTION COURSES
         institutions = {}
@@ -56,7 +57,6 @@ class CoursesBySubject:
             #   A – single subject courses (courses with 1 subject label)
             #   B – subject combinations (courses with >1 subject label)
             ###################################################################
-            # logging.warning(f'{course["institution"]["pub_ukprn"]}\t{course["kis_course_id"]}\t{course["mode"]["code"]}\t{len(course["subjects"])}\t{course["title"]["english"]}\t\t\t{course["subjects"][0]["english"]}')
             if len(course["subjects"]) == 1:
                 groupA[course["kis_course_id"]] = course
  
@@ -65,19 +65,8 @@ class CoursesBySubject:
 
 
             ###################################################################
-            # STEP 4
-            # Identify most common single subjects in Group A (where the number
-            # of courses with this subject >1% of the total number of results). 
-            # 
-            # Each of these subject groups is given an accordion with the subject 
-            # label and the number of courses and sorted in descending order by 
-            # number of courses. 
-            # 
-            # Remaining courses in Group A are grouped together 
-            # under a “Courses in other subjects” accordion
+            # STEP 4.1 Group single courses by subject label
             ###################################################################
-
-            # group all courses by their subject label
             for course in groupA.values():
                 label = course["subjects"][0]["english"]
                 if label not in accordionsGroupA:
@@ -85,19 +74,39 @@ class CoursesBySubject:
 
                 if course not in accordionsGroupA[label]:
                     accordionsGroupA[label].append(course)
-                    
-        logging.warning(accordionsGroupA.keys())
 
-        # group courses that are <= 1% of total number of courses
+            ###################################################################
+            # STEP 5.1 Group multiple courses by subject labels
+            ###################################################################
+            for course in groupB.values():
+                # logging.warning(course)
+
+                subjects = []
+                for subject in course["subjects"]:
+                    subjects.append(subject["english"])
+                label = " & ".join(subjects)
+                # logging.warning(f'label={label}')
+
+                if label not in accordionsGroupB:
+                    accordionsGroupB[label]=[]
+
+                if course not in accordionsGroupB[label]:
+                    accordionsGroupB[label].append(course)
+
+        # logging.warning(accordionsGroupA.keys())
+        logging.warning(accordionsGroupB.keys())
+
+        ###################################################################
+        # STEP 4.2 Move groups that are <= 1% of total courses to 'other' group
+        ###################################################################
         for key in list(accordionsGroupA.keys()):
             label = 'Courses in other subjects'
+            if label == key:
+                continue            
 
             percentage = len(accordionsGroupA[key]) / len(courses) * 100
-            logging.warning(f'{key}: {len(accordionsGroupA[key])} ({round(percentage,1)}%)')
+            # logging.warning(f'{key}: {len(accordionsGroupA[key])} ({round(percentage,1)}%)')
 
-            if key == label:
-                continue
-            
             # move to other group
             if percentage <= 1:
                 if label not in accordionsGroupA:
@@ -108,13 +117,21 @@ class CoursesBySubject:
                         accordionsGroupA[label].append(c)
                 accordionsGroupA.pop(key)
 
+        # self.log(accordionsGroupA, courses)
+        self.log(accordionsGroupB, courses)
 
+        # assert False
+        return {**accordionsGroupA, **accordionsGroupB}
+
+
+    def log(self, accordionsGroup, courses):
         logging.warning('---------------------------------------')
-        for key in accordionsGroupA.keys():
-            percentage = len(accordionsGroupA[key]) / len(courses) * 100
-            logging.warning(f'{key}: {len(accordionsGroupA[key])} ({round(percentage,1)}%)')
-
-        return accordionsGroupA
+        for key in accordionsGroup.keys():
+            percentage = len(accordionsGroup[key]) / len(courses) * 100
+            # logging.warning(f'{key}: {len(accordionsGroup[key])} ({round(percentage,1)}%)')
+            # if key == 'Business and management & Marketing':
+            if key == 'Marketing & Design studies' or key == 'Marketing & Journalism':
+                logging.warning(f'{key}: {len(accordionsGroup[key])} ({round(percentage,1)}%)')
 
 
         #     # CREATE INSTITUTION IF NOT ALREADY IN LIST OF INSTITUTIONS
