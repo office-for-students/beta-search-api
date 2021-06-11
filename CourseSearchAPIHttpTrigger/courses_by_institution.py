@@ -52,8 +52,8 @@ class CoursesByInstitution():
 
         # SORT COURSES BASED ON LANGUAGE
         items = []
-        for item in institutions:
-            institution = institutions.get(item)
+        for pub_ukprn in institutions:
+            institution = institutions.get(pub_ukprn)
             institution["courses"].sort(key=lambda x: course_sort_key(x, language))
             items.append(institution)
 
