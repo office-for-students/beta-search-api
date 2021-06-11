@@ -68,7 +68,7 @@ class CoursesBySubject:
             # STEP 4.1 Group single courses by subject label
             ###################################################################
             for course in groupA.values():
-                label = course["subjects"][0]["english"]
+                label = f'{course["subjects"][0]["english"]} courses'
                 if label not in accordionsGroupA:
                     accordionsGroupA[label]=[]
 
@@ -84,7 +84,7 @@ class CoursesBySubject:
                 subjects = []
                 for subject in course["subjects"]:
                     subjects.append(subject["english"])
-                label = " & ".join(subjects)
+                label = f'{" & ".join(subjects)} courses'
                 # logging.warning(f'label={label}')
 
                 if label not in accordionsGroupB:
