@@ -57,9 +57,15 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(len(actual['single_subject_courses']['Management studies courses']), 19)
         self.assertEqual(len(actual['single_subject_courses']['Tourism, transport and travel courses']), 9)
         self.assertEqual(len(actual['single_subject_courses']['Courses in other subjects']), 20)
-        self.assertEqual(len(actual['single_subject_courses'].keys()), 6)
-        # TODO check order
-
+        self.assertEqual(list(actual['single_subject_courses'].keys()), [
+            'Marketing courses',
+            'Business studies courses',
+            'Design studies courses',
+            'Management studies courses',
+            'Tourism, transport and travel courses',
+            'Courses in other subjects',
+            ]
+        )
         self.assertEqual(len(actual['multiple_subject_courses']['Business and management & Marketing courses']), 13)
         self.assertEqual(len(actual['multiple_subject_courses']['Business studies & Marketing courses']), 59)
         self.assertEqual(len(actual['multiple_subject_courses']['Economics & Marketing courses']), 8)
@@ -72,7 +78,21 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(len(actual['multiple_subject_courses']['Psychology & Marketing courses']), 10)
         self.assertEqual(len(actual['multiple_subject_courses']['Other combinations with Marketing']), 111)
         self.assertEqual(len(actual['multiple_subject_courses']['Other combinations']), 14)
-        self.assertEqual(len(actual['multiple_subject_courses'].keys()), 12)
+        self.assertEqual(list(actual['multiple_subject_courses'].keys()), [
+            'Business and management & Marketing courses',
+            'Business studies & Marketing courses',
+            'Economics & Marketing courses',
+            'Marketing & Design studies courses',
+            'Marketing & Journalism courses',
+            'Marketing & Management studies courses',
+            'Marketing & Media studies courses',
+            'Marketing & Publicity studies courses',
+            'Marketing & Tourism, transport and travel courses',
+            'Psychology & Marketing courses',
+            'Other combinations with Marketing',
+            'Other combinations',
+            ]
+        )
         # TODO check order
 
         self.assertEqual(len(actual.keys()), 2)
