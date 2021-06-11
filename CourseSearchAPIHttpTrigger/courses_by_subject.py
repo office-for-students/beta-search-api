@@ -116,31 +116,42 @@ class CoursesBySubject:
                 accordionsGroupA.pop(key)
 
         ###################################################################
-        # STEP 6 Move groups that are <= 1% of total courses to 'other' group
+        # STEP 6 Move groups that are <= 1% of total courses to 'other' groups
         ###################################################################
         for key in list(accordionsGroupB.keys()):
-            label = f'Other combinations with {queried_course_title}'
             if label == key:
                 continue            
 
             percentage = len(accordionsGroupB[key]) / len(courses) * 100
             # logging.warning(f'{key}: {len(accordionsGroupB[key])} ({round(percentage,1)}%)')
 
-            # move to other group
+            # move to other groups
             if percentage <= 1:
-                if label not in accordionsGroupB:
-                    accordionsGroupB[label]=[]
+                if queried_course_title in key: 
+                    label = f'Other combinations with {queried_course_title}'
+                    if label not in accordionsGroupB:
+                        accordionsGroupB[label]=[]
 
-                for c in list(accordionsGroupB[key]):
-                    if c not in accordionsGroupB[label]:
-                        accordionsGroupB[label].append(c)
-                accordionsGroupB.pop(key)
+                    for c in list(accordionsGroupB[key]):
+                        if c not in accordionsGroupB[label]:
+                            accordionsGroupB[label].append(c)
+                    accordionsGroupB.pop(key)
+                else:
+                    label = f'Other combinations'
+                    if label not in accordionsGroupB:
+                        accordionsGroupB[label]=[]
+
+                    for c in list(accordionsGroupB[key]):
+                        if c not in accordionsGroupB[label]:
+                            accordionsGroupB[label].append(c)
+                    accordionsGroupB.pop(key)
+
 
         # self.log(accordionsGroupA, courses)
         self.log(accordionsGroupB, courses)
 
         # assert False
-        return {**accordionsGroupA, **accordionsGroupB}
+        return {'single_subject_courses': accordionsGroupA, 'multiple_subject_courses': accordionsGroupB}
 
 
     def log(self, accordionsGroup, courses):
