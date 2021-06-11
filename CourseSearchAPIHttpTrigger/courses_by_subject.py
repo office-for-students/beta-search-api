@@ -115,6 +115,9 @@ class CoursesBySubject:
                         accordionsGroupA[label].append(c)
                 accordionsGroupA.pop(key)
 
+        # sort alphabetically
+        accordionsGroupB = dict(sorted(accordionsGroupB.items()))
+
         ###################################################################
         # STEP 6 Move groups that are <= 1% of total courses to 'other' groups
         ###################################################################
