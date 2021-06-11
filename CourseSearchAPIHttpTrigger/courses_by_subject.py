@@ -139,7 +139,7 @@ class CoursesBySubject:
                     for c in list(accordionsGroupB[key]):
                         if c not in accordionsGroupB[label]:
                             accordionsGroupB[label].append(c)
-                            logging.warning(f'adding "{label}"')
+                            # logging.warning(f'adding "{label}"')
                     accordionsGroupB.pop(key)
                 else:
                     label = f'Other combinations'
@@ -149,7 +149,7 @@ class CoursesBySubject:
                     for c in list(accordionsGroupB[key]):
                         if c not in accordionsGroupB[label]:
                             accordionsGroupB[label].append(c)
-                            logging.warning(f'adding "{label}"')
+                            # logging.warning(f'adding "{label}"')
                     accordionsGroupB.pop(key)
 
         # SORT COURSES BASED ON LANGUAGE
