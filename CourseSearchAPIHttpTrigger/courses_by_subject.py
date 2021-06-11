@@ -25,7 +25,7 @@ class CoursesBySubject:
     #     return 'TO BE IMPLEMENTED'
 
 
-    def group(self, courses, counts, limit, offset, language):
+    def group(self, queried_course_title, courses ,counts, limit, offset, language):
 
         groupA = {} # single subject courses (courses with  1 subject label)
         groupB = {} # subject combinations   (courses with >1 subject label)
@@ -76,7 +76,7 @@ class CoursesBySubject:
                     accordionsGroupA[label].append(course)
 
             ###################################################################
-            # STEP 5.1 Group multiple courses by subject labels
+            # STEP 5 Group multiple courses by subject labels
             ###################################################################
             for course in groupB.values():
                 # logging.warning(course)
@@ -116,6 +116,27 @@ class CoursesBySubject:
                     if c not in accordionsGroupA[label]:
                         accordionsGroupA[label].append(c)
                 accordionsGroupA.pop(key)
+
+        ###################################################################
+        # STEP 6 Move groups that are <= 1% of total courses to 'other' group
+        ###################################################################
+        for key in list(accordionsGroupB.keys()):
+            label = f'Other combinations with {queried_course_title}'
+            if label == key:
+                continue            
+
+            percentage = len(accordionsGroupB[key]) / len(courses) * 100
+            # logging.warning(f'{key}: {len(accordionsGroupB[key])} ({round(percentage,1)}%)')
+
+            # move to other group
+            if percentage <= 1:
+                if label not in accordionsGroupB:
+                    accordionsGroupB[label]=[]
+
+                for c in list(accordionsGroupB[key]):
+                    if c not in accordionsGroupB[label]:
+                        accordionsGroupB[label].append(c)
+                accordionsGroupB.pop(key)
 
         # self.log(accordionsGroupA, courses)
         self.log(accordionsGroupB, courses)

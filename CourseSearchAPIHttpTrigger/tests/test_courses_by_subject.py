@@ -34,16 +34,19 @@ class TestCoursesBySubject(unittest.TestCase):
         limit = "20"
         offset = "0"
         language = "en"
+        queried_course_title = "Marketing"
 
         mapper = CourseToLabelMapper(course_to_label_mapping)
         courseBySubject = CoursesBySubject(mapper)
 
         # ACT
-        actual = courseBySubject.group(courses,
+        actual = courseBySubject.group(queried_course_title,
+                                       courses,
                                        counts, 
                                        int(limit),
                                        int(offset), 
-                                       language)
+                                       language,
+                                       )
 
         # ASSERT
         # self.assertEqual(actual, expected)
@@ -73,7 +76,9 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(len(actual['Marketing & Publicity studies']), 15)
         self.assertEqual(len(actual['Marketing & Tourism, transport and travel']), 22)
         self.assertEqual(len(actual['Psychology (non-specific) & Marketing']), 10)
-        # self.assertEqual(len(actual['Other combinations with Marketing']), 111)
-        # self.assertEqual(len(actual['Other combinations']), 14)
+        self.assertEqual(len(actual['Other combinations with Marketing']), 111)
+        self.assertEqual(len(actual['Other combinations']), 14)
+
+        self.assertEqual(len(actual.keys()), 16)
 
 
