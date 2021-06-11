@@ -51,6 +51,7 @@ class TestCoursesBySubject(unittest.TestCase):
         # ASSERT
         # self.assertEqual(actual, expected)
 
+        # single_subject_courses
         self.assertEqual(len(actual['single_subject_courses']['Marketing courses']), 250)
         self.assertEqual(len(actual['single_subject_courses']['Business studies courses']), 37)
         self.assertEqual(len(actual['single_subject_courses']['Design studies courses']), 24)
@@ -66,6 +67,8 @@ class TestCoursesBySubject(unittest.TestCase):
             'Courses in other subjects',
             ]
         )
+
+        # multiple_subject_courses
         self.assertEqual(len(actual['multiple_subject_courses']['Business and management & Marketing courses']), 13)
         self.assertEqual(len(actual['multiple_subject_courses']['Business studies & Marketing courses']), 59)
         self.assertEqual(len(actual['multiple_subject_courses']['Economics & Marketing courses']), 8)
@@ -93,7 +96,6 @@ class TestCoursesBySubject(unittest.TestCase):
             'Other combinations',
             ]
         )
-        # TODO check order
 
         self.assertEqual(len(actual.keys()), 2)
 
