@@ -34,7 +34,7 @@ class TestCoursesBySubject(unittest.TestCase):
         limit = "20"
         offset = "0"
         language = "en"
-        queried_course_title = "Marketing"
+        queried_course_title = "marketing"
 
         mapper = CourseToLabelMapper(course_to_label_mapping)
         courseBySubject = CoursesBySubject(mapper)
@@ -58,6 +58,7 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(len(actual['single_subject_courses']['Tourism, transport and travel courses']), 9)
         self.assertEqual(len(actual['single_subject_courses']['Courses in other subjects']), 20)
         self.assertEqual(len(actual['single_subject_courses'].keys()), 6)
+        # TODO check order
 
         self.assertEqual(len(actual['multiple_subject_courses']['Business and management & Marketing courses']), 13)
         self.assertEqual(len(actual['multiple_subject_courses']['Business studies & Marketing courses']), 59)
@@ -72,6 +73,7 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(len(actual['multiple_subject_courses']['Other combinations with Marketing']), 111)
         self.assertEqual(len(actual['multiple_subject_courses']['Other combinations']), 14)
         self.assertEqual(len(actual['multiple_subject_courses'].keys()), 12)
+        # TODO check order
 
         self.assertEqual(len(actual.keys()), 2)
 

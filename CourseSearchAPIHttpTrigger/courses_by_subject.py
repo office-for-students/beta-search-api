@@ -121,6 +121,7 @@ class CoursesBySubject:
         ###################################################################
         # STEP 6 Move groups that are <= 1% of total courses to 'other' groups
         ###################################################################
+        logging.warning(f'queried_course_title={queried_course_title}')
         for key in list(accordionsGroupB.keys()):
             if label == key:
                 continue            
@@ -130,14 +131,15 @@ class CoursesBySubject:
 
             # move to other groups
             if percentage <= 1:
-                if queried_course_title in key: 
-                    label = f'Other combinations with {queried_course_title}'
+                if queried_course_title.lower() in key.lower(): 
+                    label = f'Other combinations with {queried_course_title.title()}'
                     if label not in accordionsGroupB:
                         accordionsGroupB[label]=[]
 
                     for c in list(accordionsGroupB[key]):
                         if c not in accordionsGroupB[label]:
                             accordionsGroupB[label].append(c)
+                            logging.warning(f'adding "{label}"')
                     accordionsGroupB.pop(key)
                 else:
                     label = f'Other combinations'
@@ -147,14 +149,34 @@ class CoursesBySubject:
                     for c in list(accordionsGroupB[key]):
                         if c not in accordionsGroupB[label]:
                             accordionsGroupB[label].append(c)
+                            logging.warning(f'adding "{label}"')
                     accordionsGroupB.pop(key)
 
+        # SORT COURSES BASED ON LANGUAGE
+        # items = []
+        # for accordion in accordionsGroupB:
+        #     logging.warning(f'accordion={accordion}')
+        #     crash
+        #     accordion = accordionsGroupB.get(accordion)
+        #     accordion["courses"].sort(key=lambda x: course_sort_key(x, language))
+        #     items.append(accordion)
+    
+        # accordionsGroupB = dict(sorted(accordionsGroupB.items()))
 
         # self.log(accordionsGroupA, courses)
-        self.log(accordionsGroupB, courses)
+        self.log(accordionsGroupB, courses) 
+        # crash 
 
         # assert False
         return {'single_subject_courses': accordionsGroupA, 'multiple_subject_courses': accordionsGroupB}
+
+    # def group_b_accordion_sort_key(accordion, language):
+
+    #     return (course["title"]["welsh"] if course["title"]["welsh"] else course["title"]["english"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
+    #     # if language == "cy":
+    #     #     return (course["title"]["welsh"] if course["title"]["welsh"] else course["title"]["english"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
+    #     # else:
+    #     #     return (course["title"]["english"] if course["title"]["english"] else course["title"]["welsh"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
 
 
     def log(self, accordionsGroup, courses):
