@@ -1,29 +1,8 @@
 import logging
 
-from courses_by_institution import CoursesByInstitution
-from helper import course_sort_key
-
-
 class CoursesBySubject:
     def __init__(self, mapper):
         self.mapper = mapper
-
-    # def group(self, courses, counts, limit, offset, language):
-    #     logging.info('sort')
-
-    #     # TODO THIS IS WHERE ALL THE WORK IS DONE
-    #     subject = 'CAH11-01-01'
-
-    #     assert self.mapper.get_label(subject) == 'Computer science'
-    #     assert self.mapper.get_label_welsh(
-    #         subject) == 'Gwyddoniaeth gyfrifiadurol'
-
-    #     logging.warning(self.mapper.get_labels(subject))
-
-    #     return self.group(courses, counts, int(limit), int(offset), language)
-
-    #     return 'TO BE IMPLEMENTED'
-
 
     def group(self, queried_course_title, courses ,counts, limit, offset, language):
 
@@ -31,10 +10,6 @@ class CoursesBySubject:
         groupB = {} # subject combinations   (courses with >1 subject label)
         accordionsGroupA = {}
         accordionsGroupB = {}
-
-        # ADD EACH COURSE TO LIST OF INSTITUTION COURSES
-        institutions = {}
-        institution_count = 0
 
         for c in courses:
             course = c["course"]
@@ -91,9 +66,6 @@ class CoursesBySubject:
                 if course not in accordionsGroupB[label]:
                     accordionsGroupB[label].append(course)
 
-        # logging.warning(accordionsGroupA.keys())
-        # logging.warning(accordionsGroupB.keys())
-
         ###################################################################
         # STEP 4.2 Move groups that are <= 1% of total courses to 'other' group
         ###################################################################
@@ -103,7 +75,6 @@ class CoursesBySubject:
                 continue            
 
             percentage = len(accordionsGroupA[key]) / len(courses) * 100
-            # logging.warning(f'{key}: {len(accordionsGroupA[key])} ({round(percentage,1)}%)')
 
             # move to other group
             if percentage <= 1:
@@ -127,7 +98,6 @@ class CoursesBySubject:
                 continue            
 
             percentage = len(accordionsGroupB[key]) / len(courses) * 100
-            # logging.warning(f'{key}: {len(accordionsGroupB[key])} ({round(percentage,1)}%)')
 
             # move to other groups
             if percentage <= 1:
@@ -139,7 +109,6 @@ class CoursesBySubject:
                     for c in list(accordionsGroupB[key]):
                         if c not in accordionsGroupB[label]:
                             accordionsGroupB[label].append(c)
-                            # logging.warning(f'adding "{label}"')
                     accordionsGroupB.pop(key)
                 else:
                     label = f'Other combinations'
@@ -149,7 +118,6 @@ class CoursesBySubject:
                     for c in list(accordionsGroupB[key]):
                         if c not in accordionsGroupB[label]:
                             accordionsGroupB[label].append(c)
-                            # logging.warning(f'adding "{label}"')
                     accordionsGroupB.pop(key)
 
         # ensure that GroupB 'Other combinations' is at the end of the list
@@ -158,116 +126,14 @@ class CoursesBySubject:
             accordionsGroupB.pop('Other combinations')
             accordionsGroupB['Other combinations'] = other_combinations
 
-        # SORT COURSES BASED ON LANGUAGE
-        # items = []
-        # for accordion in accordionsGroupB:
-        #     logging.warning(f'accordion={accordion}')
-        #     crash
-        #     accordion = accordionsGroupB.get(accordion)
-        #     accordion["courses"].sort(key=lambda x: course_sort_key(x, language))
-        #     items.append(accordion)
-    
-        # accordionsGroupB = dict(sorted(accordionsGroupB.items()))
-
         # self.log(accordionsGroupA, courses)
-        self.log(accordionsGroupB, courses) 
-        # crash 
+        # self.log(accordionsGroupB, courses) 
 
-        # assert False
         return {'single_subject_courses': accordionsGroupA, 'multiple_subject_courses': accordionsGroupB}
-
-    # def group_b_accordion_sort_key(accordion, language):
-
-    #     return (course["title"]["welsh"] if course["title"]["welsh"] else course["title"]["english"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
-    #     # if language == "cy":
-    #     #     return (course["title"]["welsh"] if course["title"]["welsh"] else course["title"]["english"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
-    #     # else:
-    #     #     return (course["title"]["english"] if course["title"]["english"] else course["title"]["welsh"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
-
 
     def log(self, accordionsGroup, courses):
         logging.warning('---------------------------------------')
         for key in accordionsGroup.keys():
             percentage = len(accordionsGroup[key]) / len(courses) * 100
-            # logging.warning(f'{key}: {len(accordionsGroup[key])} ({round(percentage,1)}%)')
-            # if key == 'Business and management & Marketing':
-            # if key == 'Marketing & Design studies' or key == 'Marketing & Journalism':
             logging.warning(f'{key}: {len(accordionsGroup[key])} ({round(percentage,1)}%)')
 
-
-        #     # CREATE INSTITUTION IF NOT ALREADY IN LIST OF INSTITUTIONS
-        #     pub_ukprn = course["institution"]["pub_ukprn"]
-        #     logging.warning(f'pub_ukprn={pub_ukprn}')
-        #     if pub_ukprn not in institutions:
-        #         institution = course["institution"]
-        #         institution_body = {
-        #             "pub_ukprn_name": institution["pub_ukprn_welsh_name"] if language == "cy" else institution["pub_ukprn_name"],
-        #             "pub_ukprn": pub_ukprn,
-        #             "courses": [],
-        #             "number_of_courses": 0,
-        #         }
-        #         institutions[pub_ukprn] = institution_body
-        #         institution_count += 1
-        #         # logging.warning('******************************************************')
-        #         # logging.warning(f'pub_ukprn={institutions[pub_ukprn]["pub_ukprn_name"]}')
-
-        #     # ADD EACH COURSE LOCATION TO LIST OF LOCATIONS
-        #     locations = []
-        #     for location in course["locations"]:
-        #         locations.append(location["name"])
-        #         # logging.warning(f'location["name"]={location["name"]}')
-        #         # logging.warning(f'location["name"]["english"]={location["name"]["english"]}')
-        #     # logging.warning(f'locations={locations}')
-
-        #     # CREATE COURSE AND ADD TO LIST OF INSTITUTION COURSES
-        #     new_course = {
-        #         "country":           course["country"]["label"],
-        #         "distance_learning": course["distance_learning"]["label"],
-        #         "foundation_year":   course["foundation_year_availability"]["label"],
-        #         "honours_award":     course["honours_award_provision"],
-        #         "kis_course_id":     course["kis_course_id"],
-        #         "length_of_course":  course["length_of_course"]["label"],
-        #         "mode":              course["mode"]["label"],
-        #         "qualification":     course["qualification"]["label"],
-        #         "sandwich_year":     course["sandwich_year"]["label"],
-        #         "subjects":          course["subjects"],
-        #         "title":             course["title"],
-        #         "year_abroad":       course["year_abroad"]["label"],
-        #         "locations":         locations,
-        #     }
-        #     institution = institutions.get(pub_ukprn)
-        #     institution["courses"].append(new_course)
-        #     institution["number_of_courses"] += 1
-
-        #     # logging.warning(f'new_course["subjects"]={new_course["subjects"]}')
-        #     # logging.warning('------------------------------------------------')
-        #     # for subject in new_course["subjects"]:
-        #     #     logging.warning(f'subject={subject["code"]} - {subject["english"]}')
-        #     # logging.warning('------------------------------------------------')
-                
-        #     # if len(new_course["subjects"]) == 1:
-        #     #     groupA[new_course["code"]] = new_course
-        #     # logging.warning(f'len(groupA)={len(groupA)}')
-
-        # # logging.warning(f'HELLO - 0015')
-
-        # # SORT COURSES BASED ON LANGUAGE
-        # items = []
-        # for item in institutions:
-        #     institution = institutions.get(item)
-        #     institution["courses"].sort(key=lambda x: course_sort_key(x, language))
-        #     items.append(institution)
-
-        # # logging.warning(f'HELLO - 0020')
-
-        # # CREATE DICTIONARY AND RETURN
-        # results = {
-        #     "items": items,
-        #     "limit": limit,
-        #     "number_of_items": len(institutions),
-        #     "offset": offset,
-        #     "total_number_of_courses": counts["courses"],
-        #     "total_results": counts["institutions"],
-        # }
-        # # logging.warning(f'HELLO - 0030')
-        # return results
