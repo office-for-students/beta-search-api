@@ -11037,6 +11037,93 @@
     },
     {
         "@search.score": 0.9560709,
+        "id": "8be05070-3064-d1a5-8703-aec3192a4445",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "PMDDGAO2MR2",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "institution": {
+                "pub_ukprn_name": "Canterbury Christ Church University",
+                "pub_ukprn_welsh_name": "Canterbury Christ Church University",
+                "sort_pub_ukprn_name": "canterbury christ church university",
+                "sort_pub_ukprn_welsh_name": "canterbury christ church university",
+                "pub_ukprn": "10001143"
+            },
+            "length_of_course": {
+                "code": "3",
+                "label": "3 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            1.088586,
+                            51.279569
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Canterbury",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 21,
+                "label": "BSc",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "subjects": [
+                {
+                    "code": "CAH17-01-03",
+                    "level": 3,
+                    "english": "Marketing",
+                    "welsh": "Marchnata"
+                },
+                {
+                    "code": "CAH17-01-08",
+                    "level": 3,
+                    "english": "Accounting",
+                    "welsh": "Cyfrifeg"
+                }
+            ],
+            "title": {
+                "english": "Accounting/Marketing",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 0.9560709,
         "id": "6c8c034f-d9bd-963c-5035-a94f16aec090",
         "course": {
             "honours_award_provision": 1,
@@ -11123,11 +11210,11 @@
         }
     },
     {
-        "@search.score": 0.9560709,
-        "id": "8be05070-3064-d1a5-8703-aec3192a4445",
+        "@search.score": 0.9404891,
+        "id": "c32e7313-3906-5452-8e56-adcc0111025a",
         "course": {
             "honours_award_provision": 1,
-            "kis_course_id": "PMDDGAO2MR2",
+            "kis_course_id": "PMDDGAO2MR2_P",
             "country": {
                 "code": "XF",
                 "label": "England"
@@ -11148,8 +11235,8 @@
                 "pub_ukprn": "10001143"
             },
             "length_of_course": {
-                "code": "3",
-                "label": "3 stages"
+                "code": "4",
+                "label": "4 stages"
             },
             "locations": [
                 {
@@ -11182,8 +11269,8 @@
                 "level": "first-degree"
             },
             "sandwich_year": {
-                "code": 0,
-                "label": "Not available"
+                "code": 2,
+                "label": "Compulsory"
             },
             "subjects": [
                 {
@@ -11288,93 +11375,6 @@
             ],
             "title": {
                 "english": "Marketing/Sociology",
-                "welsh": null
-            },
-            "year_abroad": {
-                "code": 0,
-                "label": "Not available"
-            }
-        }
-    },
-    {
-        "@search.score": 0.9404891,
-        "id": "c32e7313-3906-5452-8e56-adcc0111025a",
-        "course": {
-            "honours_award_provision": 1,
-            "kis_course_id": "PMDDGAO2MR2_P",
-            "country": {
-                "code": "XF",
-                "label": "England"
-            },
-            "distance_learning": {
-                "code": 0,
-                "label": "Course is available other than by distance learning"
-            },
-            "foundation_year_availability": {
-                "code": 0,
-                "label": "Not available"
-            },
-            "institution": {
-                "pub_ukprn_name": "Canterbury Christ Church University",
-                "pub_ukprn_welsh_name": "Canterbury Christ Church University",
-                "sort_pub_ukprn_name": "canterbury christ church university",
-                "sort_pub_ukprn_welsh_name": "canterbury christ church university",
-                "pub_ukprn": "10001143"
-            },
-            "length_of_course": {
-                "code": "4",
-                "label": "4 stages"
-            },
-            "locations": [
-                {
-                    "geo": {
-                        "type": "Point",
-                        "coordinates": [
-                            1.088586,
-                            51.279569
-                        ],
-                        "crs": {
-                            "type": "name",
-                            "properties": {
-                                "name": "EPSG:4326"
-                            }
-                        }
-                    },
-                    "name": {
-                        "english": "Canterbury",
-                        "welsh": null
-                    }
-                }
-            ],
-            "mode": {
-                "code": 1,
-                "label": "Full-time"
-            },
-            "qualification": {
-                "code": 21,
-                "label": "BSc",
-                "level": "first-degree"
-            },
-            "sandwich_year": {
-                "code": 2,
-                "label": "Compulsory"
-            },
-            "subjects": [
-                {
-                    "code": "CAH17-01-03",
-                    "level": 3,
-                    "english": "Marketing",
-                    "welsh": "Marchnata"
-                },
-                {
-                    "code": "CAH17-01-08",
-                    "level": 3,
-                    "english": "Accounting",
-                    "welsh": "Cyfrifeg"
-                }
-            ],
-            "title": {
-                "english": "Accounting/Marketing",
                 "welsh": null
             },
             "year_abroad": {
@@ -13833,6 +13833,93 @@
     },
     {
         "@search.score": 0.7648567,
+        "id": "f3eb1106-e495-d49a-888f-83c598b6210e",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "PMDDGAM2MR2",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "institution": {
+                "pub_ukprn_name": "Canterbury Christ Church University",
+                "pub_ukprn_welsh_name": "Canterbury Christ Church University",
+                "sort_pub_ukprn_name": "canterbury christ church university",
+                "sort_pub_ukprn_welsh_name": "canterbury christ church university",
+                "pub_ukprn": "10001143"
+            },
+            "length_of_course": {
+                "code": null,
+                "label": null
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            1.088586,
+                            51.279569
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Canterbury",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 2,
+                "label": "Part-time"
+            },
+            "qualification": {
+                "code": 82,
+                "label": "BA/BSc",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "subjects": [
+                {
+                    "code": "CAH17-01-03",
+                    "level": 3,
+                    "english": "Marketing",
+                    "welsh": "Marchnata"
+                },
+                {
+                    "code": "CAH19-04-08",
+                    "level": 3,
+                    "english": "American and Australasian studies",
+                    "welsh": "Astudiaethau Americanaidd ac Awstralasiaidd"
+                }
+            ],
+            "title": {
+                "english": "American Studies/Marketing",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 1,
+                "label": "Optional"
+            }
+        }
+    },
+    {
+        "@search.score": 0.7648567,
         "id": "2636a0ba-aaff-c156-8c47-d999969dbf37",
         "course": {
             "honours_award_provision": 1,
@@ -14095,93 +14182,6 @@
             "year_abroad": {
                 "code": 0,
                 "label": "Not available"
-            }
-        }
-    },
-    {
-        "@search.score": 0.7648567,
-        "id": "f3eb1106-e495-d49a-888f-83c598b6210e",
-        "course": {
-            "honours_award_provision": 1,
-            "kis_course_id": "PMDDGAM2MR2",
-            "country": {
-                "code": "XF",
-                "label": "England"
-            },
-            "distance_learning": {
-                "code": 0,
-                "label": "Course is available other than by distance learning"
-            },
-            "foundation_year_availability": {
-                "code": 0,
-                "label": "Not available"
-            },
-            "institution": {
-                "pub_ukprn_name": "Canterbury Christ Church University",
-                "pub_ukprn_welsh_name": "Canterbury Christ Church University",
-                "sort_pub_ukprn_name": "canterbury christ church university",
-                "sort_pub_ukprn_welsh_name": "canterbury christ church university",
-                "pub_ukprn": "10001143"
-            },
-            "length_of_course": {
-                "code": null,
-                "label": null
-            },
-            "locations": [
-                {
-                    "geo": {
-                        "type": "Point",
-                        "coordinates": [
-                            1.088586,
-                            51.279569
-                        ],
-                        "crs": {
-                            "type": "name",
-                            "properties": {
-                                "name": "EPSG:4326"
-                            }
-                        }
-                    },
-                    "name": {
-                        "english": "Canterbury",
-                        "welsh": null
-                    }
-                }
-            ],
-            "mode": {
-                "code": 2,
-                "label": "Part-time"
-            },
-            "qualification": {
-                "code": 82,
-                "label": "BA/BSc",
-                "level": "first-degree"
-            },
-            "sandwich_year": {
-                "code": 0,
-                "label": "Not available"
-            },
-            "subjects": [
-                {
-                    "code": "CAH17-01-03",
-                    "level": 3,
-                    "english": "Marketing",
-                    "welsh": "Marchnata"
-                },
-                {
-                    "code": "CAH19-04-08",
-                    "level": 3,
-                    "english": "American and Australasian studies",
-                    "welsh": "Astudiaethau Americanaidd ac Awstralasiaidd"
-                }
-            ],
-            "title": {
-                "english": "American Studies/Marketing",
-                "welsh": null
-            },
-            "year_abroad": {
-                "code": 1,
-                "label": "Optional"
             }
         }
     },
@@ -36352,180 +36352,6 @@
     },
     {
         "@search.score": 0.8109116,
-        "id": "de15a7c9-d0ff-66c6-d95c-d627d251c633",
-        "course": {
-            "honours_award_provision": 1,
-            "kis_course_id": "UDBEMAJO",
-            "country": {
-                "code": "XF",
-                "label": "England"
-            },
-            "distance_learning": {
-                "code": 0,
-                "label": "Course is available other than by distance learning"
-            },
-            "foundation_year_availability": {
-                "code": 1,
-                "label": "Optional"
-            },
-            "institution": {
-                "pub_ukprn_name": "London Metropolitan University",
-                "pub_ukprn_welsh_name": "London Metropolitan University",
-                "sort_pub_ukprn_name": "london metropolitan university",
-                "sort_pub_ukprn_welsh_name": "london metropolitan university",
-                "pub_ukprn": "10004048"
-            },
-            "length_of_course": {
-                "code": null,
-                "label": null
-            },
-            "locations": [
-                {
-                    "geo": {
-                        "type": "Point",
-                        "coordinates": [
-                            -0.110236,
-                            51.551819
-                        ],
-                        "crs": {
-                            "type": "name",
-                            "properties": {
-                                "name": "EPSG:4326"
-                            }
-                        }
-                    },
-                    "name": {
-                        "english": "Holloway Site",
-                        "welsh": null
-                    }
-                }
-            ],
-            "mode": {
-                "code": 2,
-                "label": "Part-time"
-            },
-            "qualification": {
-                "code": 0,
-                "label": "BA",
-                "level": "first-degree"
-            },
-            "sandwich_year": {
-                "code": 0,
-                "label": "Not available"
-            },
-            "subjects": [
-                {
-                    "code": "CAH17-01-03",
-                    "level": 3,
-                    "english": "Marketing",
-                    "welsh": "Marchnata"
-                },
-                {
-                    "code": "CAH24-01-04",
-                    "level": 3,
-                    "english": "Journalism",
-                    "welsh": "Newyddiaduraeth"
-                }
-            ],
-            "title": {
-                "english": "Beauty Marketing and Journalism",
-                "welsh": null
-            },
-            "year_abroad": {
-                "code": 0,
-                "label": "Not available"
-            }
-        }
-    },
-    {
-        "@search.score": 0.8109116,
-        "id": "3b74988b-5a05-3078-0c87-7ca5c021ea5a",
-        "course": {
-            "honours_award_provision": 1,
-            "kis_course_id": "UDBMMARK",
-            "country": {
-                "code": "XF",
-                "label": "England"
-            },
-            "distance_learning": {
-                "code": 0,
-                "label": "Course is available other than by distance learning"
-            },
-            "foundation_year_availability": {
-                "code": 0,
-                "label": "Not available"
-            },
-            "institution": {
-                "pub_ukprn_name": "London Metropolitan University",
-                "pub_ukprn_welsh_name": "London Metropolitan University",
-                "sort_pub_ukprn_name": "london metropolitan university",
-                "sort_pub_ukprn_welsh_name": "london metropolitan university",
-                "pub_ukprn": "10004048"
-            },
-            "length_of_course": {
-                "code": null,
-                "label": null
-            },
-            "locations": [
-                {
-                    "geo": {
-                        "type": "Point",
-                        "coordinates": [
-                            -0.110236,
-                            51.551819
-                        ],
-                        "crs": {
-                            "type": "name",
-                            "properties": {
-                                "name": "EPSG:4326"
-                            }
-                        }
-                    },
-                    "name": {
-                        "english": "Holloway Site",
-                        "welsh": null
-                    }
-                }
-            ],
-            "mode": {
-                "code": 2,
-                "label": "Part-time"
-            },
-            "qualification": {
-                "code": 0,
-                "label": "BA",
-                "level": "first-degree"
-            },
-            "sandwich_year": {
-                "code": 1,
-                "label": "Optional"
-            },
-            "subjects": [
-                {
-                    "code": "CAH17-01-03",
-                    "level": 3,
-                    "english": "Marketing",
-                    "welsh": "Marchnata"
-                },
-                {
-                    "code": "CAH17-01-04",
-                    "level": 3,
-                    "english": "Management studies",
-                    "welsh": "Astudiaethau rheoli"
-                }
-            ],
-            "title": {
-                "english": "Business Management and Marketing",
-                "welsh": null
-            },
-            "year_abroad": {
-                "code": 0,
-                "label": "Not available"
-            }
-        }
-    },
-    {
-        "@search.score": 0.8109116,
         "id": "331cf87c-5f57-3b0c-686f-ff55aaa1fa34",
         "course": {
             "honours_award_provision": 1,
@@ -36699,6 +36525,180 @@
         }
     },
     {
+        "@search.score": 0.8109116,
+        "id": "de15a7c9-d0ff-66c6-d95c-d627d251c633",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "UDBEMAJO",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 1,
+                "label": "Optional"
+            },
+            "institution": {
+                "pub_ukprn_name": "London Metropolitan University",
+                "pub_ukprn_welsh_name": "London Metropolitan University",
+                "sort_pub_ukprn_name": "london metropolitan university",
+                "sort_pub_ukprn_welsh_name": "london metropolitan university",
+                "pub_ukprn": "10004048"
+            },
+            "length_of_course": {
+                "code": null,
+                "label": null
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -0.110236,
+                            51.551819
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Holloway Site",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 2,
+                "label": "Part-time"
+            },
+            "qualification": {
+                "code": 0,
+                "label": "BA",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "subjects": [
+                {
+                    "code": "CAH17-01-03",
+                    "level": 3,
+                    "english": "Marketing",
+                    "welsh": "Marchnata"
+                },
+                {
+                    "code": "CAH24-01-04",
+                    "level": 3,
+                    "english": "Journalism",
+                    "welsh": "Newyddiaduraeth"
+                }
+            ],
+            "title": {
+                "english": "Beauty Marketing and Journalism",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 0.8109116,
+        "id": "3b74988b-5a05-3078-0c87-7ca5c021ea5a",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "UDBMMARK",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "institution": {
+                "pub_ukprn_name": "London Metropolitan University",
+                "pub_ukprn_welsh_name": "London Metropolitan University",
+                "sort_pub_ukprn_name": "london metropolitan university",
+                "sort_pub_ukprn_welsh_name": "london metropolitan university",
+                "pub_ukprn": "10004048"
+            },
+            "length_of_course": {
+                "code": null,
+                "label": null
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -0.110236,
+                            51.551819
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Holloway Site",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 2,
+                "label": "Part-time"
+            },
+            "qualification": {
+                "code": 0,
+                "label": "BA",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 1,
+                "label": "Optional"
+            },
+            "subjects": [
+                {
+                    "code": "CAH17-01-03",
+                    "level": 3,
+                    "english": "Marketing",
+                    "welsh": "Marchnata"
+                },
+                {
+                    "code": "CAH17-01-04",
+                    "level": 3,
+                    "english": "Management studies",
+                    "welsh": "Astudiaethau rheoli"
+                }
+            ],
+            "title": {
+                "english": "Business Management and Marketing",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
         "@search.score": 0.7691695,
         "id": "ca70cfdb-f9e6-d47f-8ad0-d10c81364fba",
         "course": {
@@ -36787,87 +36787,6 @@
     },
     {
         "@search.score": 0.76636016,
-        "id": "44846cb6-dcb7-d9b7-9db0-7fc627c9a03a",
-        "course": {
-            "honours_award_provision": 1,
-            "kis_course_id": "UDMRKTFY",
-            "country": {
-                "code": "XF",
-                "label": "England"
-            },
-            "distance_learning": {
-                "code": 0,
-                "label": "Course is available other than by distance learning"
-            },
-            "foundation_year_availability": {
-                "code": 2,
-                "label": "Compulsory"
-            },
-            "institution": {
-                "pub_ukprn_name": "London Metropolitan University",
-                "pub_ukprn_welsh_name": "London Metropolitan University",
-                "sort_pub_ukprn_name": "london metropolitan university",
-                "sort_pub_ukprn_welsh_name": "london metropolitan university",
-                "pub_ukprn": "10004048"
-            },
-            "length_of_course": {
-                "code": "4",
-                "label": "4 stages"
-            },
-            "locations": [
-                {
-                    "geo": {
-                        "type": "Point",
-                        "coordinates": [
-                            -0.110236,
-                            51.551819
-                        ],
-                        "crs": {
-                            "type": "name",
-                            "properties": {
-                                "name": "EPSG:4326"
-                            }
-                        }
-                    },
-                    "name": {
-                        "english": "Holloway Site",
-                        "welsh": null
-                    }
-                }
-            ],
-            "mode": {
-                "code": 1,
-                "label": "Full-time"
-            },
-            "qualification": {
-                "code": 0,
-                "label": "BA",
-                "level": "first-degree"
-            },
-            "sandwich_year": {
-                "code": 0,
-                "label": "Not available"
-            },
-            "subjects": [
-                {
-                    "code": "CAH17-01-03",
-                    "level": 3,
-                    "english": "Marketing",
-                    "welsh": "Marchnata"
-                }
-            ],
-            "title": {
-                "english": "Marketing (including foundation year)",
-                "welsh": null
-            },
-            "year_abroad": {
-                "code": 0,
-                "label": "Not available"
-            }
-        }
-    },
-    {
-        "@search.score": 0.76636016,
         "id": "885849cc-e0b4-29b1-f36d-b0a5310ab1f6",
         "course": {
             "honours_award_provision": 1,
@@ -36945,6 +36864,87 @@
             ],
             "title": {
                 "english": "Events Management and Marketing",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 0.76636016,
+        "id": "44846cb6-dcb7-d9b7-9db0-7fc627c9a03a",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "UDMRKTFY",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 2,
+                "label": "Compulsory"
+            },
+            "institution": {
+                "pub_ukprn_name": "London Metropolitan University",
+                "pub_ukprn_welsh_name": "London Metropolitan University",
+                "sort_pub_ukprn_name": "london metropolitan university",
+                "sort_pub_ukprn_welsh_name": "london metropolitan university",
+                "pub_ukprn": "10004048"
+            },
+            "length_of_course": {
+                "code": "4",
+                "label": "4 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -0.110236,
+                            51.551819
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Holloway Site",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 0,
+                "label": "BA",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "subjects": [
+                {
+                    "code": "CAH17-01-03",
+                    "level": 3,
+                    "english": "Marketing",
+                    "welsh": "Marchnata"
+                }
+            ],
+            "title": {
+                "english": "Marketing (including foundation year)",
                 "welsh": null
             },
             "year_abroad": {
@@ -58858,93 +58858,6 @@
     },
     {
         "@search.score": 0.8218496,
-        "id": "19866992-f884-cf9e-5b0c-831129f918ad",
-        "course": {
-            "honours_award_provision": 1,
-            "kis_course_id": "BU033T01",
-            "country": {
-                "code": "XF",
-                "label": "England"
-            },
-            "distance_learning": {
-                "code": 0,
-                "label": "Course is available other than by distance learning"
-            },
-            "foundation_year_availability": {
-                "code": 2,
-                "label": "Compulsory"
-            },
-            "institution": {
-                "pub_ukprn_name": "University of Wolverhampton",
-                "pub_ukprn_welsh_name": "University of Wolverhampton",
-                "sort_pub_ukprn_name": "wolverhampton",
-                "sort_pub_ukprn_welsh_name": "wolverhampton",
-                "pub_ukprn": "10007166"
-            },
-            "length_of_course": {
-                "code": "4",
-                "label": "4 stages"
-            },
-            "locations": [
-                {
-                    "geo": {
-                        "type": "Point",
-                        "coordinates": [
-                            -2.128165,
-                            52.588293
-                        ],
-                        "crs": {
-                            "type": "name",
-                            "properties": {
-                                "name": "EPSG:4326"
-                            }
-                        }
-                    },
-                    "name": {
-                        "english": "Wolverhampton City Campus",
-                        "welsh": null
-                    }
-                }
-            ],
-            "mode": {
-                "code": 1,
-                "label": "Full-time"
-            },
-            "qualification": {
-                "code": 0,
-                "label": "BA",
-                "level": "first-degree"
-            },
-            "sandwich_year": {
-                "code": 0,
-                "label": "Not available"
-            },
-            "subjects": [
-                {
-                    "code": "CAH17-01-02",
-                    "level": 3,
-                    "english": "Business studies",
-                    "welsh": "Astudiaethau busnes"
-                },
-                {
-                    "code": "CAH17-01-03",
-                    "level": 3,
-                    "english": "Marketing",
-                    "welsh": "Marchnata"
-                }
-            ],
-            "title": {
-                "english": "Business and Marketing Management with Foundation",
-                "welsh": null
-            },
-            "year_abroad": {
-                "code": 0,
-                "label": "Not available"
-            }
-        }
-    },
-    {
-        "@search.score": 0.8218496,
         "id": "1f6430a9-c60b-4648-d0b0-05cacb301ebb",
         "course": {
             "honours_award_provision": 1,
@@ -59097,6 +59010,93 @@
             ],
             "title": {
                 "english": "Marketing Management with Foundation Year",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 0.8218496,
+        "id": "19866992-f884-cf9e-5b0c-831129f918ad",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "BU033T01",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 2,
+                "label": "Compulsory"
+            },
+            "institution": {
+                "pub_ukprn_name": "University of Wolverhampton",
+                "pub_ukprn_welsh_name": "University of Wolverhampton",
+                "sort_pub_ukprn_name": "wolverhampton",
+                "sort_pub_ukprn_welsh_name": "wolverhampton",
+                "pub_ukprn": "10007166"
+            },
+            "length_of_course": {
+                "code": "4",
+                "label": "4 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -2.128165,
+                            52.588293
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Wolverhampton City Campus",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 0,
+                "label": "BA",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "subjects": [
+                {
+                    "code": "CAH17-01-02",
+                    "level": 3,
+                    "english": "Business studies",
+                    "welsh": "Astudiaethau busnes"
+                },
+                {
+                    "code": "CAH17-01-03",
+                    "level": 3,
+                    "english": "Marketing",
+                    "welsh": "Marchnata"
+                }
+            ],
+            "title": {
+                "english": "Business and Marketing Management with Foundation",
                 "welsh": null
             },
             "year_abroad": {

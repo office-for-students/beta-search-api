@@ -30,7 +30,7 @@ class TestCoursesBySubject(unittest.TestCase):
             output = file.read()
         expected = json.loads(output)
 
-        counts = {'institutions': 432, 'courses': 29167}
+        counts = {'institutions': 131, 'courses': 716}
         limit = "5000"
         offset = "0"
         language = "en"
@@ -98,5 +98,5 @@ class TestCoursesBySubject(unittest.TestCase):
             ]
         )
 
-        # self.assertEqual(actual, expected)
+        self.assertEqual(actual, expected)
 

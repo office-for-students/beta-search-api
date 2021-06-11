@@ -11,7 +11,6 @@ class CoursesBySubject:
         accordionsGroupA = {}
         accordionsGroupB = {}
         institutions = []
-        course_count = 0
 
         for c in courses:
             course = c["course"]
@@ -25,7 +24,6 @@ class CoursesBySubject:
                 institutions.append(pub_ukprn)
 
             course = self.build_course(c["course"], institution, language)
-            course_count += 1
 
             ###################################################################
             # STEP 2
@@ -102,7 +100,6 @@ class CoursesBySubject:
         ###################################################################
         # STEP 6 Move groups that are <= 1% of total courses to 'other' groups
         ###################################################################
-        logging.warning(f'queried_course_title={queried_course_title}')
         for key in list(accordionsGroupB.keys()):
             if label == key:
                 continue            
@@ -140,25 +137,17 @@ class CoursesBySubject:
         # self.log(accordionsGroupB, courses) 
 
         items = {'single_subject_courses': accordionsGroupA, 'multiple_subject_courses': accordionsGroupB}
-        # course_count = len(accordionsGroupA.keys()) + len(accordionsGroupB.keys())
-
-        logging.warning(f'course_count={course_count}')
-        logging.warning(f'institutions={len(institutions)}')
-        
-        # return items    
 
         # CREATE DICTIONARY AND RETURN
-        results = {
+        return {
             "items": items,
             "limit": limit,
-            "number_of_items": course_count,
+            "number_of_items": len(accordionsGroupA) + len(accordionsGroupB),
             "offset": offset,
-            "total_number_of_courses": course_count,
-            "total_results": len(institutions),
+            "total_number_of_courses": counts["courses"],
+            "total_results": counts["institutions"],
         }
-        logging.warning(f'results={results}')
-        # crash
-        return results    
+
 
     def log(self, accordionsGroup, courses):
         logging.warning('---------------------------------------')
