@@ -152,6 +152,12 @@ class CoursesBySubject:
                             # logging.warning(f'adding "{label}"')
                     accordionsGroupB.pop(key)
 
+        # ensure that GroupB 'Other combinations' is at the end of the list
+        other_combinations = accordionsGroupB['Other combinations']
+        if other_combinations:
+            accordionsGroupB.pop('Other combinations')
+            accordionsGroupB['Other combinations'] = other_combinations
+
         # SORT COURSES BASED ON LANGUAGE
         # items = []
         # for accordion in accordionsGroupB:
