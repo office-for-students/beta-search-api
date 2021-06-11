@@ -68,7 +68,7 @@ class CoursesBySubject:
             # STEP 4.1 Group single courses by subject label
             ###################################################################
             for course in groupA.values():
-                label = f'{course["subjects"][0]["english"]} courses'
+                label = f'{self.mapper.get_label(course["subjects"][0]["code"])} courses'
                 if label not in accordionsGroupA:
                     accordionsGroupA[label]=[]
 
@@ -79,13 +79,11 @@ class CoursesBySubject:
             # STEP 5 Group multiple courses by subject labels
             ###################################################################
             for course in groupB.values():
-                # logging.warning(course)
-
                 subjects = []
                 for subject in course["subjects"]:
-                    subjects.append(subject["english"])
+                    subjects.append(self.mapper.get_label(subject["code"]))
+
                 label = f'{" & ".join(subjects)} courses'
-                # logging.warning(f'label={label}')
 
                 if label not in accordionsGroupB:
                     accordionsGroupB[label]=[]
