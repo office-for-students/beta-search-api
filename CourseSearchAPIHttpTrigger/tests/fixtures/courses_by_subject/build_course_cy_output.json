@@ -1,0 +1,34 @@
+{
+    "country": "Scotland",
+    "distance_learning": "Course is available other than by distance learning",
+    "foundation_year": "Not available",
+    "honours_award": 1,
+    "kis_course_id": "NN15-U-MKTBUS",
+    "length_of_course": "4 stages",
+    "mode": "Full-time",
+    "qualification": "BA",
+    "sandwich_year": "Not available",
+    "subjects": [
+        {
+            "code": "CAH17-01-03",
+            "level": 3,
+            "english": "Marketing",
+            "welsh": "Marchnata"
+        }
+    ],
+    "title": {
+        "english": "Marketing and Business",
+        "welsh": "Marchnata a Busnes"
+    },
+    "year_abroad": "Optional",
+    "locations": [
+        {
+            "english": "Dundee Campus",
+            "welsh": "Campws Dundee"
+        }
+    ],
+    "institution": {
+        "pub_ukprn_name": "Prifysgol Abertay",
+        "pub_ukprn": "10007849"
+    }
+}
