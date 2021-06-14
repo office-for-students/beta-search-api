@@ -17,6 +17,39 @@ FIXTURES_DIR = f'{CURRENT_DIR}/fixtures/courses_by_subject'
 
 class TestCoursesBySubject(unittest.TestCase):
     def test_blah(self):
+    # TODO do the same for law
+    def test_when_welsh_course_queried(self):
+        # ARRANGE
+        with open(f'{MAPPING_FILE}', 'r') as file:
+            mapping = file.read()
+        course_to_label_mapping = json.loads(mapping)
+
+        with open(f'{FIXTURES_DIR}/input.json', 'r') as file:
+            input = file.read()
+        courses = json.loads(input)        
+
+        counts = {'institutions': 131, 'courses': 716}
+        limit = "5000"
+        offset = "0"
+        language = "en"
+        queried_course_title = "welsh"
+
+        mapper = CourseToLabelMapper(course_to_label_mapping)
+        courseBySubject = CoursesBySubject(mapper)
+
+        # ACT
+        actual = courseBySubject.group(queried_course_title,
+                                       courses,
+                                       counts, 
+                                       int(limit),
+                                       int(offset), 
+                                       language,
+                                       )
+
+        # ASSERT
+        items = actual["items"]
+        self.assertEqual(len(items.keys()), 2)
+
         # ARRANGE
         with open(f'{MAPPING_FILE}', 'r') as file:
             mapping = file.read()
