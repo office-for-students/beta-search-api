@@ -1,5 +1,9 @@
 import logging
 
+other_courses_label = {"en":"Courses in other subjects","cy":"welsh"}
+other_combinations_label = {"en":"Other combinations","cy":"welsh"}
+other_combinations_with_label = {"en":"Other combinations with","cy":"welsh"}
+
 class CoursesBySubject:
     def __init__(self, mapper):
         self.mapper = mapper
@@ -11,11 +15,11 @@ class CoursesBySubject:
 
         add_courses_to_accordions(courses, single_course_accordions, multiple_course_accordions, self.mapper, language)
 
-        group_single_courses_that_are_less_than_one_percent(courses, single_course_accordions)
+        group_single_courses_that_are_less_than_one_percent(courses, single_course_accordions, language)
 
         multiple_course_accordions = sort(multiple_course_accordions)
 
-        group_multiple_courses_that_are_less_than_one_percent(courses, multiple_course_accordions, queried_course_title)
+        group_multiple_courses_that_are_less_than_one_percent(courses, multiple_course_accordions, queried_course_title, language)
 
         log_accordions(single_course_accordions, courses)
         log_accordions(multiple_course_accordions, courses)
@@ -124,9 +128,9 @@ def add_multiple_courses_to_accordions(course, group, accordions, mapper):
         add_course_to_accordions(course, label, accordions)
 
 
-def group_single_courses_that_are_less_than_one_percent(courses, accordions):
+def group_single_courses_that_are_less_than_one_percent(courses, accordions, language):
+    label = other_courses_label["cy"] if language == "cy" else other_courses_label["en"]
     for key in list(accordions.keys()):
-        label = 'Courses in other subjects'
         if label == key:
             continue            
 
@@ -149,7 +153,7 @@ def sort(accordion):
     return dict(sorted(accordion.items()))
 
 
-def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, queried_course_title):
+def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, queried_course_title, language):
     for key in list(accordions.keys()):
         
         if queried_course_title == key:
@@ -159,21 +163,23 @@ def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, q
 
         if percentage <= 1:
             if queried_course_title.lower() in key.lower(): 
-                label = f'Other combinations with {queried_course_title.title()}'
+                l = other_combinations_with_label["cy"] if language == "cy" else other_combinations_with_label["en"]
+                label = f'{l} {queried_course_title.title()}'
                 move_course(accordions, key, label)
             else:
-                label = f'Other combinations'
+                label = other_combinations_label["cy"] if language == "cy" else other_combinations_label["en"]
                 move_course(accordions, key, label)
 
-        sort_other_combinations(accordions)
+        sort_other_combinations(accordions, language)
 
 
-def sort_other_combinations(accordions):
-    if accordions.get('Other combinations'):
-        other_combinations = accordions['Other combinations']
+def sort_other_combinations(accordions, language):
+    label = other_combinations_label["cy"] if language == "cy" else other_combinations_label["en"]
+    if accordions.get(label):
+        other_combinations = accordions[label]
         if other_combinations:
-            accordions.pop('Other combinations')
-            accordions['Other combinations'] = other_combinations    
+            accordions.pop(label)
+            accordions[label] = other_combinations    
 
 
 def log_accordions(accordions, courses):
