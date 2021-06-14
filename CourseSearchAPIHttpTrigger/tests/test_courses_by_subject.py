@@ -10,13 +10,53 @@ sys.path.insert(0, PARENT_DIR)
 
 from course_to_label_mapper import CourseToLabelMapper
 from courses_by_subject import CoursesBySubject
+from courses_by_subject import build_course
 
 MAPPING_FILE = f'{PARENT_DIR}/fixtures/subjects-sort-by.json'
 FIXTURES_DIR = f'{CURRENT_DIR}/fixtures/courses_by_subject'
 
 
 class TestCoursesBySubject(unittest.TestCase):
-    def test_blah(self):
+
+    # def setUp(self):
+    # "Hook method for setting up the test fixture before exercising it."
+    # pass
+
+
+    def test_build_course_using_english_language(self):
+        # ARRANGE
+        with open(f'{FIXTURES_DIR}/build_course_en_input.json', 'r') as file:
+            input = file.read()
+        input = json.loads(input)
+
+        with open(f'{FIXTURES_DIR}/build_course_en_output.json', 'r') as file:
+            output = file.read()
+        expected = json.loads(output)
+        
+        # ACT
+        actual = build_course(input["course"], input["institution"], input["language"])
+
+        # ASSERT
+        self.assertEqual(actual, expected)
+
+
+    def test_build_course_using_welsh_language(self):
+        # ARRANGE
+        with open(f'{FIXTURES_DIR}/build_course_cy_input.json', 'r') as file:
+            input = file.read()
+        input = json.loads(input)
+
+        with open(f'{FIXTURES_DIR}/build_course_cy_output.json', 'r') as file:
+            output = file.read()
+        expected = json.loads(output)
+
+        # ACT
+        actual = build_course(input["course"], input["institution"], input["language"])
+
+        # ASSERT
+        self.assertEqual(actual, expected)
+
+
     # TODO do the same for law
     def test_when_welsh_course_queried(self):
         # ARRANGE
@@ -50,6 +90,8 @@ class TestCoursesBySubject(unittest.TestCase):
         items = actual["items"]
         self.assertEqual(len(items.keys()), 2)
 
+
+    def test_when_marketing_course_queried(self):
         # ARRANGE
         with open(f'{MAPPING_FILE}', 'r') as file:
             mapping = file.read()

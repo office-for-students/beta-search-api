@@ -1,0 +1,87 @@
+{
+    "course": {
+        "honours_award_provision": 1,
+        "kis_course_id": "NN15-U-MKTBUS",
+        "country": {
+            "code": "XH",
+            "label": "Scotland"
+        },
+        "distance_learning": {
+            "code": 0,
+            "label": "Course is available other than by distance learning"
+        },
+        "foundation_year_availability": {
+            "code": 0,
+            "label": "Not available"
+        },
+        "institution": {
+            "pub_ukprn_name": "Abertay University",
+            "pub_ukprn_welsh_name": "Prifysgol Abertay",
+            "sort_pub_ukprn_name": "abertay university",
+            "sort_pub_ukprn_welsh_name": "prifysgol abertay",
+            "pub_ukprn": "10007849"
+        },
+        "length_of_course": {
+            "code": "4",
+            "label": "4 stages"
+        },
+        "locations": [
+            {
+                "geo": {
+                    "type": "Point",
+                    "coordinates": [
+                        -2.9739,
+                        56.463221
+                    ],
+                    "crs": {
+                        "type": "name",
+                        "properties": {
+                            "name": "EPSG:4326"
+                        }
+                    }
+                },
+                "name": {
+                    "english": "Dundee Campus",
+                    "welsh": "Campws Dundee"
+                }
+            }
+        ],
+        "mode": {
+            "code": 1,
+            "label": "Full-time"
+        },
+        "qualification": {
+            "code": 0,
+            "label": "BA",
+            "level": "first-degree"
+        },
+        "sandwich_year": {
+            "code": 0,
+            "label": "Not available"
+        },
+        "subjects": [
+            {
+                "code": "CAH17-01-03",
+                "level": 3,
+                "english": "Marketing",
+                "welsh": "Marchnata"
+            }
+        ],
+        "title": {
+            "english": "Marketing and Business",
+            "welsh": "Marchnata a Busnes"
+        },
+        "year_abroad": {
+            "code": 1,
+            "label": "Optional"
+        }
+    },
+    "institution": {
+        "pub_ukprn_name": "Abertay University",
+        "pub_ukprn_welsh_name": "Prifysgol Abertay",
+        "sort_pub_ukprn_name": "abertay university",
+        "sort_pub_ukprn_welsh_name": "prifysgol abertay",
+        "pub_ukprn": "10007849"
+    },
+    "language": "cy"
+}
