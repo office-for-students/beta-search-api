@@ -169,10 +169,11 @@ def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, q
 
 
 def sort_other_combinations(accordions):
-    other_combinations = accordions['Other combinations']
-    if other_combinations:
-        accordions.pop('Other combinations')
-        accordions['Other combinations'] = other_combinations    
+    if accordions.get('Other combinations'):
+        other_combinations = accordions['Other combinations']
+        if other_combinations:
+            accordions.pop('Other combinations')
+            accordions['Other combinations'] = other_combinations    
 
 
 def log_accordions(accordions, courses):
