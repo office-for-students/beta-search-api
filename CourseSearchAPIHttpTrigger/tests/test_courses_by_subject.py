@@ -1,5 +1,6 @@
 import inspect
 import json
+import logging
 import os
 import sys
 import unittest
@@ -38,14 +39,18 @@ class TestCoursesBySubject(unittest.TestCase):
         items = actual["items"]
         self.assertEqual(len(items.keys()), 2)
 
+        # logging.warning(f"0010={items['single_subject_courses'][0]['Marketing courses']}")
+
+
         # single_subject_courses
-        self.assertEqual(len(items['single_subject_courses']['Marketing courses']), 250)
-        self.assertEqual(len(items['single_subject_courses']['Business studies courses']), 37)
-        self.assertEqual(len(items['single_subject_courses']['Design studies courses']), 24)
-        self.assertEqual(len(items['single_subject_courses']['Management studies courses']), 19)
-        self.assertEqual(len(items['single_subject_courses']['Tourism, transport and travel courses']), 9)
-        self.assertEqual(len(items['single_subject_courses']['Courses in other subjects']), 20)
-        self.assertEqual(list(items['single_subject_courses'].keys()), [
+        courses = items['single_subject_courses'][0]
+        self.assertEqual(courses['Marketing courses']["number_of_courses"], 250)
+        self.assertEqual(courses['Business studies courses']["number_of_courses"], 37)
+        self.assertEqual(courses['Design studies courses']["number_of_courses"], 24)
+        self.assertEqual(courses['Management studies courses']["number_of_courses"], 19)
+        self.assertEqual(courses['Tourism, transport and travel courses']["number_of_courses"], 9)
+        self.assertEqual(courses['Courses in other subjects']["number_of_courses"], 20)
+        self.assertEqual(list(courses.keys()), [
             'Marketing courses',
             'Business studies courses',
             'Design studies courses',
@@ -56,19 +61,20 @@ class TestCoursesBySubject(unittest.TestCase):
         )
 
         # multiple_subject_courses
-        self.assertEqual(len(items['multiple_subject_courses']['Business and management & Marketing courses']), 13)
-        self.assertEqual(len(items['multiple_subject_courses']['Business studies & Marketing courses']), 59)
-        self.assertEqual(len(items['multiple_subject_courses']['Economics & Marketing courses']), 8)
-        self.assertEqual(len(items['multiple_subject_courses']['Marketing & Design studies courses']), 22)
-        self.assertEqual(len(items['multiple_subject_courses']['Marketing & Journalism courses']), 13)
-        self.assertEqual(len(items['multiple_subject_courses']['Marketing & Management studies courses']), 50)
-        self.assertEqual(len(items['multiple_subject_courses']['Marketing & Media studies courses']), 20)
-        self.assertEqual(len(items['multiple_subject_courses']['Marketing & Publicity studies courses']), 15)
-        self.assertEqual(len(items['multiple_subject_courses']['Marketing & Tourism, transport and travel courses']), 22)
-        self.assertEqual(len(items['multiple_subject_courses']['Psychology & Marketing courses']), 10)
-        self.assertEqual(len(items['multiple_subject_courses']['Other combinations with Marketing']), 111)
-        self.assertEqual(len(items['multiple_subject_courses']['Other combinations']), 14)
-        self.assertEqual(list(items['multiple_subject_courses'].keys()), [
+        courses = items['multiple_subject_courses'][0]
+        self.assertEqual(courses['Business and management & Marketing courses']["number_of_courses"], 13)
+        self.assertEqual(courses['Business studies & Marketing courses']["number_of_courses"], 59)
+        self.assertEqual(courses['Economics & Marketing courses']["number_of_courses"], 8)
+        self.assertEqual(courses['Marketing & Design studies courses']["number_of_courses"], 22)
+        self.assertEqual(courses['Marketing & Journalism courses']["number_of_courses"], 13)
+        self.assertEqual(courses['Marketing & Management studies courses']["number_of_courses"], 50)
+        self.assertEqual(courses['Marketing & Media studies courses']["number_of_courses"], 20)
+        self.assertEqual(courses['Marketing & Publicity studies courses']["number_of_courses"], 15)
+        self.assertEqual(courses['Marketing & Tourism, transport and travel courses']["number_of_courses"], 22)
+        self.assertEqual(courses['Psychology & Marketing courses']["number_of_courses"], 10)
+        self.assertEqual(courses['Other combinations with Marketing']["number_of_courses"], 111)
+        self.assertEqual(courses['Other combinations']["number_of_courses"], 14)
+        self.assertEqual(list(courses.keys()), [
             'Business and management & Marketing courses',
             'Business studies & Marketing courses',
             'Economics & Marketing courses',

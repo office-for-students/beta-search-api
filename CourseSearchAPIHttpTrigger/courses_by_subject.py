@@ -27,13 +27,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Business",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Dundee Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -67,7 +67,7 @@ dummy_data = {
                    "locations":[
                       {
                          "english":"Aberystwyth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -101,7 +101,7 @@ dummy_data = {
                    "locations":[
                       {
                          "english":"Aberystwyth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -135,7 +135,7 @@ dummy_data = {
                    "locations":[
                       {
                          "english":"Aberystwyth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -149,7 +149,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"K00239",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -163,7 +163,7 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
@@ -194,13 +194,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"London College of Fashion",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -228,13 +228,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Aston University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -330,13 +330,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing & Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Newton Park Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -364,13 +364,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Newton Park Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -398,13 +398,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing & Management with Professional Placement Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Newton Park Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -432,13 +432,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business & Management (Marketing) with Professional Practice Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Newton Park Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -466,13 +466,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -500,13 +500,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -534,13 +534,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -568,13 +568,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising and Marketing Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -602,13 +602,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Aviation and Airport Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -636,13 +636,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Aviation and Airport Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -670,13 +670,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with International Tourism Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -704,13 +704,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising and Marketing Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -738,13 +738,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Aviation and Airport Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -772,13 +772,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising and Marketing Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -806,13 +806,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Birkbeck College - Bloomsbury Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -826,7 +826,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"UBSMAKTG_C",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -840,13 +840,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Birkbeck College - Bloomsbury Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -874,13 +874,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -894,7 +894,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"US0641-05",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -908,13 +908,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -942,13 +942,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (Digital)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -962,7 +962,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"US0641-04",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -976,13 +976,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (Digital)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1010,13 +1010,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (Professional Practice)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1044,13 +1044,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bournemouth University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1078,13 +1078,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bournemouth University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1112,13 +1112,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Bradford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1146,13 +1146,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Bradford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1180,13 +1180,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Moulsecoomb",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1214,13 +1214,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management with Placement Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Moulsecoomb",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1248,13 +1248,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Bristol",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1282,13 +1282,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Study Abroad",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"University of Bristol",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1316,13 +1316,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sport Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"High Wycombe Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1350,13 +1350,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1370,7 +1370,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGMR4",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -1384,13 +1384,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1404,7 +1404,7 @@ dummy_data = {
                    "foundation_year":"Compulsory",
                    "honours_award":1,
                    "kis_course_id":"PFDDGMR4",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -1418,13 +1418,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1452,13 +1452,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1486,13 +1486,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1520,13 +1520,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1554,13 +1554,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1574,7 +1574,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGAV2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -1588,13 +1588,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1792,13 +1792,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"UCLan Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1826,17 +1826,17 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"UCLan Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"UCLan Burnley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1864,13 +1864,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"UCLan Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1898,13 +1898,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"UCLan Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1932,13 +1932,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -1966,13 +1966,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management (with Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2000,13 +2000,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management (3 year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2034,13 +2034,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing (including a Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2068,13 +2068,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management (including placement year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2102,13 +2102,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing (with Professional Placement Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2136,13 +2136,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bishop Otter Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2170,13 +2170,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bishop Otter Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2204,13 +2204,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Coventry Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2224,7 +2224,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"309",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Optional",
@@ -2238,13 +2238,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Global Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2272,13 +2272,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Coventry Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2306,13 +2306,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Global Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2340,13 +2340,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Coventry Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2374,13 +2374,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Coventry Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2408,13 +2408,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Coventry Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2442,13 +2442,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"De Montfort University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2476,13 +2476,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising and Marketing Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"De Montfort University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2510,13 +2510,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Marketing and Business",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"De Montfort University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2544,13 +2544,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Derby Campus - Kedleston Road",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2578,13 +2578,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Derby Campus - Kedleston Road",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2612,13 +2612,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Craiglockhart Campus, Colinton Road",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2646,13 +2646,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"Southend Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2680,13 +2680,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Southend Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2714,13 +2714,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Southend Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2748,13 +2748,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Falmouth Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2782,13 +2782,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2816,13 +2816,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"The University of Gloucestershire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2850,13 +2850,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Placement",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"The University of Gloucestershire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2884,13 +2884,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Foundation",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"The University of Gloucestershire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2918,13 +2918,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Advertising and Branding with Foundation",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"The University of Gloucestershire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2952,13 +2952,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Advertising and Branding with Placement",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"The University of Gloucestershire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -2986,13 +2986,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Advertising and Branding",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"The University of Gloucestershire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3054,13 +3054,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Goldsmiths College",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3088,13 +3088,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Greenwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3108,7 +3108,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"K0050",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -3122,13 +3122,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Greenwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3156,13 +3156,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising and Digital Marketing Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Greenwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3176,7 +3176,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"K0060",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -3190,13 +3190,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising and Digital Marketing Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Greenwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3224,13 +3224,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management (Extended)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Greenwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3258,13 +3258,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"EdinburghCampus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3292,13 +3292,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (Accelerated)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"EdinburghCampus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3326,13 +3326,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University Of Hertfordshire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3346,7 +3346,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BSMK-MARKETING",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -3360,13 +3360,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University Of Hertfordshire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3380,7 +3380,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BSMK-BUS_MARK",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -3394,13 +3394,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business And Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University Of Hertfordshire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3428,13 +3428,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business And Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University Of Hertfordshire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3448,7 +3448,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BSMK-MK_EAST",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -3462,13 +3462,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing With Eastern Language",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University Of Hertfordshire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3496,13 +3496,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing With Eastern Language",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University Of Hertfordshire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3530,13 +3530,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing With European Language",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University Of Hertfordshire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3550,7 +3550,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BSMK-MK_EURO",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -3564,13 +3564,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing With European Language",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University Of Hertfordshire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3598,13 +3598,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Queensgate Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3632,13 +3632,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Hull- Hull Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3666,13 +3666,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (with Placement Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Hull- Hull Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3700,13 +3700,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (with Study Abroad)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"University of Hull- Hull Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3720,7 +3720,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"MARKETING_BSC_N500",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -3734,13 +3734,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3768,13 +3768,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3802,13 +3802,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with a Year Abroad",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3822,7 +3822,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"MARKETING-A_BSC_N502",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -3836,13 +3836,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with a Year Abroad",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3870,13 +3870,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with a Year in Industry",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3890,7 +3890,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"MARKETING-S_BSC_N501",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -3904,13 +3904,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with a Year in Industry",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3938,13 +3938,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Advertising with Business Experience",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Kingston University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -3972,13 +3972,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Advertising with Business Experience",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Kingston University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4006,13 +4006,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Advertising with Business Experience",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Kingston University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4040,13 +4040,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bailrigg Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4074,13 +4074,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bailrigg Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4108,13 +4108,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Psychology",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bailrigg Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4142,13 +4142,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bailrigg Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4176,13 +4176,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management (Study Abroad)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"Bailrigg Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4210,13 +4210,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (Study Abroad)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"Bailrigg Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4230,7 +4230,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BAMKM_A104",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -4244,13 +4244,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Leeds City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4278,13 +4278,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sport Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Headingley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4312,13 +4312,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Leeds City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4332,7 +4332,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BMKAM_A303",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -4346,13 +4346,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Advertising Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Leeds City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4380,13 +4380,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Advertising Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Leeds City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4400,7 +4400,7 @@ dummy_data = {
                    "foundation_year":"Compulsory",
                    "honours_award":1,
                    "kis_course_id":"BASMF_B629",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -4414,13 +4414,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sport Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Headingley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4448,13 +4448,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sport Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Headingley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4482,13 +4482,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Leeds Trinity University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4516,13 +4516,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing with Foundation Year in Arts and Communication",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Leeds Trinity University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4550,13 +4550,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Leicester - Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4584,13 +4584,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Lincoln Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4618,13 +4618,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Lincoln Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4652,13 +4652,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4686,13 +4686,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with a Year in Industry",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4720,13 +4720,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4754,13 +4754,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4788,13 +4788,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4822,13 +4822,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4856,13 +4856,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4890,13 +4890,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4910,7 +4910,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"UDMARING",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -4924,13 +4924,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4958,13 +4958,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -4978,7 +4978,7 @@ dummy_data = {
                    "foundation_year":"Compulsory",
                    "honours_award":1,
                    "kis_course_id":"UDMRKTFY",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -4992,13 +4992,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (including foundation year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5026,13 +5026,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (including foundation year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5060,13 +5060,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Southwark Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5080,7 +5080,7 @@ dummy_data = {
                    "foundation_year":"Optional",
                    "honours_award":1,
                    "kis_course_id":"1262A",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -5094,13 +5094,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Southwark Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5128,13 +5128,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Enterprise and Entrepreneurship",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Southwark Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5162,13 +5162,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Creative Advertising with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Southwark Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5196,13 +5196,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Advertising and Digital Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Southwark Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5230,13 +5230,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Manchester Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5264,13 +5264,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Manchester Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5298,13 +5298,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sports Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Manchester Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5332,13 +5332,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sports Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Manchester Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5366,13 +5366,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Hendon Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5400,13 +5400,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Newcastle Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5434,13 +5434,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Newcastle Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5468,13 +5468,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Management and Marketing (London)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Newcastle University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5502,13 +5502,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Marketing and Management with Placement (London)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Newcastle University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5522,7 +5522,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"CBSCMARKT",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Optional",
@@ -5536,13 +5536,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5570,13 +5570,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5590,7 +5590,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"CBAAADVDM",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -5604,13 +5604,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising & Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5638,13 +5638,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing & Promotion",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5672,13 +5672,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (with Foundation Study)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5706,13 +5706,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising & Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5726,7 +5726,7 @@ dummy_data = {
                    "foundation_year":"Compulsory",
                    "honours_award":1,
                    "kis_course_id":"CBSCMARKTFF",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Optional",
@@ -5740,13 +5740,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (with Foundation Study)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5760,7 +5760,7 @@ dummy_data = {
                    "foundation_year":"Compulsory",
                    "honours_award":1,
                    "kis_course_id":"CBAAADVDMFF",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -5774,13 +5774,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising & Digital Marketing (with Foundation Study)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5808,13 +5808,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising & Digital Marketing (with Foundation Study)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5842,13 +5842,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing & Promotion (with Foundation Study)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5876,13 +5876,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Northumbria University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5910,13 +5910,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Northumbria University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5944,13 +5944,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5978,13 +5978,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -5998,7 +5998,7 @@ dummy_data = {
                    "foundation_year":"Optional",
                    "honours_award":1,
                    "kis_course_id":"BAH-KM",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -6012,13 +6012,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Oxford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6046,13 +6046,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Oxford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6066,7 +6066,7 @@ dummy_data = {
                    "foundation_year":"Optional",
                    "honours_award":1,
                    "kis_course_id":"BAH-MCM",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -6080,13 +6080,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Communications Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Oxford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6100,7 +6100,7 @@ dummy_data = {
                    "foundation_year":"Optional",
                    "honours_award":1,
                    "kis_course_id":"BAH-BK",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -6114,13 +6114,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Oxford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6148,13 +6148,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Communications Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Oxford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6182,13 +6182,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Oxford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6216,13 +6216,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Plymouth Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6250,13 +6250,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Plymouth Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6284,13 +6284,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University Of Portsmouth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6318,13 +6318,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Consumer Behaviour and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Reading",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6352,13 +6352,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Consumer Behaviour and Marketing with Placement Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Reading",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6386,13 +6386,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Richmond",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6420,13 +6420,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Garthdee Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6454,13 +6454,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Roehampton",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6488,13 +6488,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Roehampton",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6522,13 +6522,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (extended degree)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Roehampton",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6556,13 +6556,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing (extended degree)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Roehampton",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6590,13 +6590,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Kingsbury Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6624,13 +6624,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Kingsbury Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6658,13 +6658,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Salford University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6692,13 +6692,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing with Professional Experience",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Salford University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6726,13 +6726,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Salford University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6760,13 +6760,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6794,13 +6794,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Communications and Advertising",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6828,13 +6828,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Southampton",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6862,13 +6862,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Placement",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Southampton",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6896,13 +6896,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Study Abroad",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"Southampton",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6930,13 +6930,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital and Social Media Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Stoke on Trent Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6950,7 +6950,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"SSTK-P-S-C-0268",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -6964,13 +6964,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital and Social Media Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Stoke on Trent Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -6998,13 +6998,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital and Social Media Marketing (with a placement year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Stoke on Trent Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7032,13 +7032,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital and Social Media Marketing (with a foundation year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Stoke on Trent Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7052,7 +7052,7 @@ dummy_data = {
                    "foundation_year":"Compulsory",
                    "honours_award":1,
                    "kis_course_id":"SSTK-P-F-C-0008",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -7066,13 +7066,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital and Social Media Marketing (with a foundation year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Stoke on Trent Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7100,13 +7100,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Stirling - Stirling Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7134,13 +7134,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7168,13 +7168,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Suffolk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7188,7 +7188,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"IMKTSGLEU-P",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -7202,13 +7202,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Suffolk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7372,13 +7372,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Teesside University Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7406,13 +7406,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Jordanstown",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7426,7 +7426,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BA_MKT",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -7440,13 +7440,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University College Birmingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7474,13 +7474,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University College Birmingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7508,13 +7508,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University College Birmingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7542,13 +7542,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University College Birmingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7576,13 +7576,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University College Birmingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7596,7 +7596,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":0,
                    "kis_course_id":"FDGMKT",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"FDA",
                    "sandwich_year":"Not available",
@@ -7610,13 +7610,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University College Birmingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7644,13 +7644,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing and Social Media",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Epsom",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7678,13 +7678,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing and Social Media with Professional Practice Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Epsom",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7712,13 +7712,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of the West of England",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7746,13 +7746,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of the West of England",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7780,13 +7780,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business & Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Paisley",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7800,7 +7800,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"N1N5",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -7814,13 +7814,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business & Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Paisley",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7848,13 +7848,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Marylebone Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7882,13 +7882,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Marylebone Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7916,13 +7916,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Marylebone Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7950,13 +7950,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Marylebone Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -7984,13 +7984,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"King Alfred Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8018,13 +8018,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"King Alfred Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8052,13 +8052,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (with Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"King Alfred Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8086,13 +8086,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing (with Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"King Alfred Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8120,13 +8120,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Wolverhampton City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8140,7 +8140,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"MK010H31",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -8154,13 +8154,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Wolverhampton City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8188,13 +8188,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Wolverhampton City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8208,7 +8208,7 @@ dummy_data = {
                    "foundation_year":"Compulsory",
                    "honours_award":1,
                    "kis_course_id":"MK010T31",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -8222,13 +8222,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Wolverhampton City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8256,13 +8256,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management with Sandwich Placement",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Wolverhampton City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8290,13 +8290,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Advertising and Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Worcester",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8324,13 +8324,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Advertising and Public Relations (Placement Yr)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Worcester",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8358,13 +8358,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of York",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8392,13 +8392,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with a year in industry",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of York",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8426,13 +8426,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"YSJ Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8460,13 +8460,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Placement Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"YSJ Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8494,13 +8494,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"YSJ Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8533,13 +8533,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"ARU London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8567,13 +8567,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"ARU London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8601,13 +8601,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"ARU Cambridge Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8635,13 +8635,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"ARU Cambridge Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8669,13 +8669,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"ARU Cambridge Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8703,13 +8703,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing (Accelerated)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"ARU Cambridge Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8737,13 +8737,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Studies with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8771,13 +8771,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Studies with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8805,13 +8805,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Studies with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8839,13 +8839,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Moulsecoomb",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8873,13 +8873,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing and Placement Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Moulsecoomb",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8907,13 +8907,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Brunel University Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -8941,13 +8941,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing Management with Placement Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Brunel University Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9043,13 +9043,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University Centre Shrewsbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9077,13 +9077,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Northampton Square",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9111,13 +9111,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Dundee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9145,13 +9145,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business & Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Penryn Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9179,13 +9179,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business & Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Penryn Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9199,7 +9199,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BAN1N3KP",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -9213,7 +9213,7 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
@@ -9230,7 +9230,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BABMM_A045",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -9244,13 +9244,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Leeds City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9278,13 +9278,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Leeds City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9312,13 +9312,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Hendon Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9346,13 +9346,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9380,13 +9380,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing (OAK)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Welwyn Garden City",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9414,13 +9414,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Garthdee Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9448,13 +9448,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Digbeth Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9482,13 +9482,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Sunderland",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9516,13 +9516,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing Management with Integrated Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Sunderland",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9686,13 +9686,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing (WHC)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"West Herts Watford Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9720,13 +9720,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Marylebone Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9754,13 +9754,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Worcester",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9793,13 +9793,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Textile Design: Retail, Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9827,13 +9827,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Textile Design: Retail, Business and Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9861,13 +9861,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Promotion and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"UCLan Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9895,13 +9895,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing, and Communication",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9929,13 +9929,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Buying (with Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"De Montfort University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9949,7 +9949,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"WN25DM",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -9963,13 +9963,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Buying (with Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"De Montfort University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -9983,7 +9983,7 @@ dummy_data = {
                    "foundation_year":"Optional",
                    "honours_award":1,
                    "kis_course_id":"W2233",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -9997,13 +9997,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Design and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Derby Campus - Markeaton Street",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10031,13 +10031,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Design and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Derby Campus - Markeaton Street",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10065,13 +10065,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Docklands Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10099,13 +10099,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Design with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Queensgate Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10133,13 +10133,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Design and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Fashion Street London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10167,13 +10167,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Leeds City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10187,7 +10187,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BAFAM_A073",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -10201,13 +10201,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Leeds City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10235,13 +10235,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Promotion and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Hendon Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10269,13 +10269,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Design and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Northumbria University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10303,13 +10303,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing and Branding",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10337,13 +10337,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Ravensbourne",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10371,13 +10371,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing with Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Winchester",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10405,13 +10405,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Branding and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Ealing / Brentford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10439,13 +10439,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Branding and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Ealing / Brentford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10473,13 +10473,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Graphic Design, Advertising and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Worcester",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10507,13 +10507,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"YSJ Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10541,13 +10541,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing with Placement",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"YSJ Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10575,13 +10575,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing with Foundation",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"YSJ Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10614,13 +10614,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Digital Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Uni Centre",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10634,7 +10634,7 @@ dummy_data = {
                    "foundation_year":"Optional",
                    "honours_award":1,
                    "kis_course_id":"SD2034",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Optional",
@@ -10648,13 +10648,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Docklands Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10682,13 +10682,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Docklands Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10716,13 +10716,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Harper Adams University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10750,13 +10750,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Brand Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Queensgate Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10784,13 +10784,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Loughborough University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10818,13 +10818,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Management with Marketing (Year in Business)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Egham Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10852,13 +10852,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Retail Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Stirling - Stirling Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10886,13 +10886,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Surrey",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10920,13 +10920,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Surrey",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10954,13 +10954,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing) with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Surrey",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -10988,13 +10988,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing) with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Surrey",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11042,7 +11042,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"KIS-DM0SH",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -11144,7 +11144,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"KIS-BMMSH",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -11265,13 +11265,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Tourism Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Moulsecoomb",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11285,7 +11285,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BSEVMGT-EVENT_MAN_MK",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -11299,13 +11299,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Event Management And Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University Of Hertfordshire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11333,13 +11333,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Event Management And Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University Of Hertfordshire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11367,13 +11367,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Hospitality Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Headingley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11401,13 +11401,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Tourism Management With Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Headingley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11435,13 +11435,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Hospitality Business Management with Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Headingley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11469,13 +11469,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Tourism Management with Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Headingley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11503,13 +11503,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Event and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Suffolk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11523,7 +11523,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"IEMMSGLEU-P",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -11537,13 +11537,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Event and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Suffolk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11576,13 +11576,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Bolton",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11596,7 +11596,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BAM045-P-UOB-SX",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -11610,13 +11610,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Bolton",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11644,13 +11644,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing) with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Bolton",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11664,7 +11664,7 @@ dummy_data = {
                    "foundation_year":"Compulsory",
                    "honours_award":1,
                    "kis_course_id":"UOBBSBMMFY",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -11678,25 +11678,25 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Harrow Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Southall Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Wembley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11724,25 +11724,25 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Harrow Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Southall Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Wembley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11770,25 +11770,25 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Harrow Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Southall Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Wembley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11802,7 +11802,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"UOBBSBMMD",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -11816,25 +11816,25 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Harrow Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Southall Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Wembley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11862,13 +11862,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"High Wycombe Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11896,13 +11896,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sport Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"High Wycombe Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11930,13 +11930,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"High Wycombe Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11964,13 +11964,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Agri-food Marketing with Business",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Harper Adams University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -11984,7 +11984,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BAHUFCCM1CCM01",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -11998,13 +11998,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Creative and Cultural Industries: Design Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Kingston University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12032,13 +12032,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Creative and Cultural Industries: Design Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Kingston University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12066,13 +12066,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing and Promotion",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Harrow Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12100,13 +12100,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Nutrition with Food Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Newcastle Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12134,13 +12134,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Nutrition with Food Marketing with Placement",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Newcastle Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12168,13 +12168,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Food Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Newcastle Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12202,13 +12202,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Food Marketing and Business Economics",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Reading",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12236,13 +12236,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Food Marketing and Business Economics with Placement Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Reading",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12297,7 +12297,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGBT2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -12317,13 +12317,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12357,13 +12357,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12397,13 +12397,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12477,13 +12477,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business & Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Jewry Street, London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12517,13 +12517,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing and Business",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Norwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12557,13 +12557,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing and Business",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Norwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12597,13 +12597,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Reading",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12637,13 +12637,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Management (Marketing) with Year Abroad",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"University of Reading",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12677,13 +12677,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Management (Marketing) with Placement Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Reading",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12697,7 +12697,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"HBUMARK0P$",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -12717,13 +12717,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University Centre Peterborough",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12757,13 +12757,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University Centre Peterborough",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12777,7 +12777,7 @@ dummy_data = {
                    "foundation_year":"Compulsory",
                    "honours_award":1,
                    "kis_course_id":"BU033T31",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -12797,13 +12797,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing Management with Foundation",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Wolverhampton City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12842,13 +12842,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Birkbeck College",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12862,7 +12862,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"6N105",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -12882,13 +12882,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Birkbeck College",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -12902,7 +12902,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"408",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -12922,7 +12922,7 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
@@ -13019,7 +13019,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"US0838-00",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -13039,13 +13039,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13079,13 +13079,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13119,13 +13119,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13159,13 +13159,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13199,13 +13199,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bishop Otter Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13239,13 +13239,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Coventry Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13279,13 +13279,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing (with integrated foundation year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"In Lancaster",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13319,13 +13319,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"De Montfort University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13359,13 +13359,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Dundee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13399,13 +13399,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Durham Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13439,13 +13439,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing & Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Durham Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13459,7 +13459,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BAS000274",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Optional",
@@ -13479,13 +13479,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Ormskirk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13519,13 +13519,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Ormskirk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13559,13 +13559,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Central and King's Buildings",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13579,7 +13579,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"K0045",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -13599,13 +13599,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Greenwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13639,13 +13639,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Greenwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13679,13 +13679,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing (Extended)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Greenwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13719,13 +13719,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Queensgate Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13759,29 +13759,29 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Birmingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Leeds",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"London",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Manchester",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Nottingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13815,29 +13815,29 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management (Marketing) with foundation year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Birmingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Leeds",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"London",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Manchester",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Nottingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13871,13 +13871,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Leeds",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13911,13 +13911,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Leeds Trinity University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13951,13 +13951,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing with Foundation Year in Business",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Leeds Trinity University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -13991,13 +13991,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14031,13 +14031,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14071,13 +14071,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Southwark Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14111,13 +14111,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Manchester Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14151,13 +14151,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Business",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14171,7 +14171,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"SUBMKTGSUBBUSI",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -14191,13 +14191,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Business",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14231,13 +14231,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Business (with Foundation Study)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14251,7 +14251,7 @@ dummy_data = {
                    "foundation_year":"Compulsory",
                    "honours_award":1,
                    "kis_course_id":"SUBMKBU",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -14271,13 +14271,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Business (with Foundation Study)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14311,13 +14311,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14351,13 +14351,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14391,13 +14391,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Queen Mary University of London - Mile End campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14431,13 +14431,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Global Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14471,13 +14471,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Global Management (Marketing) with Integrated Foundation",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14511,25 +14511,25 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Harrow Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Southall Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Wembley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14543,7 +14543,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":0,
                    "kis_course_id":"HNDBUSMRK",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"HND",
                    "sandwich_year":"Not available",
@@ -14563,25 +14563,25 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Harrow Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Southall Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Wembley Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14615,13 +14615,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University Centre - Future Skills",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14655,13 +14655,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14695,13 +14695,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"St Mary's University, Twickenham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14735,13 +14735,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Studies and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Stirling - Stirling Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14775,13 +14775,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Grimsby Institute",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14815,13 +14815,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Teesside University Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14855,13 +14855,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business with Marketing (with Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Teesside University Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14895,13 +14895,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sports Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Teesside University Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14935,13 +14935,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sports Marketing and Management (with Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Teesside University Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -14975,13 +14975,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of the West of England",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15015,13 +15015,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of the West of England",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15055,13 +15055,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing Management with Foundation",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Wolverhampton City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15075,7 +15075,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BU033J31",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -15095,13 +15095,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Wolverhampton City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15135,13 +15135,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Wolverhampton City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15175,13 +15175,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing Management with Sandwich Placement",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Wolverhampton City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15215,13 +15215,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing (Placement Yr)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Worcester",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15260,13 +15260,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Economics with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Dundee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15300,13 +15300,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Economics with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Dundee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15340,13 +15340,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Economics with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Goldsmiths College",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15380,13 +15380,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Economics and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15420,13 +15420,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Economics and Marketing (with Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15460,13 +15460,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Economics and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Stirling - Stirling Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15500,13 +15500,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Economics and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15540,13 +15540,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Economics with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Jordanstown",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15585,13 +15585,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion: Design With Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Central Saint Martins",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15625,13 +15625,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Penryn Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15665,13 +15665,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing Including Professional Placement",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Penryn Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15705,13 +15705,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing & Communication for Fashion",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Fashion Retail Academy",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15745,13 +15745,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Design",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bailrigg Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15785,13 +15785,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Leeds",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15825,13 +15825,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Promotion with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Southwark Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15865,13 +15865,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Manchester Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15905,13 +15905,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15945,13 +15945,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing (Buying)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -15985,13 +15985,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing with Integrated Foundation",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16025,13 +16025,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing (Styling)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16065,13 +16065,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Design (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16105,13 +16105,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing (Styling) with Integrated Foundation",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16145,13 +16145,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing (Buying) with Integrated Foundation",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16185,13 +16185,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Design (Marketing) with Integrated Foundation",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16225,13 +16225,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Management With Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"East Park Terrace",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16265,13 +16265,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Management With Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"East Park Terrace",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16305,13 +16305,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Management With Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"East Park Terrace",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16325,7 +16325,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"DWMBA_PT",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -16345,13 +16345,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Graphic Design with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Teesside University Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16385,13 +16385,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Graphic Design with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Teesside University Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16425,13 +16425,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Graphic Design with Marketing (with Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Teesside University Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16470,13 +16470,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Music Marketing, Media and Communication",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16510,13 +16510,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Music Marketing, Media and Communication",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"BIMM Manchester - Great Marlborough Street",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16550,13 +16550,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Music Marketing, Media and Communication",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"BIMM Birmingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16590,13 +16590,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Music Marketing, Media and Communication",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"BIMM Bristol - Kings Square",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16630,13 +16630,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Music Marketing, Media and Communication",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"BIMM Brighton - West",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16670,13 +16670,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing and Journalism",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16690,7 +16690,7 @@ dummy_data = {
                    "foundation_year":"Optional",
                    "honours_award":1,
                    "kis_course_id":"UDFSMKJR",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -16710,13 +16710,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing and Journalism",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16730,7 +16730,7 @@ dummy_data = {
                    "foundation_year":"Optional",
                    "honours_award":1,
                    "kis_course_id":"UDBEMAJO",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -16750,13 +16750,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Beauty Marketing and Journalism",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16790,13 +16790,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Beauty Marketing and Journalism",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16810,7 +16810,7 @@ dummy_data = {
                    "foundation_year":"Compulsory",
                    "honours_award":1,
                    "kis_course_id":"UDFAMJFY",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -16830,13 +16830,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing and Journalism (including foundation year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16870,13 +16870,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing and Journalism (including foundation year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16910,13 +16910,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Multimedia Sports Journalism and Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16930,7 +16930,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"SUBMSJOSUBDGMK",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -16950,13 +16950,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Multimedia Sports Journalism and Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -16995,13 +16995,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Bath",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17035,13 +17035,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Edgbaston campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17075,13 +17075,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing and Year in Industry",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Edgbaston campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17115,13 +17115,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (Retailing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17135,7 +17135,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"US0641-03",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -17155,13 +17155,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (Retailing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17175,7 +17175,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"US0641-01",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -17195,13 +17195,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (Advertising and Public Relations)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17235,13 +17235,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (Advertising and Public Relations)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17275,13 +17275,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sport Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"High Wycombe Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17315,13 +17315,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"UCLan Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17355,13 +17355,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"UCLan Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17375,7 +17375,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"228",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -17395,13 +17395,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Fashion Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17435,13 +17435,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Fashion Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17475,13 +17475,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"In Lancaster",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17515,13 +17515,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing (with sandwich placement)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"In Lancaster",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17555,13 +17555,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Campus A",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17595,13 +17595,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management with a Year Abroad",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"Campus A",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17635,13 +17635,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management with a Year in Industry",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Campus A",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17675,13 +17675,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"Colchester Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17715,13 +17715,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Colchester Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17755,13 +17755,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Colchester Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17795,13 +17795,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Exeter Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17835,13 +17835,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"The University of Gloucestershire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17875,13 +17875,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and  Marketing Management with Placement",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"The University of Gloucestershire",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17915,13 +17915,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Goldsmiths College",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17955,13 +17955,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Hull- Hull Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -17995,13 +17995,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management (with Placement Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Hull- Hull Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18035,13 +18035,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Hull- Hull Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18075,13 +18075,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management (with Study Abroad)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"University of Hull- Hull Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18115,13 +18115,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing (with Study Abroad)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"University of Hull- Hull Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18155,13 +18155,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing (with Placement Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Hull- Hull Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18195,13 +18195,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Business Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Keele University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18235,13 +18235,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Business Management with Business Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Keele University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18275,13 +18275,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Leeds",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18315,13 +18315,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Retail Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Leeds City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18335,7 +18335,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BMWRM_B791",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -18355,13 +18355,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Retail Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Leeds City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18375,7 +18375,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"UDFMBSMN",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -18395,13 +18395,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing and Business Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18415,7 +18415,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"UDBMMARK",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -18435,13 +18435,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18475,13 +18475,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18515,13 +18515,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing and Business Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18555,13 +18555,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18595,13 +18595,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Management (Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18635,13 +18635,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18655,7 +18655,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"SUBMKTGSUBMGMT",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA/BSc",
                    "sandwich_year":"Optional",
@@ -18675,13 +18675,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18715,13 +18715,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"MidTown Campus, 190 High Holborn",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18755,13 +18755,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Queen Mary University of London - Mile End campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18795,13 +18795,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Richmond",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18835,13 +18835,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Egham Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18875,13 +18875,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18915,13 +18915,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Falmer Campus, Falmer",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -18955,13 +18955,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management (with a professional placement year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Falmer Campus, Falmer",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19000,13 +19000,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Media Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"High Wycombe Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19040,13 +19040,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Media Communications with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"High Wycombe Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19080,13 +19080,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Media/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19120,13 +19120,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Media and Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19140,7 +19140,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGMC2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA/BSc",
                    "sandwich_year":"Not available",
@@ -19160,13 +19160,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Media and Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19200,13 +19200,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Media/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19220,7 +19220,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGDG2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA/BSc",
                    "sandwich_year":"Not available",
@@ -19240,13 +19240,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Media/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19280,13 +19280,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Media and Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19320,13 +19320,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Digital Media",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Craiglockhart Campus, Colinton Road",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19360,13 +19360,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Media",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Keele University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19400,29 +19400,29 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Birmingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Leeds",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"London",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Manchester",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Nottingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19456,29 +19456,29 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Birmingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Leeds",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"London",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Manchester",
-                         "welsh":"dunno"
+                         "welsh":None
                       },
                       {
                          "english":"Nottingham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19512,7 +19512,7 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing (Online) 3 year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
@@ -19549,13 +19549,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Film & Visual Culture and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19589,13 +19589,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Film & Visual Culture and Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19629,13 +19629,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19649,7 +19649,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":0,
                    "kis_course_id":"HDMCFDA0P$",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"FDA",
                    "sandwich_year":"Not available",
@@ -19669,13 +19669,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing and Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University Centre Peterborough",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19709,13 +19709,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing and Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University Centre Peterborough",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19729,7 +19729,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"HDIGCOM0P$",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -19749,13 +19749,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing and communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University Centre Peterborough",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19789,13 +19789,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing and Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University Centre Peterborough",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19834,13 +19834,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Public Relations and Media",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19854,7 +19854,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGMR2PM2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Not available",
@@ -19874,13 +19874,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Public Relations and Media",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19954,13 +19954,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"East London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -19994,13 +19994,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"East London Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20034,13 +20034,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Leeds City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20054,7 +20054,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"UDADMCPR",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -20074,13 +20074,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising, Marketing Communications and Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20114,13 +20114,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising, Marketing Communications and Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20154,13 +20154,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20194,13 +20194,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Communications and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"St Mary's University, Twickenham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20234,13 +20234,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Communications, Design and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"St Mary's University, Twickenham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20274,13 +20274,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Communications, Media and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"St Mary's University, Twickenham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20314,13 +20314,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sports Communications and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"St Mary's University, Twickenham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20354,13 +20354,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Communications, Data Analytics and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"St Mary's University, Twickenham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20394,13 +20394,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Communications, Media and Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"St Mary's University, Twickenham",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20445,7 +20445,7 @@ dummy_data = {
                    "locations":[
                       {
                          "english":"Aberystwyth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20479,13 +20479,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with International Tourism Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20519,13 +20519,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with International Tourism Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20559,13 +20559,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Event Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Moulsecoomb",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20599,13 +20599,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Tourism Studies",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20639,13 +20639,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Tourism Studies",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20659,7 +20659,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGMR2TM2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -20679,13 +20679,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Tourism Studies",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20719,13 +20719,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Events Management and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20759,13 +20759,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Tourism Management and Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20799,13 +20799,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Tourism Management and Marketing Management (3yr)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20839,13 +20839,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Event Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bishop Otter Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20879,13 +20879,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Hospitality Management & Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Craiglockhart Campus, Colinton Road",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20919,13 +20919,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Tourism & Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Craiglockhart Campus, Colinton Road",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20959,13 +20959,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Tourism",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -20999,13 +20999,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Tourism (with Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21019,7 +21019,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"UDEVMAMK",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -21039,13 +21039,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Events Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21079,13 +21079,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Events Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Holloway Site",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21099,7 +21099,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"SUBMKTGSUBEVMA",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -21119,13 +21119,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Events Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21159,13 +21159,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Events Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Northampton Waterside Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21179,7 +21179,7 @@ dummy_data = {
                    "foundation_year":"Optional",
                    "honours_award":1,
                    "kis_course_id":"BAH-MEM",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -21199,13 +21199,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Events Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Oxford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21239,13 +21239,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Events Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Oxford",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21279,13 +21279,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Hospitality and Tourism Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21330,7 +21330,7 @@ dummy_data = {
                    "locations":[
                       {
                          "english":"Aberystwyth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21364,13 +21364,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Psychology and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Aston University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21424,7 +21424,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"US0641-02",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -21444,13 +21444,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (Consumer Psychology)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21484,13 +21484,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing (Consumer Psychology)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21504,7 +21504,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGMR2PS2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -21524,13 +21524,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Psychology",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21564,13 +21564,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Psychology",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21604,13 +21604,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Psychology",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21644,13 +21644,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Psychology",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21684,13 +21684,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Psychology (SBS)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21729,13 +21729,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Human Biology and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21769,13 +21769,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Human Biology and Marketing (with Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21849,13 +21849,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Video Production and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Media City",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21901,7 +21901,7 @@ dummy_data = {
                    "locations":[
                       {
                          "english":"Aberystwyth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21941,13 +21941,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Craiglockhart Campus, Colinton Road",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -21987,13 +21987,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Digital Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Queensgate Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22033,13 +22033,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Queensgate Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22073,13 +22073,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University Of Portsmouth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22119,13 +22119,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Economics with Marketing with French",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Dundee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22165,13 +22165,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Economics with Marketing and History",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Dundee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22211,13 +22211,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Economics with Marketing and Geography",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Dundee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22257,13 +22257,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Economics with Marketing with Spanish",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Dundee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22303,13 +22303,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Economics with Marketing and Politics",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Dundee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22343,13 +22343,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Food Marketing Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22383,13 +22383,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Information Technology and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22423,13 +22423,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing and Analytics with Placement",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"YSJ Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22463,13 +22463,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing and Data Analytics",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"YSJ Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22503,13 +22503,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing and Data Analytics with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"YSJ Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22543,13 +22543,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Information Technology and Marketing (with Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22583,13 +22583,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Law and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Stirling - Stirling Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22623,13 +22623,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Business Law",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22663,13 +22663,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Law with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Magee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22683,7 +22683,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"2847",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"LLB",
                    "sandwich_year":"Not available",
@@ -22703,13 +22703,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Law with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Magee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22723,7 +22723,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGAO2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -22743,13 +22743,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Accounting/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22783,13 +22783,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Accounting/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22823,13 +22823,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Accounting/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22863,13 +22863,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Accounting and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22903,13 +22903,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Accounting and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Magee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22943,13 +22943,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"American Studies/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -22983,13 +22983,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"American Studies/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23003,7 +23003,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGAM2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA/BSc",
                    "sandwich_year":"Not available",
@@ -23023,13 +23023,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"American Studies/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23063,13 +23063,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Enterprise and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23103,13 +23103,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Irish with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Magee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23143,13 +23143,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Creative Writing and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23183,13 +23183,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Creative Writing and Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23223,13 +23223,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Drama with Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Magee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23263,13 +23263,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Early Childhood and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23303,13 +23303,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Early Childhood and Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23343,13 +23343,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"English Language and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23383,13 +23383,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"English Language and Marketing with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23423,13 +23423,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Media Communications (2-year degree)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"University of Buckingham Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23463,13 +23463,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"English Literature/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23503,13 +23503,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"English Literature/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23523,7 +23523,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGLT2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA/BSc",
                    "sandwich_year":"Not available",
@@ -23543,13 +23543,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"English Literature/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23595,7 +23595,7 @@ dummy_data = {
                    "locations":[
                       {
                          "english":"Aberystwyth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23629,13 +23629,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Finance/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23649,7 +23649,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGFN2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -23669,13 +23669,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Finance/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23709,13 +23709,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Finance/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23749,13 +23749,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Finance and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23795,7 +23795,7 @@ dummy_data = {
                    "locations":[
                       {
                          "english":"Aberystwyth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23949,13 +23949,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"French and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Stirling - Stirling Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -23989,13 +23989,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"French and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24035,7 +24035,7 @@ dummy_data = {
                    "locations":[
                       {
                          "english":"Aberystwyth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24169,7 +24169,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGHR2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -24189,13 +24189,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Human Resource Management/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24229,13 +24229,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Human Resource Management/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24269,13 +24269,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Human Resource Management/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24309,13 +24309,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Human Resource Management",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Bishop Otter Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24349,13 +24349,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Human Resource Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Stirling - Stirling Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24389,13 +24389,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Human Resource Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24429,13 +24429,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Human Resource Management and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Magee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24475,7 +24475,7 @@ dummy_data = {
                    "locations":[
                       {
                          "english":"Aberystwyth",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24629,13 +24629,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Spanish",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Stirling - Stirling Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24669,13 +24669,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Spanish and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24715,13 +24715,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Communication, Advertising and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Jordanstown",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24835,13 +24835,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing with Study Abroad in a Modern Language",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Compulsory",
                    "locations":[
                       {
                          "english":"University of Bristol",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24875,13 +24875,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising and Digital Marketing Communications with Language",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Greenwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24895,7 +24895,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"K0063",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA",
                    "sandwich_year":"Optional",
@@ -24915,13 +24915,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Advertising and Digital Marketing Communications with Language",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Greenwich Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24935,7 +24935,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGEK2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA/BSc",
                    "sandwich_year":"Not available",
@@ -24955,13 +24955,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"English Language/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -24995,13 +24995,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"English Language/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25035,13 +25035,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"English Language/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25081,13 +25081,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Film, Radio and Television/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25101,7 +25101,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGFV2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BA/BSc",
                    "sandwich_year":"Not available",
@@ -25127,13 +25127,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Film, Radio and Television/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25173,13 +25173,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Film, Radio and Television/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25219,13 +25219,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing (Public Relations)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25265,13 +25265,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing (Public Relations) with Integrated Foundation",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Regents University London",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25305,13 +25305,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Digital Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Centre Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25351,13 +25351,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Public Relations and Marketing Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Queen Margaret University, Edinburgh",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25397,13 +25397,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Economics with Marketing and Mathematics",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Dundee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25437,13 +25437,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Analysis and Technology and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"John Anderson Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25457,7 +25457,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGMR2PN2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -25477,13 +25477,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Relations/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25517,13 +25517,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Relations/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25557,13 +25557,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Relations/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25603,13 +25603,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Economics with Marketing and Psychology",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"The University of Dundee",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25649,13 +25649,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management with Psychology",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Falmer Campus, Falmer",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25695,13 +25695,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Management with Psychology (with a professional placement year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Falmer Campus, Falmer",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25735,13 +25735,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Sociology",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25755,7 +25755,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGMR2SG2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -25775,13 +25775,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Sociology",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25815,13 +25815,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Sociology",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25855,13 +25855,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Sociology",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25895,13 +25895,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Sociology with Foundation Year",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -25955,7 +25955,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGMR2SP2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -25975,13 +25975,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Sport & Exercise Science",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26015,13 +26015,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Sport & Exercise Science",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26055,13 +26055,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing/Sport & Exercise Science",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26095,13 +26095,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Sport & Physical Education",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26135,13 +26135,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing and Sport & Physical Education (with Foundation Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Liverpool Hope - Hope Park",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26175,13 +26175,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Sports Studies and Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"University of Stirling - Stirling Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26215,13 +26215,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Logistics Management/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26235,7 +26235,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"PMDDGLM2MR2",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Not available",
@@ -26255,13 +26255,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Logistics Management/Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Canterbury",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26306,13 +26306,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business Management with Marketing (Extended)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Harper Adams University",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26346,13 +26346,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Events Management and Marketing Management (with Professional Placement Year)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Chester Parkgate Road/Kingsway/Riverside/Queen's Park Campus'",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26386,13 +26386,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"International Events Management (Experiential Marketing)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"City Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26426,13 +26426,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business and Marketing (with Professional Practice)",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Lincoln Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26466,13 +26466,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing With Advertising",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Ormskirk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26486,7 +26486,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"MwAnew",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Optional",
@@ -26506,13 +26506,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing With Advertising",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Ormskirk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26546,13 +26546,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business & Management With Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Ormskirk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26566,7 +26566,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"BAS000272",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Optional",
@@ -26586,13 +26586,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Business & Management With Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Ormskirk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26606,7 +26606,7 @@ dummy_data = {
                    "foundation_year":"Not available",
                    "honours_award":1,
                    "kis_course_id":"MarkDC",
-                   "length_of_course":"dunno",
+                   "length_of_course":None,
                    "mode":"Part-time",
                    "qualification":"BSc",
                    "sandwich_year":"Optional",
@@ -26626,13 +26626,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing With Digital Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Ormskirk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26666,13 +26666,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Marketing With Digital Communications",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Optional",
                    "locations":[
                       {
                          "english":"Ormskirk",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26706,13 +26706,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Fashion Marketing",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Main Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26746,13 +26746,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Media, Marketing and Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26786,13 +26786,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Media, Marketing and Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
@@ -26826,13 +26826,13 @@ dummy_data = {
                    ],
                    "title":{
                       "english":"Media, Marketing and Public Relations",
-                      "welsh":"dunno"
+                      "welsh":None
                    },
                    "year_abroad":"Not available",
                    "locations":[
                       {
                          "english":"Luton Campus",
-                         "welsh":"dunno"
+                         "welsh":None
                       }
                    ],
                    "institution":{
