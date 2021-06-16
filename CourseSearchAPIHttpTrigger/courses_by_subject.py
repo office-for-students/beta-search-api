@@ -1,11 +1,191 @@
 import logging
 
+
+dummy_data = {
+   "items":{
+      "single_subject_courses":[
+         {
+            "Pornography courses":{
+               "number_of_courses":2,
+               "courses":[
+                  {
+                     "country":"England",
+                     "distance_learning":"Course is available other than by distance learning",
+                     "foundation_year":"Not available",
+                     "honours_award":1,
+                     "kis_course_id":"LCFBAFMKF01",
+                     "length_of_course":"3 stages",
+                     "mode":"Full-time",
+                     "qualification":"BA",
+                     "sandwich_year":"Optional",
+                     "subjects":[
+                        {
+                           "code":"CAH17-01-03",
+                           "level":3,
+                           "english":"Marketing",
+                           "welsh":"Marchnata"
+                        }
+                     ],
+                     "title":{
+                        "english":"Fashion Marketing",
+                        "welsh":"null"
+                     },
+                     "institution":{
+                        "pub_ukprn_name":"Abertay University",
+                        "pub_ukprn":"10007849"
+                     },
+                     "year_abroad":"Not available",
+                     "locations":[
+                        {
+                           "english":"London College of Fashion",
+                           "welsh":"null"
+                        }
+                     ]
+                  }
+               ]
+            },
+            "Knitting courses":{
+               "number_of_courses":1,
+               "courses":[
+                  {
+                     "country":"Scotland",
+                     "kis_course_id":"NN15-U-MKTBUS",
+                     "subjects":[
+                        {
+                           "code":"CAH17-01-03",
+                           "level":3,
+                           "english":"Marketing",
+                           "welsh":"Marchnata"
+                        }
+                     ],
+                     "title":{
+                        "english":"Marketing and Business",
+                        "welsh":"null"
+                     },
+                     "institution":{
+                        "pub_ukprn_name":"Abertay University",
+                        "pub_ukprn":"10007849"
+                     }
+                  }
+               ]
+            },
+            "Veg courses":{
+               "number_of_courses":1,
+               "courses":[
+                  {
+                     "country":"Scotland",
+                     "kis_course_id":"NN15-U-MKTBUS",
+                     "subjects":[
+                        {
+                           "code":"CAH17-01-03",
+                           "level":3,
+                           "english":"Marketing",
+                           "welsh":"Marchnata"
+                        }
+                     ],
+                     "title":{
+                        "english":"Marketing and Business",
+                        "welsh":"null"
+                     },
+                     "institution":{
+                        "pub_ukprn_name":"Abertay University",
+                        "pub_ukprn":"10007849"
+                     }
+                  }
+               ]
+            }
+         }
+      ],
+      "multiple_subject_courses":[
+         {
+            "Pornography & cooking courses":{
+               "number_of_courses":2,
+               "courses":[
+                  {
+                     "country":"Scotland",
+                     "kis_course_id":"NN15-U-MKTBUS",
+                     "subjects":[
+                        {
+                           "code":"CAH17-01-03",
+                           "level":3,
+                           "english":"Marketing",
+                           "welsh":"Marchnata"
+                        }
+                     ],
+                     "title":{
+                        "english":"Marketing and Business",
+                        "welsh":"null"
+                     },
+                     "institution":{
+                        "pub_ukprn_name":"Abertay University",
+                        "pub_ukprn":"10007849"
+                     }
+                  },
+                  {
+                     "country":"Scotland",
+                     "kis_course_id":"NN15-U-MKTBUS",
+                     "subjects":[
+                        {
+                           "code":"CAH17-01-03",
+                           "level":3,
+                           "english":"Marketing",
+                           "welsh":"Marchnata"
+                        }
+                     ],
+                     "title":{
+                        "english":"Marketing and Business",
+                        "welsh":"null"
+                     },
+                     "institution":{
+                        "pub_ukprn_name":"Abertay University",
+                        "pub_ukprn":"10007849"
+                     }
+                  }
+               ]
+            },
+            "Knitting & car maintenance courses":{
+               "number_of_courses":1,
+               "courses":[
+                  {
+                     "country":"Scotland",
+                     "kis_course_id":"NN15-U-MKTBUS",
+                     "subjects":[
+                        {
+                           "code":"CAH17-01-03",
+                           "level":3,
+                           "english":"Marketing",
+                           "welsh":"Marchnata"
+                        }
+                     ],
+                     "title":{
+                        "english":"Marketing and Business",
+                        "welsh":"null"
+                     },
+                     "institution":{
+                        "pub_ukprn_name":"Abertay University",
+                        "pub_ukprn":"10007849"
+                     }
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   "limit":5000,
+   "number_of_items":4,
+   "offset":0,
+   "total_number_of_courses":6,
+   "total_results":127
+}        
+
 class CoursesBySubject:
     def __init__(self, mapper):
         self.mapper = mapper
 
 
     def group(self, queried_course_title, courses ,counts, limit, offset, language):
+        return dummy_data
+
         single_course_accordions = {}
         multiple_course_accordions = {}
 
