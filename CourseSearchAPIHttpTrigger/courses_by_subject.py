@@ -3,7 +3,7 @@ import logging
 
 dummy_data = {
     "items":{
-       "single_subject_courses":{
+       "single_subject_courses":[{
           "Marketing courses":{
              "number_of_courses":250,
              "courses":[
@@ -12286,8 +12286,8 @@ dummy_data = {
                 }
              ]
           }
-       },
-       "multiple_subject_courses":{
+       }],
+       "multiple_subject_courses":[{
           "Business and management & Marketing courses":{
              "number_of_courses":13,
              "courses":[
@@ -26842,7 +26842,7 @@ dummy_data = {
                 }
              ]
           }
-       }
+       }]
     },
     "limit":5000,
     "number_of_items":18,
