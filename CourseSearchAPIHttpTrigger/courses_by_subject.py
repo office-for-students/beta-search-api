@@ -1,83 +1,35 @@
 import logging
 
-
-dummy_data = {
-    "items":{
-       "single_subject_courses":{
-          "Business studies courses":{
-             "number_of_courses":1,
-             "courses":[
-                {
-                   "country":"England",
-                   "distance_learning":"Course is available other than by distance learning",
-                   "foundation_year":"Not available",
-                   "honours_award":1,
-                   "kis_course_id":"K00054",
-                   "length_of_course":"3 stages",
-                   "mode":"Full-time",
-                   "qualification":"BSc",
-                   "sandwich_year":"Not available",
-                   "subjects":[
-                      {
-                         "code":"CAH17-01-02",
-                         "level":3,
-                         "english":"Business studies",
-                         "welsh":"Astudiaethau busnes"
-                      }
-                   ],
-                   "title":{
-                      "english":"Business and Marketing",
-                      "welsh":None
-                   },
-                   "year_abroad":"Not available",
-                   "locations":[
-                      {
-                         "english":"ARU London Campus",
-                         "welsh":None
-                      }
-                   ],
-                   "institution":{
-                      "pub_ukprn_name":"Anglia Ruskin University Higher Education Corporation",
-                      "pub_ukprn":"10000291"
-                   }
-                },
-             ]
-          },
-       },
-    },
-    "limit":5000,
-    "number_of_items":18,
-    "offset":0,
-    "total_number_of_courses":716,
-    "total_results":131
- }     
-
 class CoursesBySubject:
     def __init__(self, mapper):
         self.mapper = mapper
 
 
     def group(self, queried_course_title, courses ,counts, limit, offset, language):
-        return dummy_data
-
         single_course_accordions = {}
         multiple_course_accordions = {}
 
         add_courses_to_accordions(courses, single_course_accordions, multiple_course_accordions, self.mapper, language)
-
+        
         group_single_courses_that_are_less_than_one_percent(courses, single_course_accordions)
 
         multiple_course_accordions = sort(multiple_course_accordions)
 
         group_multiple_courses_that_are_less_than_one_percent(courses, multiple_course_accordions, queried_course_title)
 
-        log_accordions(single_course_accordions, courses)
-        log_accordions(multiple_course_accordions, courses)
+        # TODO refactor
+        for key in list(single_course_accordions.keys()):
+            single_course_accordions[key]['number_of_courses'] = len(single_course_accordions.get(key)['courses'])
+        for key in list(multiple_course_accordions.keys()):
+            multiple_course_accordions[key]['number_of_courses'] = len(multiple_course_accordions.get(key)['courses'])
+
+        # log_accordions(single_course_accordions, courses)
+        # log_accordions(multiple_course_accordions, courses)
 
         return {
             "items": {
-                'single_subject_courses': single_course_accordions, 
-                'multiple_subject_courses': multiple_course_accordions,
+                "single_subject_courses": single_course_accordions, 
+                "multiple_subject_courses": multiple_course_accordions,
             },
             "limit": limit,
             "number_of_items": len(single_course_accordions) + len(multiple_course_accordions),
@@ -91,7 +43,7 @@ def add_courses_to_accordions(courses, single_course_accordions, multiple_course
     single_course = {}
     multiple_course = {}
     institutions = []
-
+    
     for c in courses:
         course = c["course"]
         institution = course["institution"]
@@ -164,9 +116,12 @@ def add_single_courses_to_accordions(course, group, accordions, mapper):
 
 def add_course_to_accordions(course, label, accordions):
     if label not in accordions:
-        accordions[label] = []
-    if course not in accordions[label]:
-        accordions[label].append(course)
+        accordions[label] = {}
+
+        # TODO duplication
+        accordions[label]["courses"] = []        
+    if course not in accordions[label]["courses"]:
+        accordions[label]["courses"].append(course)
 
 
 def add_multiple_courses_to_accordions(course, group, accordions, mapper):
@@ -180,11 +135,11 @@ def add_multiple_courses_to_accordions(course, group, accordions, mapper):
 
 def group_single_courses_that_are_less_than_one_percent(courses, accordions):
     for key in list(accordions.keys()):
-        label = 'Courses in other subjects'
+        label = "Courses in other subjects"
         if label == key:
             continue            
 
-        percentage = len(accordions[key]) / len(courses) * 100
+        percentage = len(accordions[key]["courses"]) / len(courses) * 100
 
         if percentage <= 1:
             move_course(accordions, key, label)
@@ -192,10 +147,13 @@ def group_single_courses_that_are_less_than_one_percent(courses, accordions):
 
 def move_course(accordions, key, label):
     if label not in accordions:
-        accordions[label] = []
-    for c in list(accordions[key]):
-        if c not in accordions[label]:
-            accordions[label].append(c)
+        accordions[label] = {}
+        
+        # TODO duplication
+        accordions[label]["courses"] = []
+    for c in accordions[key]["courses"]:
+        if c not in accordions[label]["courses"]:
+            accordions[label]["courses"].append(c)
     accordions.pop(key)
 
 
@@ -209,7 +167,7 @@ def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, q
         if queried_course_title == key:
             continue  
 
-        percentage = len(accordions[key]) / len(courses) * 100
+        percentage = len(accordions[key]["courses"]) / len(courses) * 100
 
         if percentage <= 1:
             if queried_course_title.lower() in key.lower(): 
@@ -223,6 +181,7 @@ def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, q
 
 
 def sort_other_combinations(accordions):
+    # TODO duplication
     if accordions.get('Other combinations'):
         other_combinations = accordions['Other combinations']
         if other_combinations:
@@ -233,5 +192,6 @@ def sort_other_combinations(accordions):
 def log_accordions(accordions, courses):
     logging.warning('---------------------------------------')
     for key in accordions.keys():
-        percentage = len(accordions[key]) / len(courses) * 100
-        logging.warning(f'{key}: {len(accordions[key])} ({round(percentage,1)}%)')
+        # TODO duplication
+        percentage = len(accordions[key]["courses"]) / len(courses) * 100
+        logging.warning(f'{key}: {len(accordions[key]["courses"])} ({round(percentage,1)}%)')

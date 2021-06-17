@@ -2,7 +2,6 @@
     "items":{
        "single_subject_courses":{
           "Marketing courses":{
-             "number_of_courses":250,
              "courses":[
                 {
                    "country":"Scotland",
@@ -8505,7 +8504,8 @@
                       "pub_ukprn":"10007713"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":250
           },
           "Business studies courses":{
              "number_of_courses":37,
@@ -9768,7 +9768,6 @@
              ]
           },
           "Design studies courses":{
-             "number_of_courses":24,
              "courses":[
                 {
                    "country":"England",
@@ -10586,10 +10585,10 @@
                       "pub_ukprn":"10007713"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":24
           },
           "Management studies courses":{
-             "number_of_courses":19,
              "courses":[
                 {
                    "country":"England",
@@ -11237,10 +11236,10 @@
                       "pub_ukprn":"10007858"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":19
           },
           "Tourism, transport and travel courses":{
-             "number_of_courses":9,
              "courses":[
                 {
                    "country":"England",
@@ -11548,10 +11547,10 @@
                       "pub_ukprn":"10014001"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":9
           },
           "Courses in other subjects":{
-             "number_of_courses":20,
              "courses":[
                 {
                    "country":"England",
@@ -12281,12 +12280,12 @@
                       "pub_ukprn":"10007858"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":20
           }
        },
        "multiple_subject_courses":{
           "Business and management & Marketing courses":{
-             "number_of_courses":13,
              "courses":[
                 {
                    "country":"England",
@@ -12808,10 +12807,10 @@
                       "pub_ukprn":"10007166"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":13
           },
           "Business studies & Marketing courses":{
-             "number_of_courses":59,
              "courses":[
                 {
                    "country":"England",
@@ -15226,10 +15225,10 @@
                       "pub_ukprn":"10007139"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":59
           },
           "Economics & Marketing courses":{
-             "number_of_courses":8,
              "courses":[
                 {
                    "country":"Scotland",
@@ -15551,10 +15550,10 @@
                       "pub_ukprn":"10007807"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":8
           },
           "Marketing & Design studies courses":{
-             "number_of_courses":22,
              "courses":[
                 {
                    "country":"England",
@@ -16436,10 +16435,10 @@
                       "pub_ukprn":"10007161"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":22
           },
           "Marketing & Journalism courses":{
-             "number_of_courses":13,
              "courses":[
                 {
                    "country":"England",
@@ -16961,10 +16960,10 @@
                       "pub_ukprn":"10007138"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":13
           },
           "Marketing & Management studies courses":{
-             "number_of_courses":50,
              "courses":[
                 {
                    "country":"England",
@@ -18966,10 +18965,10 @@
                       "pub_ukprn":"10007806"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":50
           },
           "Marketing & Media studies courses":{
-             "number_of_courses":20,
              "courses":[
                 {
                    "country":"England",
@@ -19800,10 +19799,10 @@
                       "pub_ukprn":"10068157"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":20
           },
           "Marketing & Publicity studies courses":{
-             "number_of_courses":15,
              "courses":[
                 {
                    "country":"England",
@@ -20405,10 +20404,10 @@
                       "pub_ukprn":"10007843"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":15
           },
           "Marketing & Tourism, transport and travel courses":{
-             "number_of_courses":22,
              "courses":[
                 {
                    "country":"Wales",
@@ -21290,10 +21289,10 @@
                       "pub_ukprn":"10007805"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":22
           },
           "Psychology & Marketing courses":{
-             "number_of_courses":10,
              "courses":[
                 {
                    "country":"Wales",
@@ -21695,10 +21694,10 @@
                       "pub_ukprn":"10007805"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":10
           },
           "Other combinations with Marketing":{
-             "number_of_courses":111,
              "courses":[
                 {
                    "country":"England",
@@ -26266,10 +26265,10 @@
                       "pub_ukprn":"10001143"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":111
           },
           "Other combinations":{
-             "number_of_courses":14,
              "courses":[
                 {
                    "country":"England",
@@ -26837,7 +26836,8 @@
                       "pub_ukprn":"10007152"
                    }
                 }
-             ]
+             ],
+             "number_of_courses":14
           }
        }
     },
