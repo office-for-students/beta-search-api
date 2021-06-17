@@ -136,31 +136,50 @@ class Query:
             for x in institution_filter_list:
                 filters.append(x)
 
-        if self.postcode_object != {}:
-            latitude = self.postcode_object["latitude"]
-            longitude = self.postcode_object["longitude"]
-            distance = self.postcode_object["distance"]
-
-            filters.append(
-                "course/locations/any(location: geo.distance(\
-                           location/geo, geography'POINT("
-                + str(longitude)
-                + " "
-                + str(latitude)
-                + ")') le "
-                + distance
-                + ")"
-            )
-
         #Condition that will remove distance learning from the filters, and run a function for a separate distance learning filter
         if '(course/distance_learning/code eq 0 or course/distance_learning/code eq 1 or course/distance_learning/code eq 2)' in filters:    
             distance_filter = Query.build_or_distance_filter(self.query_params, filters)
             filters.remove(f'(course/distance_learning/code eq 0 or course/distance_learning/code eq 1 or course/distance_learning/code eq 2)')
             filters.append(f'course/distance_learning/code ne 1')
+            
+
+            if self.postcode_object != {}:
+                latitude = self.postcode_object["latitude"]
+                longitude = self.postcode_object["longitude"]
+                distance = self.postcode_object["distance"]
+
+                filters.append(
+                    "course/locations/any(location: geo.distance(\
+                               location/geo, geography'POINT("
+                    + str(longitude)
+                    + " "
+                    + str(latitude)
+                    + ")') le "
+                    + distance
+                    + ")"
+                )
+
             filter_query = " and ".join(filters)
             filter_query += " or "
             filter_query += " and ".join(distance_filter)
         else:
+
+            if self.postcode_object != {}:
+                latitude = self.postcode_object["latitude"]
+                longitude = self.postcode_object["longitude"]
+                distance = self.postcode_object["distance"]
+
+                filters.append(
+                    "course/locations/any(location: geo.distance(\
+                               location/geo, geography'POINT("
+                    + str(longitude)
+                    + " "
+                    + str(latitude)
+                    + ")') le "
+                    + distance
+                    + ")"
+                )
+
             filter_query = " and ".join(filters)
 
         if filter_query != "":
@@ -252,7 +271,7 @@ class Query:
 
     def build_institution_filter(institutions, query_params):
         institution_filters = list()
-        split_institutions = institutions.split("#")
+        split_institutions = institutions.split("@")
         institution_list = list()
         search_public_ukprn = os.environ["SearchPubUKPRN"]
 
