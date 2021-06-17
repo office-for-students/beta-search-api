@@ -24,19 +24,19 @@ class TestCoursesBySubject(unittest.TestCase):
         expected = self.load_fixture('output.json')
 
         # ACT
-        actual = self.assert_group_course_by_subject("marketing", "en")
+        actual = self.assert_group_course_by_subject('marketing', 'en')
 
         # ASSERT
-        items = actual["items"]
+        items = actual['items']
 
         # single_subject_courses
         courses = items['single_subject_courses']
-        self.assertEqual(courses['Marketing courses']["number_of_courses"], 250)
-        self.assertEqual(courses['Business studies courses']["number_of_courses"], 37)
-        self.assertEqual(courses['Design studies courses']["number_of_courses"], 24)
-        self.assertEqual(courses['Management studies courses']["number_of_courses"], 19)
-        self.assertEqual(courses['Tourism, transport and travel courses']["number_of_courses"], 9)
-        self.assertEqual(courses['Courses in other subjects']["number_of_courses"], 20)
+        self.assertEqual(courses['Marketing courses']['number_of_courses'], 250)
+        self.assertEqual(courses['Business studies courses']['number_of_courses'], 37)
+        self.assertEqual(courses['Design studies courses']['number_of_courses'], 24)
+        self.assertEqual(courses['Management studies courses']['number_of_courses'], 19)
+        self.assertEqual(courses['Tourism, transport and travel courses']['number_of_courses'], 9)
+        self.assertEqual(courses['Courses in other subjects']['number_of_courses'], 20)
         self.assertEqual(list(courses.keys()), [
             'Marketing courses',
             'Business studies courses',
@@ -49,18 +49,18 @@ class TestCoursesBySubject(unittest.TestCase):
 
         # multiple_subject_courses
         courses = items['multiple_subject_courses']
-        self.assertEqual(courses['Business and management & Marketing courses']["number_of_courses"], 13)
-        self.assertEqual(courses['Business studies & Marketing courses']["number_of_courses"], 59)
-        self.assertEqual(courses['Economics & Marketing courses']["number_of_courses"], 8)
-        self.assertEqual(courses['Marketing & Design studies courses']["number_of_courses"], 22)
-        self.assertEqual(courses['Marketing & Journalism courses']["number_of_courses"], 13)
-        self.assertEqual(courses['Marketing & Management studies courses']["number_of_courses"], 50)
-        self.assertEqual(courses['Marketing & Media studies courses']["number_of_courses"], 20)
-        self.assertEqual(courses['Marketing & Publicity studies courses']["number_of_courses"], 15)
-        self.assertEqual(courses['Marketing & Tourism, transport and travel courses']["number_of_courses"], 22)
-        self.assertEqual(courses['Psychology & Marketing courses']["number_of_courses"], 10)
-        self.assertEqual(courses['Other combinations with Marketing']["number_of_courses"], 111)
-        self.assertEqual(courses['Other combinations']["number_of_courses"], 14)
+        self.assertEqual(courses['Business and management & Marketing courses']['number_of_courses'], 13)
+        self.assertEqual(courses['Business studies & Marketing courses']['number_of_courses'], 59)
+        self.assertEqual(courses['Economics & Marketing courses']['number_of_courses'], 8)
+        self.assertEqual(courses['Marketing & Design studies courses']['number_of_courses'], 22)
+        self.assertEqual(courses['Marketing & Journalism courses']['number_of_courses'], 13)
+        self.assertEqual(courses['Marketing & Management studies courses']['number_of_courses'], 50)
+        self.assertEqual(courses['Marketing & Media studies courses']['number_of_courses'], 20)
+        self.assertEqual(courses['Marketing & Publicity studies courses']['number_of_courses'], 15)
+        self.assertEqual(courses['Marketing & Tourism, transport and travel courses']['number_of_courses'], 22)
+        self.assertEqual(courses['Psychology & Marketing courses']['number_of_courses'], 10)
+        self.assertEqual(courses['Other combinations with Marketing']['number_of_courses'], 111)
+        self.assertEqual(courses['Other combinations']['number_of_courses'], 14)
         self.assertEqual(list(courses.keys()), [
             'Business and management & Marketing courses',
             'Business studies & Marketing courses',
@@ -81,23 +81,23 @@ class TestCoursesBySubject(unittest.TestCase):
 
 
     def test_when_welsh_en_course_queried(self):
-        self.assert_group_course_by_subject("welsh", "en")
+        self.assert_group_course_by_subject('welsh', 'en')
 
 
     def test_when_welsh_cy_course_queried(self):
-        self.assert_group_course_by_subject("welsh", "cy")
+        self.assert_group_course_by_subject('welsh', 'cy')
 
 
     def test_when_law_course_queried(self):
-        self.assert_group_course_by_subject("law", "en")
+        self.assert_group_course_by_subject('law', 'en')
 
 
     def test_when_architecture_course_queried(self):
-        self.assert_group_course_by_subject("architecture", "en")
+        self.assert_group_course_by_subject('architecture', 'en')
 
 
     def test_when_rubbish_course_queried(self):
-        self.assert_group_course_by_subject("rubbish", "en")
+        self.assert_group_course_by_subject('rubbish', 'en')
 
 
     def test_build_course_using_english_language(self):
@@ -122,7 +122,7 @@ class TestCoursesBySubject(unittest.TestCase):
                                        )
 
         # ASSERT
-        items = actual["items"]
+        items = actual['items']
         self.assertEqual(len(items.keys()), 2)
 
         return actual
@@ -134,7 +134,7 @@ class TestCoursesBySubject(unittest.TestCase):
         expected = self.load_fixture(filename_expected)
         
         # ACT
-        actual = build_course(input["course"], input["institution"], input["language"])
+        actual = build_course(input['course'], input['institution'], input['language'])
 
         # ASSERT
         self.assertEqual(actual, expected)
@@ -156,8 +156,8 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def setUp(self):
         self.counts = {'institutions': 131, 'courses': 716}
-        self.limit = "5000"
-        self.offset = "0"
+        self.limit = '5000'
+        self.offset = '0'
         mappings = self.load_mappings()
         mapper = CourseToLabelMapper(mappings)
         self.courseBySubject = CoursesBySubject(mapper)
