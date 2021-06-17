@@ -21,29 +21,16 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_marketing_course_queried(self):
         # ARRANGE
-        courses = self.load_fixture('input.json')
         expected = self.load_fixture('output.json')
-        queried_course_title = "marketing"
-        language = "en"
 
         # ACT
-        actual = self.courseBySubject.group(queried_course_title,
-                                       courses,
-                                       self.counts, 
-                                       int(self.limit),
-                                       int(self.offset), 
-                                       language,
-                                       )
+        actual = self.assert_group_course_by_subject("marketing", "en")
 
         # ASSERT
         items = actual["items"]
-        self.assertEqual(len(items.keys()), 2)
-
-        # logging.warning(f"0010={items['single_subject_courses'][0]['Marketing courses']}")
-
 
         # single_subject_courses
-        courses = items['single_subject_courses'][0]
+        courses = items['single_subject_courses']
         self.assertEqual(courses['Marketing courses']["number_of_courses"], 250)
         self.assertEqual(courses['Business studies courses']["number_of_courses"], 37)
         self.assertEqual(courses['Design studies courses']["number_of_courses"], 24)
@@ -61,7 +48,7 @@ class TestCoursesBySubject(unittest.TestCase):
         )
 
         # multiple_subject_courses
-        courses = items['multiple_subject_courses'][0]
+        courses = items['multiple_subject_courses']
         self.assertEqual(courses['Business and management & Marketing courses']["number_of_courses"], 13)
         self.assertEqual(courses['Business studies & Marketing courses']["number_of_courses"], 59)
         self.assertEqual(courses['Economics & Marketing courses']["number_of_courses"], 8)
@@ -93,12 +80,37 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(actual, expected)
 
 
-    # TODO do the same for law
-    def test_when_welsh_course_queried(self):
+    def test_when_welsh_en_course_queried(self):
+        self.assert_group_course_by_subject("welsh", "en")
+
+
+    def test_when_welsh_cy_course_queried(self):
+        self.assert_group_course_by_subject("welsh", "cy")
+
+
+    def test_when_law_course_queried(self):
+        self.assert_group_course_by_subject("law", "en")
+
+
+    def test_when_architecture_course_queried(self):
+        self.assert_group_course_by_subject("architecture", "en")
+
+
+    def test_when_rubbish_course_queried(self):
+        self.assert_group_course_by_subject("rubbish", "en")
+
+
+    def test_build_course_using_english_language(self):
+        self.assert_buld_course('build_course_en_input.json', 'build_course_en_output.json')
+
+
+    def test_build_course_using_welsh_language(self):
+        self.assert_buld_course('build_course_cy_input.json', 'build_course_cy_output.json')
+
+
+    def assert_group_course_by_subject(self, queried_course_title, language):
         # ARRANGE
         courses = self.load_fixture('input.json')
-        queried_course_title = "welsh"
-        language = "en"
 
         # ACT
         actual = self.courseBySubject.group(queried_course_title,
@@ -113,16 +125,10 @@ class TestCoursesBySubject(unittest.TestCase):
         items = actual["items"]
         self.assertEqual(len(items.keys()), 2)
 
-
-    def test_build_course_using_english_language(self):
-        self.buld_course('build_course_en_input.json', 'build_course_en_output.json')
+        return actual
 
 
-    def test_build_course_using_welsh_language(self):
-        self.buld_course('build_course_cy_input.json', 'build_course_cy_output.json')
-
-
-    def buld_course(self, filename_input, filename_expected):
+    def assert_buld_course(self, filename_input, filename_expected):
         # ARRANGE
         input = self.load_fixture(filename_input)
         expected = self.load_fixture(filename_expected)
