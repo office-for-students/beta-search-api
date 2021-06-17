@@ -20,13 +20,32 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_marketing_course_queried(self):
         # ARRANGE
+        mappings = self.load_mappings()
+        mapper = CourseToLabelMapper(mappings)
+        courseBySubject = CoursesBySubject(mapper)
+
+        courses = self.load_fixture('input.json')
         expected = self.load_fixture('output.json')
 
+        queried_course_title = 'marketing'
+        counts = {'institutions': 131, 'courses': 716}
+        limit = 5000
+        offset = 0
+        language = 'en'
+
+
         # ACT
-        actual = self.assert_group_course_by_subject('marketing', 'en')
+        actual = courseBySubject.group(queried_course_title,
+                                        courses,
+                                        counts, 
+                                        limit,
+                                        offset, 
+                                        language,
+                                        )
 
         # ASSERT
         items = actual['items']
+        self.assertEqual(len(items.keys()), 2)
 
         # single_subject_courses
         courses = items['single_subject_courses']
@@ -79,52 +98,12 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(actual, expected)
 
 
-    def test_when_welsh_en_course_queried(self):
-        self.assert_group_course_by_subject('welsh', 'en')
-
-
-    def test_when_welsh_cy_course_queried(self):
-        self.assert_group_course_by_subject('welsh', 'cy')
-
-
-    def test_when_law_course_queried(self):
-        self.assert_group_course_by_subject('law', 'en')
-
-
-    def test_when_architecture_course_queried(self):
-        self.assert_group_course_by_subject('architecture', 'en')
-
-
-    def test_when_rubbish_course_queried(self):
-        self.assert_group_course_by_subject('rubbish', 'en')
-
-
     def test_build_course_using_english_language(self):
         self.assert_buld_course('build_course_en_input.json', 'build_course_en_output.json')
 
 
     def test_build_course_using_welsh_language(self):
         self.assert_buld_course('build_course_cy_input.json', 'build_course_cy_output.json')
-
-
-    def assert_group_course_by_subject(self, queried_course_title, language):
-        # ARRANGE
-        courses = self.load_fixture('input.json')
-
-        # ACT
-        actual = self.courseBySubject.group(queried_course_title,
-                                       courses,
-                                       self.counts, 
-                                       int(self.limit),
-                                       int(self.offset), 
-                                       language,
-                                       )
-
-        # ASSERT
-        items = actual['items']
-        self.assertEqual(len(items.keys()), 2)
-
-        return actual
 
 
     def assert_buld_course(self, filename_input, filename_expected):
@@ -151,12 +130,3 @@ class TestCoursesBySubject(unittest.TestCase):
         with open(f'{dir}/{filename}', 'r') as file:
             input = file.read()
         return json.loads(input)
-
-
-    def setUp(self):
-        self.counts = {'institutions': 131, 'courses': 716}
-        self.limit = '5000'
-        self.offset = '0'
-        mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        self.courseBySubject = CoursesBySubject(mapper)
