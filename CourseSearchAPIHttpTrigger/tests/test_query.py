@@ -137,7 +137,7 @@ class TestInsitituionFilter(unittest.TestCase):
 
     @mock.patch.dict(os.environ, {"SearchPubUKPRN": "False"})
     def test_with_multiple_institutions_selected(self):
-        self.institutions = 'University of Southampton#University Two#University Three'
+        self.institutions = 'University of Southampton@University Two@University Three'
         self.query_params["language"] = {}
         build_array = Query.build_institution_filter(self.institutions, self.query_params)
         expected = [f"({self.doc} 'University of Southampton' or {self.doc} 'University Two' or {self.doc} 'University Three')"]
@@ -145,7 +145,7 @@ class TestInsitituionFilter(unittest.TestCase):
 
     @mock.patch.dict(os.environ, {"SearchPubUKPRN": "False"})
     def test_with_multiple_institutions_welsh(self):
-        self.institutions = 'University of Southampton#University Two#University Three'
+        self.institutions = 'University of Southampton@University Two@University Three'
         self.query_params["language"] = 'cy'
         build_array = Query.build_institution_filter(self.institutions, self.query_params)
         expected = [f"({self.doc_cy} 'University of Southampton' or {self.doc_cy} 'University Two' or {self.doc_cy} 'University Three')"]
@@ -153,7 +153,7 @@ class TestInsitituionFilter(unittest.TestCase):
 
     @mock.patch.dict(os.environ, {"SearchPubUKPRN": "True"})
     def test_multiple_with_SearchPubUKPRN_set_true(self):
-        self.institutions = 'University of Southampton#University Two#University Three'
+        self.institutions = 'University of Southampton@University Two@University Three'
         self.query_params["language"] = 'cy'
         build_array = Query.build_institution_filter(self.institutions, self.query_params)
         expected = [f"({self.doc_ukprn} 'University of Southampton' or {self.doc_ukprn} 'University Two' or {self.doc_ukprn} 'University Three')"]
