@@ -17,11 +17,8 @@ class CoursesBySubject:
 
         group_multiple_courses_that_are_less_than_one_percent(courses, multiple_course_accordions, queried_course_title)
 
-        # TODO refactor
-        for key in list(single_course_accordions.keys()):
-            single_course_accordions[key]['number_of_courses'] = len(single_course_accordions.get(key)['courses'])
-        for key in list(multiple_course_accordions.keys()):
-            multiple_course_accordions[key]['number_of_courses'] = len(multiple_course_accordions.get(key)['courses'])
+        add_number_of_courses(single_course_accordions)
+        add_number_of_courses(multiple_course_accordions)
 
         # log_accordions(single_course_accordions, courses)
         # log_accordions(multiple_course_accordions, courses)
@@ -187,6 +184,11 @@ def sort_other_combinations(accordions):
         if other_combinations:
             accordions.pop('Other combinations')
             accordions['Other combinations'] = other_combinations    
+
+
+def add_number_of_courses(accordions):
+    for key in accordions.keys():
+        accordions[key]['number_of_courses'] = len(accordions.get(key)['courses'])
 
 
 def log_accordions(accordions, courses):
