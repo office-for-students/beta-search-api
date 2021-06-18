@@ -10,7 +10,6 @@ sys.path.insert(0, PARENT_DIR)
 from course_to_label_mapper import CourseToLabelMapper
 
 
-
 class TestCourseToLabelMapper(unittest.TestCase):
     def test_convert_to_dictionary(self):
         actual = CourseToLabelMapper.convert_to_dictionary(self, data)

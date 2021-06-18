@@ -5,12 +5,12 @@ import sys
 import unittest
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+TEST_DATA_DIR=f'{CURRENT_DIR}/fixtures/courses_by_institution'
 PARENT_DIR = os.path.dirname(CURRENT_DIR)
 sys.path.insert(0, PARENT_DIR)
 
 from courses_by_institution import CoursesByInstitution
 
-TEST_DATA_DIR=f'{CURRENT_DIR}/fixtures/courses_by_institution'
 
 class TestCoursesByInstitution(unittest.TestCase):
     

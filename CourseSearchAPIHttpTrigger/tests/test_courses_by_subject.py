@@ -6,14 +6,13 @@ import unittest
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 PARENT_DIR = os.path.dirname(CURRENT_DIR)
+MAPPING_DIR = f'{PARENT_DIR}/fixtures'
+FIXTURES_DIR = f'{CURRENT_DIR}/fixtures/courses_by_subject'
 sys.path.insert(0, PARENT_DIR)
 
 from course_to_label_mapper import CourseToLabelMapper
 from courses_by_subject import CoursesBySubject
 from courses_by_subject import build_course
-
-MAPPING_DIR = f'{PARENT_DIR}/fixtures'
-FIXTURES_DIR = f'{CURRENT_DIR}/fixtures/courses_by_subject'
 
 
 class TestCoursesBySubject(unittest.TestCase):
