@@ -4,7 +4,6 @@ import sys
 import inspect
 import traceback
 import json
-import re
 
 import azure.functions as func
 
@@ -15,13 +14,15 @@ PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
+from courses_by_institution import CoursesByInstitution
+from course_to_label_mapper import CourseToLabelMapper
+from courses_by_subject import CoursesBySubject
+
 from .helper import (
     handle_search_terms,
     remove_conjunctions_from_searchable_fields,
     handle_apostrophes_in_search,
-    get_offset_and_limit,
-    group_courses_by_institution,
-)
+    get_offset_and_limit,)
 
 from .query import (
     build_institution_search_query,
@@ -97,6 +98,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         length_of_course = req.params.get("length_of_course", "")
         subjects = req.params.get("subjects", "")
         language = req.params.get("language", "en")
+        sortBySubject = req.params.get("sortBySubject", "false")
+        sortBySubjectLimit = req.params.get("sortBySubjectLimit", default_limit)
 
         # Step 1 - Validate query parameters
         query_params, error_objects = check_query_parameters(
@@ -216,11 +219,13 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             )
             json_response = response.json()
             courses = json_response["value"]
-
+            
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
-        search_results = group_courses_by_institution(
-            courses, counts, int(limit), int(offset), language
-        )
+        if sortBySubject == 'true':
+            mapper = getCourseToLabelMapper();
+            search_results = CoursesBySubject(mapper).group(course, courses, counts, int(sortBySubjectLimit), int(offset), language) 
+        else: 
+            search_results = CoursesByInstitution().group(courses, counts, int(limit), int(offset), language)
 
         return func.HttpResponse(
             json.dumps(search_results),
@@ -242,3 +247,9 @@ def convert_miles_to_km(distance_in_miles):
         return distance
     except ValueError:
         return None
+
+
+def getCourseToLabelMapper():
+    with open(f'{CURRENTDIR}/fixtures/subjects-sort-by.json', 'r') as file:
+        input = file.read()
+    return CourseToLabelMapper(json.loads(input))
