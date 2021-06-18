@@ -9,13 +9,26 @@ class CoursesBySubject:
         single_course_accordions = {}
         multiple_course_accordions = {}
 
-        add_courses_to_accordions(courses, single_course_accordions, multiple_course_accordions, self.mapper, language)
+        add_courses_to_accordions(
+            self.mapper, 
+            courses, 
+            single_course_accordions, 
+            multiple_course_accordions,             
+            language,
+            )
         
-        group_single_courses_that_are_less_than_one_percent(courses, single_course_accordions)
+        group_single_courses_that_are_less_than_one_percent(
+            courses, 
+            single_course_accordions,
+            )
 
         multiple_course_accordions = sort(multiple_course_accordions)
 
-        group_multiple_courses_that_are_less_than_one_percent(courses, multiple_course_accordions, queried_course_title)
+        group_multiple_courses_that_are_less_than_one_percent(
+            courses, 
+            multiple_course_accordions, 
+            queried_course_title,
+            )
 
         add_number_of_courses(single_course_accordions)
         add_number_of_courses(multiple_course_accordions)
@@ -31,112 +44,116 @@ class CoursesBySubject:
             "limit": limit,
             "number_of_items": len(single_course_accordions) + len(multiple_course_accordions),
             "offset": offset,
-            "total_number_of_courses": counts["courses"],
-            "total_results": counts["institutions"],
+            "total_number_of_courses": counts[key_courses],
+            "total_results": counts[key_institutions],
         }
 
 
-def add_courses_to_accordions(courses, single_course_accordions, multiple_course_accordions, mapper, language):
-    single_course = {}
-    multiple_course = {}
+def add_courses_to_accordions(mapper, courses, single_course_accordions, multiple_course_accordions, language):
+    single_courses = {}
+    multiple_courses = {}
     institutions = []
     
     for c in courses:
-        course = c["course"]
-        institution = course["institution"]
-
-        if institution["pub_ukprn_name"] == "not available":
+        institution = c[key_course][key_institution]
+        if institution[key_pub_ukprn_name] == "not available":
             continue
 
         add_institution_to_list(institution, institutions)
 
-        course = build_course(c["course"], institution, language)
+        course = build_course(c[key_course], institution, language)
 
-        sort_results_into_groups(course, single_course, multiple_course)
+        sort_results_into_groups(
+            course, 
+            single_courses, 
+            multiple_courses,
+            )
 
-        add_single_courses_to_accordions(course, single_course, single_course_accordions, mapper)
+        add_single_courses_to_accordions(
+            course, 
+            single_courses, 
+            single_course_accordions, 
+            mapper,
+            )
 
-        add_multiple_courses_to_accordions(course, multiple_course, multiple_course_accordions, mapper)
+        add_multiple_courses_to_accordions(
+            course, 
+            multiple_courses, 
+            multiple_course_accordions, 
+            mapper,
+            )
 
 
 def add_institution_to_list(institution, institutions):
-    pub_ukprn = institution["pub_ukprn"]
+    pub_ukprn = institution[key_pub_ukprn]
     if pub_ukprn not in institutions:
         institutions.append(pub_ukprn)
 
-
 def build_course(course, institution, language):
     institution_body = {
-        "pub_ukprn_name": institution["pub_ukprn_welsh_name"] if language == "cy" else institution["pub_ukprn_name"],
-        "pub_ukprn": institution["pub_ukprn"],
+        key_pub_ukprn_name: institution[key_pub_ukprn_welsh_name] if language == "cy" else institution[key_pub_ukprn_name],
+        key_pub_ukprn: institution[key_pub_ukprn],
     }
 
     locations = []
-    for location in course["locations"]:
-        locations.append(location["name"])
+    for location in course[key_locations]:
+        locations.append(location[key_name])
 
     return {
         "country":           course["country"]["label"],
         "distance_learning": course["distance_learning"]["label"],
         "foundation_year":   course["foundation_year_availability"]["label"],
         "honours_award":     course["honours_award_provision"],
-        "kis_course_id":     course["kis_course_id"],
+        "kis_course_id":     course[key_kis_course_id],
         "length_of_course":  course["length_of_course"]["label"],
         "mode":              course["mode"]["label"],
         "qualification":     course["qualification"]["label"],
         "sandwich_year":     course["sandwich_year"]["label"],
-        "subjects":          course["subjects"],
+        "subjects":          course[key_subjects],
         "title":             course["title"],
         "year_abroad":       course["year_abroad"]["label"],
-        "locations":         locations,
-        "institution":       institution_body,
+        key_locations:       locations,
+        key_institution:     institution_body,
     }
 
 
-def sort_results_into_groups(course, group_a, group_b):
-    if len(course["subjects"]) == 1:
-        add_course_id_to_group(group_a, course)
-
-    if len(course["subjects"]) > 1:
-        add_course_id_to_group(group_b, course)
-
-
-def add_course_id_to_group(group, course):
-    group[course["kis_course_id"]] = course
+def sort_results_into_groups(course, single_courses, multiple_courses):
+    if len(course[key_subjects]) == 1:
+        single_courses[course[key_kis_course_id]] = course
+    if len(course[key_subjects]) > 1:
+        multiple_courses[course[key_kis_course_id]] = course
 
 
-def add_single_courses_to_accordions(course, group, accordions, mapper):
-    for course in group.values():
-        label = f'{mapper.get_label(course["subjects"][0]["code"])} courses'
+def add_single_courses_to_accordions(course, courses, accordions, mapper):
+    for course in courses.values():
+        label = f'{mapper.get_label(course[key_subjects][0][key_code])} courses'
         add_course_to_accordions(course, label, accordions)
 
 
 def add_course_to_accordions(course, label, accordions):
     if label not in accordions:
         accordions[label] = {}
-
-        # TODO duplication
-        accordions[label]["courses"] = []        
-    if course not in accordions[label]["courses"]:
-        accordions[label]["courses"].append(course)
+        accordions[label][key_courses] = []      
+    if course not in accordions[label][key_courses]:
+        accordions[label][key_courses].append(course)
 
 
-def add_multiple_courses_to_accordions(course, group, accordions, mapper):
-    for course in group.values():
+def add_multiple_courses_to_accordions(course, courses, accordions, mapper):
+    for course in courses.values():
         subjects = []
-        for subject in course["subjects"]:
-            subjects.append(mapper.get_label(subject["code"]))
+        for subject in course[key_subjects]:
+            subjects.append(mapper.get_label(subject[key_code]))
         label = f'{" & ".join(subjects)} courses'
         add_course_to_accordions(course, label, accordions)
 
 
 def group_single_courses_that_are_less_than_one_percent(courses, accordions):
     for key in list(accordions.keys()):
-        label = "Courses in other subjects"
+        label = key_courses_in_other_subjects
         if label == key:
             continue            
 
-        percentage = len(accordions[key]["courses"]) / len(courses) * 100
+        percentage = len(accordions[key][key_courses]) / len(courses) * 100
 
         if percentage <= 1:
             move_course(accordions, key, label)
@@ -145,12 +162,10 @@ def group_single_courses_that_are_less_than_one_percent(courses, accordions):
 def move_course(accordions, key, label):
     if label not in accordions:
         accordions[label] = {}
-        
-        # TODO duplication
-        accordions[label]["courses"] = []
-    for c in accordions[key]["courses"]:
-        if c not in accordions[label]["courses"]:
-            accordions[label]["courses"].append(c)
+        accordions[label][key_courses] = []
+    for c in accordions[key][key_courses]:
+        if c not in accordions[label][key_courses]:
+            accordions[label][key_courses].append(c)
     accordions.pop(key)
 
 
@@ -164,36 +179,52 @@ def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, q
         if queried_course_title == key:
             continue  
 
-        percentage = len(accordions[key]["courses"]) / len(courses) * 100
+        percentage = len(accordions[key][key_courses]) / len(courses) * 100
 
         if percentage <= 1:
             if queried_course_title.lower() in key.lower(): 
-                label = f'Other combinations with {queried_course_title.title()}'
+                label = f'{key_other_combinations_with} {queried_course_title.title()}'
                 move_course(accordions, key, label)
             else:
-                label = f'Other combinations'
+                label = key_other_combinations
                 move_course(accordions, key, label)
 
         sort_other_combinations(accordions)
 
 
 def sort_other_combinations(accordions):
-    # TODO duplication
-    if accordions.get('Other combinations'):
-        other_combinations = accordions['Other combinations']
-        if other_combinations:
-            accordions.pop('Other combinations')
-            accordions['Other combinations'] = other_combinations    
+    if accordions.get(key_other_combinations):
+        other_combinations = accordions[key_other_combinations]
+        accordions.pop(key_other_combinations)
+        accordions[key_other_combinations] = other_combinations    
 
 
 def add_number_of_courses(accordions):
     for key in accordions.keys():
-        accordions[key]['number_of_courses'] = len(accordions.get(key)['courses'])
+        accordions[key][key_number_of_courses] = len(accordions.get(key)[key_courses])
 
 
 def log_accordions(accordions, courses):
     logging.warning('---------------------------------------')
     for key in accordions.keys():
-        # TODO duplication
-        percentage = len(accordions[key]["courses"]) / len(courses) * 100
-        logging.warning(f'{key}: {len(accordions[key]["courses"])} ({round(percentage,1)}%)')
+        courses = accordions[key][key_courses]
+        percentage = len(courses) / len(courses) * 100
+        logging.warning(f'{key}: {len(courses)} ({round(percentage,1)}%)')
+
+
+key_code = 'code'
+key_course = 'course'
+key_courses = 'courses'
+key_courses_in_other_subjects = 'Courses in other subjects'
+key_institution = 'institution'
+key_institutions = 'institutions'
+key_kis_course_id = 'kis_course_id'
+key_locations = 'locations'
+key_name = 'name'
+key_number_of_courses = 'number_of_courses'
+key_other_combinations = 'Other combinations'
+key_other_combinations_with = 'Other combinations with'
+key_pub_ukprn = 'pub_ukprn'
+key_pub_ukprn_name = 'pub_ukprn_name'
+key_pub_ukprn_welsh_name = 'pub_ukprn_welsh_name'
+key_subjects = 'subjects'
