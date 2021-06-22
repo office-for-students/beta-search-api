@@ -97,6 +97,49 @@ class TestCoursesBySubject(unittest.TestCase):
         )
 
         self.assertEqual(actual, expected)
+    
+    def test_when_bioengineering_course_queried(self):
+        unittest.TestCase.skipTest(self, 'temp')
+        
+        # ARRANGE
+        mappings = self.load_mappings()
+        mapper = CourseToLabelMapper(mappings)
+        courseBySubject = CoursesBySubject(mapper)
+
+        courses = self.load_fixture('input_bioengineering.json')
+        # expected = self.load_fixture('output_bioengineering.json')
+
+        queried_course_title = 'Bioengineering'
+        counts = {'institutions': 131, 'courses': 716}
+        limit = 5000
+        offset = 0
+        language = 'en'
+
+
+        # ACT
+        actual = courseBySubject.group(queried_course_title,
+                                        courses,
+                                        counts, 
+                                        limit,
+                                        offset, 
+                                        language,
+                                        )
+
+        # ASSERT
+        items = actual['items']
+        self.assertEqual(len(items.keys()), 2)
+
+        # single_subject_courses
+        courses = items['single_subject_courses']
+        self.assertEqual(courses['Bioengineering, medical and biomedical engineering courses']['number_of_courses'], 10)
+        self.assertEqual(courses['Engineering courses']['number_of_courses'], 2)
+        self.assertEqual(courses['Mechanical engineering courses']['number_of_courses'], 1)
+        self.assertEqual(list(courses.keys()), [
+            'Bioengineering, medical and biomedical engineering courses',
+            'Engineering courses',
+            'Mechanical engineering courses',
+            ]
+        )
 
 
     def test_build_course_using_english_language(self):

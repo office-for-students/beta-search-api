@@ -1,0 +1,1055 @@
+[
+    {
+        "@search.score": 1.8979703,
+        "id": "357ebab0-a01f-3116-e4c8-49802aa13e2d",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "H160",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "institution": {
+                "pub_ukprn_name": "Imperial College London",
+                "pub_ukprn_welsh_name": "Imperial College London",
+                "sort_pub_ukprn_name": "imperial college london",
+                "sort_pub_ukprn_welsh_name": "imperial college london",
+                "pub_ukprn": "10003270"
+            },
+            "length_of_course": {
+                "code": null,
+                "label": null
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -0.178219,
+                            51.500505
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "South Kensington",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 2,
+                "label": "Part-time"
+            },
+            "qualification": {
+                "code": 56,
+                "label": "MEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-01",
+                    "level": 3,
+                    "english": "Engineering (non-specific)",
+                    "welsh": "Peirianneg (amhenodol)"
+                }
+            ],
+            "title": {
+                "english": "Molecular Bioengineering",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 1.8970072,
+        "id": "e697ba47-65f1-283f-0cab-8a0c6c8b878e",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "H160",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "institution": {
+                "pub_ukprn_name": "Imperial College London",
+                "pub_ukprn_welsh_name": "Imperial College London",
+                "sort_pub_ukprn_name": "imperial college london",
+                "sort_pub_ukprn_welsh_name": "imperial college london",
+                "pub_ukprn": "10003270"
+            },
+            "length_of_course": {
+                "code": "4",
+                "label": "4 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -0.178219,
+                            51.500505
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "South Kensington",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 56,
+                "label": "MEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-01",
+                    "level": 3,
+                    "english": "Engineering (non-specific)",
+                    "welsh": "Peirianneg (amhenodol)"
+                }
+            ],
+            "title": {
+                "english": "Molecular Bioengineering",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 3.2536066,
+        "id": "c171031f-ae31-e4f6-4935-d760fe2ec0a0",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "KISH160",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "institution": {
+                "pub_ukprn_name": "Loughborough University",
+                "pub_ukprn_welsh_name": "Loughborough University",
+                "sort_pub_ukprn_name": "loughborough university",
+                "sort_pub_ukprn_welsh_name": "loughborough university",
+                "pub_ukprn": "10004113"
+            },
+            "length_of_course": {
+                "code": "3",
+                "label": "3 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -1.228838,
+                            52.768455
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Loughborough University",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 8,
+                "label": "BEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-06",
+                    "level": 3,
+                    "english": "Bioengineering, medical and biomedical engineering",
+                    "welsh": "Biobeirianneg, peirianneg feddygol a biofeddygol    "
+                }
+            ],
+            "title": {
+                "english": "Bioengineering",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 3.0352116,
+        "id": "bed919dc-5ab1-805e-8c14-a9e3520a0005",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "KISH161",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "institution": {
+                "pub_ukprn_name": "Loughborough University",
+                "pub_ukprn_welsh_name": "Loughborough University",
+                "sort_pub_ukprn_name": "loughborough university",
+                "sort_pub_ukprn_welsh_name": "loughborough university",
+                "pub_ukprn": "10004113"
+            },
+            "length_of_course": {
+                "code": "4",
+                "label": "4 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -1.228838,
+                            52.768455
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Loughborough University",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 8,
+                "label": "BEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 2,
+                "label": "Compulsory"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-06",
+                    "level": 3,
+                    "english": "Bioengineering, medical and biomedical engineering",
+                    "welsh": "Biobeirianneg, peirianneg feddygol a biofeddygol    "
+                }
+            ],
+            "title": {
+                "english": "Bioengineering",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 2.898123,
+        "id": "5b353599-fe64-d83f-8650-9a47913b5946",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "KISH162",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "institution": {
+                "pub_ukprn_name": "Loughborough University",
+                "pub_ukprn_welsh_name": "Loughborough University",
+                "sort_pub_ukprn_name": "loughborough university",
+                "sort_pub_ukprn_welsh_name": "loughborough university",
+                "pub_ukprn": "10004113"
+            },
+            "length_of_course": {
+                "code": "4",
+                "label": "4 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -1.228838,
+                            52.768455
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Loughborough University",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 56,
+                "label": "MEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-06",
+                    "level": 3,
+                    "english": "Bioengineering, medical and biomedical engineering",
+                    "welsh": "Biobeirianneg, peirianneg feddygol a biofeddygol    "
+                }
+            ],
+            "title": {
+                "english": "Bioengineering",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 2.898123,
+        "id": "96130243-bb2f-252f-b092-34f30ea77c6f",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "KISH163",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "institution": {
+                "pub_ukprn_name": "Loughborough University",
+                "pub_ukprn_welsh_name": "Loughborough University",
+                "sort_pub_ukprn_name": "loughborough university",
+                "sort_pub_ukprn_welsh_name": "loughborough university",
+                "pub_ukprn": "10004113"
+            },
+            "length_of_course": {
+                "code": "5",
+                "label": "5 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -1.228838,
+                            52.768455
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Loughborough University",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 56,
+                "label": "MEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 2,
+                "label": "Compulsory"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-06",
+                    "level": 3,
+                    "english": "Bioengineering, medical and biomedical engineering",
+                    "welsh": "Biobeirianneg, peirianneg feddygol a biofeddygol    "
+                }
+            ],
+            "title": {
+                "english": "Bioengineering",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 1.6251945,
+        "id": "da2a15b1-d5a6-c5ff-1988-1755da6d5d0b",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "KISH1FP",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 2,
+                "label": "Compulsory"
+            },
+            "institution": {
+                "pub_ukprn_name": "Loughborough University",
+                "pub_ukprn_welsh_name": "Loughborough University",
+                "sort_pub_ukprn_name": "loughborough university",
+                "sort_pub_ukprn_welsh_name": "loughborough university",
+                "pub_ukprn": "10004113"
+            },
+            "length_of_course": {
+                "code": "4",
+                "label": "4 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -1.228838,
+                            52.768455
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Loughborough University",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 8,
+                "label": "BEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-06",
+                    "level": 3,
+                    "english": "Bioengineering, medical and biomedical engineering",
+                    "welsh": "Biobeirianneg, peirianneg feddygol a biofeddygol    "
+                }
+            ],
+            "title": {
+                "english": "Bioengineering with an International Foundation Year",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 1.4490615,
+        "id": "8f4b5586-a73f-3fef-23e8-faba4b325973",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "KISH1FY",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 2,
+                "label": "Compulsory"
+            },
+            "institution": {
+                "pub_ukprn_name": "Loughborough University",
+                "pub_ukprn_welsh_name": "Loughborough University",
+                "sort_pub_ukprn_name": "loughborough university",
+                "sort_pub_ukprn_welsh_name": "loughborough university",
+                "pub_ukprn": "10004113"
+            },
+            "length_of_course": {
+                "code": "4",
+                "label": "4 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -1.228838,
+                            52.768455
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Loughborough University",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 8,
+                "label": "BEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-06",
+                    "level": 3,
+                    "english": "Bioengineering, medical and biomedical engineering",
+                    "welsh": "Biobeirianneg, peirianneg feddygol a biofeddygol    "
+                }
+            ],
+            "title": {
+                "english": "Bioengineering with a Foundation Year",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 1.5171489,
+        "id": "7ada920c-89a7-016c-2c20-e8e779775057",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "objid51328700",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 0,
+                "label": "Not available"
+            },
+            "institution": {
+                "pub_ukprn_name": "Newcastle University",
+                "pub_ukprn_welsh_name": "Newcastle University",
+                "sort_pub_ukprn_name": "newcastle university",
+                "sort_pub_ukprn_welsh_name": "newcastle university",
+                "pub_ukprn": "10007799"
+            },
+            "length_of_course": {
+                "code": "4",
+                "label": "4 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -1.615714,
+                            54.980324
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "Newcastle Campus",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 56,
+                "label": "MEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 1,
+                "label": "Optional"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-02",
+                    "level": 3,
+                    "english": "Mechanical engineering",
+                    "welsh": "Peirianneg fecanyddol"
+                }
+            ],
+            "title": {
+                "english": "Mechanical Engineering with Bioengineering",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 3.2373605,
+        "id": "1470054f-29c4-84db-6ab8-a88f71df1e51",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "H673",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 1,
+                "label": "Optional"
+            },
+            "institution": {
+                "pub_ukprn_name": "University of Sheffield",
+                "pub_ukprn_welsh_name": "University of Sheffield",
+                "sort_pub_ukprn_name": "sheffield",
+                "sort_pub_ukprn_welsh_name": "sheffield",
+                "pub_ukprn": "10007157"
+            },
+            "length_of_course": {
+                "code": "3",
+                "label": "3 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -1.48858,
+                            53.381261
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "The University of Sheffield",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 8,
+                "label": "BEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 1,
+                "label": "Optional"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-06",
+                    "level": 3,
+                    "english": "Bioengineering, medical and biomedical engineering",
+                    "welsh": "Biobeirianneg, peirianneg feddygol a biofeddygol    "
+                }
+            ],
+            "title": {
+                "english": "Bioengineering",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 3.2359152,
+        "id": "2f9f17ff-6c8a-9713-d325-d95ad23c4c0d",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "H675",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 1,
+                "label": "Optional"
+            },
+            "institution": {
+                "pub_ukprn_name": "University of Sheffield",
+                "pub_ukprn_welsh_name": "University of Sheffield",
+                "sort_pub_ukprn_name": "sheffield",
+                "sort_pub_ukprn_welsh_name": "sheffield",
+                "pub_ukprn": "10007157"
+            },
+            "length_of_course": {
+                "code": "4",
+                "label": "4 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -1.48858,
+                            53.381261
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "The University of Sheffield",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 56,
+                "label": "MEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 1,
+                "label": "Optional"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-06",
+                    "level": 3,
+                    "english": "Bioengineering, medical and biomedical engineering",
+                    "welsh": "Biobeirianneg, peirianneg feddygol a biofeddygol    "
+                }
+            ],
+            "title": {
+                "english": "Bioengineering",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 1,
+                "label": "Optional"
+            }
+        }
+    },
+    {
+        "@search.score": 3.0367525,
+        "id": "497d50fb-8254-1f98-e95c-a4a9f0cbd3e4",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "H67I",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 1,
+                "label": "Optional"
+            },
+            "institution": {
+                "pub_ukprn_name": "University of Sheffield",
+                "pub_ukprn_welsh_name": "University of Sheffield",
+                "sort_pub_ukprn_name": "sheffield",
+                "sort_pub_ukprn_welsh_name": "sheffield",
+                "pub_ukprn": "10007157"
+            },
+            "length_of_course": {
+                "code": "5",
+                "label": "5 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -1.48858,
+                            53.381261
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "The University of Sheffield",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 56,
+                "label": "MEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 2,
+                "label": "Compulsory"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-06",
+                    "level": 3,
+                    "english": "Bioengineering, medical and biomedical engineering",
+                    "welsh": "Biobeirianneg, peirianneg feddygol a biofeddygol    "
+                }
+            ],
+            "title": {
+                "english": "Bioengineering",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    },
+    {
+        "@search.score": 3.0342977,
+        "id": "0a55a7e8-a5dd-4697-7d21-07312da62bd2",
+        "course": {
+            "honours_award_provision": 1,
+            "kis_course_id": "H67H",
+            "country": {
+                "code": "XF",
+                "label": "England"
+            },
+            "distance_learning": {
+                "code": 0,
+                "label": "Course is available other than by distance learning"
+            },
+            "foundation_year_availability": {
+                "code": 1,
+                "label": "Optional"
+            },
+            "institution": {
+                "pub_ukprn_name": "University of Sheffield",
+                "pub_ukprn_welsh_name": "University of Sheffield",
+                "sort_pub_ukprn_name": "sheffield",
+                "sort_pub_ukprn_welsh_name": "sheffield",
+                "pub_ukprn": "10007157"
+            },
+            "length_of_course": {
+                "code": "4",
+                "label": "4 stages"
+            },
+            "locations": [
+                {
+                    "geo": {
+                        "type": "Point",
+                        "coordinates": [
+                            -1.48858,
+                            53.381261
+                        ],
+                        "crs": {
+                            "type": "name",
+                            "properties": {
+                                "name": "EPSG:4326"
+                            }
+                        }
+                    },
+                    "name": {
+                        "english": "The University of Sheffield",
+                        "welsh": null
+                    }
+                }
+            ],
+            "mode": {
+                "code": 1,
+                "label": "Full-time"
+            },
+            "qualification": {
+                "code": 8,
+                "label": "BEng",
+                "level": "first-degree"
+            },
+            "sandwich_year": {
+                "code": 2,
+                "label": "Compulsory"
+            },
+            "subjects": [
+                {
+                    "code": "CAH10-01-06",
+                    "level": 3,
+                    "english": "Bioengineering, medical and biomedical engineering",
+                    "welsh": "Biobeirianneg, peirianneg feddygol a biofeddygol    "
+                }
+            ],
+            "title": {
+                "english": "Bioengineering",
+                "welsh": null
+            },
+            "year_abroad": {
+                "code": 0,
+                "label": "Not available"
+            }
+        }
+    }
+]
