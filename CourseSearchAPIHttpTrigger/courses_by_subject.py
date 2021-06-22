@@ -22,7 +22,7 @@ class CoursesBySubject:
             single_course_accordions,
             )
 
-        multiple_course_accordions = sort(multiple_course_accordions)
+        multiple_course_accordions = sort_alphabetically(multiple_course_accordions)
 
         group_multiple_courses_that_are_less_than_one_percent(
             courses, 
@@ -169,7 +169,7 @@ def move_course(accordions, key, label):
     accordions.pop(key)
 
 
-def sort(accordion):
+def sort_alphabetically(accordion):
     return dict(sorted(accordion.items()))
 
 
