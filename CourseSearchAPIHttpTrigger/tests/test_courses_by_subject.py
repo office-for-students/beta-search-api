@@ -99,15 +99,12 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(actual, expected)
     
     def test_when_bioengineering_course_queried(self):
-        unittest.TestCase.skipTest(self, 'temp')
-        
         # ARRANGE
         mappings = self.load_mappings()
         mapper = CourseToLabelMapper(mappings)
         courseBySubject = CoursesBySubject(mapper)
 
         courses = self.load_fixture('input_bioengineering.json')
-        # expected = self.load_fixture('output_bioengineering.json')
 
         queried_course_title = 'Bioengineering'
         counts = {'institutions': 131, 'courses': 716}

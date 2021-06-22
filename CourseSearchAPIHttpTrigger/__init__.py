@@ -220,6 +220,12 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             json_response = response.json()
             courses = json_response["value"]
             
+        # return func.HttpResponse(
+        #     json.dumps(courses),
+        #     headers={"Content-Type": "application/json"},
+        #     status_code=200,
+        # )
+
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
         if sortBySubject == 'true':
             mapper = getCourseToLabelMapper();
