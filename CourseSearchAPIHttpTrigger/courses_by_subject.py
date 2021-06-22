@@ -189,7 +189,7 @@ def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, q
                 label = key_other_combinations
                 move_course(accordions, key, label)
 
-        sort_other_combinations(accordions)
+    sort_other_combinations(accordions)
 
 
 def sort_other_combinations(accordions):
