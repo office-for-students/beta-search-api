@@ -15,14 +15,16 @@ class CoursesBySubject:
             single_course_accordions, 
             multiple_course_accordions,             
             language,
-            )
+            )        
         
         group_single_courses_that_are_less_than_one_percent(
             courses, 
             single_course_accordions,
-            )
+            )        
+        
+        single_course_accordions = sort_single_course_accordions(single_course_accordions)
 
-        multiple_course_accordions = sort(multiple_course_accordions)
+        multiple_course_accordions = sort_alphabetically(multiple_course_accordions)
 
         group_multiple_courses_that_are_less_than_one_percent(
             courses, 
@@ -32,7 +34,7 @@ class CoursesBySubject:
 
         add_number_of_courses(single_course_accordions)
         add_number_of_courses(multiple_course_accordions)
-
+        
         # log_accordions(single_course_accordions, courses)
         # log_accordions(multiple_course_accordions, courses)
 
@@ -169,8 +171,25 @@ def move_course(accordions, key, label):
     accordions.pop(key)
 
 
-def sort(accordion):
-    return dict(sorted(accordion.items()))
+def sort_single_course_accordions(accordions):
+    accordions = sort_by_count(accordions)
+    if key_courses_in_other_subjects in accordions:
+        accordions[key_courses_in_other_subjects] = accordions.pop(key_courses_in_other_subjects)
+    return accordions
+
+
+def sort_by_count(accordions):
+    keys = accordions.keys()
+    sorted_keys = sorted(keys, key=lambda key: len(accordions[key][key_courses]), reverse=True)
+    [accordions[key] for key in sorted_keys]
+    sorted_accordions = {}
+    for key in sorted_keys:
+        sorted_accordions[key] = accordions[key]
+    return sorted_accordions
+
+
+def sort_alphabetically(accordions):
+    return dict(sorted(accordions.items()))
 
 
 def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, queried_course_title):
@@ -189,7 +208,7 @@ def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, q
                 label = key_other_combinations
                 move_course(accordions, key, label)
 
-        sort_other_combinations(accordions)
+    sort_other_combinations(accordions)
 
 
 def sort_other_combinations(accordions):

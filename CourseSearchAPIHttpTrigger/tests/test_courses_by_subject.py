@@ -15,6 +15,8 @@ from courses_by_subject import CoursesBySubject
 from courses_by_subject import build_course
 
 
+# To invoke function directly, open the following in a browser
+# http://localhost:7071/api/CourseSearchAPIHttpTrigger?qc=marketing&sortBySubject=true&sortBySubjectLimit=5000&limit=5000
 class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_marketing_course_queried(self):
@@ -23,8 +25,8 @@ class TestCoursesBySubject(unittest.TestCase):
         mapper = CourseToLabelMapper(mappings)
         courseBySubject = CoursesBySubject(mapper)
 
-        courses = self.load_fixture('input.json')
-        expected = self.load_fixture('output.json')
+        courses = self.load_fixture('input_marketing.json')
+        expected = self.load_fixture('output_marketing.json')
 
         queried_course_title = 'marketing'
         counts = {'institutions': 131, 'courses': 716}
@@ -95,6 +97,122 @@ class TestCoursesBySubject(unittest.TestCase):
         )
 
         self.assertEqual(actual, expected)
+    
+
+    def test_when_bioengineering_course_queried(self):
+        # ARRANGE
+        mappings = self.load_mappings()
+        mapper = CourseToLabelMapper(mappings)
+        courseBySubject = CoursesBySubject(mapper)
+
+        courses = self.load_fixture('input_bioengineering.json')
+
+        queried_course_title = 'Bioengineering'
+        counts = {'institutions': 131, 'courses': 716}
+        limit = 5000
+        offset = 0
+        language = 'en'
+
+
+        # ACT
+        actual = courseBySubject.group(queried_course_title,
+                                        courses,
+                                        counts, 
+                                        limit,
+                                        offset, 
+                                        language,
+                                        )
+
+        # ASSERT
+        items = actual['items']
+        self.assertEqual(len(items.keys()), 2)
+
+        # single_subject_courses
+        courses = items['single_subject_courses']
+        self.assertEqual(courses['Bioengineering, medical and biomedical engineering courses']['number_of_courses'], 10)
+        self.assertEqual(courses['Engineering courses']['number_of_courses'], 2)
+        self.assertEqual(courses['Mechanical engineering courses']['number_of_courses'], 1)
+        self.assertEqual(list(courses.keys()), [
+            'Bioengineering, medical and biomedical engineering courses',
+            'Engineering courses',
+            'Mechanical engineering courses',
+            ]
+        )
+    
+    
+    def test_when_food_course_queried(self):
+        # ARRANGE
+        mappings = self.load_mappings()
+        mapper = CourseToLabelMapper(mappings)
+        courseBySubject = CoursesBySubject(mapper)
+
+        courses = self.load_fixture('input_food.json')
+
+        queried_course_title = 'food'
+        counts = {'institutions': 131, 'courses': 716}
+        limit = 5000
+        offset = 0
+        language = 'en'
+
+
+        # ACT
+        actual = courseBySubject.group(queried_course_title,
+                                        courses,
+                                        counts, 
+                                        limit,
+                                        offset, 
+                                        language,
+                                        )
+
+        # ASSERT
+        items = actual['items']
+        self.assertEqual(len(items.keys()), 2)
+
+        # single_subject_courses
+        courses = items['single_subject_courses']
+        self.assertEqual(courses['Food sciences courses']['number_of_courses'], 31)
+        self.assertEqual(courses['Nutrition and dietetics courses']['number_of_courses'], 16)
+        self.assertEqual(courses['Food and beverage studies courses']['number_of_courses'], 8)
+        self.assertEqual(courses['Food and beverage production courses']['number_of_courses'], 7)
+        self.assertEqual(courses['Tourism, transport and travel courses']['number_of_courses'], 4)
+        self.assertEqual(courses['Agriculture courses']['number_of_courses'], 3)
+        self.assertEqual(courses['Teacher training courses']['number_of_courses'], 2)
+        self.assertEqual(courses['Biosciences courses']['number_of_courses'], 2)
+        self.assertEqual(courses['Courses in other subjects']['number_of_courses'], 1)
+        self.assertEqual(list(courses.keys()), [
+            'Food sciences courses',
+            'Nutrition and dietetics courses',
+            'Food and beverage studies courses',
+            'Food and beverage production courses',
+            'Tourism, transport and travel courses',
+            'Agriculture courses',
+            'Biosciences courses', 
+            'Teacher training courses',
+            'Courses in other subjects',
+            ]
+        )
+
+        # multiple_subject_courses
+        courses = items['multiple_subject_courses']
+        self.assertEqual(courses['Agriculture & Business and management courses']['number_of_courses'], 2)
+        self.assertEqual(courses['Ecology and environmental biology & Agricultural sciences courses']['number_of_courses'], 3)
+        self.assertEqual(courses['Food and beverage production & Marketing courses']['number_of_courses'], 3)
+        self.assertEqual(courses['Nutrition and dietetics & Food and beverage production courses']['number_of_courses'], 3)
+        self.assertEqual(courses['Nutrition and dietetics & Food sciences courses']['number_of_courses'], 12)
+
+        #TODO  
+        # self.assertEqual(courses['Other combinations with Food']['number_of_courses'], 2)
+        # self.assertEqual(courses['Other combinations']['number_of_courses'], 2)
+        self.assertEqual(list(courses.keys()), [
+            'Agriculture & Business and management courses',
+            'Ecology and environmental biology & Agricultural sciences courses',
+            'Food and beverage production & Marketing courses',
+            'Nutrition and dietetics & Food and beverage production courses',
+            'Nutrition and dietetics & Food sciences courses',
+            'Other combinations with Food',
+            #TODO 'Other combinations',
+            ]
+        )        
 
 
     def test_build_course_using_english_language(self):
