@@ -15,6 +15,8 @@ from courses_by_subject import CoursesBySubject
 from courses_by_subject import build_course
 
 
+# To invoke function directly, open the following in a browser
+# http://localhost:7071/api/CourseSearchAPIHttpTrigger?qc=marketing&sortBySubject=true&sortBySubjectLimit=5000&limit=5000
 class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_marketing_course_queried(self):
@@ -23,8 +25,8 @@ class TestCoursesBySubject(unittest.TestCase):
         mapper = CourseToLabelMapper(mappings)
         courseBySubject = CoursesBySubject(mapper)
 
-        courses = self.load_fixture('input.json')
-        expected = self.load_fixture('output.json')
+        courses = self.load_fixture('input_marketing.json')
+        expected = self.load_fixture('output_marketing.json')
 
         queried_course_title = 'marketing'
         counts = {'institutions': 131, 'courses': 716}
