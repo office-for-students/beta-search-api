@@ -5,7 +5,7 @@ class CoursesBySubject:
         self.mapper = mapper
 
 
-    def group(self, queried_course_title, courses ,counts, limit, offset, language):
+    def group(self, courses ,counts, limit, offset, language):
         single_course_accordions = {}
         multiple_course_accordions = {}
 
@@ -26,10 +26,12 @@ class CoursesBySubject:
 
         multiple_course_accordions = sort_alphabetically(multiple_course_accordions)
 
+        most_common_subject = get_most_common_subject(single_course_accordions)
+        
         group_multiple_courses_that_are_less_than_one_percent(
             courses, 
             multiple_course_accordions, 
-            queried_course_title,
+            most_common_subject,
             )
 
         add_number_of_courses(single_course_accordions)
@@ -135,7 +137,7 @@ def add_single_courses_to_accordions(course, courses, accordions, mapper):
 def add_course_to_accordions(course, label, accordions):
     if label not in accordions:
         accordions[label] = {}
-        accordions[label][key_courses] = []      
+        accordions[label][key_courses] = []  
     if course not in accordions[label][key_courses]:
         accordions[label][key_courses].append(course)
 
@@ -143,7 +145,7 @@ def add_course_to_accordions(course, label, accordions):
 def add_multiple_courses_to_accordions(course, courses, accordions, mapper):
     for course in courses.values():
         subjects = []
-        for subject in course[key_subjects]:
+        for subject in course[key_subjects]:            
             subjects.append(mapper.get_label(subject[key_code]))
         label = f'{" & ".join(subjects)} courses'
         add_course_to_accordions(course, label, accordions)
@@ -192,17 +194,21 @@ def sort_alphabetically(accordions):
     return dict(sorted(accordions.items()))
 
 
-def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, queried_course_title):
+def get_most_common_subject(accordions):
+        return next(iter(accordions)).replace(key_courses, '').strip()
+
+
+def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, most_common_subject):
     for key in list(accordions.keys()):
-        
-        if queried_course_title == key:
+
+        if most_common_subject == key:
             continue  
 
         percentage = len(accordions[key][key_courses]) / len(courses) * 100
 
         if percentage <= 1:
-            if queried_course_title.lower() in key.lower(): 
-                label = f'{key_other_combinations_with} {queried_course_title.title()}'
+            if most_common_subject in key: 
+                label = f'{key_other_combinations_with} {most_common_subject}'
                 move_course(accordions, key, label)
             else:
                 label = key_other_combinations

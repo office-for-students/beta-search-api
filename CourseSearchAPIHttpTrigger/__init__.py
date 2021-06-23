@@ -223,7 +223,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
         if sortBySubject == 'true':
             mapper = getCourseToLabelMapper();
-            search_results = CoursesBySubject(mapper).group(course, courses, counts, int(sortBySubjectLimit), int(offset), language) 
+            search_results = CoursesBySubject(mapper).group(courses, counts, int(sortBySubjectLimit), int(offset), language) 
         else: 
             search_results = CoursesByInstitution().group(courses, counts, int(limit), int(offset), language)
 
