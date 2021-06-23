@@ -69,7 +69,7 @@ class PostcodeIndex:
 
 def get_courses(url, api_key, api_version, index_name, search_query):
     index = CourseIndex(url, api_key, api_version, index_name, search_query)
-    print(search_query)
+    
     return index.get()
 
 
