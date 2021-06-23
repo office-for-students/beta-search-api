@@ -205,6 +205,93 @@ class TestCoursesBySubject(unittest.TestCase):
         )        
 
 
+    def test_when_history_course_queried(self):
+        # ARRANGE
+        mappings = self.load_mappings()
+        mapper = CourseToLabelMapper(mappings)
+        courseBySubject = CoursesBySubject(mapper)
+
+        courses = self.load_fixture('input_history.json')
+
+        counts = {'institutions': 131, 'courses': 716}
+        limit = 5000
+        offset = 0
+        language = 'en'
+
+        # ACT
+        actual = courseBySubject.group(courses,
+                                        counts, 
+                                        limit,
+                                        offset, 
+                                        language,
+                                        )
+
+        # ASSERT
+        items = actual['items']
+        self.assertEqual(len(items.keys()), 2)
+
+        # single_subject_courses
+        courses = items['single_subject_courses']
+        self.assertEqual(courses['History courses']['number_of_courses'], 325)
+        self.assertEqual(courses['History of art, architecture and design courses']['number_of_courses'], 91)
+        self.assertEqual(courses['Courses in other subjects']['number_of_courses'], 61)
+        self.assertEqual(list(courses.keys()), [
+            'History courses',
+            'History of art, architecture and design courses',
+            'Courses in other subjects',
+            ]
+        )
+
+        # multiple_subject_courses
+        courses = items['multiple_subject_courses']
+        self.assertEqual(courses['Economics & History courses']['number_of_courses'], 38)
+        self.assertEqual(courses['English studies & History courses']['number_of_courses'], 62)
+        self.assertEqual(courses['French studies & History courses']['number_of_courses'], 35)
+        self.assertEqual(courses['German and Scandinavian studies & History courses']['number_of_courses'], 27)
+        self.assertEqual(courses['History & Archaeology courses']['number_of_courses'], 63)
+        self.assertEqual(courses['History & Classics courses']['number_of_courses'], 28)
+        self.assertEqual(courses['History & Combined, general or negotiated studies courses']['number_of_courses'], 24)
+        self.assertEqual(courses['History & Education courses']['number_of_courses'], 24)
+        self.assertEqual(courses['History & History of art, architecture and design courses']['number_of_courses'], 26)
+        self.assertEqual(courses['History & Media studies courses']['number_of_courses'], 30)
+        self.assertEqual(courses['History & Philosophy courses']['number_of_courses'], 57)
+        self.assertEqual(courses['History & Theology and religious studies courses']['number_of_courses'], 27)
+        self.assertEqual(courses['Iberian studies & History courses']['number_of_courses'], 39)
+        self.assertEqual(courses['Italian studies & History courses']['number_of_courses'], 21)
+        self.assertEqual(courses['Languages and area studies & History courses']['number_of_courses'], 20)
+        self.assertEqual(courses['Literature in English & History courses']['number_of_courses'], 56)
+        self.assertEqual(courses['Politics & History courses']['number_of_courses'], 163)
+        self.assertEqual(courses['Slavic studies & History courses']['number_of_courses'], 23)
+        self.assertEqual(courses['Sociology & History courses']['number_of_courses'], 44)
+        self.assertEqual(courses['Other combinations with History']['number_of_courses'], 338)
+        self.assertEqual(courses['Other combinations']['number_of_courses'], 228)
+
+        self.assertEqual(list(courses.keys()), [
+            'Economics & History courses',
+            'English studies & History courses',
+            'French studies & History courses',
+            'German and Scandinavian studies & History courses',
+            'History & Archaeology courses',
+            'History & Classics courses',
+            'History & Combined, general or negotiated studies courses',
+            'History & Education courses',
+            'History & History of art, architecture and design courses',
+            'History & Media studies courses',
+            'History & Philosophy courses',
+            'History & Theology and religious studies courses',
+            'Iberian studies & History courses',
+            'Italian studies & History courses',
+            'Languages and area studies & History courses',
+            'Literature in English & History courses',
+            'Politics & History courses',
+            'Slavic studies & History courses',
+            'Sociology & History courses',
+            'Other combinations with History',
+            'Other combinations',
+            ]
+        )        
+
+
     def test_build_course_using_english_language(self):
         self.assert_buld_course('build_course_en_input.json', 'build_course_en_output.json')
 
