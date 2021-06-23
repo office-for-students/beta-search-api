@@ -93,7 +93,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         institution = req.params.get("qi", "")
         filters = req.params.get("filters", "")
         postcode_and_distance = req.params.get("postcode", "")
-        institutions = req.params.get("institutions", "")
+        print(f"GET BODY {type(req.get_json())}")
+        institution_list = req.get_json().get('institutions', [])
+        institution_string = "@".join(institution_list)
+        institutions = institution_string
         countries = req.params.get("countries", "")
         length_of_course = req.params.get("length_of_course", "")
         subjects = req.params.get("subjects", "")
@@ -169,7 +172,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         response_with_facets = get_courses(
             search_url, api_key, api_version, course_index_name, search_query
         )
-
+        print("SEARRCH", search_url)
         facets = response_with_facets.json()
 
         counts = {}

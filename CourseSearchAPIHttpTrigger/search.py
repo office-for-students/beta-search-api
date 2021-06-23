@@ -4,6 +4,7 @@ import os
 import sys
 import inspect
 import math
+import json
 
 
 # TODO investigate setting PATH in Azure so can remove this
@@ -68,7 +69,7 @@ class PostcodeIndex:
 
 def get_courses(url, api_key, api_version, index_name, search_query):
     index = CourseIndex(url, api_key, api_version, index_name, search_query)
-
+    print(search_query)
     return index.get()
 
 
@@ -82,14 +83,16 @@ class CourseIndex:
         }
 
         # lowercase postcode and remove whitespace
-        self.query_string = "?api-version=" + api_version + search_query
+        self.api_version = "?api-version=" + api_version
         self.index_name = index_name
+        self.search_query = search_query
+        
 
     def get(self):
         try:
-            url = self.url + "/indexes/" + self.index_name + "/docs" + self.query_string
+            url = self.url + "/indexes/" + self.index_name + "/docs/search" + self.api_version
             logging.info(f"Querying search service with the following url: {url}")
-            response = requests.get(url, headers=self.headers)
+            response = requests.post(url=url, data=json.dumps(self.search_query), headers=self.headers)
 
         except requests.exceptions.RequestException as e:
             logging.exception(
@@ -102,7 +105,8 @@ class CourseIndex:
                 f"failed to find courses in search index\n\
                             index-name: {self.index_name}\n\
                             status: {response.status_code}\n\
-                            url: {self.query_string}"
+                            url: {self.api_version}\n\
+                            {json.dumps(self.search_query)}"
             )
             return {}
 
