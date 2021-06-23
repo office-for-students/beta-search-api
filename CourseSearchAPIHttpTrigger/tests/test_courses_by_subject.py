@@ -28,16 +28,13 @@ class TestCoursesBySubject(unittest.TestCase):
         courses = self.load_fixture('input_marketing.json')
         expected = self.load_fixture('output_marketing.json')
 
-        queried_course_title = 'marketing'
         counts = {'institutions': 131, 'courses': 716}
         limit = 5000
         offset = 0
         language = 'en'
 
-
         # ACT
-        actual = courseBySubject.group(queried_course_title,
-                                        courses,
+        actual = courseBySubject.group(courses,
                                         counts, 
                                         limit,
                                         offset, 
@@ -107,16 +104,13 @@ class TestCoursesBySubject(unittest.TestCase):
 
         courses = self.load_fixture('input_bioengineering.json')
 
-        queried_course_title = 'Bioengineering'
         counts = {'institutions': 131, 'courses': 716}
         limit = 5000
         offset = 0
         language = 'en'
 
-
         # ACT
-        actual = courseBySubject.group(queried_course_title,
-                                        courses,
+        actual = courseBySubject.group(courses,
                                         counts, 
                                         limit,
                                         offset, 
@@ -148,16 +142,13 @@ class TestCoursesBySubject(unittest.TestCase):
 
         courses = self.load_fixture('input_food.json')
 
-        queried_course_title = 'food'
         counts = {'institutions': 131, 'courses': 716}
         limit = 5000
         offset = 0
         language = 'en'
 
-
         # ACT
-        actual = courseBySubject.group(queried_course_title,
-                                        courses,
+        actual = courseBySubject.group(courses,
                                         counts, 
                                         limit,
                                         offset, 
@@ -199,18 +190,17 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(courses['Food and beverage production & Marketing courses']['number_of_courses'], 3)
         self.assertEqual(courses['Nutrition and dietetics & Food and beverage production courses']['number_of_courses'], 3)
         self.assertEqual(courses['Nutrition and dietetics & Food sciences courses']['number_of_courses'], 12)
+        self.assertEqual(courses['Other combinations with Food sciences']['number_of_courses'], 3)
+        self.assertEqual(courses['Other combinations']['number_of_courses'], 1)
 
-        #TODO  
-        # self.assertEqual(courses['Other combinations with Food']['number_of_courses'], 2)
-        # self.assertEqual(courses['Other combinations']['number_of_courses'], 2)
         self.assertEqual(list(courses.keys()), [
             'Agriculture & Business and management courses',
             'Ecology and environmental biology & Agricultural sciences courses',
             'Food and beverage production & Marketing courses',
             'Nutrition and dietetics & Food and beverage production courses',
             'Nutrition and dietetics & Food sciences courses',
-            'Other combinations with Food',
-            #TODO 'Other combinations',
+            'Other combinations with Food sciences',
+            'Other combinations',
             ]
         )        
 
