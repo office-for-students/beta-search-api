@@ -93,9 +93,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         institution = req.params.get("qi", "")
         filters = req.params.get("filters", "")
         postcode_and_distance = req.params.get("postcode", "")
-        logging.error(f"FDIHFVDIFBIDF  {req.get_json()}")
-        institution_json = json.loads(req.get_body().decode('UTF-8'))
-        logging.error(f"INSTITION_BODY {institution_json}")
+        logging.info(f"request body  {req.get_json()}")
+        institution_json = req.get_json()
         institution_list = institution_json.get("institutions", [])
         institution_string = "@".join(institution_list)
         institutions = institution_string
