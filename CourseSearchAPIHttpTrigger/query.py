@@ -34,7 +34,7 @@ class Query:
         self.query_params = query_params
 
     def build(self):
-        query = ""
+        query_dict = {}
         # Create search part of query
         search = list()
         if self.institution:
@@ -51,13 +51,19 @@ class Query:
         if self.course:
             english_course_search_query = "course/title/english:" + self.course
             welsh_course_search_query = "course/title/welsh:" + self.course
-            search.append(english_course_search_query)
-            search.append(welsh_course_search_query)
+            if self.query_params["language"] == "cy":
+                search.append(welsh_course_search_query)
+            else:
+                search.append(english_course_search_query)
 
         if search:
-            query += "&search=" + " ".join(search) + "&queryType=full"
+            query_dict["search"] = " ".join(search)
         else:
-            query += "&search=*"
+            query_dict["search"] = "*"
+
+        query_dict["queryType"] = "full"
+        query_dict["searchMode"] = "all"
+
 
         # Create filter part of query
         filters = list()
@@ -183,41 +189,43 @@ class Query:
             filter_query = " and ".join(filters)
 
         if filter_query != "":
-            query += "&$filter=" + filter_query
+            query_dict["filter"]=filter_query
+
 
         # Add alphabetic ordering based on the institution name after
         # ordering by search score
-        query += "&$orderby=course/institution/sort_pub_ukprn_welsh_name" if self.query_params["language"] == "cy" else "&$orderby=course/institution/sort_pub_ukprn_name"
+        if self.query_params["language"] == "cy":
+            query_dict["orderby"] = "course/institution/sort_pub_ukprn_welsh_name"
+        else:
+            query_dict["orderby"] = "course/institution/sort_pub_ukprn_name"
 
-        self.query = query
+        self.query = query_dict
 
     def add_paging(self):
-        query = self.query
-
+        result = dict()
         # Add limit and offset parameters
         if "limit" in self.query_params:
-            query += "&$top=" + str(self.query_params["limit"])
+            result["top"]=str(self.query_params["limit"])
 
         if "offset" in self.query_params:
-            query += "&$skip=" + str(self.query_params["offset"])
+            result["skip"]=str(self.query_params["offset"])
 
-        return query
+        return {**self.query, **result}
 
     def add_facet(self):
-        query = self.query
 
         # Set top to be zero
-        query += "&$top=0"
+        result = dict(top=0)
 
         # Build facet query for categorising courses by institution
         if self.query_params["language"] == "cy":
-            query += "&facet=course/institution/sort_pub_ukprn_welsh_name,\
-                count:500, sort:value"
+            result["facets"]=["course/institution/sort_pub_ukprn_welsh_name,\
+                count:500, sort:value"]
         else:
-            query += "&facet=course/institution/sort_pub_ukprn_name,\
-                count:500,sort:value"
+            result["facets"]=["course/institution/sort_pub_ukprn_name,\
+                count:500,sort:value"]
 
-        return query
+        return {**self.query, **result}
 
     def build_distance_learning_filter(query_params):
         on_campus = query_params.get('on_campus')

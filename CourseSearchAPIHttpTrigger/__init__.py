@@ -93,7 +93,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         institution = req.params.get("qi", "")
         filters = req.params.get("filters", "")
         postcode_and_distance = req.params.get("postcode", "")
-        institutions = req.params.get("institutions", "")
+        institution_list = req.get_json().get('institutions', [])
+        institution_string = "@".join(institution_list)
+        institutions = institution_string
         countries = req.params.get("countries", "")
         length_of_course = req.params.get("length_of_course", "")
         subjects = req.params.get("subjects", "")
