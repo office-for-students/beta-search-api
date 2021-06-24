@@ -51,8 +51,10 @@ class Query:
         if self.course:
             english_course_search_query = "course/title/english:" + self.course
             welsh_course_search_query = "course/title/welsh:" + self.course
-            search.append(english_course_search_query)
-            search.append(welsh_course_search_query)
+            if self.query_params["language"] == "cy":
+                search.append(welsh_course_search_query)
+            else:
+                search.append(english_course_search_query)
 
         if search:
             query_dict["search"] = " ".join(search)
