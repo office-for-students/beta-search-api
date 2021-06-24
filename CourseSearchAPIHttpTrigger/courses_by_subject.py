@@ -22,7 +22,7 @@ class CoursesBySubject:
             single_course_accordions,
             )        
         
-        single_course_accordions = sort_single_course_accordions(single_course_accordions)
+        single_course_accordions = sort_by_count(single_course_accordions)
 
         multiple_course_accordions = sort_alphabetically(multiple_course_accordions)
 
@@ -173,13 +173,6 @@ def move_course(accordions, key, label):
     accordions.pop(key)
 
 
-def sort_single_course_accordions(accordions):
-    accordions = sort_by_count(accordions)
-    if key_courses_in_other_subjects in accordions:
-        accordions[key_courses_in_other_subjects] = accordions.pop(key_courses_in_other_subjects)
-    return accordions
-
-
 def sort_by_count(accordions):
     keys = accordions.keys()
     sorted_keys = sorted(keys, key=lambda key: len(accordions[key][key_courses]), reverse=True)
@@ -187,6 +180,8 @@ def sort_by_count(accordions):
     sorted_accordions = {}
     for key in sorted_keys:
         sorted_accordions[key] = accordions[key]
+    if key_courses_in_other_subjects in sorted_accordions:
+        sorted_accordions[key_courses_in_other_subjects] = sorted_accordions.pop(key_courses_in_other_subjects)
     return sorted_accordions
 
 
