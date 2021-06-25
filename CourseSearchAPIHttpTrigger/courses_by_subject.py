@@ -253,9 +253,8 @@ def add_number_of_courses(accordions):
 def log_accordions(accordions, courses):
     logging.warning('---------------------------------------')
     for key in accordions.keys():
-        courses = accordions[key][key_courses]
-        percentage = len(courses) / len(courses) * 100
-        logging.warning(f'{key}: {len(courses)} ({round(percentage,1)}%)')
+        percentage = len(accordions[key][key_courses]) / len(courses) * 100
+        logging.warning(f'{key}: {len(accordions[key][key_courses])} ({round(percentage,1)}%)')
 
 
 key_code = 'code'
