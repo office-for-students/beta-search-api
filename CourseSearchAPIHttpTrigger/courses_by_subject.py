@@ -40,8 +40,8 @@ class CoursesBySubject:
         add_number_of_courses(single_course_accordions)
         add_number_of_courses(multiple_course_accordions)
         
-        log_accordions(single_course_accordions, courses)
-        log_accordions(multiple_course_accordions, courses)
+        # log_accordions(single_course_accordions, courses)
+        # log_accordions(multiple_course_accordions, courses)
 
         return {
             "items": {
