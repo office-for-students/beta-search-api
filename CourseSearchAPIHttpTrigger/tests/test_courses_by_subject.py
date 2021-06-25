@@ -260,7 +260,7 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assertEqual(courses['Politics & History courses']['number_of_courses'], 164)
         self.assertEqual(courses['Slavic studies & History courses']['number_of_courses'], 23)
         self.assertEqual(courses['Sociology & History courses']['number_of_courses'], 44)
-        # self.assertEqual(courses['Other combinations with History']['number_of_courses'], 338)
+        self.assertEqual(courses['Other combinations with History']['number_of_courses'], 301)
         self.assertEqual(courses['Other combinations']['number_of_courses'], 228)
 
         self.assertEqual(list(courses.keys()), [
