@@ -174,16 +174,16 @@ def move_course(accordions, key, label):
     accordions.pop(key)
 
 
-def sort_by_count(accordions):
-    keys = accordions.keys()
-    sorted_keys = sorted(keys, key=lambda key: len(accordions[key][key_courses]), reverse=True)
-    [accordions[key] for key in sorted_keys]
-    sorted_accordions = {}
+def sort_by_count(accordion):
+    keys = accordion.keys()
+    sorted_keys = sorted(keys, key=lambda key: len(accordion[key][key_courses]), reverse=True)
+    [accordion[key] for key in sorted_keys]
+    sorted_accordion = {}
     for key in sorted_keys:
-        sorted_accordions[key] = accordions[key]
-    if key_courses_in_other_subjects in sorted_accordions:
-        sorted_accordions[key_courses_in_other_subjects] = sorted_accordions.pop(key_courses_in_other_subjects)
-    return sorted_accordions
+        sorted_accordion[key] = accordion[key]
+    if key_courses_in_other_subjects in sorted_accordion:
+        sorted_accordion[key_courses_in_other_subjects] = sorted_accordion.pop(key_courses_in_other_subjects)
+    return sorted_accordion
 
 
 def replace_codes_with_labels(mapper, most_common_subject_code, accordions):
