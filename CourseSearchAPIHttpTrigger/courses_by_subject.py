@@ -37,6 +37,9 @@ class CoursesBySubject:
         multiple_course_accordions = sort_alphabetically(multiple_course_accordions)
         sort_other_combinations(self.mapper, most_common_subject_code, multiple_course_accordions)
 
+        sort_contents_alphabetically(single_course_accordions)          
+        sort_contents_alphabetically(multiple_course_accordions)          
+
         add_number_of_courses(single_course_accordions)
         add_number_of_courses(multiple_course_accordions)
         
@@ -86,7 +89,7 @@ def add_courses_to_accordions(courses, single_course_accordions, multiple_course
             multiple_courses, 
             multiple_course_accordions, 
         )
-
+        
 
 def add_institution_to_list(institution, institutions):
     pub_ukprn = institution[key_pub_ukprn]
@@ -186,6 +189,11 @@ def sort_by_count(accordion):
     return sorted_accordion
 
 
+def sort_contents_alphabetically(accordion):
+    for key in list(accordion.keys()):
+        accordion[key][key_courses] = sorted(accordion[key][key_courses], key=lambda k: k[key_title]['english']) 
+
+
 def replace_codes_with_labels(mapper, most_common_subject_code, accordions):
     for codes in list(accordions):
         if codes.startswith(key_other_combinations_with):
@@ -273,3 +281,4 @@ key_pub_ukprn = 'pub_ukprn'
 key_pub_ukprn_name = 'pub_ukprn_name'
 key_pub_ukprn_welsh_name = 'pub_ukprn_welsh_name'
 key_subjects = 'subjects'
+key_title = 'title'
