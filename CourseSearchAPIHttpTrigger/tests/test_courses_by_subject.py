@@ -93,21 +93,26 @@ class TestCoursesBySubject(unittest.TestCase):
         )
     
         c = courses['Other combinations with Marketing']['courses']     
-        # original (incorrect) ordering
-        # self.assertEqual(c[0]['title']['english'], 'Marketing / Spanish')
-        # self.assertEqual(c[1]['title']['english'], 'Spanish With Marketing')
-        # self.assertEqual(c[2]['title']['english'], 'Marketing And Spanish')
-        # self.assertEqual(c[3]['title']['english'], 'Marketing With Spanish')
-        # self.assertEqual(c[4]['title']['english'], 'Marketing and Spanish')
-        # self.assertEqual(c[5]['title']['english'], 'Spanish and Marketing')
+        self.assert_subject_and_institution(c[0], 'Accounting and Finance / Marketing', 'Aberystwyth University')
+        
+        self.assert_subject_and_institution(c[1], 'Accounting and Marketing', 'University of Strathclyde')
+        self.assert_subject_and_institution(c[2], 'Accounting and Marketing', 'Ulster University')
 
-        # original (incorrect) ordering
-        # self.assertEqual(c[0]['institution']['pub_ukprn_name'], 'Aberystwyth University')
-        # self.assertEqual(c[1]['institution']['pub_ukprn_name'], 'Bangor University')
-        # self.assertEqual(c[2]['institution']['pub_ukprn_name'], 'Bangor University')
-        # self.assertEqual(c[3]['institution']['pub_ukprn_name'], 'Bangor University')
-        # self.assertEqual(c[4]['institution']['pub_ukprn_name'], 'University of Stirling')
-        # self.assertEqual(c[5]['institution']['pub_ukprn_name'], 'University of Strathclyde')
+        self.assert_subject_and_institution(c[3], 'Accounting/Marketing', 'Canterbury Christ Church University')
+        self.assert_subject_and_institution(c[4], 'Accounting/Marketing', 'Canterbury Christ Church University')
+        self.assert_subject_and_institution(c[5], 'Accounting/Marketing', 'Canterbury Christ Church University')
+
+        self.assert_subject_and_institution(c[25], 'Digital Marketing', 'Birmingham City University')
+        self.assert_subject_and_institution(c[26], 'Digital Marketing', 'University of Huddersfield')
+        self.assert_subject_and_institution(c[27], 'Digital Marketing', 'University of Portsmouth')
+
+        self.assert_subject_and_institution(c[55], 'French and Marketing', 'University of Stirling')
+        self.assert_subject_and_institution(c[56], 'French and Marketing', 'University of Strathclyde')
+
+        self.assert_subject_and_institution(c[60], 'Human Resource Management and Marketing', 'University of Stirling')
+        self.assert_subject_and_institution(c[61], 'Human Resource Management and Marketing', 'University of Strathclyde')
+        self.assert_subject_and_institution(c[62], 'Human Resource Management and Marketing', 'Ulster University')
+
 
     def assert_subject_and_institution(self, course, subject, institution):
         self.assertEqual(course['title']['english'], subject)
