@@ -93,10 +93,8 @@ class TestCoursesBySubject(unittest.TestCase):
         )
     
         c = courses['Other combinations with Marketing']['courses']     
-        self.assert_subject_and_institution(c[0], 'Accounting and Finance / Marketing', 'Aberystwyth University')
-        
-        self.assert_subject_and_institution(c[1], 'Accounting and Marketing', 'University of Strathclyde')
-        self.assert_subject_and_institution(c[2], 'Accounting and Marketing', 'Ulster University')
+        self.assert_subject_and_institution(c[1], 'Accounting and Marketing', 'Ulster University')
+        self.assert_subject_and_institution(c[2], 'Accounting and Marketing', 'University of Strathclyde')
 
         self.assert_subject_and_institution(c[3], 'Accounting/Marketing', 'Canterbury Christ Church University')
         self.assert_subject_and_institution(c[4], 'Accounting/Marketing', 'Canterbury Christ Church University')
@@ -109,14 +107,9 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assert_subject_and_institution(c[55], 'French and Marketing', 'University of Stirling')
         self.assert_subject_and_institution(c[56], 'French and Marketing', 'University of Strathclyde')
 
-        self.assert_subject_and_institution(c[60], 'Human Resource Management and Marketing', 'University of Stirling')
-        self.assert_subject_and_institution(c[61], 'Human Resource Management and Marketing', 'University of Strathclyde')
-        self.assert_subject_and_institution(c[62], 'Human Resource Management and Marketing', 'Ulster University')
-
-
-    def assert_subject_and_institution(self, course, subject, institution):
-        self.assertEqual(course['title']['english'], subject)
-        self.assertEqual(course['institution']['pub_ukprn_name'], institution)
+        self.assert_subject_and_institution(c[60], 'Human Resource Management and Marketing', 'Ulster University')
+        self.assert_subject_and_institution(c[61], 'Human Resource Management and Marketing', 'University of Stirling')
+        self.assert_subject_and_institution(c[62], 'Human Resource Management and Marketing', 'University of Strathclyde')
 
 
     def test_when_bioengineering_course_queried(self):
@@ -321,6 +314,11 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_build_course_using_welsh_language(self):
         self.assert_buld_course('build_course_cy_input.json', 'build_course_cy_output.json')
+
+
+    def assert_subject_and_institution(self, course, subject, institution):
+        self.assertEqual(course['title']['english'], subject)
+        self.assertEqual(course['institution']['pub_ukprn_name'], institution)
 
 
     def assert_buld_course(self, filename_input, filename_expected):

@@ -37,15 +37,15 @@ class CoursesBySubject:
         multiple_course_accordions = sort_alphabetically(multiple_course_accordions)
         sort_other_combinations(self.mapper, most_common_subject_code, multiple_course_accordions)
 
-        sort_contents_alphabetically(single_course_accordions)          
-        sort_contents_alphabetically(multiple_course_accordions)          
+        sort_contents(single_course_accordions)          
+        sort_contents(multiple_course_accordions)   
 
         add_number_of_courses(single_course_accordions)
         add_number_of_courses(multiple_course_accordions)
         
         # log_accordions(single_course_accordions, courses)
         # log_accordions(multiple_course_accordions, courses)
-
+        
         return {
             "items": {
                 "single_subject_courses": single_course_accordions, 
@@ -79,13 +79,11 @@ def add_courses_to_accordions(courses, single_course_accordions, multiple_course
         )
 
         add_single_courses_to_accordions(
-            course, 
             single_courses, 
             single_course_accordions, 
         )
 
         add_multiple_courses_to_accordions(
-            course, 
             multiple_courses, 
             multiple_course_accordions, 
         )
@@ -132,7 +130,7 @@ def sort_results_into_groups(course, single_courses, multiple_courses):
         multiple_courses[course[key_kis_course_id]] = course
 
 
-def add_single_courses_to_accordions(course, courses, accordions):
+def add_single_courses_to_accordions(courses, accordions):
     for course in courses.values():
         label = course[key_subjects][0][key_code]
         add_course_to_accordions(course, label, accordions)
@@ -146,7 +144,7 @@ def add_course_to_accordions(course, label, accordions):
         accordions[label][key_courses].append(course)
 
 
-def add_multiple_courses_to_accordions(course, courses, accordions):
+def add_multiple_courses_to_accordions(courses, accordions):
     for course in courses.values():
         subject_codes = []
         for subject in course[key_subjects]:            
@@ -189,9 +187,36 @@ def sort_by_count(accordion):
     return sorted_accordion
 
 
-def sort_contents_alphabetically(accordion):
+def sort_contents(accordion):
+    sort_contents_alphabetically_by_subject(accordion)
+    sort_contents_alphabetically_by_institution(accordion)
+
+
+def sort_contents_alphabetically_by_subject(accordion):
     for key in list(accordion.keys()):
         accordion[key][key_courses] = sorted(accordion[key][key_courses], key=lambda k: k[key_title]['english']) 
+
+
+def sort_contents_alphabetically_by_institution(accordion):
+    for key in list(accordion.keys()):
+        courses = {}
+        for course in accordion[key][key_courses]:
+            title = course[key_title]["english"]
+            group_courses(key, course, title, courses)
+
+        accordion[key][key_courses] = []
+        for k, v in courses.items():
+            for k2, v2 in v.items():
+                v2 = sorted(v2, key=lambda k3: k3[key_institution][key_pub_ukprn_name]) 
+                accordion[key][key_courses].extend(v2)
+
+
+def group_courses(key, course, title, accordions):
+    if not accordions.get(key):
+        accordions[key] = {}
+    if not accordions[key].get(title):
+        accordions[key][title] = []
+    accordions[key][title].append(course)
 
 
 def replace_codes_with_labels(mapper, most_common_subject_code, accordions):
@@ -199,7 +224,6 @@ def replace_codes_with_labels(mapper, most_common_subject_code, accordions):
         if codes.startswith(key_other_combinations_with):
             accordions[f'{key_other_combinations_with} {mapper.get_label(most_common_subject_code)}'] = accordions.pop(codes)
             continue
-
         labels = []
         for code in codes.split():
             if code.startswith('CAH'):
@@ -263,7 +287,7 @@ def log_accordions(accordions, courses):
     for key in accordions.keys():
         percentage = len(accordions[key][key_courses]) / len(courses) * 100
         logging.warning(f'{key}: {len(accordions[key][key_courses])} ({round(percentage,1)}%)')
-
+        
 
 key_code = 'code'
 key_course = 'course'
