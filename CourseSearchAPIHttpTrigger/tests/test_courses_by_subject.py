@@ -92,7 +92,7 @@ class TestCoursesBySubject(unittest.TestCase):
             ]
         )
     
-        c = courses['Other combinations with Marketing']['courses']
+        c = courses['Other combinations with Marketing']['courses']     
         # original (incorrect) ordering
         # self.assertEqual(c[0]['title']['english'], 'Marketing / Spanish')
         # self.assertEqual(c[1]['title']['english'], 'Spanish With Marketing')
@@ -109,12 +109,9 @@ class TestCoursesBySubject(unittest.TestCase):
         # self.assertEqual(c[4]['institution']['pub_ukprn_name'], 'University of Stirling')
         # self.assertEqual(c[5]['institution']['pub_ukprn_name'], 'University of Strathclyde')
 
-        self.assertEqual(c[0]['title']['english'], 'Accounting and Finance / Marketing')
-        self.assertEqual(c[1]['title']['english'], 'Accounting and Marketing')
-        self.assertEqual(c[2]['title']['english'], 'Accounting and Marketing')
-        self.assertEqual(c[3]['title']['english'], 'Accounting/Marketing')
-        self.assertEqual(c[4]['title']['english'], 'Accounting/Marketing')
-        self.assertEqual(c[5]['title']['english'], 'Accounting/Marketing')
+    def assert_subject_and_institution(self, course, subject, institution):
+        self.assertEqual(course['title']['english'], subject)
+        self.assertEqual(course['institution']['pub_ukprn_name'], institution)
 
 
     def test_when_bioengineering_course_queried(self):
