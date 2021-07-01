@@ -46,19 +46,6 @@ class Query:
 
     def build(self):
         query_dict = {}
-        # Create search part of query
-        search = list()
-        if self.institution:
-            if self.query_params["language"] == "cy":
-                institution_search_query = (
-                        "course/institution/pub_ukprn_welsh_name:" + self.institution
-                )
-            else:
-                institution_search_query = (
-                        "course/institution/pub_ukprn_name:" + self.institution
-                )
-            search.append(institution_search_query)
-            print(f"institution_search_query {institution_search_query}")
 
         search = self._generate_course_search_fields(self.course)
 
