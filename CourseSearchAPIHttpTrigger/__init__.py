@@ -89,13 +89,15 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         params = dict(req.route_params)
         limit = req.params.get("limit", default_limit)
         offset = req.params.get("offset", "0")
-        course = req.params.get("qc", "")
+
         institution = req.params.get("qi", "")
         filters = req.params.get("filters", "")
         postcode_and_distance = req.params.get("postcode", "")
         logging.info(f"request body  {req.get_json()}")
-        institution_json = req.get_json()
-        institution_list = institution_json.get("institutions", [])
+        # The course is being passed from wagtail via teh url, pass it into "search" field for the query in the body, if it doesn't exist search for all
+        course = req.params.get('qc', "*")
+        body_json = req.get_json()
+        institution_list = body_json.get("institutions", [])
         institution_string = "@".join(institution_list)
         institutions = institution_string
         countries = req.params.get("countries", "")
@@ -230,7 +232,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             search_results = CoursesBySubject(mapper).group(courses, int(sortBySubjectLimit), int(offset), language) 
         else: 
             search_results = CoursesByInstitution().group(courses, counts, int(limit), int(offset), language)
-
+        print(f"search_url {search_url}")
         return func.HttpResponse(
             json.dumps(search_results),
             headers={"Content-Type": "application/json"},

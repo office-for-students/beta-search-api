@@ -3,7 +3,7 @@ import re
 
 
 def build_course_search_query(
-    course, institution, institutions, postcode_object, query_params
+        course, institution, institutions, postcode_object, query_params
 ):
     query = Query(course, institution, institutions, postcode_object, query_params)
 
@@ -13,7 +13,7 @@ def build_course_search_query(
 
 
 def build_institution_search_query(
-    course, institution, institutions, postcode_object, query_params
+        course, institution, institutions, postcode_object, query_params
 ):
     query = Query(course, institution, institutions, postcode_object, query_params)
 
@@ -24,7 +24,7 @@ def build_institution_search_query(
 
 class Query:
     def __init__(
-        self, course, institution, institutions, postcode_object, query_params
+            self, course, institution, institutions, postcode_object, query_params
     ):
 
         self.postcode_object = postcode_object
@@ -33,6 +33,22 @@ class Query:
         self.institutions = institutions
         self.query_params = query_params
 
+    def _generate_course_search_fields(self, course=None, language=None):
+        search = []
+        english_course_search_query = "course/title/english"
+        welsh_course_search_query = "course/title/welsh"
+
+        if course:
+            if language == "cy":
+                search.append(welsh_course_search_query)
+            else:
+                search.append(english_course_search_query)
+        else:
+            search.append(english_course_search_query)
+            search.append(welsh_course_search_query)
+
+        return search
+
     def build(self):
         query_dict = {}
         # Create search part of query
@@ -40,30 +56,23 @@ class Query:
         if self.institution:
             if self.query_params["language"] == "cy":
                 institution_search_query = (
-                    "course/institution/pub_ukprn_welsh_name:" + self.institution
+                        "course/institution/pub_ukprn_welsh_name:" + self.institution
                 )
             else:
                 institution_search_query = (
-                    "course/institution/pub_ukprn_name:" + self.institution
+                        "course/institution/pub_ukprn_name:" + self.institution
                 )
             search.append(institution_search_query)
+            print(f"institution_search_query {institution_search_query}")
 
-        if self.course:
-            english_course_search_query = "course/title/english:" + self.course
-            welsh_course_search_query = "course/title/welsh:" + self.course
-            if self.query_params["language"] == "cy":
-                search.append(welsh_course_search_query)
-            else:
-                search.append(english_course_search_query)
+        search = self._generate_course_search_fields(self.course, self.query_params["language"])
 
-        if search:
-            query_dict["search"] = " ".join(search)
-        else:
-            query_dict["search"] = "*"
+        query_dict["searchFields"] = ",".join(search)
+        query_dict["search"] = self.course
+        print(f"search (course) {self.course} in fields {search}")
 
         query_dict["queryType"] = "full"
         query_dict["searchMode"] = "all"
-
 
         # Create filter part of query
         filters = list()
@@ -96,8 +105,8 @@ class Query:
                 filters.append("course/honours_award_provision/code eq 0")
 
         if (
-            "length_of_course" in self.query_params
-            and self.query_params["length_of_course"]
+                "length_of_course" in self.query_params
+                and self.query_params["length_of_course"]
         ):
             loc = ",".join(self.query_params["length_of_course"])
             filters.append(
@@ -142,12 +151,12 @@ class Query:
             for x in institution_filter_list:
                 filters.append(x)
 
-        #Condition that will remove distance learning from the filters, and run a function for a separate distance learning filter
-        if '(course/distance_learning/code eq 0 or course/distance_learning/code eq 1 or course/distance_learning/code eq 2)' in filters:    
+        # Condition that will remove distance learning from the filters, and run a function for a separate distance learning filter
+        if '(course/distance_learning/code eq 0 or course/distance_learning/code eq 1 or course/distance_learning/code eq 2)' in filters:
             distance_filter = Query.build_or_distance_filter(self.query_params, filters)
-            filters.remove(f'(course/distance_learning/code eq 0 or course/distance_learning/code eq 1 or course/distance_learning/code eq 2)')
+            filters.remove(
+                f'(course/distance_learning/code eq 0 or course/distance_learning/code eq 1 or course/distance_learning/code eq 2)')
             filters.append(f'course/distance_learning/code ne 1')
-            
 
             if self.postcode_object != {}:
                 latitude = self.postcode_object["latitude"]
@@ -189,8 +198,7 @@ class Query:
             filter_query = " and ".join(filters)
 
         if filter_query != "":
-            query_dict["filter"]=filter_query
-
+            query_dict["filter"] = filter_query
 
         # Add alphabetic ordering based on the institution name after
         # ordering by search score
@@ -199,16 +207,19 @@ class Query:
         else:
             query_dict["orderby"] = "course/institution/sort_pub_ukprn_name"
 
+        # print(f"search: {query_dict['search']}")
+        # print(f"search: {query_dict['searchFields']}")
+
         self.query = query_dict
 
     def add_paging(self):
         result = dict()
         # Add limit and offset parameters
         if "limit" in self.query_params:
-            result["top"]=str(self.query_params["limit"])
+            result["top"] = str(self.query_params["limit"])
 
         if "offset" in self.query_params:
-            result["skip"]=str(self.query_params["offset"])
+            result["skip"] = str(self.query_params["offset"])
 
         return {**self.query, **result}
 
@@ -219,10 +230,10 @@ class Query:
 
         # Build facet query for categorising courses by institution
         if self.query_params["language"] == "cy":
-            result["facets"]=["course/institution/sort_pub_ukprn_welsh_name,\
+            result["facets"] = ["course/institution/sort_pub_ukprn_welsh_name,\
                 count:500, sort:value"]
         else:
-            result["facets"]=["course/institution/sort_pub_ukprn_name,\
+            result["facets"] = ["course/institution/sort_pub_ukprn_name,\
                 count:500,sort:value"]
 
         return {**self.query, **result}
@@ -231,8 +242,8 @@ class Query:
         on_campus = query_params.get('on_campus')
         distance_learning = query_params.get('distance_learning')
         doc = 'course/distance_learning/code'
-        filter = f'({doc} eq 0 or {doc} eq 1 or {doc} eq 2)'       
-        
+        filter = f'({doc} eq 0 or {doc} eq 1 or {doc} eq 2)'
+
         if on_campus and not distance_learning:
             filter = f'{doc} ne 1'
         elif not on_campus and distance_learning:
@@ -265,7 +276,7 @@ class Query:
             distance_filter.append(f'{doc} ne 0')
 
         if "countries" in query_params and query_params["countries"]:
-            #remove all countries from the duplicate filter
+            # remove all countries from the duplicate filter
             countries = list()
             for country in query_params["countries"]:
                 countries.append("course/country/code eq '" + country + "'")
@@ -307,4 +318,3 @@ class Query:
             institution_filters.append(institution_list[0])
 
         return institution_filters
-
