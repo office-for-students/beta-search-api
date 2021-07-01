@@ -17,6 +17,8 @@ from courses_by_subject import build_course
 
 # To invoke function directly, open the following in a browser
 # http://localhost:7071/api/CourseSearchAPIHttpTrigger?qc=marketing&sortBySubject=true&sortBySubjectLimit=5000&limit=5000
+#
+# Technical documents: https://mobilisecloud.atlassian.net/wiki/spaces/OFS/pages/1537572869/Sort+by+Subject+logic
 class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_marketing_course_queried(self):
