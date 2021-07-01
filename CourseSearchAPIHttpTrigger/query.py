@@ -33,21 +33,16 @@ class Query:
         self.institutions = institutions
         self.query_params = query_params
 
-    def _generate_course_search_fields(self, course=None, language=None):
-        search = []
+    def _generate_course_search_fields(self, course=None):
+        search_fields = []
         english_course_search_query = "course/title/english"
         welsh_course_search_query = "course/title/welsh"
 
         if course:
-            if language == "cy":
-                search.append(welsh_course_search_query)
-            else:
-                search.append(english_course_search_query)
-        else:
-            search.append(english_course_search_query)
-            search.append(welsh_course_search_query)
+            search_fields.append(english_course_search_query)
+            search_fields.append(welsh_course_search_query)
 
-        return search
+        return search_fields
 
     def build(self):
         query_dict = {}
@@ -65,7 +60,7 @@ class Query:
             search.append(institution_search_query)
             print(f"institution_search_query {institution_search_query}")
 
-        search = self._generate_course_search_fields(self.course, self.query_params["language"])
+        search = self._generate_course_search_fields(self.course)
 
         query_dict["searchFields"] = ",".join(search)
         query_dict["search"] = self.course
