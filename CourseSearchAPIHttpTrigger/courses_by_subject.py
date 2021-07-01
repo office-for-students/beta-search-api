@@ -41,8 +41,8 @@ class CoursesBySubject:
         multiple_course_accordions = sort_alphabetically(multiple_course_accordions)
         sort_other_combinations(self.mapper, most_common_subject_code, multiple_course_accordions)
 
-        sort_contents(single_course_accordions)          
-        sort_contents(multiple_course_accordions)   
+        sort_contents(single_course_accordions, language)          
+        sort_contents(multiple_course_accordions, language)   
 
         add_number_of_courses(single_course_accordions)
         add_number_of_courses(multiple_course_accordions)
@@ -201,22 +201,32 @@ def sort_by_count(accordion):
 
 def sort_contents(accordion, language):
     logging.debug('sort_contents')
-def sort_contents(accordion):
-    sort_contents_alphabetically_by_subject(accordion)
-    sort_contents_alphabetically_by_institution(accordion)
+    sort_contents_alphabetically_by_subject(accordion, language)
+    sort_contents_alphabetically_by_institution(accordion, language)
 
 
 def sort_contents_alphabetically_by_subject(accordion, language):
     logging.debug('sort_contents_alphabetically_by_subject')
     for key in list(accordion.keys()):
-        accordion[key][key_courses] = sorted(accordion[key][key_courses], key=lambda k: k[key_title]['english']) 
+        accordion[key][key_courses] = sorted(accordion[key][key_courses], key=lambda k: get_translation(k[key_title], language)) 
 
 
+def get_translation(json, language):
+    logging.debug(f'get_translation({language})')
+    language_name = 'welsh' if language == 'cy' else 'english'
+
+    if not json[language_name]:
+        logging.warning(f'missing translation: {json}')
+        return json['english']        
+    return json[language_name]
+
+
+def sort_contents_alphabetically_by_institution(accordion, language):
     logging.debug('sort_contents_alphabetically_by_institution')
     for key in list(accordion.keys()):
         courses = {}
         for course in accordion[key][key_courses]:
-            title = course[key_title]["english"]
+            title = get_translation(course[key_title], language)
             group_courses(key, course, title, courses)
 
         accordion[key][key_courses] = []
