@@ -39,9 +39,9 @@ class Query:
         english_course_search_query = "course/title/english"
         welsh_course_search_query = "course/title/welsh"
 
-        if course:
-            search_fields.append(english_course_search_query)
-            search_fields.append(welsh_course_search_query)
+        # if course:
+        #     search_fields.append(english_course_search_query)
+        #     search_fields.append(welsh_course_search_query)
 
         return search_fields
 
@@ -55,7 +55,7 @@ class Query:
         print(f"search (course) {self.course} in fields {search}")
 
         query_dict["queryType"] = "full"
-        query_dict["searchMode"] = "all"
+        # query_dict["searchMode"] = "all"
 
         # Create filter part of query
         filters = list()
