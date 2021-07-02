@@ -17,6 +17,8 @@ from courses_by_subject import build_course
 
 # To invoke function directly, open the following in a browser
 # http://localhost:7071/api/CourseSearchAPIHttpTrigger?qc=marketing&sortBySubject=true&sortBySubjectLimit=5000&limit=5000
+#
+# Technical documents: https://mobilisecloud.atlassian.net/wiki/spaces/OFS/pages/1537572869/Sort+by+Subject+logic
 class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_marketing_course_queried(self):
@@ -92,6 +94,25 @@ class TestCoursesBySubject(unittest.TestCase):
             ]
         )
     
+        c = courses['Other combinations with Marketing']['courses']     
+        self.assert_subject_and_institution(c[1], 'Accounting and Marketing', 'Ulster University')
+        self.assert_subject_and_institution(c[2], 'Accounting and Marketing', 'University of Strathclyde')
+
+        self.assert_subject_and_institution(c[3], 'Accounting/Marketing', 'Canterbury Christ Church University')
+        self.assert_subject_and_institution(c[4], 'Accounting/Marketing', 'Canterbury Christ Church University')
+        self.assert_subject_and_institution(c[5], 'Accounting/Marketing', 'Canterbury Christ Church University')
+
+        self.assert_subject_and_institution(c[25], 'Digital Marketing', 'Birmingham City University')
+        self.assert_subject_and_institution(c[26], 'Digital Marketing', 'University of Huddersfield')
+        self.assert_subject_and_institution(c[27], 'Digital Marketing', 'University of Portsmouth')
+
+        self.assert_subject_and_institution(c[55], 'French and Marketing', 'University of Stirling')
+        self.assert_subject_and_institution(c[56], 'French and Marketing', 'University of Strathclyde')
+
+        self.assert_subject_and_institution(c[60], 'Human Resource Management and Marketing', 'Ulster University')
+        self.assert_subject_and_institution(c[61], 'Human Resource Management and Marketing', 'University of Stirling')
+        self.assert_subject_and_institution(c[62], 'Human Resource Management and Marketing', 'University of Strathclyde')
+
 
     def test_when_bioengineering_course_queried(self):
         # ARRANGE
@@ -295,6 +316,11 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_build_course_using_welsh_language(self):
         self.assert_buld_course('build_course_cy_input.json', 'build_course_cy_output.json')
+
+
+    def assert_subject_and_institution(self, course, subject, institution):
+        self.assertEqual(course['title']['english'], subject)
+        self.assertEqual(course['institution']['pub_ukprn_name'], institution)
 
 
     def assert_buld_course(self, filename_input, filename_expected):
