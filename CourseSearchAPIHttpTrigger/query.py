@@ -1,5 +1,6 @@
 import os
 import re
+import urllib.parse
 
 
 def build_course_search_query(
@@ -50,11 +51,11 @@ class Query:
         search = self._generate_course_search_fields(self.course)
 
         query_dict["searchFields"] = ",".join(search)
-        query_dict["search"] = self.course
+        query_dict["search"] = urllib.parse.quote_plus(self.course)
         print(f"search (course) {self.course} in fields {search}")
 
         query_dict["queryType"] = "full"
-        query_dict["searchMode"] = "all"
+        query_dict["searchMode"] = "any" 
 
         # Create filter part of query
         filters = list()
