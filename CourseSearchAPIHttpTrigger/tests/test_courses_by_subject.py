@@ -114,6 +114,80 @@ class TestCoursesBySubject(unittest.TestCase):
         self.assert_subject_and_institution(c[62], 'Human Resource Management and Marketing', 'University of Strathclyde')
 
 
+    def test_when_psychology_course_queried(self):
+        # ARRANGE
+        mappings = self.load_mappings()
+        mapper = CourseToLabelMapper(mappings)
+        courseBySubject = CoursesBySubject(mapper)
+
+        courses = self.load_fixture('input_psychology.json')
+
+        limit = 5000
+        offset = 0
+        language = 'en'
+
+        # ACT
+        actual = courseBySubject.group(courses,
+                                        limit,
+                                        offset, 
+                                        language,
+                                        )
+
+        # ASSERT
+        self.assertEqual(actual['number_of_items'], 18)
+        self.assertEqual(actual['total_number_of_courses'], 1195)
+        self.assertEqual(actual['total_results'], 150)
+        self.assertEqual(len(actual['items'].keys()), 2)
+
+        # single_subject_courses
+        courses = actual['items']['single_subject_courses']
+        self.assertEqual(courses['Psychology courses']['number_of_courses'], 404)
+        self.assertEqual(courses['Applied psychology courses']['number_of_courses'], 96)
+        self.assertEqual(courses['Developmental psychology courses']['number_of_courses'], 30)
+        self.assertEqual(courses['Counselling, psychotherapy and occupational therapy courses']['number_of_courses'], 16)
+        self.assertEqual(courses['Psychology and health courses']['number_of_courses'], 12)
+        self.assertEqual(courses['Courses in other subjects']['number_of_courses'], 63)
+        self.assertEqual(list(courses.keys()), [
+            'Psychology courses',
+            'Applied psychology courses',
+            'Developmental psychology courses',
+            'Counselling, psychotherapy and occupational therapy courses',
+            'Psychology and health courses',
+            'Courses in other subjects',
+            ]
+        )
+
+        # multiple_subject_courses
+        courses = actual['items']['multiple_subject_courses']
+        self.assertEqual(courses['Psychology & Sociology courses']['number_of_courses'], 156)
+        self.assertEqual(courses['Counselling, psychotherapy and occupational therapy & Psychology courses']['number_of_courses'], 30)
+        self.assertEqual(courses['Psychology & Education courses']['number_of_courses'], 25)
+        self.assertEqual(courses['Psychology & Law courses']['number_of_courses'], 20)
+        self.assertEqual(courses['Psychology & History courses']['number_of_courses'], 14)
+        self.assertEqual(courses['Sport and exercise sciences & Psychology courses']['number_of_courses'], 15)
+        self.assertEqual(courses['Psychology & Philosophy courses']['number_of_courses'], 14)
+        self.assertEqual(courses['Applied psychology & Sociology courses']['number_of_courses'], 14)
+        self.assertEqual(courses['Psychology & Marketing courses']['number_of_courses'], 13)
+        self.assertEqual(courses['Psychology & Economics courses']['number_of_courses'], 12)
+        self.assertEqual(courses['Other combinations with Psychology']['number_of_courses'], 239)
+        self.assertEqual(courses['Other combinations']['number_of_courses'], 22)
+        self.assertEqual(list(courses.keys()), [
+            'Applied psychology & Sociology courses',
+            'Counselling, psychotherapy and occupational therapy & Psychology courses',
+            'Psychology & Economics courses',
+            'Psychology & Education courses',
+            'Psychology & History courses',
+            'Psychology & Law courses',
+            'Psychology & Marketing courses',
+            'Psychology & Philosophy courses',
+            'Psychology & Sociology courses',
+            'Sport and exercise sciences & Psychology courses',
+            'Other combinations with Psychology',
+            'Other combinations',
+            ]
+        )
+    
+
     def test_when_bioengineering_course_queried(self):
         # ARRANGE
         mappings = self.load_mappings()
