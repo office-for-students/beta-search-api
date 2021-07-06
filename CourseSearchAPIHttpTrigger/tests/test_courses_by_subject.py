@@ -188,6 +188,42 @@ class TestCoursesBySubject(unittest.TestCase):
         )
     
 
+    def test_when_arts_course_queried(self):
+        # ARRANGE
+        mappings = self.load_mappings()
+        mapper = CourseToLabelMapper(mappings)
+        courseBySubject = CoursesBySubject(mapper)
+
+        courses = self.load_fixture('input_arts.json')
+
+        limit = 5000
+        offset = 0
+        language = 'en'
+
+        # ACT
+        actual = courseBySubject.group(courses,
+                                        limit,
+                                        offset, 
+                                        language,
+                                        )
+
+        # ASSERT
+        self.assertEqual(actual['number_of_items'], 19)
+        self.assertEqual(actual['total_number_of_courses'], 964)
+        self.assertEqual(actual['total_results'], 202)
+        self.assertEqual(len(actual['items'].keys()), 2)
+
+        # single_subject_courses
+        courses = actual['items']['single_subject_courses']
+        self.assertEqual(courses['Art courses']['number_of_courses'], 174)
+
+        # multiple_subject_courses
+        courses = actual['items']['multiple_subject_courses']
+        self.assertEqual(courses['English studies & History of art, architecture and design courses']['number_of_courses'], 13)
+        self.assertEqual(courses['Other combinations with Art']['number_of_courses'], 136)
+        self.assertEqual(courses['Other combinations']['number_of_courses'], 105)
+
+
     def test_when_bioengineering_course_queried(self):
         # ARRANGE
         mappings = self.load_mappings()
