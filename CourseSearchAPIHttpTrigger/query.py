@@ -52,7 +52,6 @@ class Query:
 
         query_dict["searchFields"] = ",".join(search)
         query_dict["search"] = urllib.parse.quote_plus(self.course)
-        print(f"search (course) {self.course} in fields {search}")
 
         query_dict["queryType"] = "full"
         query_dict["searchMode"] = "any" 

@@ -20,7 +20,7 @@ class CoursesBySubject:
             multiple_course_accordions,  
             institutions,           
             language,
-        )        
+        )                    
         
         # single courses
         group_single_courses_that_are_less_than_one_percent(
@@ -28,6 +28,7 @@ class CoursesBySubject:
             single_course_accordions,
         )        
         most_common_subject_code = get_most_common_subject_code(single_course_accordions)
+        combine_most_common_subjects(self.mapper, most_common_subject_code, single_course_accordions)
         replace_codes_with_labels(self.mapper, most_common_subject_code, single_course_accordions)
         single_course_accordions = sort_by_count(single_course_accordions)
                 
@@ -278,6 +279,17 @@ def get_most_common_subject_code(accordions):
     return most_common_subject_code_accordion[key_courses][0][key_subjects][0][key_code]
 
 
+def combine_most_common_subjects(mapper, code, accordions):
+    most_common_subject = mapper.get_label(code)
+    for key in list(accordions.keys()):
+        if not key.startswith(key_courses_in_other_subjects):
+            label = mapper.get_label(key)
+            if key != code and label == most_common_subject:
+                accordions[code][key_courses].extend(accordions[key][key_courses])
+                accordions.pop(key)
+                break
+
+
 def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, most_common_subject_code):
     logging.debug('group_multiple_courses_that_are_less_than_one_percent')
     for key in list(accordions.keys()): 
@@ -320,7 +332,7 @@ def log_accordions(accordions, courses):
     for key in accordions.keys():
         percentage = len(accordions[key][key_courses]) / len(courses) * 100
         logging.info(f'{key}: {len(accordions[key][key_courses])} ({round(percentage,1)}%)')
-        
+
 
 key_code = 'code'
 key_course = 'course'
