@@ -23,14 +23,16 @@ class CoursesBySubject:
         )                    
         
         # single courses
+        single_course_accordions = sort_by_count(single_course_accordions)  
+        most_common_subject_code = get_first_accordion_subject_code(single_course_accordions)
+        most_common_subject_label = self.mapper.get_label(most_common_subject_code)
+        combine_most_common_subjects(self.mapper, most_common_subject_code, most_common_subject_label, single_course_accordions)
         group_single_courses_that_are_less_than_one_percent(
             courses, 
             single_course_accordions,
         )        
-        most_common_subject_code = get_most_common_subject_code(single_course_accordions)
-        combine_most_common_subjects(self.mapper, most_common_subject_code, single_course_accordions)
-        replace_codes_with_labels(self.mapper, most_common_subject_code, single_course_accordions)
-        single_course_accordions = sort_by_count(single_course_accordions)
+        replace_codes_with_labels(self.mapper, most_common_subject_label, single_course_accordions)
+        single_course_accordions = sort_by_count(single_course_accordions) 
                 
         # multiple courses
         group_multiple_courses_that_are_less_than_one_percent(
@@ -38,9 +40,9 @@ class CoursesBySubject:
             multiple_course_accordions, 
             most_common_subject_code,
         )
-        replace_codes_with_labels(self.mapper, most_common_subject_code, multiple_course_accordions)
+        replace_codes_with_labels(self.mapper, most_common_subject_label, multiple_course_accordions)
         multiple_course_accordions = sort_alphabetically(multiple_course_accordions)
-        sort_other_combinations(self.mapper, most_common_subject_code, multiple_course_accordions)
+        sort_other_combinations(most_common_subject_label, multiple_course_accordions)
 
         sort_contents(single_course_accordions, language)          
         sort_contents(multiple_course_accordions, language)   
@@ -50,7 +52,7 @@ class CoursesBySubject:
         
         # log_accordions(single_course_accordions, courses)
         # log_accordions(multiple_course_accordions, courses)
-        
+
         return {
             "items": {
                 "single_subject_courses": single_course_accordions, 
@@ -246,11 +248,11 @@ def group_courses(key, course, title, accordions):
     accordions[key][title].append(course)
 
 
-def replace_codes_with_labels(mapper, most_common_subject_code, accordions):
+def replace_codes_with_labels(mapper, most_common_subject_label, accordions):
     logging.debug('replace_codes_with_labels')
     for codes in list(accordions):
         if codes.startswith(key_other_combinations_with):
-            accordions[f'{key_other_combinations_with} {mapper.get_label(most_common_subject_code)}'] = accordions.pop(codes)
+            accordions[f'{key_other_combinations_with} {most_common_subject_label}'] = accordions.pop(codes)
             continue
         labels = []
         for code in codes.split():
@@ -266,26 +268,17 @@ def sort_alphabetically(accordions):
     return dict(sorted(accordions.items()))
 
 
-def get_most_common_subject_code_label(accordions):
-    logging.debug('get_most_common_subject_code_label')
-    return next(iter(accordions)).replace(key_courses, '').strip()
+def get_first_accordion_subject_code(accordions):
+    logging.debug('get_first_accordion_subject_code')
+    key = next(iter(accordions))
+    return accordions.get(key)[key_courses][0][key_subjects][0][key_code]
 
 
-def get_most_common_subject_code(accordions):
-    logging.debug('get_most_common_subject_code')
-    first_accordion = next(iter(accordions))
-    most_common_subject_code = first_accordion.replace(key_courses, '').strip()
-    most_common_subject_code_accordion = accordions.get(first_accordion)
-    return most_common_subject_code_accordion[key_courses][0][key_subjects][0][key_code]
-
-
-def combine_most_common_subjects(mapper, code, accordions):
-    most_common_subject = mapper.get_label(code)
+def combine_most_common_subjects(mapper, most_common_subject_code, most_common_subject_label, accordions):
     for key in list(accordions.keys()):
-        if not key.startswith(key_courses_in_other_subjects):
-            label = mapper.get_label(key)
-            if key != code and label == most_common_subject:
-                accordions[code][key_courses].extend(accordions[key][key_courses])
+        if key != most_common_subject_code:
+            if mapper.get_label(key) == most_common_subject_label:
+                accordions[most_common_subject_code][key_courses].extend(accordions[key][key_courses])
                 accordions.pop(key)
                 break
 
@@ -307,9 +300,9 @@ def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, m
                 move_course(accordions, key, label)
 
 
-def sort_other_combinations(mapper, most_common_subject_code, accordions):
+def sort_other_combinations(most_common_subject_label, accordions):
     logging.debug('sort_other_combinations')
-    key = f'{key_other_combinations_with} {mapper.get_label(most_common_subject_code)}'
+    key = f'{key_other_combinations_with} {most_common_subject_label}'
     if accordions.get(key):
         other_combinations_with = accordions[key]
         accordions.pop(key)
