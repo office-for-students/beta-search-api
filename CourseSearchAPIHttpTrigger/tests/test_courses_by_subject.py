@@ -23,21 +23,20 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_marketing_course_queried(self):
         # ARRANGE
+        language = 'en'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
         courses = self.load_fixture('input_marketing.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
                                         )
 
         # ASSERT
@@ -116,21 +115,20 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_psychology_course_queried(self):
         # ARRANGE
+        language = 'en'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
         courses = self.load_fixture('input_psychology.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
                                         )
 
         # ASSERT
@@ -190,21 +188,20 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_arts_course_queried(self):
         # ARRANGE
+        language = 'en'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
         courses = self.load_fixture('input_arts.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
                                         )
 
         # ASSERT
@@ -226,21 +223,20 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_bioengineering_course_queried(self):
         # ARRANGE
+        language = 'en'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
         courses = self.load_fixture('input_bioengineering.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
                                         )
 
         # ASSERT
@@ -264,21 +260,20 @@ class TestCoursesBySubject(unittest.TestCase):
     
     def test_when_food_course_queried(self):
         # ARRANGE
+        language = 'en'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
         courses = self.load_fixture('input_food.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
                                         )
 
         # ASSERT
@@ -335,21 +330,20 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_history_course_queried(self):
         # ARRANGE
+        language = 'en'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
         courses = self.load_fixture('input_history.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
                                         )
 
         # ASSERT

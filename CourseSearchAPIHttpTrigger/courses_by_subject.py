@@ -4,22 +4,22 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 class CoursesBySubject:
-    def __init__(self, mapper):
+    def __init__(self, mapper, language):
         self.mapper = mapper
+        self.language = language
 
 
-    def group(self, courses, limit, offset, language):
+    def group(self, courses, limit, offset):
         logging.debug('group')
         single_course_accordions = {}
         multiple_course_accordions = {}
         institutions = []
 
-        add_courses_to_accordions(
+        self.add_courses_to_accordions(
             courses, 
             single_course_accordions, 
             multiple_course_accordions,  
             institutions,           
-            language,
         )                    
         
         # single courses
@@ -44,8 +44,8 @@ class CoursesBySubject:
         multiple_course_accordions = sort_alphabetically(multiple_course_accordions)
         sort_other_combinations(most_common_subject_label, multiple_course_accordions)
 
-        sort_contents(single_course_accordions, language)          
-        sort_contents(multiple_course_accordions, language)   
+        self.sort_contents(single_course_accordions)          
+        self.sort_contents(multiple_course_accordions)   
 
         add_number_of_courses(single_course_accordions)
         add_number_of_courses(multiple_course_accordions)
@@ -66,42 +66,72 @@ class CoursesBySubject:
         }
 
 
-def add_courses_to_accordions(courses, single_course_accordions, multiple_course_accordions, institutions, language):
-    logging.debug('add_courses_to_accordions')
-    single_courses = {}
-    multiple_courses = {}
-    
-    for c in courses:
-        institution = c[key_course][key_institution]
-        if institution[key_pub_ukprn_name] == "not available":
-            continue
-
-        add_institution_to_list(institution, institutions)
-
-        course = build_course(c[key_course], institution, language)
-
-        sort_results_into_groups(
-            course, 
-            single_courses, 
-            multiple_courses,
-        )
-
-        add_single_courses_to_accordions(
-            single_courses, 
-            single_course_accordions, 
-        )
-
-        add_multiple_courses_to_accordions(
-            multiple_courses, 
-            multiple_course_accordions, 
-        )
+    def add_courses_to_accordions(self, courses, single_course_accordions, multiple_course_accordions, institutions):
+        logging.debug('add_courses_to_accordions')
+        single_courses = {}
+        multiple_courses = {}
         
+        for c in courses:
+            institution = c[key_course][key_institution]
+            if institution[key_pub_ukprn_name] == "not available":
+                continue
 
-def add_institution_to_list(institution, institutions):
-    logging.debug('add_institution_to_list')
-    pub_ukprn = institution[key_pub_ukprn]
-    if pub_ukprn not in institutions:
-        institutions.append(pub_ukprn)
+            add_institution_to_list(institution, institutions)
+
+            course = build_course(c[key_course], institution, self.language)
+
+            sort_results_into_groups(
+                course, 
+                single_courses, 
+                multiple_courses,
+            )
+
+            add_single_courses_to_accordions(
+                single_courses, 
+                single_course_accordions, 
+            )
+
+            add_multiple_courses_to_accordions(
+                multiple_courses, 
+                multiple_course_accordions, 
+            )
+            
+
+    def sort_contents(self, accordion):
+        logging.debug('sort_contents')
+        self.sort_contents_alphabetically_by_subject(accordion)
+        self.sort_contents_alphabetically_by_institution(accordion)
+
+
+    def sort_contents_alphabetically_by_subject(self, accordion):
+        logging.debug('sort_contents_alphabetically_by_subject')
+        for key in list(accordion.keys()):
+            accordion[key][key_courses] = sorted(accordion[key][key_courses], key=lambda k: self.get_translation(k[key_title])) 
+
+
+    def sort_contents_alphabetically_by_institution(self, accordion):
+        logging.debug('sort_contents_alphabetically_by_institution')
+        for key in list(accordion.keys()):
+            courses = {}
+            for course in accordion[key][key_courses]:
+                title = self.get_translation(course[key_title])
+                group_courses(key, course, title, courses)
+
+            accordion[key][key_courses] = []
+            for k, v in courses.items():
+                for k2, v2 in v.items():
+                    v2 = sorted(v2, key=lambda k3: k3[key_institution][key_pub_ukprn_name]) 
+                    accordion[key][key_courses].extend(v2)
+
+
+    def get_translation(self, json):
+        logging.debug(f'get_translation({self.language})')
+        language_name = 'welsh' if self.language == 'cy' else 'english'
+
+        if not json[language_name]:
+            logging.warning(f'missing translation: {json}')
+            return json['english']        
+        return json[language_name]
 
 
 def build_course(course, institution, language):
@@ -131,6 +161,13 @@ def build_course(course, institution, language):
         key_locations:       locations,
         key_institution:     institution_body,
     }
+
+
+def add_institution_to_list(institution, institutions):
+    logging.debug('add_institution_to_list')
+    pub_ukprn = institution[key_pub_ukprn]
+    if pub_ukprn not in institutions:
+        institutions.append(pub_ukprn)
 
 
 def sort_results_into_groups(course, single_courses, multiple_courses):
@@ -200,43 +237,6 @@ def sort_by_count(accordion):
     if key_courses_in_other_subjects in sorted_accordion:
         sorted_accordion[key_courses_in_other_subjects] = sorted_accordion.pop(key_courses_in_other_subjects)
     return sorted_accordion
-
-
-def sort_contents(accordion, language):
-    logging.debug('sort_contents')
-    sort_contents_alphabetically_by_subject(accordion, language)
-    sort_contents_alphabetically_by_institution(accordion, language)
-
-
-def sort_contents_alphabetically_by_subject(accordion, language):
-    logging.debug('sort_contents_alphabetically_by_subject')
-    for key in list(accordion.keys()):
-        accordion[key][key_courses] = sorted(accordion[key][key_courses], key=lambda k: get_translation(k[key_title], language)) 
-
-
-def get_translation(json, language):
-    logging.debug(f'get_translation({language})')
-    language_name = 'welsh' if language == 'cy' else 'english'
-
-    if not json[language_name]:
-        logging.warning(f'missing translation: {json}')
-        return json['english']        
-    return json[language_name]
-
-
-def sort_contents_alphabetically_by_institution(accordion, language):
-    logging.debug('sort_contents_alphabetically_by_institution')
-    for key in list(accordion.keys()):
-        courses = {}
-        for course in accordion[key][key_courses]:
-            title = get_translation(course[key_title], language)
-            group_courses(key, course, title, courses)
-
-        accordion[key][key_courses] = []
-        for k, v in courses.items():
-            for k2, v2 in v.items():
-                v2 = sorted(v2, key=lambda k3: k3[key_institution][key_pub_ukprn_name]) 
-                accordion[key][key_courses].extend(v2)
 
 
 def group_courses(key, course, title, accordions):

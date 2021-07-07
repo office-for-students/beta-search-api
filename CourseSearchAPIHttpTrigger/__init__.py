@@ -235,8 +235,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
         if sortBySubject == 'true':
-            mapper = getCourseToLabelMapper();
-            search_results = CoursesBySubject(mapper).group(courses, int(sortBySubjectLimit), int(offset), language) 
+            mapper = getCourseToLabelMapper(language);
+            search_results = CoursesBySubject(mapper, language).group(courses, int(sortBySubjectLimit), int(offset)) 
         else: 
             search_results = CoursesByInstitution().group(courses, counts, int(limit), int(offset), language)
         print(f"search_url {search_url}")
@@ -262,7 +262,7 @@ def convert_miles_to_km(distance_in_miles):
         return None
 
 
-def getCourseToLabelMapper():
+def getCourseToLabelMapper(language):
     with open(f'{CURRENTDIR}/fixtures/subjects-sort-by.json', 'r') as file:
         input = file.read()
-    return CourseToLabelMapper(json.loads(input))
+    return CourseToLabelMapper(json.loads(input), language)
