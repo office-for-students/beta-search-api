@@ -220,8 +220,8 @@ class TestCoursesBySubject(unittest.TestCase):
         # multiple_subject_courses
         courses = actual['items']['multiple_subject_courses']
         self.assertEqual(courses['English studies & History of art, architecture and design courses']['number_of_courses'], 13)
-        self.assertEqual(courses['Other combinations with Art']['number_of_courses'], 136)
-        self.assertEqual(courses['Other combinations']['number_of_courses'], 105)
+        self.assertEqual(courses['Other combinations with Art']['number_of_courses'], 41)
+        self.assertEqual(courses['Other combinations']['number_of_courses'], 200)
 
 
     def test_when_bioengineering_course_queried(self):
