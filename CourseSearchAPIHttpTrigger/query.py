@@ -34,27 +34,22 @@ class Query:
         self.institutions = institutions
         self.query_params = query_params
 
-    def _generate_course_search_fields(self, course=None):
-        search_fields = []
-        english_course_search_query = "course/title/english"
-        welsh_course_search_query = "course/title/welsh"
+    def generate_course_search_string(self, course=None) -> str:
+        english_course_search_query = f"course/title/english:{course}"
+        welsh_course_search_query = f"course/title/welsh:{course}"
 
         if course:
-            search_fields.append(english_course_search_query)
-            search_fields.append(welsh_course_search_query)
+            return f"{english_course_search_query}, {welsh_course_search_query}"
 
-        return search_fields
+        return "*"
 
     def build(self):
         query_dict = {}
 
-        search = self._generate_course_search_fields(self.course)
-
-        query_dict["searchFields"] = ",".join(search)
-        query_dict["search"] = urllib.parse.quote_plus(self.course)
-
+        search = self.generate_course_search_fields(self.course)
+        query_dict["search"] = search
         query_dict["queryType"] = "full"
-        query_dict["searchMode"] = "any" 
+        query_dict["searchMode"] = "any"
 
         # Create filter part of query
         filters = list()
