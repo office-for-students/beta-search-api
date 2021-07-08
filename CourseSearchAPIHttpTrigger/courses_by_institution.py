@@ -1,4 +1,4 @@
-from helper import course_sort_key
+from helper import course_sort_key, is_welsh
 
 class CoursesByInstitution():
     def group(self, courses, counts, limit, offset, language):
@@ -17,7 +17,7 @@ class CoursesByInstitution():
             if pub_ukprn not in institutions:
                 institution = course["institution"]
                 institution_body = {
-                    "pub_ukprn_name": institution["pub_ukprn_welsh_name"] if language == "cy" else institution["pub_ukprn_name"],
+                    "pub_ukprn_name": institution["pub_ukprn_welsh_name"] if is_welsh(language) else institution["pub_ukprn_name"],
                     "pub_ukprn": pub_ukprn,
                     "courses": [],
                     "number_of_courses": 0,

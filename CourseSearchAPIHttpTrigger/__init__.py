@@ -22,7 +22,8 @@ from .helper import (
     handle_search_terms,
     remove_conjunctions_from_searchable_fields,
     handle_apostrophes_in_search,
-    get_offset_and_limit,)
+    get_offset_and_limit,
+    is_welsh,)
 
 from .query import (
     build_institution_search_query,
@@ -182,7 +183,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # Step 8 - handle facets to build correct
         # limit and offset for next query
 
-        if language == "cy":
+        if is_welsh(language):
             query_params["limit"], query_params["offset"], counts["institutions"], counts[
                 "courses"
             ], institution_course_counts = get_offset_and_limit(

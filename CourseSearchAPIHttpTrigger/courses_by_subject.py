@@ -1,4 +1,5 @@
 import logging
+from helper import is_welsh
 
 logging.basicConfig(level=logging.INFO) 
 logger = logging.getLogger(__name__)
@@ -31,7 +32,7 @@ class CoursesBySubject:
             courses, 
             single_course_accordions,
         )        
-        replace_codes_with_labels(self.mapper, most_common_subject_label, single_course_accordions)
+        self.replace_codes_with_labels(most_common_subject_label, single_course_accordions)
         single_course_accordions = sort_by_count(single_course_accordions) 
                 
         # multiple courses
@@ -40,7 +41,7 @@ class CoursesBySubject:
             multiple_course_accordions, 
             most_common_subject_code,
         )
-        replace_codes_with_labels(self.mapper, most_common_subject_label, multiple_course_accordions)
+        self.replace_codes_with_labels(most_common_subject_label, multiple_course_accordions)
         multiple_course_accordions = sort_alphabetically(multiple_course_accordions)
         sort_other_combinations(most_common_subject_label, multiple_course_accordions)
 
@@ -50,8 +51,8 @@ class CoursesBySubject:
         add_number_of_courses(single_course_accordions)
         add_number_of_courses(multiple_course_accordions)
         
-        # log_accordions(single_course_accordions, courses)
-        # log_accordions(multiple_course_accordions, courses)
+        log_accordions(single_course_accordions, courses)
+        log_accordions(multiple_course_accordions, courses)
 
         return {
             "items": {
@@ -126,12 +127,29 @@ class CoursesBySubject:
 
     def get_translation(self, json):
         logging.debug(f'get_translation({self.language})')
-        language_name = 'welsh' if self.language == 'cy' else 'english'
+        language_name = 'welsh' if is_welsh(self.language) else 'english'
 
         if not json[language_name]:
             logging.warning(f'missing translation: {json}')
             return json['english']        
         return json[language_name]
+
+
+    def replace_codes_with_labels(self, most_common_subject_label, accordions):
+        logging.debug('replace_codes_with_labels')
+        for codes in list(accordions):
+            if codes.startswith(key_other_combinations_with):
+                #TODO needs translating
+                accordions[f'{key_other_combinations_with} {most_common_subject_label}'] = accordions.pop(codes)
+                continue
+            labels = []
+            for code in codes.split():
+                if code.startswith('CAH'):
+                    labels.append(self.mapper.get_label(code))
+            label = wrap_with_course(labels, self.language)
+            
+            if codes.startswith('CAH'):
+                accordions[label] = accordions.pop(codes)
 
 
 def wrap_with_course(labels, language):
@@ -141,7 +159,7 @@ def wrap_with_course(labels, language):
 def build_course(course, institution, language):
     logging.debug('build_course')
     institution_body = {
-        key_pub_ukprn_name: institution[key_pub_ukprn_welsh_name] if language == "cy" else institution[key_pub_ukprn_name],
+        key_pub_ukprn_name: institution[key_pub_ukprn_welsh_name] if is_welsh(language) else institution[key_pub_ukprn_name],
         key_pub_ukprn: institution[key_pub_ukprn],
     }
 
@@ -250,21 +268,6 @@ def group_courses(key, course, title, accordions):
     if not accordions[key].get(title):
         accordions[key][title] = []
     accordions[key][title].append(course)
-
-
-def replace_codes_with_labels(mapper, most_common_subject_label, accordions):
-    logging.debug('replace_codes_with_labels')
-    for codes in list(accordions):
-        if codes.startswith(key_other_combinations_with):
-            accordions[f'{key_other_combinations_with} {most_common_subject_label}'] = accordions.pop(codes)
-            continue
-        labels = []
-        for code in codes.split():
-            if code.startswith('CAH'):
-                labels.append(mapper.get_label(code))
-        label = f'{" & ".join(labels)} {key_courses}'
-        if codes.startswith('CAH'):
-            accordions[label] = accordions.pop(codes)
 
 
 def sort_alphabetically(accordions):

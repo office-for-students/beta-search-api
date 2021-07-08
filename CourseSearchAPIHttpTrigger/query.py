@@ -2,6 +2,8 @@ import os
 import re
 import urllib.parse
 
+from helper import is_welsh
+
 
 def build_course_search_query(
         course, institution, institutions, postcode_object, query_params
@@ -179,7 +181,7 @@ class Query:
 
         # Add alphabetic ordering based on the institution name after
         # ordering by search score
-        if self.query_params["language"] == "cy":
+        if is_welsh(self.query_params["language"]):
             query_dict["orderby"] = "course/institution/sort_pub_ukprn_welsh_name"
         else:
             query_dict["orderby"] = "course/institution/sort_pub_ukprn_name"
@@ -206,7 +208,7 @@ class Query:
         result = dict(top=0)
 
         # Build facet query for categorising courses by institution
-        if self.query_params["language"] == "cy":
+        if is_welsh(self.query_params["language"]):
             result["facets"] = ["course/institution/sort_pub_ukprn_welsh_name,\
                 count:500, sort:value"]
         else:
@@ -276,7 +278,7 @@ class Query:
             institution = institution.replace("&", "%26")
 
             if search_public_ukprn == "False":
-                if query_params["language"] == "cy":
+                if is_welsh(query_params["language"]):
                     institution_list.append(
                         "course/institution/pub_ukprn_welsh_name eq '" + institution + "'"
                     )
