@@ -17,6 +17,7 @@ sys.path.insert(0, PARENTDIR)
 from courses_by_institution import CoursesByInstitution
 from course_to_label_mapper import CourseToLabelMapper
 from courses_by_subject import CoursesBySubject
+from helper import get_course_to_label_mapping_file
 
 from .helper import (
     handle_search_terms,
@@ -236,7 +237,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
         if sortBySubject == 'true':
-            mapper = getCourseToLabelMapper(language);
+            input = get_course_to_label_mapping_file(CURRENTDIR)
+            mapper = CourseToLabelMapper(input, language);
             search_results = CoursesBySubject(mapper, language).group(courses, int(sortBySubjectLimit), int(offset)) 
         else: 
             search_results = CoursesByInstitution().group(courses, counts, int(limit), int(offset), language)
@@ -262,8 +264,3 @@ def convert_miles_to_km(distance_in_miles):
     except ValueError:
         return None
 
-
-def getCourseToLabelMapper(language):
-    with open(f'{CURRENTDIR}/fixtures/subjects-sort-by.json', 'r') as file:
-        input = file.read()
-    return CourseToLabelMapper(json.loads(input), language)

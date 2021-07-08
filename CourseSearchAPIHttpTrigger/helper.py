@@ -11,7 +11,6 @@ PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
-# from sort_by_subject import SortBySubject
 
 def get_offset_and_limit(facets, requested_limit, requested_offset):
     limit = 0
@@ -88,3 +87,9 @@ def course_sort_key(course, language):
 
 def is_welsh(language):
     return language == 'cy'
+
+
+def get_course_to_label_mapping_file(root_dir):
+    with open(f'{root_dir}/fixtures/subjects-sort-by.json', 'r') as file:
+        input = file.read()
+    return json.loads(input)

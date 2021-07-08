@@ -1,9 +1,4 @@
-import json
-import os
-import inspect
 from helper import is_welsh
-
-CURRENT_DIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
 
 class CourseToLabelMapper:
