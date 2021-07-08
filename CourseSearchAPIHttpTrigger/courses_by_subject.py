@@ -36,14 +36,14 @@ class CoursesBySubject:
         single_course_accordions = sort_by_count(single_course_accordions) 
                 
         # multiple courses
-        group_multiple_courses_that_are_less_than_one_percent(
+        self.group_multiple_courses_that_are_less_than_one_percent(
             courses, 
             multiple_course_accordions, 
             most_common_subject_code,
         )
         self.replace_codes_with_labels(most_common_subject_label, multiple_course_accordions)
         multiple_course_accordions = sort_alphabetically(multiple_course_accordions)
-        sort_other_combinations(most_common_subject_label, multiple_course_accordions)
+        self.sort_other_combinations(most_common_subject_label, multiple_course_accordions)
 
         self.sort_contents(single_course_accordions)          
         self.sort_contents(multiple_course_accordions)   
@@ -150,6 +150,47 @@ class CoursesBySubject:
             
             if codes.startswith('CAH'):
                 accordions[label] = accordions.pop(codes)
+
+
+    def group_multiple_courses_that_are_less_than_one_percent(self, courses, accordions, most_common_subject_code):
+        logging.debug('group_multiple_courses_that_are_less_than_one_percent')
+        for key in list(accordions.keys()): 
+            if most_common_subject_code == key:
+                continue  
+
+            percentage = len(accordions[key][key_courses]) / len(courses) * 100
+
+            if percentage <= 1:
+                if most_common_subject_code in key.split(): 
+                    label = f'{key_other_combinations_with} {most_common_subject_code}'
+                    move_course(accordions, key, label)
+                else:
+                    label = get_key_other_combinations(self.language)
+                    move_course(accordions, key, label)
+
+
+    def sort_other_combinations(self, most_common_subject_label, accordions):
+        logging.debug('sort_other_combinations')
+
+        key = f'{key_other_combinations_with} {most_common_subject_label}'
+        if accordions.get(key):
+            other_combinations_with = accordions[key]
+            accordions.pop(key)
+            accordions[key] = other_combinations_with    
+
+        key_other_combinations = get_key_other_combinations(self.language)
+        if accordions.get(key_other_combinations):
+            other_combinations = accordions[key_other_combinations]
+            accordions.pop(key_other_combinations)
+            accordions[key_other_combinations] = other_combinations    
+
+
+def get_key_other_combinations(language):
+    return key_other_combinations[get_language_name(language)]
+
+
+def get_language_name(language):
+    return 'welsh' if is_welsh(language) else 'english'
 
 
 def wrap_with_course(labels, language):
@@ -290,37 +331,6 @@ def combine_most_common_subjects(mapper, most_common_subject_code, most_common_s
                 break
 
 
-def group_multiple_courses_that_are_less_than_one_percent(courses, accordions, most_common_subject_code):
-    logging.debug('group_multiple_courses_that_are_less_than_one_percent')
-    for key in list(accordions.keys()): 
-        if most_common_subject_code == key:
-            continue  
-
-        percentage = len(accordions[key][key_courses]) / len(courses) * 100
-
-        if percentage <= 1:
-            if most_common_subject_code in key.split(): 
-                label = f'{key_other_combinations_with} {most_common_subject_code}'
-                move_course(accordions, key, label)
-            else:
-                label = key_other_combinations
-                move_course(accordions, key, label)
-
-
-def sort_other_combinations(most_common_subject_label, accordions):
-    logging.debug('sort_other_combinations')
-    key = f'{key_other_combinations_with} {most_common_subject_label}'
-    if accordions.get(key):
-        other_combinations_with = accordions[key]
-        accordions.pop(key)
-        accordions[key] = other_combinations_with    
-
-    if accordions.get(key_other_combinations):
-        other_combinations = accordions[key_other_combinations]
-        accordions.pop(key_other_combinations)
-        accordions[key_other_combinations] = other_combinations    
-
-
 def add_number_of_courses(accordions):
     logging.debug('add_number_of_courses')
     for key in accordions.keys():
@@ -344,7 +354,7 @@ key_kis_course_id = 'kis_course_id'
 key_locations = 'locations'
 key_name = 'name'
 key_number_of_courses = 'number_of_courses'
-key_other_combinations = 'Other combinations'
+key_other_combinations = {'english': 'Other combinations', 'welsh': 'Cyfuniadau arall'}
 key_other_combinations_with = 'Other combinations with'
 key_pub_ukprn = 'pub_ukprn'
 key_pub_ukprn_name = 'pub_ukprn_name'
