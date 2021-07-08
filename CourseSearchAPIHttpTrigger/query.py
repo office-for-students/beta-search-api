@@ -34,7 +34,7 @@ class Query:
         self.institutions = institutions
         self.query_params = query_params
 
-    def generate_course_search_string(self, course=None) -> str:
+    def generate_course_search_terms(self, course=None) -> str:
         english_course_search_query = f"course/title/english:{course}"
         welsh_course_search_query = f"course/title/welsh:{course}"
 
@@ -46,7 +46,7 @@ class Query:
     def build(self):
         query_dict = {}
 
-        search = self.generate_course_search_fields(self.course)
+        search = self.generate_course_search_terms(self.course)
         query_dict["search"] = search
         query_dict["queryType"] = "full"
         query_dict["searchMode"] = "any"
