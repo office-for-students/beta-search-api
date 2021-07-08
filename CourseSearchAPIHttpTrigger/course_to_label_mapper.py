@@ -1,6 +1,7 @@
 import json
 import os
 import inspect
+from helper import is_welsh
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
@@ -24,7 +25,7 @@ class CourseToLabelMapper:
 
     def get_label(self, subject):
         if self.dict.get(subject):
-            return self.dict[subject]['welsh_name'] if self.language == 'cy' else self.dict[subject]['english_name']
+            return self.dict[subject]['welsh_name'] if is_welsh(self.language) else self.dict[subject]['english_name']
         else:
             return None
 

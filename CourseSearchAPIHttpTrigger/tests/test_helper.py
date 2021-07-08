@@ -7,7 +7,7 @@ CURRENTDIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
-from helper import remove_conjunctions, handle_apostrophes_in_search
+from helper import remove_conjunctions, handle_apostrophes_in_search, is_welsh
 
 
 class TestRemoveConjunctions(unittest.TestCase):
@@ -118,3 +118,13 @@ class TestHandleApostrophesInSearch(unittest.TestCase):
 
         output_result = handle_apostrophes_in_search("Queen's and King's University")
         self.assertEqual("Queen''s and King''s University", output_result)
+
+
+class TestIsWelsh(unittest.TestCase):
+    def test_when_lang_is_not_welsh(self):
+        self.assertEqual(False, is_welsh('blah'))        
+
+
+    def test_when_lang_is_welsh(self):
+        self.assertEqual(True, is_welsh('cy'))        
+
