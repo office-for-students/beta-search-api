@@ -137,6 +137,7 @@ class CoursesBySubject:
 
     def replace_codes_with_labels(self, most_common_subject_label, accordions):
         logging.debug('replace_codes_with_labels')
+        key_other_combinations_with = get_key_other_combinations_with(self.language)
         for codes in list(accordions):
             if codes.startswith(key_other_combinations_with):
                 #TODO needs translating
@@ -154,6 +155,7 @@ class CoursesBySubject:
 
     def group_multiple_courses_that_are_less_than_one_percent(self, courses, accordions, most_common_subject_code):
         logging.debug('group_multiple_courses_that_are_less_than_one_percent')
+        key_other_combinations_with = get_key_other_combinations_with(self.language)
         for key in list(accordions.keys()): 
             if most_common_subject_code == key:
                 continue  
@@ -171,7 +173,7 @@ class CoursesBySubject:
 
     def sort_other_combinations(self, most_common_subject_label, accordions):
         logging.debug('sort_other_combinations')
-
+        key_other_combinations_with = get_key_other_combinations_with(self.language)
         key = f'{key_other_combinations_with} {most_common_subject_label}'
         if accordions.get(key):
             other_combinations_with = accordions[key]
@@ -187,6 +189,10 @@ class CoursesBySubject:
 
 def get_key_other_combinations(language):
     return key_other_combinations[get_language_name(language)]
+
+
+def get_key_other_combinations_with(language):
+    return key_other_combinations_with[get_language_name(language)]
 
 
 def get_language_name(language):
@@ -355,7 +361,7 @@ key_locations = 'locations'
 key_name = 'name'
 key_number_of_courses = 'number_of_courses'
 key_other_combinations = {'english': 'Other combinations', 'welsh': 'Cyfuniadau arall'}
-key_other_combinations_with = 'Other combinations with'
+key_other_combinations_with = {'english': 'Other combinations with', 'welsh': 'Cyfuniadau eraill gyda'}
 key_pub_ukprn = 'pub_ukprn'
 key_pub_ukprn_name = 'pub_ukprn_name'
 key_pub_ukprn_welsh_name = 'pub_ukprn_welsh_name'
