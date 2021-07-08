@@ -24,16 +24,16 @@ class CoursesBySubject:
         )                    
         
         # single courses
-        single_course_accordions = sort_by_count(single_course_accordions)  
+        single_course_accordions = self.sort_by_count(single_course_accordions)  
         most_common_subject_code = get_first_accordion_subject_code(single_course_accordions)
         most_common_subject_label = self.mapper.get_label(most_common_subject_code)
         combine_most_common_subjects(self.mapper, most_common_subject_code, most_common_subject_label, single_course_accordions)
-        group_single_courses_that_are_less_than_one_percent(
+        self.group_single_courses_that_are_less_than_one_percent(
             courses, 
             single_course_accordions,
         )        
         self.replace_codes_with_labels(most_common_subject_label, single_course_accordions)
-        single_course_accordions = sort_by_count(single_course_accordions) 
+        single_course_accordions = self.sort_by_count(single_course_accordions) 
                 
         # multiple courses
         self.group_multiple_courses_that_are_less_than_one_percent(
@@ -187,6 +187,38 @@ class CoursesBySubject:
             accordions[key_other_combinations] = other_combinations    
 
 
+    def sort_by_count(self, accordion):
+        logging.debug('sort_by_count')
+        keys = accordion.keys()
+        sorted_keys = sorted(keys, key=lambda key: len(accordion[key][key_courses]), reverse=True)
+        [accordion[key] for key in sorted_keys]
+        sorted_accordion = {}
+        for key in sorted_keys:
+            sorted_accordion[key] = accordion[key]
+        key_courses_in_other_subjects = get_key_courses_in_other_subjects(self.language)
+        if key_courses_in_other_subjects in sorted_accordion:
+            sorted_accordion[key_courses_in_other_subjects] = sorted_accordion.pop(key_courses_in_other_subjects)
+        return sorted_accordion
+
+
+    def group_single_courses_that_are_less_than_one_percent(self, courses, accordions):
+        logging.debug('group_single_courses_that_are_less_than_one_percent')
+        key_courses_in_other_subjects = get_key_courses_in_other_subjects(self.language)
+        for key in list(accordions.keys()):
+            label = key_courses_in_other_subjects
+            if label == key:
+                continue            
+
+            percentage = len(accordions[key][key_courses]) / len(courses) * 100
+
+            if percentage <= 1:
+                move_course(accordions, key, label)
+
+
+def get_key_courses_in_other_subjects(language):
+    return key_courses_in_other_subjects[get_language_name(language)]
+
+
 def get_key_other_combinations(language):
     return key_other_combinations[get_language_name(language)]
 
@@ -272,19 +304,6 @@ def add_multiple_courses_to_accordions(courses, accordions):
         add_course_to_accordions(course, label, accordions)
 
 
-def group_single_courses_that_are_less_than_one_percent(courses, accordions):
-    logging.debug('group_single_courses_that_are_less_than_one_percent')
-    for key in list(accordions.keys()):
-        label = key_courses_in_other_subjects
-        if label == key:
-            continue            
-
-        percentage = len(accordions[key][key_courses]) / len(courses) * 100
-
-        if percentage <= 1:
-            move_course(accordions, key, label)
-
-
 def move_course(accordions, key, label):
     if label not in accordions:
         accordions[label] = {}
@@ -293,19 +312,6 @@ def move_course(accordions, key, label):
         if c not in accordions[label][key_courses]:
             accordions[label][key_courses].append(c)
     accordions.pop(key)
-
-
-def sort_by_count(accordion):
-    logging.debug('sort_by_count')
-    keys = accordion.keys()
-    sorted_keys = sorted(keys, key=lambda key: len(accordion[key][key_courses]), reverse=True)
-    [accordion[key] for key in sorted_keys]
-    sorted_accordion = {}
-    for key in sorted_keys:
-        sorted_accordion[key] = accordion[key]
-    if key_courses_in_other_subjects in sorted_accordion:
-        sorted_accordion[key_courses_in_other_subjects] = sorted_accordion.pop(key_courses_in_other_subjects)
-    return sorted_accordion
 
 
 def group_courses(key, course, title, accordions):
@@ -353,7 +359,7 @@ def log_accordions(accordions, courses):
 key_code = 'code'
 key_course = 'course'
 key_courses = 'courses'
-key_courses_in_other_subjects = 'Courses in other subjects'
+key_courses_in_other_subjects = {'english': 'Courses in other subjects', 'welsh': 'Cyrsiau mewn pynciau eraill'}
 key_institution = 'institution'
 key_institutions = 'institutions'
 key_kis_course_id = 'kis_course_id'
