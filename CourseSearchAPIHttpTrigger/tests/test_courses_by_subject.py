@@ -13,6 +13,7 @@ sys.path.insert(0, PARENT_DIR)
 from course_to_label_mapper import CourseToLabelMapper
 from courses_by_subject import CoursesBySubject
 from courses_by_subject import build_course
+from courses_by_subject import wrap_with_course
 
 
 # To invoke function directly, open the following in a browser
@@ -420,6 +421,17 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_build_course_using_welsh_language(self):
         self.assert_buld_course('build_course_cy_input.json', 'build_course_cy_output.json')
+
+    def test_wrap_with_course_using_english_language(self):
+        labels = ['one', 'two', 'three']
+        actual = wrap_with_course(labels, 'en')
+        self.assertEqual(actual, 'one & two & three courses')
+
+
+    def test_wrap_with_course_using_welsh_language(self):
+        labels = ['un', 'dau', 'tri']
+        actual = wrap_with_course(labels, 'cy')
+        self.assertEqual(actual, 'Cyrsiau un & dau & tri')
 
 
     def assert_subject_and_institution(self, course, subject, institution):

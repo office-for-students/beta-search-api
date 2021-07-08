@@ -134,6 +134,10 @@ class CoursesBySubject:
         return json[language_name]
 
 
+def wrap_with_course(labels, language):
+    return f'Cyrsiau {" & ".join(labels)}' if is_welsh(language) else f'{" & ".join(labels)} courses'
+
+
 def build_course(course, institution, language):
     logging.debug('build_course')
     institution_body = {
