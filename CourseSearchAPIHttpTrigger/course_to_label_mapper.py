@@ -1,13 +1,16 @@
 import json
 import os
 import inspect
+from helper import is_welsh
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
 
 class CourseToLabelMapper:
-    def __init__(self, json_array):
+
+    def __init__(self, json_array, language):
         self.dict = self.convert_to_dictionary(json_array)
+        self.language = language
 
     def convert_to_dictionary(self, json_array):
         dict = {}
@@ -20,11 +23,9 @@ class CourseToLabelMapper:
             dict[key] = value
         return dict
 
-    def get_labels(self, subject):
-        return self.dict.get(subject)
-
     def get_label(self, subject):
-        return self.dict[subject]['english_name']
+        if self.dict.get(subject):
+            return self.dict[subject]['welsh_name'] if is_welsh(self.language) else self.dict[subject]['english_name']
+        else:
+            return None
 
-    def get_label_welsh(self, subject):
-        return self.dict[subject]['welsh_name']

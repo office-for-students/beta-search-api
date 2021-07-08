@@ -22,7 +22,8 @@ from .helper import (
     handle_search_terms,
     remove_conjunctions_from_searchable_fields,
     handle_apostrophes_in_search,
-    get_offset_and_limit,)
+    get_offset_and_limit,
+    is_welsh,)
 
 from .query import (
     build_institution_search_query,
@@ -182,7 +183,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # Step 8 - handle facets to build correct
         # limit and offset for next query
 
-        if language == "cy":
+        if is_welsh(language):
             query_params["limit"], query_params["offset"], counts["institutions"], counts[
                 "courses"
             ], institution_course_counts = get_offset_and_limit(
@@ -235,8 +236,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
         # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
         if sortBySubject == 'true':
-            mapper = getCourseToLabelMapper();
-            search_results = CoursesBySubject(mapper).group(courses, int(sortBySubjectLimit), int(offset), language) 
+            mapper = getCourseToLabelMapper(language);
+            search_results = CoursesBySubject(mapper, language).group(courses, int(sortBySubjectLimit), int(offset)) 
         else: 
             search_results = CoursesByInstitution().group(courses, counts, int(limit), int(offset), language)
         print(f"search_url {search_url}")
@@ -262,7 +263,7 @@ def convert_miles_to_km(distance_in_miles):
         return None
 
 
-def getCourseToLabelMapper():
+def getCourseToLabelMapper(language):
     with open(f'{CURRENTDIR}/fixtures/subjects-sort-by.json', 'r') as file:
         input = file.read()
-    return CourseToLabelMapper(json.loads(input))
+    return CourseToLabelMapper(json.loads(input), language)

@@ -80,7 +80,11 @@ def course_sort_key(course, language):
         return "course title is missing"
     elif not course["title"]["english"]:
         return "course title is missing"
-    elif language == "cy":
+    elif is_welsh(language):
         return (course["title"]["welsh"] if course["title"]["welsh"] else course["title"]["english"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
     else:
         return (course["title"]["english"] if course["title"]["english"] else course["title"]["welsh"]) + course["qualification"] + (" Hons" if course["honours_award"] == 1 else "") 
+
+
+def is_welsh(language):
+    return language == 'cy'

@@ -7,8 +7,11 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfra
 PARENT_DIR = os.path.dirname(CURRENT_DIR)
 sys.path.insert(0, PARENT_DIR)
 
+import course_to_label_mapper
 from course_to_label_mapper import CourseToLabelMapper
 
+language_english = 'en'
+language_welsh = 'cy'
 
 class TestCourseToLabelMapper(unittest.TestCase):
     def test_convert_to_dictionary(self):
@@ -19,24 +22,18 @@ class TestCourseToLabelMapper(unittest.TestCase):
 
     def test_when_no_subject_found_return_None(self):
         subject = 'something-that-does-not-exist'
-        actual = CourseToLabelMapper(data).get_labels(subject)
+        actual = CourseToLabelMapper(data, language_english).get_label(subject)
         expected = None
         self.assertEqual(actual, expected)
 
-    def test_when_subject_found_return_labels(self):
-        subject = 'CAH02-04-02'
-        actual = CourseToLabelMapper(data).get_labels(subject)
-        self.assertEqual(actual['english_name'], 'Adult nursing')
-        self.assertEqual(actual['welsh_name'], 'Nyrsio oedolion')
-
     def test_when_subject_found_return_english_label(self):
         subject = 'CAH17-01-08'
-        actual = CourseToLabelMapper(data).get_label(subject)
+        actual = CourseToLabelMapper(data, language_english).get_label(subject)
         self.assertEqual(actual, 'Accounting')
 
     def test_when_subject_found_return_welsh_label(self):
         subject = 'CAH17-01-08'
-        actual = CourseToLabelMapper(data).get_label_welsh(subject)
+        actual = CourseToLabelMapper(data, language_welsh).get_label(subject)
         self.assertEqual(actual, 'Cyfrifeg')
 
 

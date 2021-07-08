@@ -11,8 +11,7 @@ FIXTURES_DIR = f'{CURRENT_DIR}/fixtures/courses_by_subject'
 sys.path.insert(0, PARENT_DIR)
 
 from course_to_label_mapper import CourseToLabelMapper
-from courses_by_subject import CoursesBySubject
-from courses_by_subject import build_course
+from courses_by_subject import CoursesBySubject, build_course, get_language_name, wrap_with_course
 
 
 # To invoke function directly, open the following in a browser
@@ -23,21 +22,20 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_marketing_course_queried(self):
         # ARRANGE
+        language = 'en'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
         courses = self.load_fixture('input_marketing.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
                                         )
 
         # ASSERT
@@ -116,21 +114,20 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_psychology_course_queried(self):
         # ARRANGE
+        language = 'en'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
         courses = self.load_fixture('input_psychology.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
                                         )
 
         # ASSERT
@@ -190,21 +187,20 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_arts_course_queried(self):
         # ARRANGE
+        language = 'en'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
         courses = self.load_fixture('input_arts.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
                                         )
 
         # ASSERT
@@ -226,21 +222,20 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_when_bioengineering_course_queried(self):
         # ARRANGE
+        language = 'en'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
         courses = self.load_fixture('input_bioengineering.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
                                         )
 
         # ASSERT
@@ -262,23 +257,22 @@ class TestCoursesBySubject(unittest.TestCase):
         )
     
     
-    def test_when_food_course_queried(self):
+    def test_when_food_course_queried_in_english(self):
         # ARRANGE
+        language = 'en'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
         courses = self.load_fixture('input_food.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
                                         )
 
         # ASSERT
@@ -333,23 +327,58 @@ class TestCoursesBySubject(unittest.TestCase):
         )        
 
 
-    def test_when_history_course_queried(self):
+    def test_when_food_course_queried_in_welsh(self):
         # ARRANGE
+        language = 'cy'
         mappings = self.load_mappings()
-        mapper = CourseToLabelMapper(mappings)
-        courseBySubject = CoursesBySubject(mapper)
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
 
-        courses = self.load_fixture('input_history.json')
+        courses = self.load_fixture('input_food.json')
 
         limit = 5000
         offset = 0
-        language = 'en'
 
         # ACT
         actual = courseBySubject.group(courses,
                                         limit,
                                         offset, 
-                                        language,
+                                        )
+
+        # ASSERT
+        self.assertEqual(actual['number_of_items'], 16)
+        self.assertEqual(actual['total_number_of_courses'], 101)
+        self.assertEqual(actual['total_results'], 27)
+        self.assertEqual(len(actual['items'].keys()), 2)    
+
+        # single_subject_courses
+        courses = actual['items']['single_subject_courses']
+        self.assertEqual(courses['Cyrsiau Gwyddorau bwyd']['number_of_courses'], 31)
+        self.assertEqual(courses['Cyrsiau mewn pynciau eraill']['number_of_courses'], 1)
+
+        # multiple_subject_courses
+        courses = actual['items']['multiple_subject_courses']
+        self.assertEqual(courses['Cyrsiau Amaethyddiaeth & Busnes a rheolaeth']['number_of_courses'], 2)
+        self.assertEqual(courses['Cyfuniadau eraill gyda Gwyddorau bwyd']['number_of_courses'], 3)
+        self.assertEqual(courses['Cyfuniadau arall']['number_of_courses'], 1)
+
+
+    def test_when_history_course_queried(self):
+        # ARRANGE
+        language = 'en'
+        mappings = self.load_mappings()
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
+
+        courses = self.load_fixture('input_history.json')
+
+        limit = 5000
+        offset = 0
+
+        # ACT
+        actual = courseBySubject.group(courses,
+                                        limit,
+                                        offset, 
                                         )
 
         # ASSERT
@@ -426,6 +455,25 @@ class TestCoursesBySubject(unittest.TestCase):
 
     def test_build_course_using_welsh_language(self):
         self.assert_buld_course('build_course_cy_input.json', 'build_course_cy_output.json')
+
+    def test_wrap_with_course_using_welsh_language(self):
+        labels = ['un', 'dau', 'tri']
+        actual = wrap_with_course(labels, 'cy')
+        self.assertEqual(actual, 'Cyrsiau un & dau & tri')
+
+
+    def test_wrap_with_course_using_non_welsh_language(self):
+        labels = ['one', 'two', 'three']
+        actual = wrap_with_course(labels, 'en')
+        self.assertEqual(actual, 'one & two & three courses')
+
+
+    def test_get_language_name_using_welsh_language(self):
+        self.assertEqual(get_language_name('cy'), 'welsh')
+
+
+    def test_get_language_name_using_non_welsh_language(self):
+        self.assertEqual(get_language_name('blah'), 'english')
 
 
     def assert_subject_and_institution(self, course, subject, institution):
