@@ -257,7 +257,7 @@ class TestCoursesBySubject(unittest.TestCase):
         )
     
     
-    def test_when_food_course_queried(self):
+    def test_when_food_course_queried_in_english(self):
         # ARRANGE
         language = 'en'
         mappings = self.load_mappings()
@@ -325,6 +325,42 @@ class TestCoursesBySubject(unittest.TestCase):
             'Other combinations',
             ]
         )        
+
+
+    def test_when_food_course_queried_in_welsh(self):
+        # ARRANGE
+        language = 'cy'
+        mappings = self.load_mappings()
+        mapper = CourseToLabelMapper(mappings, language)
+        courseBySubject = CoursesBySubject(mapper, language)
+
+        courses = self.load_fixture('input_food.json')
+
+        limit = 5000
+        offset = 0
+
+        # ACT
+        actual = courseBySubject.group(courses,
+                                        limit,
+                                        offset, 
+                                        )
+
+        # ASSERT
+        self.assertEqual(actual['number_of_items'], 16)
+        self.assertEqual(actual['total_number_of_courses'], 101)
+        self.assertEqual(actual['total_results'], 27)
+        self.assertEqual(len(actual['items'].keys()), 2)    
+
+        # single_subject_courses
+        courses = actual['items']['single_subject_courses']
+        self.assertEqual(courses['Cyrsiau Gwyddorau bwyd']['number_of_courses'], 31)
+        self.assertEqual(courses['Cyrsiau mewn pynciau eraill']['number_of_courses'], 1)
+
+        # multiple_subject_courses
+        courses = actual['items']['multiple_subject_courses']
+        self.assertEqual(courses['Cyrsiau Amaethyddiaeth & Busnes a rheolaeth']['number_of_courses'], 2)
+        self.assertEqual(courses['Cyfuniadau eraill gyda Gwyddorau bwyd']['number_of_courses'], 3)
+        self.assertEqual(courses['Cyfuniadau arall']['number_of_courses'], 1)
 
 
     def test_when_history_course_queried(self):
