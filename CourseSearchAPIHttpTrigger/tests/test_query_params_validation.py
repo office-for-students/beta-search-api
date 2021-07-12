@@ -154,12 +154,13 @@ class TestValidateFilters(unittest.TestCase):
         self.assertEqual([], output_error_object)
 
     def test_when_all_filters_are_selected_returns_no_error(self):
-        filters = "-distance_learning,honours_award,foundation_year,sandwich_year,year_abroad,-full_time"
+        filters = "-distance_learning,on_campus,honours_award,foundation_year,sandwich_year,year_abroad,-full_time"
         validator = Validator("", filters, "", "", "0", 100, "0", "en")
 
         output_filters, output_error_object = validator.validate_filters()
         expected_filters = {
             "distance_learning": False,
+            "on_campus": True,
             "foundation_year": True,
             "full_time": False,
             "honours_award": True,
@@ -220,6 +221,13 @@ class TestValidateFilterOptions(unittest.TestCase):
     def test_distance_learning_is_true(self):
         expected_result = True
         filter = "distance_learning"
+
+        output_result = validate_filter_options(filter)
+        self.assertEqual(expected_result, output_result)
+
+    def test_on_campus_is_true(self):
+        expected_result = True
+        filter = "on_campus"
 
         output_result = validate_filter_options(filter)
         self.assertEqual(expected_result, output_result)
@@ -527,7 +535,7 @@ class TestValidate(unittest.TestCase):
     def test_when_all_query_params_are_set(self):
         limit = 5
         offset = "30"
-        filters = "distance_learning,honours_award,-foundation_year,sandwich_year,-year_abroad,full_time"
+        filters = "distance_learning,on_campus,honours_award,-foundation_year,sandwich_year,-year_abroad,full_time"
         length_of_course = "3,4"
         countries = "england,wales"
         subjects = "CAH09-01-01,CAH09-01-02"
@@ -540,6 +548,7 @@ class TestValidate(unittest.TestCase):
         expected_result = {
             "countries": ["XF", "XI"],
             "distance_learning": True,
+            "on_campus": True,
             "foundation_year": False,
             "full_time": True,
             "honours_award": True,

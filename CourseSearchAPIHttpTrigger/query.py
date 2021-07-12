@@ -1,9 +1,12 @@
 import os
 import re
+import urllib.parse
+
+from helper import is_welsh
 
 
 def build_course_search_query(
-    course, institution, institutions, postcode_object, query_params
+        course, institution, institutions, postcode_object, query_params
 ):
     query = Query(course, institution, institutions, postcode_object, query_params)
 
@@ -13,7 +16,7 @@ def build_course_search_query(
 
 
 def build_institution_search_query(
-    course, institution, institutions, postcode_object, query_params
+        course, institution, institutions, postcode_object, query_params
 ):
     query = Query(course, institution, institutions, postcode_object, query_params)
 
@@ -24,7 +27,7 @@ def build_institution_search_query(
 
 class Query:
     def __init__(
-        self, course, institution, institutions, postcode_object, query_params
+            self, course, institution, institutions, postcode_object, query_params
     ):
 
         self.postcode_object = postcode_object
@@ -33,31 +36,22 @@ class Query:
         self.institutions = institutions
         self.query_params = query_params
 
+    def generate_course_search_terms(self, course=None) -> str:
+        english_course_search_query = f"course/title/english:{course}"
+        welsh_course_search_query = f"course/title/welsh:{course}"
+
+        if course:
+            return f"{english_course_search_query}, {welsh_course_search_query}"
+
+        return "*"
+
     def build(self):
-        query = ""
-        # Create search part of query
-        search = list()
-        if self.institution:
-            if self.query_params["language"] == "cy":
-                institution_search_query = (
-                    "course/institution/pub_ukprn_welsh_name:" + self.institution
-                )
-            else:
-                institution_search_query = (
-                    "course/institution/pub_ukprn_name:" + self.institution
-                )
-            search.append(institution_search_query)
+        query_dict = {}
 
-        if self.course:
-            english_course_search_query = "course/title/english:" + self.course
-            welsh_course_search_query = "course/title/welsh:" + self.course
-            search.append(english_course_search_query)
-            search.append(welsh_course_search_query)
-
-        if search:
-            query += "&search=" + " ".join(search) + "&queryType=full"
-        else:
-            query += "&search=*"
+        search = self.generate_course_search_terms(self.course)
+        query_dict["search"] = search
+        query_dict["queryType"] = "full"
+        query_dict["searchMode"] = "any"
 
         # Create filter part of query
         filters = list()
@@ -72,11 +66,7 @@ class Query:
             else:
                 filters.append(countries[0])
 
-        if "distance_learning" in self.query_params:
-            if self.query_params["distance_learning"]:
-                filters.append("course/distance_learning/code ne 0")
-            else:
-                filters.append("course/distance_learning/code ne 1")
+        filters.append(Query.build_distance_learning_filter(self.query_params))
 
         if "foundation_year" in self.query_params:
             if self.query_params["foundation_year"]:
@@ -94,8 +84,8 @@ class Query:
                 filters.append("course/honours_award_provision/code eq 0")
 
         if (
-            "length_of_course" in self.query_params
-            and self.query_params["length_of_course"]
+                "length_of_course" in self.query_params
+                and self.query_params["length_of_course"]
         ):
             loc = ",".join(self.query_params["length_of_course"])
             filters.append(
@@ -135,84 +125,175 @@ class Query:
             filters.append("course/qualification/level eq 'other-undergraduate'")
 
         if self.institutions != "":
-            institutions = re.split(r',(?=")', self.institutions)
+            institution_filter_list = Query.build_institution_filter(self.institutions, self.query_params)
 
-            institution_list = list()
-            search_public_ukprn = os.environ["SearchPubUKPRN"]
-            for institution in institutions:
-                institution = institution.strip('"')
-                institution = institution.replace("&", "%26")
+            for x in institution_filter_list:
+                filters.append(x)
 
-                if search_public_ukprn == "False":
-                    if self.query_params["language"] == "cy":
-                        institution_list.append(
-                            "course/institution/pub_ukprn_welsh_name eq '" + institution + "'"
-                        )
-                    else:
-                        institution_list.append(
-                            "course/institution/pub_ukprn_name eq '" + institution + "'"
-                        )
-                else:
-                    institution_list.append(
-                        "course/institution/pub_ukprn eq '" + institution + "'"
-                    )
+        # Condition that will remove distance learning from the filters, and run a function for a separate distance learning filter
+        if '(course/distance_learning/code eq 0 or course/distance_learning/code eq 1 or course/distance_learning/code eq 2)' in filters:
+            distance_filter = Query.build_or_distance_filter(self.query_params, filters)
+            filters.remove(
+                f'(course/distance_learning/code eq 0 or course/distance_learning/code eq 1 or course/distance_learning/code eq 2)')
+            filters.append(f'course/distance_learning/code ne 1')
 
-            if len(institution_list) > 1:
-                filters.append("(" + " or ".join(institution_list) + ")")
-            else:
-                filters.append(institution_list[0])
+            if self.postcode_object != {}:
+                latitude = self.postcode_object["latitude"]
+                longitude = self.postcode_object["longitude"]
+                distance = self.postcode_object["distance"]
 
-        if self.postcode_object != {}:
-            latitude = self.postcode_object["latitude"]
-            longitude = self.postcode_object["longitude"]
-            distance = self.postcode_object["distance"]
+                filters.append(
+                    "course/locations/any(location: geo.distance(\
+                               location/geo, geography'POINT("
+                    + str(longitude)
+                    + " "
+                    + str(latitude)
+                    + ")') le "
+                    + distance
+                    + ")"
+                )
 
-            filters.append(
-                "course/locations/any(location: geo.distance(\
-                           location/geo, geography'POINT("
-                + str(longitude)
-                + " "
-                + str(latitude)
-                + ")') le "
-                + distance
-                + ")"
-            )
+            filter_query = " and ".join(filters)
+            filter_query += " or "
+            filter_query += " and ".join(distance_filter)
+        else:
 
-        filter_query = " and ".join(filters)
+            if self.postcode_object != {}:
+                latitude = self.postcode_object["latitude"]
+                longitude = self.postcode_object["longitude"]
+                distance = self.postcode_object["distance"]
+
+                filters.append(
+                    "course/locations/any(location: geo.distance(\
+                               location/geo, geography'POINT("
+                    + str(longitude)
+                    + " "
+                    + str(latitude)
+                    + ")') le "
+                    + distance
+                    + ")"
+                )
+
+            filter_query = " and ".join(filters)
 
         if filter_query != "":
-            query += "&$filter=" + filter_query
+            query_dict["filter"] = filter_query
 
         # Add alphabetic ordering based on the institution name after
         # ordering by search score
-        query += "&$orderby=course/institution/sort_pub_ukprn_welsh_name" if self.query_params["language"] == "cy" else "&$orderby=course/institution/sort_pub_ukprn_name"
+        if is_welsh(self.query_params["language"]):
+            query_dict["orderby"] = "course/institution/sort_pub_ukprn_welsh_name"
+        else:
+            query_dict["orderby"] = "course/institution/sort_pub_ukprn_name"
 
-        self.query = query
+        # print(f"search: {query_dict['search']}")
+        # print(f"search: {query_dict['searchFields']}")
+
+        self.query = query_dict
 
     def add_paging(self):
-        query = self.query
-
+        result = dict()
         # Add limit and offset parameters
         if "limit" in self.query_params:
-            query += "&$top=" + str(self.query_params["limit"])
+            result["top"] = str(self.query_params["limit"])
 
         if "offset" in self.query_params:
-            query += "&$skip=" + str(self.query_params["offset"])
+            result["skip"] = str(self.query_params["offset"])
 
-        return query
+        return {**self.query, **result}
 
     def add_facet(self):
-        query = self.query
 
         # Set top to be zero
-        query += "&$top=0"
+        result = dict(top=0)
 
         # Build facet query for categorising courses by institution
-        if self.query_params["language"] == "cy":
-            query += "&facet=course/institution/sort_pub_ukprn_welsh_name,\
-                count:500, sort:value"
+        if is_welsh(self.query_params["language"]):
+            result["facets"] = ["course/institution/sort_pub_ukprn_welsh_name,\
+                count:500, sort:value"]
         else:
-            query += "&facet=course/institution/sort_pub_ukprn_name,\
-                count:500,sort:value"
+            result["facets"] = ["course/institution/sort_pub_ukprn_name,\
+                count:500,sort:value"]
 
-        return query
+        return {**self.query, **result}
+
+    def build_distance_learning_filter(query_params):
+        on_campus = query_params.get('on_campus')
+        distance_learning = query_params.get('distance_learning')
+        doc = 'course/distance_learning/code'
+        filter = f'({doc} eq 0 or {doc} eq 1 or {doc} eq 2)'
+
+        if on_campus and not distance_learning:
+            filter = f'{doc} ne 1'
+        elif not on_campus and distance_learning:
+            filter = f'{doc} ne 0'
+        return filter
+
+    def build_country_filter(query_params):
+        filters = list()
+        if "countries" in query_params and query_params["countries"]:
+
+            countries = list()
+            for country in query_params["countries"]:
+                countries.append("course/country/code eq '" + country + "'")
+
+            if len(countries) > 1:
+                filters.append("(" + " or ".join(countries) + ")")
+            else:
+                filters.append(countries[0])
+
+            return filters[0]
+
+    def build_or_distance_filter(query_params, filters):
+        distance_filter = filters.copy()
+        on_campus = query_params.get('on_campus')
+        distance_learning = query_params.get('distance_learning')
+        doc = 'course/distance_learning/code'
+
+        if f'({doc} eq 0 or {doc} eq 1 or {doc} eq 2)' in filters:
+            distance_filter.remove(f'({doc} eq 0 or {doc} eq 1 or {doc} eq 2)')
+            distance_filter.append(f'{doc} ne 0')
+
+        if "countries" in query_params and query_params["countries"]:
+            # remove all countries from the duplicate filter
+            countries = list()
+            for country in query_params["countries"]:
+                countries.append("course/country/code eq '" + country + "'")
+
+            if len(countries) > 1:
+                distance_filter.remove("(" + " or ".join(countries) + ")")
+            else:
+                distance_filter.remove(countries[0])
+
+        return distance_filter
+
+    def build_institution_filter(institutions, query_params):
+        institution_filters = list()
+        split_institutions = institutions.split("@")
+        institution_list = list()
+        search_public_ukprn = os.environ["SearchPubUKPRN"]
+
+        for institution in split_institutions:
+            institution = institution.strip('"')
+            institution = institution.replace("&", "%26")
+
+            if search_public_ukprn == "False":
+                if is_welsh(query_params["language"]):
+                    institution_list.append(
+                        "course/institution/pub_ukprn_welsh_name eq '" + institution + "'"
+                    )
+                else:
+                    institution_list.append(
+                        "course/institution/pub_ukprn_name eq '" + institution + "'"
+                    )
+            else:
+                institution_list.append(
+                    "course/institution/pub_ukprn eq '" + institution + "'"
+                )
+
+        if len(institution_list) > 1:
+            institution_filters.append("(" + " or ".join(institution_list) + ")")
+        else:
+            institution_filters.append(institution_list[0])
+
+        return institution_filters

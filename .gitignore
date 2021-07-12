@@ -120,3 +120,7 @@ local.settings.json
 local.settings.json.*
 .python_packages
 beta-search-api.zip
+
+# Mac
+.DS_Store
+.idea

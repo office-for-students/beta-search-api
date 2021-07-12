@@ -4,7 +4,6 @@ import sys
 import inspect
 import traceback
 import json
-import re
 
 import azure.functions as func
 
@@ -15,13 +14,17 @@ PARENTDIR = os.path.dirname(CURRENTDIR)
 sys.path.insert(0, CURRENTDIR)
 sys.path.insert(0, PARENTDIR)
 
+from courses_by_institution import CoursesByInstitution
+from course_to_label_mapper import CourseToLabelMapper
+from courses_by_subject import CoursesBySubject
+from helper import get_course_to_label_mapping_file
+
 from .helper import (
     handle_search_terms,
     remove_conjunctions_from_searchable_fields,
     handle_apostrophes_in_search,
     get_offset_and_limit,
-    group_courses_by_institution,
-)
+    is_welsh,)
 
 from .query import (
     build_institution_search_query,
@@ -88,15 +91,23 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         params = dict(req.route_params)
         limit = req.params.get("limit", default_limit)
         offset = req.params.get("offset", "0")
-        course = req.params.get("qc", "")
+
         institution = req.params.get("qi", "")
         filters = req.params.get("filters", "")
         postcode_and_distance = req.params.get("postcode", "")
-        institutions = req.params.get("institutions", "")
+        logging.info(f"request body  {req.get_json()}")
+        # The course is being passed from wagtail via teh url, pass it into "search" field for the query in the body, if it doesn't exist search for all
+        course = req.params.get('qc', "*")
+        body_json = req.get_json()
+        institution_list = body_json.get("institutions", [])
+        institution_string = "@".join(institution_list)
+        institutions = institution_string
         countries = req.params.get("countries", "")
         length_of_course = req.params.get("length_of_course", "")
         subjects = req.params.get("subjects", "")
         language = req.params.get("language", "en")
+        sortBySubject = req.params.get("sortBySubject", "false")
+        sortBySubjectLimit = req.params.get("sortBySubjectLimit", default_limit)
 
         # Step 1 - Validate query parameters
         query_params, error_objects = check_query_parameters(
@@ -173,7 +184,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # Step 8 - handle facets to build correct
         # limit and offset for next query
 
-        if language == "cy":
+        if is_welsh(language):
             query_params["limit"], query_params["offset"], counts["institutions"], counts[
                 "courses"
             ], institution_course_counts = get_offset_and_limit(
@@ -217,11 +228,21 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             json_response = response.json()
             courses = json_response["value"]
 
-        # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
-        search_results = group_courses_by_institution(
-            courses, counts, int(limit), int(offset), language
-        )
+        # Uncomment to obtain input data for any future CoursesBySubject test fixtures             
+        # return func.HttpResponse(
+        #     json.dumps(courses),
+        #     headers={"Content-Type": "application/json"},
+        #     status_code=200,
+        # )
 
+        # Step 10 - Manipulate response to match swagger spec - add counts (inst. & courses)
+        if sortBySubject == 'true':
+            input = get_course_to_label_mapping_file(CURRENTDIR)
+            mapper = CourseToLabelMapper(input, language);
+            search_results = CoursesBySubject(mapper, language).group(courses, int(sortBySubjectLimit), int(offset)) 
+        else: 
+            search_results = CoursesByInstitution().group(courses, counts, int(limit), int(offset), language)
+        print(f"search_url {search_url}")
         return func.HttpResponse(
             json.dumps(search_results),
             headers={"Content-Type": "application/json"},
@@ -242,3 +263,4 @@ def convert_miles_to_km(distance_in_miles):
         return distance
     except ValueError:
         return None
+
