@@ -140,7 +140,6 @@ class CoursesBySubject:
         key_other_combinations_with = get_key_other_combinations_with(self.language)
         for codes in list(accordions):
             if codes.startswith(key_other_combinations_with):
-                #TODO needs translating
                 accordions[f'{key_other_combinations_with} {most_common_subject_label}'] = accordions.pop(codes)
                 continue
             labels = []
