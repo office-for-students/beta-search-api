@@ -278,7 +278,6 @@ class Query:
 
         for institution in split_institutions:
             institution = institution.strip('"')
-            institution = institution.replace("&", "%26")
 
             if search_public_ukprn == "False":
                 if query_params["language"] == "cy":
