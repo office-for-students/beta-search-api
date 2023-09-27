@@ -13,19 +13,20 @@ develop - [![Build Status](https://dev.azure.com/ofsbeta/discoverUni/_apis/build
 
 Add the following to your local.settings.json:
 
-| Variable                            | Default                | Description                                              |
-| ----------------------------------- | ---------------------- | -------------------------------------------------------- |
-| FUNCTIONS_WORKER_RUNTIME            | python                 | The programming language the function worker runs on     |
-| AzureCosmosDbUri                    | {retrieve from portal} | The uri to the cosmosdb instance                         |
-| AzureCosmosDbKey                    | {retrieve from portal} | The database key to access cosmosdb instance             |
-| AzureCosmosDbDatabaseId             | discoveruni            | The database where documents are stored                  |
-| AzureCosmosDbDataSetCollectionId    | datasets               | The name of the collection in which datasets are loaded  |
-| AzureWebJobsStorage                 | {retrieve from portal} | The default endpoint to access storage account           |
-| StopEtlPipelineOnWarning            | false                  | Boolean flag to stop function worker on a warning        |
-| PostcodeIndexName                   | postcodes              | The storage container that will trigger the function     |
-| SearchURL                           | {retrieve from portal} | The uri to the azure search instance                     |
-| SearchAPIKey                        | {retrieve from portal} | The api key to access the azure search instance          |
-| AzureSearchAPIVersion               | 2019-05-06             | The azure search API version for instance                |
+| Variable                         | Default                | Description                                                                                                                                                                                     |
+|----------------------------------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| FUNCTIONS_WORKER_RUNTIME         | python                 | The programming language the function worker runs on                                                                                                                                            |
+| AzureCosmosDbUri                 | {retrieve from portal} | The uri to the cosmosdb instance                                                                                                                                                                |
+| AzureCosmosDbKey                 | {retrieve from portal} | The database key to access cosmosdb instance                                                                                                                                                    |
+| AzureCosmosDbDatabaseId          | discoveruni            | The database where documents are stored                                                                                                                                                         |
+| AzureCosmosDbDataSetCollectionId | datasets               | The name of the collection in which datasets are loaded                                                                                                                                         |
+| AzureWebJobsStorage              | {retrieve from portal} | The default endpoint to access storage account                                                                                                                                                  |
+| StopEtlPipelineOnWarning         | false                  | Boolean flag to stop function worker on a warning                                                                                                                                               |
+| PostcodeIndexName                | postcodes              | The storage container that will trigger the function                                                                                                                                            |
+| SearchURL                        | {retrieve from portal} | The uri to the azure search instance                                                                                                                                                            |
+| SearchAPIKey                     | {retrieve from portal} | The api key to access the azure search instance                                                                                                                                                 |
+| AzureSearchAPIVersion            | 2019-05-06             | The azure search API version for instance                                                                                                                                                       |
+| HardcodedHighestDataset          | 0                      | The highest dataset that will be loaded into the search index. This is used to determine which dataset to load into the search index. NB zero means use internal method not the hardcoded value |
 
 ### Setup
 
