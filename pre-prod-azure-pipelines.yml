@@ -28,8 +28,6 @@ steps:
 - script: |
     sudo apt-get install python-dev
     pip install --upgrade pip
-    pip install --upgrade setuptools
-    pip install --no-cache-dir  --force-reinstall -Iv grpcio==1.33.1
     pip install -r requirements.txt
   displayName: 'Install Python Dependencies'
 
