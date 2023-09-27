@@ -33,7 +33,7 @@ steps:
 
 # Execute Python Tests
 - script: |
-    pip install -r requirements.txt
+    pip install pytest
     pytest -v
   displayName: 'pytest'
 
