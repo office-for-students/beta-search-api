@@ -26,9 +26,10 @@ steps:
 
 # Create a Python Virtual Environment and download required dependencies
 - script: |
-    sudo apt-get install python-dev
-    pip install --upgrade pip
-    pip install -r requirements.txt
+    python3 -m venv .python_packages
+    source .python_packages/bin/activate
+    python3 -m pip install --upgrade pip
+    python3 -m pip install -r requirements.txt
   displayName: 'Install Python Dependencies'
 
 # Execute Python Tests
