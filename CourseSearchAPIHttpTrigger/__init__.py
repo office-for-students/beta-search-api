@@ -163,7 +163,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         dataset_collection_link = get_collection_link(cosmosdb_database_id, cosmosdb_dataset_collection_id)
 
         dsh = DataSetHelper(client, dataset_collection_link)
-        if hardcoded_highest_dataset and hardcoded_highest_dataset > 0:
+        if hardcoded_highest_dataset and int(hardcoded_highest_dataset) > 0:
             version = 78
         else:
             version = dsh.get_highest_successful_version_number()
