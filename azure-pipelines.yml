@@ -14,7 +14,7 @@ pool:
 strategy:
   matrix:
     Python36:
-      python.version: '3.8'
+      python.version: '3.10'
 
 # Build Process Tree
 steps:
@@ -27,17 +27,13 @@ steps:
 
 # Create a Python Virtual Environment and download required dependencies
 - script: |
-    python3.8 -m venv .python_packages
-    source .python_packages/bin/activate
-    python3.8 -m pip install --upgrade pip
-    python3.8 -m pip install --upgrade setuptools
-    python3.8 -m pip install --no-cache-dir  --force-reinstall -Iv grpcio==1.33.1
-    python3.8 -m pip install -r requirements.txt
+    pip install --upgrade pip
+    pip install -r requirements.txt
   displayName: 'Install Python Dependencies'
 
 # Execute Python Tests
 - script: |
-    python3.8 -m pip install -r requirements.txt
+    pip install -r requirements.txt
     pytest -v
   displayName: 'pytest'
 
