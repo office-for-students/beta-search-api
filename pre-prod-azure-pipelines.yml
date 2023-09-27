@@ -4,6 +4,9 @@
 trigger:
 - release/*
 
+variables:
+  workingDirectory: $(System.DefaultWorkingDirectory)/pre-prod-search-api
+
 # The pr from branches to be included or excluded to trigger build
 pr: none
 
@@ -13,7 +16,7 @@ pool:
 strategy:
   matrix:
     Python36:
-      python.version: '3.10'
+      python.version: '3.9'
 
 # Build Process Tree
 steps:
@@ -27,10 +30,8 @@ steps:
 
 # Create a Python Virtual Environment and download required dependencies
 - script: |
-    python3 -m venv .venv
-    source .venv/bin/activate
     pip3 install --upgrade pip
-    pip install --target="$(workingDirectory)/.python_packages/lib/site-packages" -r requirements.txt
+    pip3 install --target="$(workingDirectory)/.python_packages/lib/site-packages" -r requirements.txt
   displayName: 'Install Python Dependencies'
 
 # Execute Python Tests
