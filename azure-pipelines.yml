@@ -29,13 +29,15 @@ steps:
 - script: |
     python3.8 -m venv .python_packages
     source .python_packages/bin/activate
-    python -m pip install --upgrade pip
-    python -m pip install -r requirements.txt
+    python3.8 -m pip install --upgrade pip
+    python3.8 -m pip install --upgrade setuptools
+    python3.8 -m pip install --no-cache-dir  --force-reinstall -Iv grpcio==1.33.1
+    python3.8 -m pip install -r requirements.txt
   displayName: 'Install Python Dependencies'
 
 # Execute Python Tests
 - script: |
-    python -m pip install -r requirements.txt
+    python3.8 -m pip install -r requirements.txt
     pytest -v
   displayName: 'pytest'
 
