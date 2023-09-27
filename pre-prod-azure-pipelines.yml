@@ -26,6 +26,7 @@ steps:
 
 # Create a Python Virtual Environment and download required dependencies
 - script: |
+    sudo apt-get install python-dev
     pip install --upgrade pip
     pip install --upgrade setuptools
     pip install --no-cache-dir  --force-reinstall -Iv grpcio==1.33.1

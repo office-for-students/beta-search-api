@@ -27,6 +27,7 @@ steps:
 
 # Create a Python Virtual Environment and download required dependencies
 - script: |
+    sudo apt-get install python-dev
     pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install Python Dependencies'
