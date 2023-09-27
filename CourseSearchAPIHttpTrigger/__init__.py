@@ -162,7 +162,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         dataset_collection_link = get_collection_link(cosmosdb_database_id, cosmosdb_dataset_collection_id)
 
         dsh = DataSetHelper(client, dataset_collection_link)
-        version = dsh.get_highest_successful_version_number()
+        version = 78 # dsh.get_highest_successful_version_number()
         
         course_index_name = f"courses-{version}"
         logging.info(f"course_index_name:{course_index_name}")
